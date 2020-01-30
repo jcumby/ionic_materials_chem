@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="energy, materials, chemistry" />
+  <meta name="description" content="Lecture 1 - Energy Storage Materials" />
+  <title>Lecture1</title>
+  <style type="text/css">
+    @import url("common/style.css");
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
+
+class: beige-background
+layout: true
+    
+    
+---
+class: center, middle
+
+# Energy Storage Materials
+
+## Dr. James Cumby
+
+.author[
+james.cumby@ed.ac.uk
+
+Room 269
+]
+
+---
+class: center, top
+
+# Lecture Overview
+
+<br>
+
+Lecture | Topic
+---|-------------
+1 | Introduction to energy storage materials
+1-2 | Batteries
+3 | (Super) capacitors
+4-5 | Fuel Cells 
+
+<br>
+
+## Recommended Reading
+
+Basic Solid State Chemistry, A. R. West, _Wiley_, **1988**.
+
+References given during course.
+
+---
+
+# Introduction
+
+Meeting global energy demand is one of the big challenges facing society.
+
+<br>
+
+.pull-left[![](./images/energy_consumption_by_region.svg)]
+
+.pull-right[![](./images/predicted_consumption_region.svg)]
+
+.footnote[&copy; Martin Kraus, ExxonMobil]
+.footnoteright[BTU = British Thermal Unit &asymp; 1055 J]
+
+
+---
+
+# Energy sources
+
+To meet this demand will require a combination of energy sources:
+
+.pull-left.w20[
+- Fossil Fuels
+	- Coal
+	- Oil
+	- Gas
+- Nuclear
+- Renewable 
+    - Wind 
+    - Solar 
+    - Hydro
+- ... 
+]
+
+
+--
+
+.pull-right.w80[ ![](./images/world_energy_balance.jpg) ]
+
+.footnote[&copy; Lynn Orr]
+
+
+
+---
+
+# **All** sources have problems...
+
+.pull-left[
+## Fossil fuels
+
+- **Finite supply**
+- Environmental cost (i.e. climate change)
+- Political uncertainty
+]
+.pull-right[
+![:width 65%](./images/fossil_fuel_chimney.jpg)
+]
+
+--
+
+.pull-left[
+## Nuclear
+- "Finite" supply
+- Concerns over waste storage
+- Political issues
+]
+
+.pull-right[
+![:width 65%](./images/nuclear_waste.jpg)
+]
+
+--
+
+.pull-left[
+## Renewable
+- Intermittent source
+- (Relatively) expensive (although this is changing)
+- Limited lifespan of components
+]
+
+.pull-right[
+![:width 65%](./images/solar_panel_night.jpg)
+]
+---
+
+# Drivers behind change
+
+
+- Problems with energy supply/demand
+- Climate change
+    - CO<sub>2</sub> emissions
+- Other emissions
+    - NO<sub>x</sub>
+    - SO<sub>x</sub>
+    - Particulates
+    - Others
+- Dwindling oil and gas resources
+- Poltical aspects of fuel supply
+
+.pull-right.w40[ ![](./images/renewable_energy_bulb.jpg) ]
+
+---
+
+# Energy storage
+
+If we aim to increase renewable sources, we need a way to *store* this energy.
+
+- Supply cannot immediately respond to changes in demand
+- Inefficient to waste "excess" energy (e.g. on a windy day)
+
+### How can we store this energy?
+
+--
+
+Historic approaches:
+
+Technology                                   | Energy   | conversion
+---------------------------------------------|-----------------: | --------
+- Burning wood								 | Chemical potential |&rarr; Heat
+- Firebrick <br/> &nbsp&nbsp(Used since the Hittites)	 | Heat |&rarr; Heat
+- Gravity!									 | Gravitational potential |&rarr; Kinetic
+&nbsp&nbsp *e.g.* Irrigation (Hanging Gardens of Babylon)| 
+&nbsp&nbsp *e.g.* Mill ponds (modifying existing rivers) |
+	
+---
+
+# Energy storage history
+
+The discovery of electricity introduced much more variety into energy storage methods:
+
+.highlighttable[
+Technology        | Energy   | conversion
+---------------------------------------------|------------------: | ---------
+- Burning wood								 | Chemical potential |&rarr; Heat
+- Firebrick <br/> &nbsp&nbsp(Used since the Hittites) | Heat | &rarr; Heat
+Gravity!	| Gravitational potential | &rarr; Kinetic |
+&nbsp&nbsp *e.g.* Irrigation, Mill ponds |
+ | |
+- Batteries                                  |           Chemical   | &rarr; Electrical
+- (Super-) Capacitors           | Electrical | &rarr; Electrical
+- Fuel Cells                                |           Chemical   | &rarr; Electrical
+  |  | 
+- Cryogenic / Liquid air       | Kinetic (from electrical) | &rarr; 'Heat'
+- Mechanical (*e.g.* flywheels)  | Kinetic      | &rarr; potential
+]
+
+---
+
+# Efficient energy storage relies on *materials*
+### Important properties for energy storage:
+
+- **Cost**
+- (Long-term) stability; reactivity
+- Durability
+- Compatibility of different materials
+- Material performance
+	- Ionic conduction
+	- Electronic conduction
+
+
+---
+class: center, middle
+# Batteries
+
+
+---
+class: centre, top
+# Battery History
+
+![:grid](.fourxfour[ &
+.c1r1.cspan3.rspan4[***ca.* 190 AD**: Baghdad (or Parthian) battery
+- Iron and copper electrodes, filled with vinegar or wine
+- Possible uses: medicinal, religious or electro-plating!
+
+.hidden[
+**1800**: Volta created the voltaic pile
+- Alternating Ag and Zn discs, NaCl electrolyte
+- Enabled *chemistry* e.g. 2H<sub>2</sub>O &rarr; H<sub>2</sub> + O<sub>2</sub>
+- Corrosion limited battery life
+]
+.hidden[
+**1836**: Daniell cell: .grey[Zn|Zn<sup>2+</sup>,SO<sub>4</sub><sup>2-</sup> || SO<sub>4</sub><sup>2-</sup> | Cu<sup>2+</sup> | Cu ]
+- First practical electricity source (used to power telegraphs)
+
+**1859** Lead-acid battery (first rechargeable)
+]
+.hidden[
+**1886** The first dry cell, .grey[Zn | NH<sub>4</sub>Cl | MnO<sub>2</sub> ]
+- NH<sub>4</sub>Cl immobilised with plaster of Paris (CaSO<sub>4</sub>&middot;0.5 H<sub>2</sub>O)
+
+**1899** The first alkaline battery .grey[NiO(OH) | KOH | Cd]
+- Higher energy density than lead-acid, but expensive
+]
+.hidden[
+**1991** Li-ion battery commercialised by Sony
+]
+] &
+.c4r2.rspan2[ ![Voltaic pile](./images/VoltaBattery.jpg)] &
+.c4r1[ ![Baghdad battery](./images/baghdad-battery-cutaway.jpg) ] &
+.c4r4[ ![Daniell cell](./images/Daniell_cell.jpg)] &
+.c4r4[ .pull-right.w33[![Daniell cell schematic](./images/Daniell_cell_schematic.png)]] &
+
+]
+)
+
+.footnote[&copy; GuidoB]
+
+???
+
+Voltaic pile came about as a disagreement between Volta and Galvani; the latter
+had discovered that frogs legs would move when forming a circuit from two different types of metal.
+Galvani asserted this was 'animal electricity'
+
+---
+# Battery Operation
+
+.pull-left[ ![:width 60%](./images/battery_charging_schematic.png) ]
+.pull-right[ ![:width 60%](./images/battery_discharging_schematic.png) ]
+
+NOTE: In rechargeable cells, naming of *anode* and *cathode* is often unclear. Here we define:
+- Cathode is **positive** electrode under **discharge**
+- Anode is **negative** electrode under **discharge**
+
+---
+# Improving batteries
+
+The most important parameter in improving batteries is the total *energy capacity*, `\(E\)`
+- Combination of cell voltage (*V*) and amount of charge (*Q*) stored in material:
+$$
+E_{\mathrm{bat}} = QV
+$$
+.grey[*Q* is expressed in units of Ah (1 mAh = 3.6 C), so *E*<sub>bat</sub> is in Wh (watt-hours)]
+
+--
+
+- *E*<sub>bat</sub> is dependent on the amount of material. More useful:
+	- *Gravimetric* energy density (Wh g<sup>-1</sup>): Q is charge per unit mass (Ah g<sup>-1</sup>)
+	- *Volumetric* energy density (Wh L<sup>-1</sup>): Q is charge per unit volume (Ah L<sup>-1</sup>)
+
+.pull-left.w30[ <br> .center[We want to maximise volumetric and gravimetric energy densities]]
+	
+.pull-right.w60[![Energy density](./images/cell_energy_density_mod.svg)]
+	
+
+.footnote[&copy; Barrie Lawson]
+
+---
+# Increase *E*<sub>bat</sub>: *voltage*
+
+![:width 80%](./images/energy_diagram_schematic.png)
+---
+# Increase *E*<sub>bat</sub>: *charge stored*
+
+Faraday's Law:
+$$
+Q_{\mathrm{theoretical}} = \frac{nF}{3.6 M_w}\qquad(\text{in mAh g}^{-1})
+$$
+
+--
+
+*e.g.* for `\( \ce{LiCoO_2 -> Li^+ + e^- + CoO_2}\)` :
+
+--
+
+$$
+n = 1,
+F = 96485.3 \: \mathrm{sA\:mol}^{-1} \\\\
+M_w = 97.873\: \mathrm{g\: mol^{-1}} \\\\
+\therefore Q = 274\: \mathrm{mAh\: g}^{-1} \\\\
+$$
+
+--
+
+In reality, the charge stored is less than the theoretical maximum
+
+- For LiCoO<sub>2</sub>, CoO<sub>2</sub> is *very* unstable: `\( \ce{2Co^{IV}O_2 -> Co^{III}_2O_3 + \frac{1}{2}O_2} \)`
+	- We can only safely reach Li<sub>0.5</sub>CoO<sub>2</sub>, so the useful capacity is 137 mAh g<sup>-1</sup>
+
+---
+# Charging rates
+
+Ideally we want to charge batteries quickly
+.pull-left.w66[
+Define charge rate, `\( C = \frac{I}{Q} \)`, the ratio of discharge current to capacity
+- i.e. for a 100 mAh battery:
+	- `\(1C\)` => current of 100 A, which could be sustained for 1 hour
+	- `\(2C\)` => 200 A (for 30 mins)
+	- `\(\frac{1}{6} C \)` => 50 A (for 2 hours) 
+- This allows us to describe charging rates independent of battery capacity.
+]
+
+.pull-right.w33[ ![Battery Life](./images/battery_life_cartoon.png)]
+
+---
+# Effect of rate on capacity
+
+High charging rates reduce capacity
+
+- Electrons can move much faster than ions, so at high *C*-rates strain occurs in the lattice
+	- Ions get stuck, reducing the overall discharge capacity
+	- Irreversible damage to crystal structure can occur, preventing future charging
+
+<br><br>
+![](./images/cathode_degradation_schematic.gif)	
+	
+.footnote[B. Song, *J. Mat. Chem. A*, 2015, 18171.]
+	
+???
+
+Peukert's law:
+
+$$
+t = H \left( \frac{Q}{IH} \right)^{k}
+$$
+
+where t is the actual discharge time, H is the rated discharge time (in hours), Q is the capacity (in Ah)
+and I is the discharge current. k is the Peukert constant, and typically falls in the range 1.1-1.3. k increases
+with battery cycling/age.
+
+NOTE: Peukert's law was developed for lead-acid batteries, and doesn't apply well to e.g. Li-ion. This
+is because it takes no account of temperature (from Nernst equation V&uarr; as T&uarr;) which is particularly
+important in Li-ion batteries.
+
+
+---
+#Ragone .grey[(*ru-GO-nee*)] plot
+
+Quantifies the trade-off between energy density (E) and power density (P)
+- `\( P = IV \)`, whereas `\( E = QV \)`
+
+Some applications require fast discharge over short times (e.g. electric sports car accelerating) while others need 
+more sustained energy supply (long-range electric vehicle)
+
+![:width 70%](./images/ragone_plot.svg)
+
+.footnote[B.D. McCloskey, J. Phys. Chem. Lett., **2015**, 6, 3592-3593.]
+
+
+---
+# Characterising capacity
+
+Typically we use *Galvanostatic* (constant current) measurements to characterise battery response, and measure the resulting
+voltage.
+- Charging rates have a big impact on device performance, so *potentiostatic* (*i.e.* constant voltage) measurements 
+would be difficult to attribute to chemistry vs. rate effects.
+
+.pull-left.w60[![](./images/galvanostat_graph.jpg)]
+.pull-right.w30[![](./images/gamry_galvanostat.jpg)]
+.pull-right.w30[![](./images/button_battery_test.jpg)]
+
+
+
+---
+# Characterising capacity
+
+e.g. for a 2.2 Ah battery:
+
+.pull-left.w60[![galvanostat example](../resources/22Ah_battery_galvanostat.svg)]
+
+--
+
+.pull-right.w40[![Evscapacity](../resources/E_vs_capacity.svg)]
+
+.pull-left.w80[<br> Capacity can be expressed in a number of formats]
+
+---
+# What can we learn from galvanostats?
+
+
+
+![:grid]( .threextwo.gapped[ &
+.c1r1[ **Solid Solution** ] &
+.c2r1[ **Two-phase region**] &
+.c3r1[ **Phase change**] &
+.c1r2[![](./images/voltage_curves_solid_soln.png)] &
+.c2r2[![](./images/voltage_curves_2phase.png)] &
+.c3r2[![](./images/voltage_curves_phase_change.png)] &
+.c1r3[ Ions can be continously added/removed from the material without a structural transition] &
+.c2r3[ .center[Two distinct compositions exist together, and the relative proportions change with x]] &
+.c3r3[ .right[Abrupt voltage (and structure) change between &alpha; and &beta; due to a more-stable &gamma; phase with narrow composition window.]] &
+]
+)
+
+???
+
+![](./images/voltage_curves_free_energy.jpg)
+from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
+
+
+---
+#Example: Na<sub>*x*</sub>CoO<sub>2</sub>
+
+![](./images/NaxCoO2_with_diffraction.png)
+
+.footnote[Berthelot *et al*, *Nature Materials*, **2010**, 74-80.]
+
+
+
+---
+# Key materials properties
+
+.pull-left.w33[
+**Anode**
+- Good electronic conductor
+- Good ionic conductor
+- Structural stability on ionic movement
+]
+.pull-left.w33[
+**Electrolyte**
+- Good ionic conductor
+- *Negligible* electronic conduction
+
+]
+.pull-right.w33[
+**Cathode**
+- Good electronic conductor
+- Good ionic conductor
+- Structural stability on ionic movement
+]
+
+
+**Overall**
+
+- Compatibility between materials (particularly under volume changes during charge/discharge)
+
+.pull-left[ ![:width 40%](./images/battery_charging_schematic.png)]
+.pull-right[ ![:width 40%](./images/battery_discharging_schematic.png)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </textarea>
+  <script src="common/remark-latest.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+	remark.macros.width = function (width) {
+		var url = this;
+		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.colortable = function (color) {
+		console.log(this)
+		var cells = this.split('|');
+		console.log(cells)
+		var newcells = cells.map(function (val, idx, array) { 
+			return val.trim()
+			})
+		console.log(newcells)
+		return newcells.join("|");
+		
+	}
+	
+	remark.macros.grid = function () {
+		var content = this.replace( /&\n/g, " ");
+		return content;
+	}
+  
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true,
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+    });
+	
+		function doanim() {
+		// Modify visibility of 'hidden' elements in order,
+		// only operating on the first non-hidden one
+		var vis = document.getElementsByClassName('remark-visible');
+		// Assume there is only one remark-visible object
+		var anim = vis[0].getElementsByClassName('hidden');
+		var i;
+		for (i=0; i<anim.length; i++) {
+				if (anim[i].style['visibility'] == 'hidden' || anim[i].style['visibility'] == '') {
+					anim[i].style['visibility'] = 'visible';
+					return 0;
+
+				}
+			}
+		return -1;
+	}
+	
+	function hasanim() {
+		// Determine if a slide has any 'hidden' components
+		var vis = document.getElementsByClassName('remark-visible');
+		// Assume there is only one remark-visible object
+		var anim = vis[0].getElementsByClassName('hidden');
+		if (anim.length > 0) {
+			return true;
+			}
+		else {
+			return false;
+			}
+	}
+	
+	function listenanim (event) {
+		// Listen for keyboard events, for use on custom
+		// animation slides
+		if (event.defaultPrevented) {
+			return;
+			}
+		
+		var key = event.key || event.keyCode
+		switch (key) {
+			case 'PageUp': // pge up
+			case 'ArrowLeft': // Left
+			case 'ArrowUp': // up
+				//slideshow.gotoPreviousSlide();
+				document.removeEventListener('keydown', listenanim);
+				//document.removeEventListener('wheel', listenanim);
+				slideshow.resume();
+				//
+				break;
+			case " ": // space
+			case 'PageDown': // Page Down
+			case 'ArrowRight': // Right
+			case 'ArrowDown': // Down
+				var i = doanim()
+				//slideshow.resume();
+				if ( i == -1 ) {
+					document.removeEventListener('keydown', listenanim);
+					//document.removeEventListener('wheel', listenanim);
+					slideshow.resume();
+					break;
+					}
+		
+		}
+		
+		//var scroll = event.deltaY
+		//if (scroll < 0) {
+		//	document.removeEventListener('wheel', listenanim);
+		//	slideshow.resume();
+		//}
+		//else {
+		//	var i = doanim()
+		//	if ( i == -1 ) {
+		//		document.removeEventListener('wheel', listenanim);
+		//		slideshow.resume();
+		//		}
+		//}
+	}
+	
+	slideshow.on('afterShowSlide', function (slide) {
+		// Check if slide has 'hidden' components, and if so pause remark
+		// and perform manual keyboard listening
+		if (hasanim()) {
+			slideshow.pause();
+			document.addEventListener('keydown', listenanim );
+			//document.addEventListener('wheel', listenanim );
+	
+		}
+	
+	});
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['\\(','\\)']],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		}	
+    });
+
+    MathJax.Hub.Configured();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="energy, materials, chemistry" />
+  <meta name="description" content="Lecture 2 - Energy Storage Materials" />
+  <title>Lecture2</title>
+  <style type="text/css">
+    @import url("common/style.css");
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
+
+class: beige-background
+layout: true
+    
+    
+---
+class: center, middle
+
+# Batteries 2
+
+---
+
+# Types of battery technology
+
+- Cationic battery
+	- Li-ion
+	- Metal-air
+- Anionic battery
+	- Hydroxide battery
+	- Fluoride ion
+- Flow battery
+
+![](./images/battery_types.png)
+
+
+---
+# Cationic Batteries
+
+Li-ion batteries have come to dominate the commericial market. Why?
+
+- Li/Li<sup>+</sup> has one of the most negative reduction potentials of any element:
+$$
+\ce{ Li^+ + e^- -> Li(s)}\qquad\qquad E = -3.04 \mathrm{V \quad(vs. SHE)}
+$$
+	- This gives rise to a higher voltage (and therefore energy capacity)
+	
+--
+
+*e.g.*:
+$$
+\begin{align}
+                & \ce{Li+ + CoO2 + e- -> LiCoO2}    & E &= +0.6 V \\\\
+                & \ce{Li+ + 6C + e- -> LiC6}         & E &= -2.84 V \\\\
+\text{overall (discharge):}  &                                    &   &           \\\\
+                & \ce{ LiC6 + CoO2 -> LiCoO2 + 6C }  & E &= +2.90 V \\\\
+\end{align}
+$$
+$$
+\begin{align}
+\Delta G &= -nFE \\\\
+         &= -279.8\ \mathrm{kJ\ mol}^{-1} \\\\
+		 &= -77.7\ \mathrm{Wh\ mol}^{-1}
+\end{align}
+$$
+.grey[Note: 1 W = 1 J s<sup>-1</sup>, so 1 Wh = 3600 J = 3.6 kJ]
+
+
+---
+# Cathode materials
+
+Materials for Li-ion cathodes fall into three main families:
+
+![:grid](.threextwo[ &
+.c1r1[ 2D conductor <br> (e.g. layered &alpha;-NaFeO<sub>2</sub>)] &
+.c2r1[ 3D conductor <br> (e.g. spinel) ] &
+.c3r1[ 1D conductor <br> (e.g. olivine) ] &
+.c2r2[ ![:width 90%](./images/LiMn2O4_structure_and_diffusion.png)] &
+.c1r2[ ![:width 90%](./images/LiCoO2_structure.png)] &
+.c3r2[ ![:width 90%](./images/LiFePO4_structure.png)] &
+.c1r3[ .center[LiCoO<sub>2</sub> <br> (Q<sub>theo</sub> = 274 mAh g<sup>-1</sup>)]] &
+.c2r3[ .center[LiMn<sub>2</sub>O<sub>4</sub> <br> (148 mAh g<sup>-1</sup>) ]] &
+.c3r3[ .center[LiFePO<sub>4</sub> <br> (170 mAh g<sup>-1</sup>)]] &
+.c1r4.cspan3[ .center[ &
+&larr; Better Li conduction &larr; <br> &
+&rarr; Safer &rarr; <br> &
+&larr; (Higher cost) &larr; <br> &
+] ] &
+]
+
+)
+
+---
+# Cathode disadvantages
+
+.pull-left.w60[
+- Many materials are electrically insulating
+	- They must be mixed with a conductor (carbon) to allow charge transfer
+	
+.hidden[
+- Realistic capacity Q is often much lower than Q<sub>theo</sub>
+	- Chemical stability <br> (*e.g.* in Li<sub>*x*</sub>CoO<sub>2</sub>, 0.5 &le; *x* &le; 1)
+	- Useable capacity is reduced even at low C-rates
+]
+
+.hidden[
+- Practical energy capacity E is often < 30% of the ideal
+	- Discharge voltages are lower than expected
+		- Ohmic Losses: additional electronic and ionic resistance
+		- Drop in voltage with change in Li concentration (concentration polarization)
+]
+]
+
+.pull-right.w40[ <br> <br> ![](./images/cathode_composite_structure.jpg) ]
+
+---
+# Concentration polarization
+
+As Li<sup>+</sup> is removed from the anode, E<sub>meas</sub> changes:
+
+Nernst Equation:	
+$$
+E_{meas} = E^{\circ} - \frac{RT}{nF} \ln \frac{[Red]}{[Ox]}
+$$
+
+--
+
+
+*e.g.*:
+$$
+\begin{align}
+\ce{Li+ + CoO2 + e- &-> LiCoO2}    & E &= +0.6 V \\\\
+\ce{Li+ + 6C + e- &-> LiC6}         & E &= -2.84 V \\\\
+\mathrm{Overall:}\qquad\quad \ce{ LiC6 + CoO2 &-> LiCoO2 + 6C }  & E &= +2.90 V \\\\
+\end{align}
+$$
+--
+$$
+E = 2.90 - \frac{RT}{F} \ln \frac{[\ce{LiCoO2}]}{[\ce{LiC6}]}
+$$
+
+---
+background-image: url(./images/periodic_table_abundance.png)
+
+--
+![:overbox 27%, 9%, 8%, 16%, blue ]()
+![:overbox 45%, 44%, 15%, 16%, blue ]()
+
+
+
+---
+# Anode Materials
+
+Typically, graphite is used as the anode in Li-ion batteries:
+
+.pull-left[
+- Cheap
+- Low potential (*cf.* oxides)
+	- Gives high cell voltage
+- Electrically conducting
+- Li intercalates between graphite sheets
+	- High Li storage capacity of 339 mAh g<sup>-1</sup>
+]
+
+
+.pull-right[ ![](./images/graphite_Li_intercalation.png)]
+
+.footnote[&copy; A. Crerend]
+
+---
+# Anode Materials
+
+.pull-left.w40[As cathode capacities improve, graphite will become the limiting
+cell cacpacity
+
+Silicon has a clear advantage in capacity, but breaks down due to massive (320 %)
+volume changes.
+
+Nano-structured Si (particles or wires) is one potential solution
+
+NOTE: Li anodes have a very high capacity, but this assumes all Li(m) -> Li<sup>+</sup>.
+- Safety of Li metal is also a concern
+]
+
+
+.pull-right.w60[![](./images/battery_anode_materials.png)]
+
+.footnote[Y. Chen, *J. Carbon Res.* **2018**, 18. <br> *e.g.* https://www.sigmaaldrich.com/technical-documents/articles/materials-science/recent-developments-in-silicon-anode-materials.html for Si anodes]
+
+
+---
+# Electrolyte
+
+Liquid electrolyte:
+- Must be stable across the potential range of the cell
+- **Must** be non-aqueous
+- Typically consist of a .red[lithium salt] in .blue[organic solvent]
+	- .red[LiPF<sub>6</sub>, LiBF<sub>4</sub>, LiClO<sub>4</sub>]
+	- .blue[Ethylene carbonate, dimethyl carbonate, diethyl carbonate]
+
+.hidden[
+Solid electrolyte:
+- Would avoid the problems of solvent leakage/flammability
+- Typically use a Li-conducting ceramic (*e.g.* LISICON, Li<sub>2+2x</sub>Zn<sub>1-x</sub>GeO<sub>4</sub>)
+- Problems:
+	- Conductivity is lower than liquid
+	- Matching expansion/contraction at the electrode-electrolyte boundary
+]
+![:width 40%](./images/phone_fire.jpg)
+
+
+
+
+---
+# Limitations of Li-ion batteries
+
+We're all used to Li-ion batteries degrading over time:
+
+![:width 70%](./images/battery_capacity_w_cycles.jpg)
+
+Two factors contribute to the 'demise' of Li-ion batteries:
+- Solid-Electrolyte Interphase (SEI)
+- Dendrites
+
+.footnote[S.S. Choi, *J. Power Sources*, 2002, 130.]
+
+---
+# Solid-Electrolyte Interphase (SEI)
+
+Liquid electrolyte is thermodynamically *unstable* in presence of Li-rich graphite (LiC<sub>6</sub>) or Li-metal, decomposing
+to form SEI.
+- ionically-conducting (but worse than electrolyte)
+- electrically insulating
+
+.hidden[
+On charge/discharge, cracks in SEI allow further decomposition
+- SEI gets thicker
+- Eventually, capacity/conductivity are reduced
+]
+
+![:width 60%](./images/SEI_schematic.jpg)
+
+???
+
+Image - Hardwick group, https://www.liverpool.ac.uk/chemistry/research/hardwick-group/research/
+
+---
+# Dendrites
+
+- Main cause of fire/explosion in Li batteries
+- Short-circuit causes local heating
+	- Solvent catches fire...
+
+.hidden[
+Currently this is prevented using separators and careful charging electronics,
+but this reduces capacity and/or increases cost. Solid-state electrolytes are a
+partial solution.]
+
+.pull-left.w40[![](./images/SEI_basic.png)]
+.pull-right.w60[![:width 90%](./images/lithium_dendrite.gif)]
+.pull-left.w40[![](./images/dendrite_formation_cartoon.png)]
+
+.footnoteright[Optical image of Li dendrite]
+
+???
+
+https://areweanycloser.wordpress.com/2013/06/21/dendritic-lithium-and-battery-fires/
+
+---
+# Beyond current Li-ion
+
+One possible solution is the lithium-air battery:
+- Removes much of the mass (and cost) of the cathode
+	- replaced with porous carbon
+- Has energy capacity 5-times that of current Li-ion
+
+.pull-left.w60[![](./images/lithium_air_battery.jpg)]
+
+--
+
+.pull-right.w40[
+**But:**
+- Li<sub>2</sub>O<sub>2</sub> is highly insulating
+- Stability of other components (particularly in the presence of O<sub>2</sub>) limits long-term use
+- Relatively inefficient due to side-reactions
+- Dendrites and SEI are highly problematic
+]
+
+
+
+
+
+
+---
+# Anionic Batteries
+
+Charge can be carried by either cations or anions
+
+.pull-left[ ![:width 80%](./images/battery_charging_schematic.png) ]
+.pull-right[ ![:width 80%](./images/battery_discharging_schematic.png) ]
+
+---
+# *e.g.* Nickel-metal hydride (NiMH)
+
+<br>
+
+![:grid](.threextwo.gapped[&
+.c1r2.border[ &
+$$ 
+\ce{MH + OH- -> \\\\ &
+M + H2O + e- &
+} &
+$$
+$$ 
+E \approx -0.83 \mathrm{V}
+$$ &
+where M is a mixed-metal alloy, *e.g.* LaNi<sub>5</sub>
+] &
+.c1r1.border.center[ **Anode** ]
+.c2r1.border.center[**Electrolyte**]
+.c2r2.border.center[Simple OH<sup>-</sup> <br>source, *e.g.* KOH]
+.c3r1.border.center[**Cathode**]
+.c3r2.border.right[
+$$
+\ce{ NiO(OH) + H2O + e-  \\\\ -> \\\\ Ni(OH)2 + OH- }
+$$
+$$
+E = +0.49 \mathrm{V}
+$$
+<br>
+![:width 50%](./images/battery_discharging_schematic.png)
+]
+])
+
+
+.pull-left[
+$$
+E_{\mathrm{cell}} = 0.49 \mathrm{V} - (-0.83 \mathrm{V}) = 1.32 \mathrm{V}
+$$
+]
+
+
+---
+# NiMH Batteries
+
+.pull-left[
+### Advantages
+- Can be completely discharged without harm
+	- Means cheaper control systems
+- Capacity insensitive to charge rate (within reason)
+- 'Safe' materials
+- Quite robust to overcharging
+]
+
+.pull-right[
+### Disadvantages
+- Relatively low cell voltage (1.2 V)
+- Limited to low C-rates
+- Voltage very sensitive to temperature
+- Very high self-discharge
+]
+
+--
+
+<br>
+Problematic electrolyte reaction: `\( \ce{ 2OH- -> H2O + \frac{1}{2}O2(g) + 2e- } \)`
+
+--
+
+But luckily, O<sub>2</sub> can diffuse to the anode:
+
+$$
+\ce{ MH\_{x} + 2H2O + 2e- -> MH_{{x + 2}} + 2OH- }
+$$
+
+$$
+\ce{\frac{1}{2} O2 + MH_{x + 2} -> MH_x + H2O}
+$$
+
+
+---
+
+# Fluoride ion batteries
+
+So far we have considered 1-electron redox processes (*e.g.* `\( \ce{Li+ + CoO2 + e- -> LiCoO2} \)`)
+why not use multiple electrons?
+
+One solution is di- or tri-valent charge carriers (*e.g.* Mg<sup>2+</sup>) **but** ionic conduction 
+becomes harder.
+
+--
+
+An alternative is multi-electron redox, incorporating more than one charge-carrier per mole, *e.g.*:
+
+$$
+\ce{MF_{n} + ne- -> M + nF-}
+$$
+
+which can occur either as a single reaction or multiple 1-electron processes:
+
+$$
+\begin{align}
+\ce{MF\_{n} + e- &-> MF\_{n - 1} + F- } \\\\
+\ce{MF\_{n - 1} + e- &-> MF\_{n - 2} + F- }  \\\\
+&\vdots \\\\
+\ce{MF\_{1} + e- &-> M + F- }  \\\\
+\end{align}
+$$
+
+NOTE: Total potential for sequence of 1 electron reactions is `\(E_{tot} = \frac{E_1 + E_2 + ... + E_{n}}{n} \)`
+
+.footnote[V.K. Davies et al., *Science*, 2018, 1144.] 
+
+
+---
+# Fluoride ion batteries
+
+Fluoride ion batteries have theoretical *volumetric* energy density of > 8 times Li-ion batteries!
+
+
+$$
+\ce{CoF3 + La -> LaF3 + Co} \qquad\qquad E = 3.31 V
+$$
+.pull-left.w60[
+Cathode: `\( \ce{CoF3 + 3e- -> Co^0 + 3F- } \)`
+
+Anode: `\( \ce{LaF3 +3e- <- La + 3F-} \)`
+]
+
+.pull-right.w40[ ![](./images/cell_energy_density_mod.svg) ]
+
+$$
+Q_{\mathrm{theo}} = \frac{3F}{3.6} = 80404 \mathrm{\ mAh\ mol}^{-1}
+$$
+
+--
+
+.pull-left.w40[
+By (combined) mass:
+
+M<sub>w</sub> = 254.83 g mol<sup>-1</sup>
+
+Q<sub>grav.</sub> = 315 mAh g<sup>-1</sup>, so
+Gravimetric energy density = ** 1042 Wh kg<sup>-1</sup> **
+
+]
+
+--
+
+.pull-right.w60[
+By combined volume:
+
+LaF<sub>3</sub> density = 5.9 g cm<sup>-3</sup> <br>
+Co density = 1.14 g cm<sup>-3</sup>
+
+Q<sub>vol.</sub> = 315 &times; (5.9 + 1.14) = 2217.6 Ah dm<sup>-3</sup>
+Volumetric energy density = **7340 Wh L<sup>-1</sup>**
+]
+
+.footnote[NOTE: These calculations ignore electrolyte and electrode contributions. Including this, 
+volumetric density is still ca. 5069 Wh L<sup>-1</sup>, *cf.* 400 Wh L<sup>-1</sup> for Li-ion!]
+
+???
+Volume per LaF3 = 54.78 &times; N<sub>A</sub> &#8491;<sup>3</sup> mol<sup>-1</sup>/*
+Volume per Co = 11.12 &times; N<sub>A</sub> &#8491;<sup>3</sup> mol<sup>-1</sup>
+
+
+---
+# Fluoride ion battery problems
+
+- Solid state electrolytes are required as efficient fluoride ion conducting electrolytes
+	- These require high temperatures (&ge; 150 &deg;)
+		- Recently, R<sub>4</sub>N<sup>+</sup> salts have provided low-temperature F<sup>-</sup> conduction
+
+--
+		
+- Potential safety risks if F<sub>2</sub> is created
+
+![:width 60%](./images/fluorine_and_steel.jpg)
+
+		
+.footnote[V.K. Davies et al., *Science*, 2018, 1144.] 
+
+
+
+
+---
+# Redox flow batteries
+
+Rather than storing a fixed amount of charge in an electrode, why not use a flowing redox reaction?
+
+![:width 70%](./images/flow_battery_schematic.gif)
+
+
+- Can be operated with 'rechargable' or replaceable fuel
+- Best suited to stationary power applications (to maximise electrolyte storage)
+
+---
+# Flow Battery chemistry
+
+The all-vanadium flow battery is most developed:
+
+$$
+\begin{align}
+&\mathrm{Cathode:} & \ce{VO2^+ + 2H+ + e- &-> VO^{2+} + H2O }\quad &E = +0.991\mathrm{\ V} \\\\
+&\mathrm{Anode:}  & \ce{V^{3+} + e- &-> V^{2+}} &E = -0.255 \mathrm{\ V} \\\\
+&\mathrm{Overall:} & \ce{VO2^+ + 2H+ + V^{2+} &-> VO^{2+} + V^{3+} + H2O} &E_{tot} = 1.246\mathrm{\ V}
+\end{align}
+$$
+
+--
+
+.pull-left[
+### Advantages
+- Simple electrodes (often porous carbon)
+- Low maintenance
+- Capacity increased by storing more electrolyte
+
+### Disadvantages
+- Membranes are not perfect
+- Cost of metals
+- Solubility issues with cycling
+]
+
+--
+
+.pull-right.w50[
+![](./images/rongke_flow_battery.jpeg)
+![](./images/puneng_flow_battery.jpg)]
+
+.footnote[G. Soloveichik, *Chem. Rev.* 2015, 11533.]
+.footnoteright[Rongke and Puneng flow cell installations]
+
+
+
+
+
+
+
+
+
+  </textarea>
+  <script src="common/remark-latest.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+	remark.macros.width = function (width) {
+		var url = this;
+		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.colortable = function (color) {
+		console.log(this)
+		var cells = this.split('|');
+		console.log(cells)
+		var newcells = cells.map(function (val, idx, array) { 
+			return val.trim()
+			})
+		console.log(newcells)
+		return newcells.join("|");
+		
+	}
+	
+	remark.macros.overbox = function (top, left, height, width, color) {
+		return '<span class="outlinebox" style="top: ' + top + '; left: ' + left + '; height: ' + height + '; width: ' + width + '; border-color: ' + color + ';"></span>';
+	};
+	
+	remark.macros.grid = function () {
+		var content = this.replace( /&\n/g, " ");
+		return content;
+	}
+  
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true,
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+    });
+	
+	function doanim() {
+		// Modify visibility of 'hidden' elements in order,
+		// only operating on the first non-hidden one
+		var vis = document.getElementsByClassName('remark-visible');
+		// Assume there is only one remark-visible object
+		var anim = vis[0].getElementsByClassName('hidden');
+		var i;
+		for (i=0; i<anim.length; i++) {
+				if (anim[i].style['visibility'] == 'hidden' || anim[i].style['visibility'] == '') {
+					anim[i].style['visibility'] = 'visible';
+					return 0;
+
+				}
+			}
+		return -1;
+	}
+	
+	function hasanim() {
+		// Determine if a slide has any 'hidden' components
+		var vis = document.getElementsByClassName('remark-visible');
+		// Assume there is only one remark-visible object
+		var anim = vis[0].getElementsByClassName('hidden');
+		if (anim.length > 0) {
+			return true;
+			}
+		else {
+			return false;
+			}
+	}
+	
+	function listenanim (event) {
+		// Listen for keyboard events, for use on custom
+		// animation slides
+		if (event.defaultPrevented) {
+			return;
+			}
+		
+		var key = event.key || event.keyCode
+		switch (key) {
+			case 'PageUp': // pge up
+			case 'ArrowLeft': // Left
+			case 'ArrowUp': // up
+				//slideshow.gotoPreviousSlide();
+				document.removeEventListener('keydown', listenanim);
+				slideshow.resume();
+				//
+				break;
+			case " ": // space
+			case 'PageDown': // Page Down
+			case 'ArrowRight': // Right
+			case 'ArrowDown': // Down
+				var i = doanim()
+				//slideshow.resume();
+				if ( i == -1 ) {
+					document.removeEventListener('keydown', listenanim);
+					slideshow.resume();
+					break;
+					}
+		
+		}
+		
+		//var scroll = event.deltaY
+		//if (scroll < 0) {
+		//	document.removeEventListener('wheel', listenanim);
+		//	slideshow.resume();
+		//}
+		//else {
+		//	var i = doanim()
+		//	if ( i == -1 ) {
+		//		document.removeEventListener('wheel', listenanim);
+		//		slideshow.resume();
+		//		}
+		//}
+	}
+	
+	slideshow.on('afterShowSlide', function (slide) {
+		// Check if slide has 'hidden' components, and if so pause remark
+		// and perform manual keyboard listening
+		if (hasanim()) {
+			slideshow.pause();
+			document.addEventListener('keydown', listenanim );
+			//document.addEventListener('wheel', listenanim );
+	
+		}
+	
+	});
+	
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['\\(','\\)']],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		}	
+    });
+
+    MathJax.Hub.Configured();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords" content="energy, materials, chemistry" />
+  <meta name="description" content="Lecture 1 - Energy Storage Materials" />
+  <title>Lecture1</title>
+  <style type="text/css">
+    @import url("common/style.css");
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
+
+class: beige-background
+layout: true
+
+---
+# Title
+
+---
+# Normal slide
+
+---
+# Norma;l 2
+
+---
+class: centre, top
+# Battery History test
+
+.hidden[studff]
+stuff2
+.pull-right[stuff3 .hidden[stuffagin]]
+
+---
+# Test
+
+.hidden[- l1]
+.hidden[- l2]
+.hidden[- l3
+	- l4]
+.hidden[l5]
+
+---
+#Normal
+<iframe width="100%" height="80%" src="https://www.presentation-guru.com/how-to-get-instant-feedback-from-your-audience/" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+
+
+---
+# Norm again
+
+  </textarea>
+  <script src="common/remark-latest.js"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+	remark.macros.width = function (width) {
+		var url = this;
+		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.colortable = function (color) {
+		console.log(this)
+		var cells = this.split('|');
+		console.log(cells)
+		var newcells = cells.map(function (val, idx, array) { 
+			return val.trim()
+			})
+		console.log(newcells)
+		return newcells.join("|");
+		
+	}
+	
+	remark.macros.grid = function () {
+		var content = this.replace( /&\n/g, " ");
+		return content;
+	}
+  
+	
+  
+    var slideshow = remark.create({
+      highlightStyle: 'monokai',
+      highlightLanguage: 'remark',
+      highlightLines: true,
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+    });
+	
+
+	function doanim() {
+		var vis = document.getElementsByClassName('remark-visible');
+		// Assume there is only one remark-visible object
+		var anim = vis[0].getElementsByClassName('hidden');
+		var i;
+		for (i=0; i<anim.length; i++) {
+				if (anim[i].style['visibility'] == 'hidden' || anim[i].style['visibility'] == '') {
+					anim[i].style['visibility'] = 'visible';
+					return 0;
+
+				}
+			}
+		return -1;
+	}
+	
+	function hasanim() {
+		var vis = document.getElementsByClassName('remark-visible');
+		// Assume there is only one remark-visible object
+		var anim = vis[0].getElementsByClassName('hidden');
+		if (anim.length > 0) {
+			return true;
+			}
+		else {
+			return false;
+			}
+	}
+	
+	function listenanim (event) {
+		if (event.defaultPrevented) {
+			return;
+			}
+		
+		var key = event.key || event.keyCode
+		switch (key) {
+			case 'PageUp': // pge up
+			case 'ArrowLeft': // Left
+			case 'ArrowUp': // up
+				//slideshow.gotoPreviousSlide();
+				document.removeEventListener('keydown', listenanim);
+				slideshow.resume();
+				//
+				break;
+			case " ": // space
+			case 'PageDown': // Page Down
+			case 'ArrowRight': // Right
+			case 'ArrowDown': // Down
+				var i = doanim()
+				//slideshow.resume();
+				if ( i == -1 ) {
+					document.removeEventListener('keydown', listenanim);
+					slideshow.resume();
+					break;
+					}
+		
+		}
+	}
+	
+	slideshow.on('afterShowSlide', function (slide) {
+	
+		if (hasanim()) {
+			slideshow.pause();
+			document.addEventListener('keydown', listenanim );
+	
+		}
+	
+	});
+	
+
+	function filterClass(obj, classval, idx=[]) {
+		// Recursively search through slide.content looking for class==class val
+		// and return the first instance
+		if (obj.hasOwnProperty("class") && obj.class == classval) {
+			return [idx, 0];
+			}
+		var cont = obj.content; 
+		var i, err;
+		for (i = 0; i < cont.length; i++) {
+			idx.push(i)
+			if (typeof(cont[i]) == 'string') {
+				idx.pop();
+			}
+			else if (typeof(cont[i]) == 'object') {
+				[idx, err] =  filterClass(cont[i], classval, idx);
+				if (err == 0) {
+					return [idx, err]
+					}
+				else if (err == -1) {
+					idx.pop();
+					}
+			}	
+		
+		}
+		return [idx,-1]
+	}
+	
+
+	
+  </script>
+</body>
+
+</html>
