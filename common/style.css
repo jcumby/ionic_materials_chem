@@ -1,18 +1,24 @@
 
+/* Font properties */
 body {
   font-family: 'Futura', 'Helvetica', 'Arial';
+  font-size: 20px;
 }
 
 h1, h2, h3 {
-  font-family: 'Futura', 'Helvetica', 'Arial'; 
   font-weight: 400;
   margin-bottom: 0;
 }
-.remark-slide-content h1 { font-size: 2.5em; }
+.remark-slide-content h1 { font-size: 3rem; }
 .remark-slide-content h2 { font-size: 2em; }
 .remark-slide-content h3 { font-size: 1.6em; }
 .remark-slide-content {	background-size: contain ; }
 
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+
+.large { font-size: 2rem; }
+.small { font-size: 0.8rem; }
 
 /* Slide backgrounds */
 .remark-slide-content.sky-background { 
@@ -28,14 +34,12 @@ h1, h2, h3 {
 .whitebkg { background-color: white; }
 
 /* Colours (e.g. text) */
-
 .red { color: #fa0000; }
 .blue { color: blue; }
 .grey { color: grey }
 
 
 /* Footnotes */
-
 .remark-slide-content .footnote {
   position: absolute;
   bottom: 0.6em;
@@ -52,35 +56,48 @@ h1, h2, h3 {
   right: 7em
 }
 
-/* Title layouts */
-
+/* Slide layouts */
 .remark-slide-content .author{
   float: center;
   bottom: 3em;
 }
 
+.remark-slide-content.compact p {
+  margin-block-start: 0.1em;
+  margin-block-end: 0.5em;
+}
+
+.remark-slide-content.compact h1,h2,h3, ul {
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+/* Formatting for specific blocks */
+
 li p { line-height: 1.25em; }
-
-
-.large { font-size: 2em; }
-
-.small { font-size: 0.8em; }
 
 a, a > code {
   color: gray;
   text-decoration: none;
 }
-/* reveal beige theme 
-a {
-  color: #8b743d;
-}
-*/
 
 code {
   border-radius: 5px;
 }
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-/*.remark-code-line-highlighted     { background-color: #373832; }*/
+
+#slideshow .slide .content code {
+  font-size: 0.8em;
+}
+#slideshow .slide .content pre code {
+  font-size: 0.9em;
+  padding: 15px;
+}
+
+
+
+/* General formatting for layout */
+
+/* Floating blocks of different widths */
 
 .pull-left {
   float: left;
@@ -94,9 +111,25 @@ code {
   float: middle;
   width: 47%;
 }
-  
+ /* 
 .pull-right ~ p {
   clear: both;
+}
+*/
+.clear-right {
+	clear: right;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-both {
+	clear: both;
+}
+
+.w10 {
+	width: 10%;
 }
 
 .w20 {
@@ -131,6 +164,10 @@ code {
 	width: 70%;
 }
 
+.w75  {
+	width: 75%;
+}
+
 .w80 {
 	width: 78%;
 }
@@ -139,170 +176,15 @@ code {
 	width: 100%;
 }
 
+/*
 .pull-right:after {
 	content: "";
 	display: table;
 	clear: both;
 }
+*/
 
-#slideshow .slide .content code {
-  font-size: 0.8em;
-}
-#slideshow .slide .content pre code {
-  font-size: 0.9em;
-  padding: 15px;
-}
-
-
-
-
-/* inversed colors for big text slides */
-.inverse {
-  background: #272822;
-  color: #777872;
-  text-shadow: 0 0 20px #333;
-}
-.inverse h1, .inverse h2 {
-  color: #f3f3f3;
-  line-height: 0.8em;
-}
-
-/* Slide-specific styling */
-#slide-inverse .footnote {
-  bottom: 12px;
-  left: 20px;
-}
-#slide-how .slides {
-  font-size: 0.9em;
-  position: absolute;
-  top:  140px;
-  right: 140px;
-}
-#slide-how .slides h3 {
-  margin-top: 0.2em;
-}
-#slide-how .slides .first, #slide-how .slides .second {
-  padding: 1px 20px;
-  height: 90px;
-  width: 120px;
-  -moz-box-shadow: 0 0 10px #777;
-  -webkit-box-shadow: 0 0 10px #777;
-  box-shadow: 0 0 10px #777;
-}
-#slide-how .slides .first {
-  background: #fff;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  z-index: 1;
-}
-#slide-how .slides .second {
-  position: relative;
-  background: #fff;
-  z-index: 0;
-}
-
-
-/* Two-column layout 50-50 */
-.two-columns-left {
-  width: 47%;
-  float: left;
-  clear: left;
-}
-.two-columns-right {
-  width: 47%;
-  float: right;
-  padding-left: 6%; /* padding extend the width */
-  clear: right;
-}
-
-table {
-	padding-block-start: 1em;
-	border-bottom: 1px solid gray;
-	margin-left: auto;
-	margin-right: auto;
-	border-spacing: 0;
-}
-
-th {
-    padding: 5px;
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
-}
-td {
-    padding: 5px;
-}
-
-td.red {
-	color: red;
-}
-
-tr {
-	border-bottom: 1px solid gray;
-}
-
-.highlighttable {
-	color: red;
-}
-
-.highlighttable  tr:nth-child(-n+5) {
-	color: gray;
-}
-
-.highlighttable  tr:nth-last-child(-n+2) {
-	color: black;
-}
-
-.table {
-	display: table;
-    border-collapse: collapse;
-    text-align: left;
-    margin: 0 auto;
-}
-
-.tableformat {
-	display: table;
-	empty-cells: hide;
-	border-collapse: collapse;
-	border-top: none;
-	text-align: left;
-    margin: 0 auto;
-	table-layout: fixed;
-	width: 80%;
-}
-
-.tablerow {
-	display: table-row;
-	table-layout: fixed;
-	border: 2px solid red;
-	width: 100%;
-}
-
-.tablerow ul {
-	margin: 0;
-	list-style: none;
-	padding: 0;
-}
-.tablerow li {
-	display: table-cell;
-	padding: 5px;
-	border: 1px solid green;
-	width=auto;
-}
-
-.tablecell {
-	display: table-cell;
-
-}
-
-img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	max-width:100%;	
-	max-height: 100%;
-}
+/* Grid-like layout commands */
 
 .twoxtwo {
 	display: grid;
@@ -511,6 +393,122 @@ img {
 	grid-row-end: span 4
 }
 
+/* Reduce the size of gaps around paragraphs within grid layouts */
+.grid p {
+	margin-block-start: 0.5em;
+	margin-block-end: 0em;
+	}
+	
+
+
+/* Two-column layout 50-50 */
+.two-columns-left {
+  width: 47%;
+  float: left;
+  clear: left;
+}
+.two-columns-right {
+  width: 47%;
+  float: right;
+  padding-left: 6%; /* padding extend the width */
+  clear: right;
+}
+
+
+
+/* Table formatting commands */
+
+table {
+	padding-block-start: 1em;
+	border-bottom: 1px solid gray;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 0;
+}
+
+th {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+td {
+    padding: 5px;
+}
+
+td.red {
+	color: red;
+}
+
+tr {
+	border-bottom: 1px solid gray;
+}
+
+.highlighttable {
+	color: red;
+}
+
+.highlighttable  tr:nth-child(-n+5) {
+	color: gray;
+}
+
+.highlighttable  tr:nth-last-child(-n+2) {
+	color: black;
+}
+
+.table {
+	display: table;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.tableformat {
+	display: table;
+	empty-cells: hide;
+	border-collapse: collapse;
+	border-top: none;
+	text-align: left;
+    margin: 0 auto;
+	table-layout: fixed;
+	width: 80%;
+}
+
+.tablerow {
+	display: table-row;
+	table-layout: fixed;
+	border: 2px solid red;
+	width: 100%;
+}
+
+.tablerow ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+.tablerow li {
+	display: table-cell;
+	padding: 5px;
+	border: 1px solid green;
+	width=auto;
+}
+
+.tablecell {
+	display: table-cell;
+
+}
+
+/* General image formatting */
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width:100%;	
+	max-height: 100%;
+}
+
+
 .hidden {
 	visibility: hidden;
 }
@@ -534,8 +532,58 @@ img {
 	height: 10%;
 }
 
-.grid p {
-	margin-block-start: 0.5em;
-	margin-block-end: 0em;
-	}
+
+	
+/* Unused (?) styles 
+	
+#slide-inverse .footnote {
+  bottom: 12px;
+  left: 20px;
+}
+#slide-how .slides {
+  font-size: 0.9em;
+  position: absolute;
+  top:  140px;
+  right: 140px;
+}
+#slide-how .slides h3 {
+  margin-top: 0.2em;
+}
+#slide-how .slides .first, #slide-how .slides .second {
+  padding: 1px 20px;
+  height: 90px;
+  width: 120px;
+  -moz-box-shadow: 0 0 10px #777;
+  -webkit-box-shadow: 0 0 10px #777;
+  box-shadow: 0 0 10px #777;
+}
+#slide-how .slides .first {
+  background: #fff;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+}
+#slide-how .slides .second {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+}
+
+
+
+
+.inverse {
+  background: #272822;
+  color: #777872;
+  text-shadow: 0 0 20px #333;
+}
+.inverse h1, .inverse h2 {
+  color: #f3f3f3;
+  line-height: 0.8em;
+}
+
+
+
+*/
 
