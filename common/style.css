@@ -13,7 +13,30 @@ h1, h2, h3 {
 .remark-slide-content h3 { font-size: 1.6em; }
 .remark-slide-content {	background-size: contain ; }
 
-.footnote {
+
+/* Slide backgrounds */
+.remark-slide-content.sky-background { 
+  background-image: radial-gradient(#f4f9fb, #afd7e3);
+  background-size: cover;
+}
+
+.beige-background { 
+  background-image: radial-gradient(white, #F5F3D3);
+  background-size: cover;
+}
+
+.whitebkg { background-color: white; }
+
+/* Colours (e.g. text) */
+
+.red { color: #fa0000; }
+.blue { color: blue; }
+.grey { color: grey }
+
+
+/* Footnotes */
+
+.remark-slide-content .footnote {
   position: absolute;
   bottom: 0.6em;
   font-size: 0.6em;
@@ -21,7 +44,7 @@ h1, h2, h3 {
   left: 0.8em
 }
 
-.footnoteright {
+.remark-slide-content .footnoteright {
   position: absolute;
   bottom: 0.6em;
   font-size: 0.6em;
@@ -29,18 +52,19 @@ h1, h2, h3 {
   right: 7em
 }
 
-.author{
+/* Title layouts */
+
+.remark-slide-content .author{
   float: center;
   bottom: 3em;
 }
-li p { line-height: 1.25em; }
-.red { color: #fa0000; }
-.blue { color: blue; }
-.grey { color: grey }
 
-.whitebkg { background-color: white; }
+li p { line-height: 1.25em; }
+
 
 .large { font-size: 2em; }
+
+.small { font-size: 0.8em; }
 
 a, a > code {
   color: gray;
@@ -129,17 +153,8 @@ code {
   padding: 15px;
 }
 
-.sky-background { 
-  background-image: radial-gradient(#f4f9fb, #afd7e3);
-  background-size: cover;
-}
 
-/*
-.beige-background { 
-  background-image: radial-gradient(white, #F5F3D3);
-  background-size: cover;
-}
-*/
+
 
 /* inversed colors for big text slides */
 .inverse {
@@ -160,7 +175,7 @@ code {
 #slide-how .slides {
   font-size: 0.9em;
   position: absolute;
-  top:  151px;
+  top:  140px;
   right: 140px;
 }
 #slide-how .slides h3 {
@@ -518,4 +533,9 @@ img {
 	width: 10%;
 	height: 10%;
 }
+
+.grid p {
+	margin-block-start: 0.5em;
+	margin-block-end: 0em;
+	}
 

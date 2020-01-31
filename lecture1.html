@@ -14,7 +14,7 @@
 <body>
   <textarea id="source">
 
-class: beige-background
+
 layout: true
     
     
@@ -102,40 +102,37 @@ To meet this demand will require a combination of energy sources:
 # **All** sources have problems...
 
 .pull-left[
-## Fossil fuels
+### Fossil fuels
 
 - **Finite supply**
 - Environmental cost (i.e. climate change)
 - Political uncertainty
 ]
 .pull-right[
-![:width 65%](./images/fossil_fuel_chimney.jpg)
+![:width 62%](./images/fossil_fuel_chimney.jpg)
 ]
-
 --
-
 .pull-left[
-## Nuclear
+### Nuclear
 - "Finite" supply
 - Concerns over waste storage
 - Political issues
 ]
 
 .pull-right[
-![:width 65%](./images/nuclear_waste.jpg)
+![:width 62%](./images/nuclear_waste.jpg)
 ]
 
 --
-
 .pull-left[
-## Renewable
+### Renewable
 - Intermittent source
 - (Relatively) expensive (although this is changing)
 - Limited lifespan of components
 ]
 
 .pull-right[
-![:width 65%](./images/solar_panel_night.jpg)
+![:width 62%](./images/solar_panel_night.jpg)
 ]
 ---
 
@@ -233,6 +230,7 @@ class: centre, top
 - Alternating Ag and Zn discs, NaCl electrolyte
 - Enabled *chemistry* e.g. 2H<sub>2</sub>O &rarr; H<sub>2</sub> + O<sub>2</sub>
 - Corrosion limited battery life
+
 ]
 .hidden[
 **1836**: Daniell cell: .grey[Zn|Zn<sup>2+</sup>,SO<sub>4</sub><sup>2-</sup> || SO<sub>4</sub><sup>2-</sup> | Cu<sup>2+</sup> | Cu ]
@@ -266,6 +264,8 @@ class: centre, top
 Voltaic pile came about as a disagreement between Volta and Galvani; the latter
 had discovered that frogs legs would move when forming a circuit from two different types of metal.
 Galvani asserted this was 'animal electricity'
+
+
 
 ---
 # Battery Operation
@@ -521,7 +521,7 @@ from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
 	
 	remark.macros.grid = function () {
 		var content = this.replace( /&\n/g, " ");
-		return content;
+		return ".grid[".concat(content).concat("]");
 	}
   
     var slideshow = remark.create({
@@ -532,7 +532,7 @@ from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
       countIncrementalSlides: false,
     });
 	
-		function doanim() {
+	function doanim() {
 		// Modify visibility of 'hidden' elements in order,
 		// only operating on the first non-hidden one
 		var vis = document.getElementsByClassName('remark-visible');
