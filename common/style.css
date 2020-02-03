@@ -33,6 +33,8 @@ h1, h2, h3 {
 
 .whitebkg { background-color: white; }
 
+.blackbkg { background-color: black; }
+
 /* Colours (e.g. text) */
 .red { color: #fa0000; }
 .blue { color: blue; }
@@ -399,6 +401,21 @@ code {
 	margin-block-end: 0em;
 	}
 	
+
+/* Relative positioning (compared to the default position) */
+
+
+.v400px {
+  position: relative;
+  top: 400px;
+}
+
+.h150px {
+  position: relative;
+  left: 150px
+}
+
+
 
 
 /* Two-column layout 50-50 */

@@ -9,10 +9,17 @@
   <style type="text/css">
     @import url("common/style.css");
   </style>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  
 </head>
 
 <body>
-  <textarea id="source">
+
+<main role="main">
+
+<textarea id="source">
 
 
 layout: true
@@ -30,6 +37,8 @@ james.cumby@ed.ac.uk
 
 Room 269
 ]
+
+.footnote[If you're using the html version, try pressing 'h' for instructions!]
 
 ---
 class: center, top
@@ -136,7 +145,10 @@ To meet this demand will require a combination of energy sources:
 ]
 ---
 
+background-image: url(./images/renewable_energy_bulb.jpg)
+
 # Drivers behind change
+
 
 
 - Problems with energy supply/demand
@@ -150,7 +162,6 @@ To meet this demand will require a combination of energy sources:
 - Dwindling oil and gas resources
 - Poltical aspects of fuel supply
 
-.pull-right.w40[ ![](./images/renewable_energy_bulb.jpg) ]
 
 ---
 
@@ -273,17 +284,24 @@ background-image: url(./images/nobel_prize_2019.jpg)
 .pull-center.w33[John B. Goodenough]
 .pull-right.w30[M. Stanley Whittingham]
 
-.pull-center[![:width 30%](./images/Nobel_Prize.png)]
+.pull_center.v400px.h150px[![:width 40%](./images/Nobel_Prize.png)]
 
 .footnote[https://www.nobelprize.org/prizes/chemistry/2019/popular-information/]
 
 ---
+class: blackbkg
+
+<iframe width="750" height="600" src="https://www.youtube-nocookie.com/embed/CkIKRoTFogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
 # Battery Operation
 
 .pull-left[ ![:width 60%](./images/battery_charging_schematic.png) ]
 .pull-right[ ![:width 60%](./images/battery_discharging_schematic.png) ]
 
-NOTE: In rechargeable cells, naming of *anode* and *cathode* is often unclear. Here we define:
+<br>
+**NOTE**: In rechargeable cells, naming of *anode* and *cathode* is often unclear. Here we define:
 - Cathode is **positive** electrode under **discharge**
 - Anode is **negative** electrode under **discharge**
 
@@ -292,16 +310,16 @@ NOTE: In rechargeable cells, naming of *anode* and *cathode* is often unclear. H
 
 The most important parameter in improving batteries is the total *energy capacity*, `\(E\)`
 - Combination of cell voltage (*V*) and amount of charge (*Q*) stored in material:
-$$
+.red[$$
 E_{\mathrm{bat}} = QV
-$$
-.grey[*Q* is expressed in units of Ah (1 mAh = 3.6 C), so *E*<sub>bat</sub> is in Wh (watt-hours)]
+$$]
+.grey[*Q* is expressed in units of Ah (1 mAh = 3.6 C), so *E*<sub>bat</sub> is in Wh (Watt-hours)]
 
 --
 
-- *E*<sub>bat</sub> is dependent on the amount of material. More useful:
-	- *Gravimetric* energy density (Wh g<sup>-1</sup>): Q is charge per unit mass (Ah g<sup>-1</sup>)
-	- *Volumetric* energy density (Wh L<sup>-1</sup>): Q is charge per unit volume (Ah L<sup>-1</sup>)
+- *E*<sub>bat</sub> is dependent on the amount of battery material. More useful are:
+	- Specific (gravimetric) energy (Wh g<sup>-1</sup>). .grey[ Q is charge per unit mass (Ah g<sup>-1</sup>)]
+	- (Volumetric) energy density (Wh L<sup>-1</sup>). .grey[ Q is charge per unit volume (Ah L<sup>-1</sup>)]
 
 .pull-left.w30[ <br> .center[We want to maximise volumetric and gravimetric energy densities]]
 	
@@ -310,12 +328,20 @@ $$
 
 .footnote[&copy; Barrie Lawson]
 
+???
+
+Energy capacity is often also known as 'nominal energy' or just 'energy'. It is simply the amount of useful energy stored in the battery.
+
+Note that 1 Wh = 3600 J!
+
 ---
-# Increase *E*<sub>bat</sub>: *voltage*
+# Increase *E*<sub>bat</sub>: Increase *voltage* `\(V\)`
 
 ![:width 80%](./images/energy_diagram_schematic.png)
 ---
-# Increase *E*<sub>bat</sub>: *charge stored*
+class: fit-h1,
+
+# Increase *E*<sub>bat</sub>: Increase *charge* `\(Q\)`
 
 Faraday's Law:
 $$
@@ -325,15 +351,18 @@ $$
 --
 
 *e.g.* for `\( \ce{LiCoO_2 -> Li^+ + e^- + CoO_2}\)` :
+.pull-right.w20[![](./images/john_goodenough.jpg)]
 
 --
 
+.clear_left[
 $$
 n = 1,
-F = 96485.3 \: \mathrm{sA\:mol}^{-1} \\\\
+F = 96485.3 \: \mathrm{As\:mol}^{-1} \\\\
 M_w = 97.873\: \mathrm{g\: mol^{-1}} \\\\
 \therefore Q = 274\: \mathrm{mAh\: g}^{-1} \\\\
 $$
+]
 
 --
 
@@ -342,20 +371,24 @@ In reality, the charge stored is less than the theoretical maximum
 - For LiCoO<sub>2</sub>, CoO<sub>2</sub> is *very* unstable: `\( \ce{2Co^{IV}O_2 -> Co^{III}_2O_3 + \frac{1}{2}O_2} \)`
 	- We can only safely reach Li<sub>0.5</sub>CoO<sub>2</sub>, so the useful capacity is 137 mAh g<sup>-1</sup>
 
+???
+	
+Effectively, this is charge stored (nF) per formula mass. The factor 3.6 converts F from A.s mol^{-1}) into A.h mol^{-1}
+	
 ---
 # Charging rates
 
 Ideally we want to charge batteries quickly
-.pull-left.w66[
-Define charge rate, `\( C = \frac{I}{Q} \)`, the ratio of discharge current to capacity
-- i.e. for a 100 mAh battery:
-	- `\(1C\)` => current of 100 A, which could be sustained for 1 hour
-	- `\(2C\)` => 200 A (for 30 mins)
-	- `\(\frac{1}{6} C \)` => 50 A (for 2 hours) 
-- This allows us to describe charging rates independent of battery capacity.
-]
 
-.pull-right.w33[ ![Battery Life](./images/battery_life_cartoon.png)]
+Define charge rate, `\( C = \frac{I}{Q} \)`, the ratio of discharge current to capacity
+- *i.e.* for a 1000 mAh (1 Ah) battery:
+	- `\(1C\)` => current of 1 A, which could be sustained for 1 hour
+	- `\(2C\)` => 2 A (for 30 mins)
+	- `\(\frac{C}{6} \)` => 0.167 A (for 6 hours) 
+- This allows us to describe charging rates independent of battery capacity.
+
+
+![:width 80%](./images/battery_discharge_rates.gif)
 
 ---
 # Effect of rate on capacity
@@ -364,26 +397,29 @@ High charging rates reduce capacity
 
 - Electrons can move much faster than ions, so at high *C*-rates strain occurs in the lattice
 	- Ions get stuck, reducing the overall discharge capacity
-	- Irreversible damage to crystal structure can occur, preventing future charging
+	- Irreversible damage to crystal structure and/or microstructure can occur, preventing future charging
 
 <br><br>
 ![](./images/cathode_degradation_schematic.gif)	
 	
-.footnote[B. Song, *J. Mat. Chem. A*, 2015, 18171.]
+.footnote[B. Song, *J. Mat. Chem. A*, **2015**, 18171.]
 	
 ???
 
-Peukert's law:
+Peukert's law was empirically derived to explain the variation in capacity with C for lead-acid batteries (which are sold 
+with a capacity under a specified discharge rate:
 
 $$
 t = H \left( \frac{Q}{IH} \right)^{k}
 $$
 
 where t is the actual discharge time, H is the rated discharge time (in hours), Q is the capacity (in Ah)
-and I is the discharge current. k is the Peukert constant, and typically falls in the range 1.1-1.3. k increases
-with battery cycling/age.
+and I is the discharge current. k is the Peukert constant, and typically falls in the range 1.1-1.3. 
 
-NOTE: Peukert's law was developed for lead-acid batteries, and doesn't apply well to e.g. Li-ion. This
+For an ideal battery (with no change in capacity for any cycling rate) k = 1. In reality, k increases
+with battery cycling nad/or age.
+
+**NOTE:** Peukert's law was developed for lead-acid batteries, and doesn't apply well to e.g. Li-ion. This
 is because it takes no account of temperature (from Nernst equation V&uarr; as T&uarr;) which is particularly
 important in Li-ion batteries.
 
@@ -391,24 +427,27 @@ important in Li-ion batteries.
 ---
 #Ragone .grey[(*ru-GO-nee*)] plot
 
-Quantifies the trade-off between energy density (E) and power density (P)
-- `\( P = IV \)`, whereas `\( E = QV \)`
+Displays the relation between *specific energy* (`\(E\)`) and *specific power* (`\(P\)`):
 
-Some applications require fast discharge over short times (e.g. electric sports car accelerating) while others need 
-more sustained energy supply (long-range electric vehicle)
+.pull-left.w30[`\\(E = QV (=ItV)\\)`] .pull-right.w70[The total amount of energy available in the battery]
+ <br></br>
+.pull-left.clear-both.w30[`\\( P = IV \\)`] .pull-right.w70[The rate at which energy can be used]
 
+
+.clear-both[<br>Some applications require fast discharge over short times (e.g. electric sports car accelerating) while others need 
+more sustained energy supply (long-range electric vehicle)]
 ![:width 70%](./images/ragone_plot.svg)
 
 .footnote[B.D. McCloskey, J. Phys. Chem. Lett., **2015**, 6, 3592-3593.]
 
 
 ---
-# Characterising capacity
+# Electrochemical measurements
 
 Typically we use *Galvanostatic* (constant current) measurements to characterise battery response, and measure the resulting
 voltage.
 - Charging rates have a big impact on device performance, so *potentiostatic* (*i.e.* constant voltage) measurements 
-would be difficult to attribute to chemistry vs. rate effects.
+would be difficult to attribute to chemistry *vs.* rate effects.
 
 .pull-left.w60[![](./images/galvanostat_graph.jpg)]
 .pull-right.w30[![](./images/gamry_galvanostat.jpg)]
@@ -417,17 +456,19 @@ would be difficult to attribute to chemistry vs. rate effects.
 
 
 ---
-# Characterising capacity
+# Electrochemical measurements
 
-e.g. for a 2.2 Ah battery:
+*e.g.* for a 2.2 Ah battery:
 
 .pull-left.w60[![galvanostat example](../resources/22Ah_battery_galvanostat.svg)]
 
 --
 
-.pull-right.w40[![Evscapacity](../resources/E_vs_capacity.svg)]
+.pull-right.w40[![Potential versus capacity](../resources/E_vs_capacity.svg)]
 
 .pull-left.w80[<br> Capacity can be expressed in a number of formats]
+
+
 
 ---
 # What can we learn from galvanostats?
@@ -449,8 +490,16 @@ e.g. for a 2.2 Ah battery:
 
 ???
 
+To a first approximation, the voltage depends linearly on the curvature of free energy with x,
+$$
+V \propto -\frac{\partial G(x)}{\partial x}.
+$$
+In the case of phase mixtures, the free energy follows a linear combination of the two phase minima,
+ so the potential is constant.
+
 ![](./images/voltage_curves_free_energy.jpg)
-from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
+
+For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
 
 
 ---
@@ -484,11 +533,11 @@ from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
 - Structural stability on ionic movement
 ]
 
-
-**Overall**
+.clear-both[
+.pull-center[**Overall**]
 
 - Compatibility between materials (particularly under volume changes during charge/discharge)
-
+]
 .pull-left[ ![:width 40%](./images/battery_charging_schematic.png)]
 .pull-right[ ![:width 40%](./images/battery_discharging_schematic.png)]
 
@@ -504,7 +553,9 @@ from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
 
 
 
-  </textarea>
+</textarea>
+
+
   <script src="common/remark-latest.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
   <script>
@@ -529,6 +580,8 @@ from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
 		
 	}
 	
+
+	
 	remark.macros.grid = function () {
 		var content = this.replace( /&\n/g, " ");
 		return ".grid[".concat(content).concat("]");
@@ -538,6 +591,19 @@ from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
       slideNumberFormat: '%current%',
       countIncrementalSlides: false,
     });
+	
+	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
+			}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});	
 	
 	function doanim() {
 		// Modify visibility of 'hidden' elements in order,
@@ -643,6 +709,9 @@ from http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
 
     MathJax.Hub.Configured();
   </script>
+  
+</main>
+  
 </body>
 
 </html>
