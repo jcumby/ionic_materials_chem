@@ -282,7 +282,21 @@ code {
 
 .border{ 
 	border-left: 1px solid grey;
+	border-right: 1px solid grey;
 }	
+
+.grid_grey {
+	background-color: lightgrey;
+	}
+	
+.grid_blue {
+	background-color: lightblue;
+}
+
+.grid_yellow {
+	background-color: lightyellow;
+}
+
 
 .fourxfour,.twoxthree p,ul {
 	margin-block-start: 0.5em;
@@ -415,6 +429,23 @@ code {
   left: 150px
 }
 
+.rel_vmiddle {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+/* Absolute positioning */
+.abs_vbottom {
+	position: absolute;
+	bottom: 0%;
+}
+
+.abs_vmiddle {
+	position: absolute;
+	left: 50%;
+}
 
 
 
@@ -536,7 +567,8 @@ img {
 }
 
 .morevspace {
-	margin-block-start: 6em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
 }
 
 .outlinebox {
