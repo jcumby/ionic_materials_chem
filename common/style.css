@@ -250,6 +250,19 @@ code {
 	align-items; center;
 }	
 
+.threexten {
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+	grid-template-rows: repeat(10, 2em);
+	justify-content: center;
+	align-content: center;
+	column-gap: 0px;
+	row-gap: 0px;
+	justify-content: start;
+	align-content; top;
+	align-items; center;
+}	
+
 .threexfour {
 	display: grid;
 	grid-template-columns: repeat(3, 33%);

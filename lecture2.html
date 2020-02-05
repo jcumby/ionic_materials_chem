@@ -45,11 +45,11 @@ class: center, middle
 ---
 # Cationic Batteries
 
-Li-ion batteries have come to dominate the commericial market. Why?
+Li-ion batteries have come to dominate the commercial market. Why?
 
 - Li/Li<sup>+</sup> has one of the most negative reduction potentials of any element:
 .pull-left.center.w75[ $$ \ce{ Li^+ + e^- -> Li(s)} $$]
-.pull-right.w25[ $$ E = -3.04 \mathrm{V \ (vs. SHE)} $$]
+.pull-right.w25[ $$ E = -3.04\ \mathrm{V \ (vs. SHE)} $$]
 	
 --
 
@@ -66,8 +66,8 @@ $$
 .pull-right.w25[
 $$
 \begin{align}
-&E \simeq +0.8 V \\\\				
-&E = -2.84 V \\\\
+&E \simeq +0.8\ \mathrm{V} \\\\				
+&E = -2.84\ \mathrm{V}
 \end{align}
 $$
 ]
@@ -75,14 +75,14 @@ $$
 
 .pull-left.w100.clear-both[overall (on discharge):]
 .pull-left.center.w75[$$ \ce{ LiC6 + CoO2 -> LiCoO2 + 6C } $$]
-.pull-right.w25[$$ E = +3.64 V $$]
+.pull-right.w25[$$ E = +3.64 \ \mathrm{V} $$]
 
 
 $$
 \begin{align}
 \Delta G &= -nFE \\\\
-&= -279.8\ \mathrm{kJ\ mol}^{-1} \\\\
-&= -77.7\ \mathrm{Wh\ mol}^{-1} \\\\
+&= -351.2\ \mathrm{kJ\ mol}^{-1} \\\\
+&= -97.5\ \mathrm{Wh\ mol}^{-1} \\\\
 \end{align}
 $$
 .grey[Note: 1 W = 1 J s<sup>-1</sup>, so 1 Wh = 3600 J = 3.6 kJ]
@@ -149,26 +149,40 @@ Materials for Li-ion cathodes fall into three main families:
 
 As Li<sup>+</sup> is removed from the anode, E<sub>meas</sub> changes:
 
-Nernst Equation:	
+This can be understood using the Nernst Equation:	
 $$
-E_{meas} = E^{\circ} - \frac{RT}{nF} \ln \frac{[Red]}{[Ox]}
+E_{meas} = E^{\circ} - \frac{RT}{nF} \ln Q_r
 $$
-
+where `\(Q_r\)` is the reaction quotient (how far it has proceeded).
 --
 
 
 *e.g.*:
 $$
 \begin{align}
-\ce{Li+ + CoO2 + e- &-> LiCoO2}    & E &= +0.6 V \\\\
+\ce{Li+ + CoO2 + e- &-> LiCoO2}    & E &= +0.8 V \\\\
 \ce{Li+ + 6C + e- &-> LiC6}         & E &= -2.84 V \\\\
-\mathrm{Overall:}\qquad\quad \ce{ LiC6 + CoO2 &-> LiCoO2 + 6C }  & E &= +2.90 V \\\\
+\mathrm{Overall:}\qquad\quad \ce{ LiC6 + CoO2 &-> LiCoO2 + 6C }  & E^{\circ} &= +3.64 V \\\\
 \end{align}
 $$
 --
 $$
-E = 2.90 - \frac{RT}{F} \ln \frac{[\ce{LiCoO2}]}{[\ce{LiC6}]}
+E = 3.64 - \frac{RT}{F} \ln \frac{\mathrm{moles}(\ce{LiCoO2})}{\mathrm{moles}(\ce{CoO2})}
 $$
+
+???
+
+You may have seen the Nernst equation defined using the equilibrium constant `\(K\)` in place of 
+`\(Q_r\)`. `\(K\)` is used when the reaction is in equilibrium, which is not necessarily true for
+a Li-ion battery (depending on the C-rate).
+
+Strictly speaking, the Nernst equation does not fully describe the variation in cell 
+potential on charge/discharge, as the chemical potential of Li `\((\mu_{Li})\)` at both 
+the anode and cathode does not vary linearly with the ratio of charged:discharge material;
+at very low or high proportions of Li (*e.g.* large or small `\(x\)` in `\(\ce{Li_{x}CoO2}\)`)
+the voltage deviates from its predicted value.
+
+
 
 ---
 background-image: url(./images/periodic_table_abundance.png)
@@ -202,7 +216,7 @@ Typically, graphite is used as the anode in Li-ion batteries:
 # Anode Materials
 
 .pull-left.w40[As cathode capacities improve, graphite will become the limiting
-cell cacpacity
+cell capacity
 
 Silicon has a clear advantage in capacity, but breaks down due to massive (320 %)
 volume changes.
@@ -258,7 +272,7 @@ Two factors contribute to the 'demise' of Li-ion batteries:
 .footnote[S.S. Choi, *J. Power Sources*, 2002, 130.]
 
 ---
-# Solid-Electrolyte Interphase (SEI)
+# Solid-Electrolyte **Interphase** (SEI)
 
 Liquid electrolyte is thermodynamically *unstable* in presence of Li-rich graphite (LiC<sub>6</sub>) or Li-metal, decomposing
 to form SEI.
@@ -302,18 +316,19 @@ partial solution.
 https://areweanycloser.wordpress.com/2013/06/21/dendritic-lithium-and-battery-fires/
 
 ---
-# Beyond current Li-ion
+# The future of Li-ion?
 
-One possible solution is the lithium-air battery:
+Use lighter materials: the **lithium-air** battery:
+- Form Li<sub>2</sub>O<sub>2</sub> as needed when discharging
 - Removes much of the mass (and cost) of the cathode
 	- replaced with porous carbon
-- Has energy capacity 5-times that of current Li-ion
+- Has specific capacity 5-times that of current Li-ion
 
-.pull-left.w60[![](./images/lithium_air_battery.jpg)]
+.pull-left.w50[![](./images/lithium_air_battery.jpg)]
 
 --
 
-.pull-right.w40[
+.pull-right.w50[
 **But:**
 - Li<sub>2</sub>O<sub>2</sub> is highly insulating
 - Stability of other components (particularly in the presence of O<sub>2</sub>) limits long-term use
@@ -321,8 +336,17 @@ One possible solution is the lithium-air battery:
 - Dendrites and SEI are highly problematic
 ]
 
+???
 
+Using *e.g.* a lithium metal anode:
 
+$$
+\begin{align}
+&\mathrm{Anode} & \ce{2Li^+ + 2e- &<- 2Li } \\\\
+&\mathrm{Cathode} & \ce{2Li+ + O2 + 2e- &-> Li2O2} \\\\
+&\mathrm{Overall} & \ce{2Li + O2 &-> Li2O2} \qquad (E = 2.96\ \mathrm{V})\\\\
+\end{align}
+$$
 
 
 
@@ -367,11 +391,16 @@ $$
 ])
 
 
-.pull-left[
+.pull-left.w20[
 $$
-E_{\mathrm{cell}} = 0.49 \mathrm{V} - (-0.83 \mathrm{V}) = 1.32\ \mathrm{V}
+\begin{align}
+E_{\mathrm{cell}} &= 0.49 \mathrm{V} - (-0.83 \mathrm{V}) \\\\
+                  &= 1.32\ \mathrm{V}
+\end{align}
 $$
 ]
+
+
 
 
 ---
@@ -392,6 +421,9 @@ $$
 - Limited to low C-rates
 - Voltage very sensitive to temperature
 - Very high self-discharge
+
+![:width 38%](./images/camera_flash.jpg)
+
 ]
 
 --
@@ -470,19 +502,19 @@ $$
 --
 
 .pull-left.w40[
-By (combined) mass:
+.blue[By combined mass:]
 
 M<sub>w</sub> = 254.83 g mol<sup>-1</sup>
 
 Q<sub>grav.</sub> = 315 mAh g<sup>-1</sup>, so
-Gravimetric energy density = ** 1042 Wh kg<sup>-1</sup> **
+Gravimetric energy density = ** 1.04 Wh kg<sup>-1</sup> **
 
 ]
 
 --
 
 .pull-right.w60[
-By combined volume:
+.blue[By combined volume:]
 
 LaF<sub>3</sub> density = 5.9 g cm<sup>-3</sup> <br>
 Co density = 1.14 g cm<sup>-3</sup>
@@ -495,25 +527,27 @@ Volumetric energy density = **7340 Wh L<sup>-1</sup>**
 volumetric density is still ca. 5069 Wh L<sup>-1</sup>, *cf.* 400 Wh L<sup>-1</sup> for Li-ion!]
 
 ???
-Volume per LaF3 = 54.78 &times; N<sub>A</sub> &#8491;<sup>3</sup> mol<sup>-1</sup>/*
-Volume per Co = 11.12 &times; N<sub>A</sub> &#8491;<sup>3</sup> mol<sup>-1</sup>
+This calculation is quite approximate, but gives an indication of the potential capacity. Gravimetric
+energy density is quite poor, but for some applications (*e.g.* domestic power storage) volume is more
+critical than mass.
+
+Also note that La is very heavy; by choosing a different fluoride this could improve the gravimetric properties!
 
 
 ---
 # Fluoride ion battery problems
 
-- Solid state electrolytes are required as efficient fluoride ion conducting electrolytes
-	- These require high temperatures (&ge; 150 &deg;)
-		- Recently, R<sub>4</sub>N<sup>+</sup> salts have provided low-temperature F<sup>-</sup> conduction
-
---
-		
-- Potential safety risks if F<sub>2</sub> is created
-
-![:width 60%](./images/fluorine_and_steel.jpg)
-
+- Most fluoride ion conductors are solids, requiring high temperature (&ge; 150 &deg;) operation
+	- Recently, R<sub>4</sub>N<sup>+</sup> salts have provided low-temperature F<sup>-</sup> conduction
 		
 .footnote[V.K. Davies et al., *Science*, 2018, 1144.] 
+--
+		
+- Potential safety risks if HF is generated (particulary likely at high temperatures)
+
+.center[<iframe width="560" height="315" src="https://www.youtube.com/embed/6ZBwluyR2Tc?start=150" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]
+
+
 
 
 
@@ -521,7 +555,7 @@ Volume per Co = 11.12 &times; N<sub>A</sub> &#8491;<sup>3</sup> mol<sup>-1</sup>
 ---
 # Redox flow batteries
 
-Rather than storing a fixed amount of charge in an electrode, why not use a flowing redox reaction?
+Rather than storing a fixed amount of charge in an electrode, why not use a liquid redox reaction?
 
 ![:width 70%](./images/flow_battery_schematic.gif)
 
@@ -611,7 +645,7 @@ $$
       highlightStyle: 'monokai',
       highlightLanguage: 'remark',
       highlightLines: true,
-      slideNumberFormat: '%current%',
+      slideNumberFormat: '',
       countIncrementalSlides: false,
     });
 	
