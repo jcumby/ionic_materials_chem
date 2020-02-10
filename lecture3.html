@@ -153,27 +153,54 @@ The total impedance `\((Z(\omega) = \frac{E_t}{I_t} )\)` can be represented as a
 .pull-left.w70[
 Two standard ways to display data:
 
-- **Nyquist plot**: -Z'' (90&deg; out-of-phase) against Z' (in phase). 
 - **Bode plot**: |Z| and &phi; plotted against frequency
+- **Nyquist plot**: -Z'' (90&deg; out-of-phase) against Z' (in phase).
 	]
 
 --
 
 
-.large[Ideal Response]
+##Ideal Response
 
-.pull-left[![](./images/resistor_bode_and_nyquist.png)]
-.pull-right[![](./images/capacitor_bode_and_nyquist.png)]
+.pull-left[ ![:width 50%](./images/simple_R_circuit.png)]
+.pull-right[ ![:width 50%](./images/simple_C_circuit.png)]
 
+
+.pull-left.w50[![](./images/simple_R_bode_nyquist.png)]
+.pull-right.w50[![](./images/simple_C_bode_nyquist.png)]
+
+.pull-left[
+- Single Z' value for all frequencies
+    - Z'' = 0
+- 0&deg; phase shift
+]
+
+.pull-right[
+- Z'' varies with frequency
+    - Z' = 0
+- 90&deg; phase shift
+]
+
+
+???
+
+Z'' for a capacitor can be related to f by the formula:
+
+$$
+Z'' = \frac{1}{2 \pi f C}
+$$
+where f is frequency and C is the capacitance (in farads)
 
 ---
 # 'Real' Impedance
 
-Many real materials exhibit behaviour like a parallel RC circuit:
+.pull-right.w20[![](./images/parallel_RC_circuit.png)]
 
-![:width 50%](./images/parallel_RC_bode_nyquist.png)
+.pull-left.w80[<br>Many real materials exhibit behaviour like a parallel RC circuit:
+]
 
-*e.g.*
+.pull-left.w100[![:width 85%](./images/parallel_RC_bode_nyquist2.png)]
+
 - Ions flowing through a solution and building up a layer on the electrode (see later)
 - Ionic conduction in a ceramic material building up a charge gradient
 
@@ -186,7 +213,8 @@ More complex behaviour is often observed, and can be modelled using *equivalent 
 Changing the electric field direction causes the dipoles to rearrange with a characteristic timescale. This timescale means *real* dielectrics
 show a peak in &phi; with frequency, corresponding to the maximum energy loss.
 
-![:width 30%](./images/randles_circuit_bode_nyquist.svg)
+.pull-right.w20[![](./images/parallel_RC_seriesR_circuit.png)]
+.pull-left.w80[![](./images/parallel_RC_seriesR_bode_nyquist.png)]
 
 --
 
@@ -197,8 +225,16 @@ This *dielectric loss* is often characterised as `\( \tan \delta = \frac{Z'}{-Z'
 
 .pull-right.w30[![:width 60%](./images/complex_impedance.svg)]
 
+???
 
-.footnote[The Z<sub>w</sub> component (Warburg impendance) is not always observed at low frequency; it depends on the interaction between electrode and dielectric]
+Note: In ionically conducting materials, an additional signal is often also observed at low frequencies due to interaction
+between the conducting ion and the measurement electrode(s).
+
+![:width 60%](./images/randles_circuit_bode_nyquist2.png)
+
+Real materials also usually consist of closely-packed ceramic grains. For many materials, different R/C effects are seen
+at the grain boundaries *vs.* in the bulk, giving rise to 2 (often overlapping) semicircles.
+
 ---
 # Dielectric breakdown
 
@@ -216,7 +252,7 @@ Take *e.g.* a BaTiO<sub>3</sub>-based capacitor:
 
 - &epsilon;<sub>r</sub> &approx; 1000
 - Dielectric strength &approx; 10 MV m<sup>-1</sup>
-- Thickness &approx; 1 &mu;m
+- Thickness `\((d)\)` &approx; 1 &mu;m
 
 Assuming a total volume of 5 cm<sup>3</sup> (similar to an AA battery):
 --
@@ -228,11 +264,11 @@ $$
 C = \frac{\epsilon_r \epsilon_0 A}{d} =  0.04427 \mathrm{\ F}
 $$
 --
-Maximum voltage = `\(10 \times 10^6 / 1 \times 10^-6 = 10 \mathrm{\ V} \)`, therefore:
+Maximum voltage = `\(10 \times 10^6 / 1 \times 10^{-6} = 10 \mathrm{\ V} \)`, therefore:
 $$
 Q = CV = 0.4427 \mathrm{\ Coulombs} = 0.1229 \mathrm{\ mAh}
 $$
-This is a volumetric capacity of 24.6 mAh L<sup>-1</sup>, Energy capacity = 0.245 Wh L<sup>-1</sup>
+Volumetric charge storage of 24.6 mAh L<sup>-1</sup>: Energy capacity = 0.245 Wh L<sup>-1</sup>
 
 .footnote[This is a higher than realistic estimate due to ignoring electrodes, packaging etc. but is still less than a battery!]
 
@@ -243,7 +279,7 @@ This is a volumetric capacity of 24.6 mAh L<sup>-1</sup>, Energy capacity = 0.24
 Although energy capacity is worse than for batteries (often by a lot), capacitors can discharge the charge very rapidly
 - A discharge current of 100 Amps can be easily achieved.
 
-This gives a high specfic power. For the BaTiO<sub>3</sub> capacitor considered before,
+This gives a high specific power. For the BaTiO<sub>3</sub> capacitor considered before,
 this gives power density approximately 1000 W L<sup>-1</sup>!
 
 --
@@ -296,43 +332,45 @@ $$
 --
 The total energy stored is:
 $$
-E = \frac{QV^2}{2}
+E = \frac{CV^2}{2}
 $$
 Charging voltages are typically 1-3 V (depending on electrolyte). 
 
 ---
+
 # Electrolytes
 
-![:grid](.twoxthree[ 
-.c1r2.rspan2[  &
+.pull-left[
+## Aqueous
 - Acids (*e.g.* H<sub>2</sub>SO<sub>4</sub>)
 - Alkalis (KOH)
 - NaClO<sub>4</sub> or LiClO<sub>4</sub>
 - LiAsF<sub>6</sub>
-] &
-.c1r1[ ##Aqueous ] &
-.c2r1[ ##Organic ] &
+]
 
-.c2r2.rspan2[ *e.g.* acetonitrile, propylene carbonate, tetrahydrofuran with:
+.pull-right[
+## Organic
+*e.g.* acetonitrile, propylene carbonate, tetrahydrofuran with:
 - Tetraethylammonium tetrafluoroborate, N(Et)<sub>4</sub>BF<sub>4</sub>
 - Triethyl(methyl) tetrafluoroborate, NMe(Et)<sub>3</sub>BF<sub>4</sub>
-] &
-.c1r4.cspan2[&
-<br>.center[ .hidden[
+]
+
+--
+.clear-both.center[
 &larr; Cheaper <br>
 Higher voltage &rarr; <br>
 Wider temperature range &rarr; <br>
 &larr; Higher conductivity <br>
 &larr; Higher specific power <br>
 Higher specific energy &rarr; <br>
-]]]])
-
+]
 
 
 ---
 # Electrode materials
 
-C &prop; amount of double-layer &prop; A &rarr; electrodes are designed to have maximum area
+- .large[C &prop; amount of double-layer &prop; A &rarr;]
+    - electrodes are designed to have maximum area
 
 ### Porous (activated) carbon
 
