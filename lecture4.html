@@ -308,11 +308,9 @@ $$
 - Two sub-groups
 	- High-temperature (HT) SOFC: 800 - 1000 &deg;C-C
 	- Intermediate temperature (IT) SOFC: 500 - 700 &deg;C
-	
 --
 
 - Based around redox and conduction of O<sup>2-</sup>:
-
 $$
 \begin{align}
 &\text{Anode:} & \ce{H2O + 2e- &-> H2 + O^{2-}} \\\\
@@ -323,7 +321,6 @@ $$
 $$
 
 --
-
 - The high temperature operation means that internal steam reforming occurs readily
 	- a wide range of fuels can be used
 - No precious metal catalysts are required
@@ -349,53 +346,52 @@ and issues with thermal expansion, reactivity and device construction
 
 ![:width 60%](./images/bloom_energy_fuel_cell.jpg)
 
-
 ---
 # Requirements for SOFC materials
-
-![:grid](.threexthree.gapped[
-.c1r1.border[ **Anode**
-]
-.c2r1.border[**Electrolyte**]
-.c3r1.border[**Cathode**]
-.c1r2.border[
+.pull-left.w33[
+**Anode**
 - High electronic conductivity
 - High catalytic activity for fuel oxidation
 - High ionic conductivity
 - High stability under HT reducing conditions
 ]
-.c2r2.border[
+
+.pull-left.center.w33[
+**Electrolyte**
 - High ionic conductivity
 - Negligible electronic conductivity
 - High stability in oxidising *and* reducing environments
 ]
-.c3r2.border[
+.pull-right.w33[
+**Cathode**
 - High electronic conductivity
 - High catalytic activity for O<sub>2</sub> reduction
 - High ionic conductivity
 - Stable in HT oxidising conditions
 ]
-.c1r3.border.hidden[
+
+--
+
+.pull-left.clear-both.w33[
 Typically a cermet (*i.e.* mixture) of Ni and electrolyte
 - Ni has high electronic conductivity and catalytic activity
 - High ionic conductivity from electrolyte
 ]
-.c2r3.border.hidden[
+.pull-left.center.w33[
 *e.g.* 
 - `\(\ce{Gd_{0.1}Ce_{0.9}O_{1.95}}\)` (CGO)
 - `\( \ce{Y_{0.15}Zr_{0.85}O_{1.925} }\)` (YSZ)
 ]
-.c3r3.border.hidden[
+.pull-right.w33[
 - `\(\ce{La_{1-x}Sr_{x}CoO_{3-y}} \)` - a good mixed conductor, 
 but with high thermal expansion
 - `\( \ce{La2NiO_{4+x}} \)` - an intersitial oxide ion conductor
 ]
-])
 
-<br>
-<br>
+--
 
-.hidden[As well as: Chemical stability, Similar thermal expansion, Cost, ...]
+.pull-left.w100[<br>As well as: Chemical stability, similar thermal expansion, cost, ...]
+
 
 ---
 # Improving electrodes
@@ -503,7 +499,7 @@ Typically, these peak powers are lower than batteries
       highlightStyle: 'monokai',
       highlightLanguage: 'remark',
       highlightLines: true,
-      slideNumberFormat: '%current%',
+      slideNumberFormat: '',
       countIncrementalSlides: false,
     });
 	
