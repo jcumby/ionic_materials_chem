@@ -32,7 +32,7 @@ class: center, middle
 Batteries are a good charge-storage solution, but are limited in how quickly they can discharge (safely).
 - Ultimately, redox processes can only occur so fast...
 
---
+<!-- inc -->
 
 Why not separate charges directly?
 
@@ -80,7 +80,7 @@ The maximum charge stored, `\( Q = CV \)`
 `\(C = \frac{\epsilon_0 A}{d}\)`, so decreasing `\(d\)` or increasing `\(A\)` will increase stored charge. If `\(d\)` gets
 too small, however, electrons will tunnel from one plate to the other.
 
---
+<!-- inc -->
 
 Alternatively, use a **dielectric**
 - *An electrically insulating material in which an applied electric field causes a **displacement** (but not a flow) of charge.*
@@ -132,7 +132,7 @@ Apply an alternating (sinusoidal) field, and measure the resulting current *and 
 - Response current, `\(I_t = I_0 \sin(\omega t + \phi) \)`
 
 ![:width 50%](./images/capacitor_impedance_sinusoid.gif)
---
+<!-- inc -->
 
 The total impedance `\((Z(\omega) = \frac{E_t}{I_t} )\)` can be represented as a complex number: 
 - `\(Z(\omega) = Z_0 (\cos \phi + i \sin \phi )\)`
@@ -157,7 +157,7 @@ Two standard ways to display data:
 - **Nyquist plot**: -Z'' (90&deg; out-of-phase) against Z' (in phase).
 	]
 
---
+<!-- inc -->
 
 
 ##Ideal Response
@@ -216,7 +216,7 @@ show a peak in &phi; with frequency, corresponding to the maximum energy loss.
 .pull-right.w20[![](./images/parallel_RC_seriesR_circuit.png)]
 .pull-left.w80[![](./images/parallel_RC_seriesR_bode_nyquist.png)]
 
---
+<!-- inc -->
 
 .pull-left.w70[
 This *dielectric loss* is often characterised as `\( \tan \delta = \frac{Z'}{-Z''} \)`, where `\( \delta = 90^{\circ}-\phi \)` 
@@ -255,7 +255,7 @@ Take *e.g.* a BaTiO<sub>3</sub>-based capacitor:
 - Thickness `\((d)\)` &approx; 1 &mu;m
 
 Assuming a total volume of 5 cm<sup>3</sup> (similar to an AA battery):
---
+<!-- inc -->
 
 $$
 A = \frac{5 \times 10^{-6}}{1 \times 10^{-6}} = 5 \mathrm{\ m}^2
@@ -263,7 +263,7 @@ $$
 $$
 C = \frac{\epsilon_r \epsilon_0 A}{d} =  0.04427 \mathrm{\ F}
 $$
---
+<!-- inc -->
 Maximum voltage = `\(10 \times 10^6 / 1 \times 10^{-6} = 10 \mathrm{\ V} \)`, therefore:
 $$
 Q = CV = 0.4427 \mathrm{\ Coulombs} = 0.1229 \mathrm{\ mAh}
@@ -282,7 +282,7 @@ Although energy capacity is worse than for batteries (often by a lot), capacitor
 This gives a high specific power. For the BaTiO<sub>3</sub> capacitor considered before,
 this gives power density approximately 1000 W L<sup>-1</sup>!
 
---
+<!-- inc -->
 
 ![:width 70%](./images/power_energy_different_tech.png)
 
@@ -293,7 +293,7 @@ this gives power density approximately 1000 W L<sup>-1</sup>!
 - Higher capacitance (but lower voltage limits) than other capacitors
 - Sometimes known as ultracapacitors or electrostatic double layer capacitors (EDLCs)
 
---
+<!-- inc -->
 
 Rather than a ceramic dielectric, supercapacitors rely on an ionic electrolyte solution, and an ion-permeable membrane to
 prevent electronic conduction.
@@ -324,12 +324,12 @@ Because there are two double-layers, a supercapacitor behaves as two capacitors 
 $$
 \frac{1}{C} = \frac{1}{C_a} + \frac{1}{C_c}
 $$
---
+<!-- inc -->
 For a symmetric supercapacitor (commonly called ultracapacitor, where anode and cathode are the same material):
 $$
 C = \frac{C_A}{2}
 $$
---
+<!-- inc -->
 The total energy stored is:
 $$
 E = \frac{CV^2}{2}
@@ -355,7 +355,7 @@ Charging voltages are typically 1-3 V (depending on electrolyte).
 - Triethyl(methyl) tetrafluoroborate, NMe(Et)<sub>3</sub>BF<sub>4</sub>
 ]
 
---
+<!-- inc -->
 .clear-both.center[
 &larr; Cheaper <br>
 Higher voltage &rarr; <br>
@@ -381,7 +381,7 @@ Higher specific energy &rarr; <br>
 ]
 .pull-right.w40[ ![:width 80%](./images/activated_carbon_pores.jpg) ]
 
---
+<!-- inc -->
 
 .pull-left.w60[
 - Activated carbon is relatively expensive and potentially unsustainable
@@ -400,7 +400,7 @@ One way to increase energy storage in supercapacitors is to add redox-active spe
 
 ![:width 40%](./images/pseudocapacitance_schematic.png)
 
---
+<!-- inc -->
 
 - Must be fast, reversible redox processes (so that power density remains high)
 - Pseudocapacitance can contribute 100 times the double-layer capacitance
@@ -419,7 +419,7 @@ NOTE: In order to be considered pseudocapacitance, charge stored must depend lin
 One of the main drawbacks of supercapacitors is that their voltage drops with time
 .lessvspace[- Not ideal for powering devices]
 
---
+<!-- inc -->
 
 Hybrid capacitors combine a battery-electrode with a supercapacitor electrode
 - *e.g.* replace carbon cathode with NiOOH
@@ -440,7 +440,7 @@ Hybrid capacitors combine a battery-electrode with a supercapacitor electrode
 
 .pull-left.w60[ ![](./images/capacitor_pcb.jpg)]
 
---
+<!-- inc -->
 
 .pull-right.w40[ ![width: 60%](./images/regenerative_braking_schematic.png)]
 
@@ -450,7 +450,7 @@ Hybrid capacitors combine a battery-electrode with a supercapacitor electrode
 - Large currents generated; supercapacitors required to store charge
 ]
 
---
+<!-- inc -->
 
 .pull-left.w50[
 **Medical devices** *i.e.* pacemakers
@@ -458,7 +458,7 @@ Hybrid capacitors combine a battery-electrode with a supercapacitor electrode
 ]
 
 .pull-left.w25[ ![](./images/pacemaker.jpg)]
---
+<!-- inc -->
 .pull-right.w25[ ![:width 60%](./images/supercapacitor_drill.jpg)]
 
 
