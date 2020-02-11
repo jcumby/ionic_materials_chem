@@ -75,7 +75,7 @@ $$
 $$
 \begin{align}
 \text{Cathode:} & & \ce{4H+ + O2 + 4e- &-> 2H2O & & E} = +1.229 \mathrm{\ V} \\\\
-\text{Anode:} & & \ce{4H+ + 4e- &-> 2H2} & & E = 0.00 \mathrm{\ V} \\\\
+\text{Anode:} & & \ce{4H+ + 4e- &<- 2H2} & & E = 0.00 \mathrm{\ V} \\\\
 \end{align}
 $$
 --
@@ -293,18 +293,18 @@ Operates at 200 &deg;C
 
 - Optimum temperature 560 &deg;C
 - Range of fuel choices
-	- High temperature allows steam reforming to generate H<sub>2</sub>:
+	- High temperature allows steam reforming (water-gas shift reaction) to generate H<sub>2</sub>:
+	
 $$
 \begin{align}
-& & \ce{CH4 + 2H2O &-> CO2 + 4H2 }  \\\\
-&\text{or} &  \ce{CH4 + H2O &-> CO + 3H2 } \\\\
-&\text{then} & \ce{CO + H2O &-> CO2 + H2} \\\\
+&\ce{CH4 + 2H2O -> & CO2 + 4H2 } \quad &\text{or} \quad  \ce{CH4 + H2O -> CO + 3H2 } \\\\
+&\text{followed by:} & \ce{CO + H2O &<=> CO2 + H2}
 \end{align}
 $$
 
 $$
 \begin{align}
-&\text{Anode:} & \ce{CO2 + H2O + 2e- &-> H2 + CO3^{2-}} \\\\
+&\text{Anode:} & \ce{CO2 + H2O + 2e- &<- H2 + CO3^{2-}} \\\\
 &\text{Cathode:} & \ce{\frac{1}{2}O2 + CO2 + 2e- &-> CO3^{2-}} \\\\
 \end{align}
 $$
@@ -324,19 +324,23 @@ $$
 
 - All solid state system (*i.e.* solid electrolyte)
 - Two sub-groups
-	- High-temperature (HT) SOFC: 800 - 1000 &deg;C-C
+	- High-temperature (HT) SOFC: 800 - 1000 &deg;C
 	- Intermediate temperature (IT) SOFC: 500 - 700 &deg;C
 --
 
 - Based around redox and conduction of O<sup>2-</sup>:
+
 $$
 \begin{align}
-&\text{Anode:} & \ce{H2O + 2e- &-> H2 + O^{2-}} \\\\
-&\text{or with hydrocarbon fuels}    & \ce{CO2 + 2e- &-> CO + O^{2-}} \\\\
-&\text{or}              & \ce{2H2O + CO2 + 8e- &-> CH4 + 4O^{2-}} \\\\
-&\text{Cathode:}  & \ce{O2 + 4e- &-> 2O^{2-}} \\\\
+&\text{Anode (depending on fuel):} & &\begin{cases}
+\ce{2H2O + 4e- &<- 2H2 + 2O^{2-}} \\\\
+\ce{2CO2 + 4e- &<- 2CO + 2O^{2-}} \\\\
+\ce{H2O + \frac{1}{2}CO2 + 4e- &<- \frac{1}{2}CH4 + 2O^{2-}} \\\\
+\end{cases}  \\\\
+&\text{Cathode:} & &\quad\ce{O2 + 4e- -> 2O^{2-}} \\\\
 \end{align}
 $$
+
 
 --
 - The high temperature operation means that internal steam reforming occurs readily
@@ -399,27 +403,40 @@ Typically a cermet (*i.e.* mixture) of Ni and electrolyte
 *e.g.* 
 - `\(\ce{Gd_{0.1}Ce_{0.9}O_{1.95}}\)` (CGO)
 - `\( \ce{Y_{0.15}Zr_{0.85}O_{1.925} }\)` (YSZ)
+![:width 95%](./images/YSZ_structure.gif)
 ]
 .pull-right.w33[
-- `\(\ce{La_{1-x}Sr_{x}CoO_{3-y}} \)` - a good mixed conductor, 
+- `\(\ce{La_{1-x}Sr_{x}CoO_{3-y}} \)`: a good mixed conductor, 
 but with high thermal expansion
-- `\( \ce{La2NiO_{4+x}} \)` - an intersitial oxide ion conductor
+- `\( \ce{La2NiO_{4+x}} \)`: an intersitial oxide ion conductor
 ]
 
 --
 
 .pull-left.w100[<br>As well as: Chemical stability, similar thermal expansion, cost, ...]
 
+???
+
+Most of the existing ionic conductors found in SOFCs have structures related to either fluorite, CaF<sub>2</sub>
+or perovskite CaTiO<sub>3</sub>. The introduction of oxygen vacancies (necessary for good conduction) can either 
+be disordered (maintaining the 'ideal' crystal structure, e.g. `\(\ce{La_{1-x}Sr_{x}CoO_{3-y}} \)`) 
+or ordered (resulting in modified crystal structures). The Ruddlesden-Popper structure (example below) is frequently observed
+for perovskite-derived materials (e.g. `\( \ce{La2NiO_{4+x}} \)`)
+
+![:width 60%](./images/ruddlesden_popper.png)
+
 
 ---
 # Improving electrodes
 
-For cathode and anode, we ideally want a perfect mixed electronic/ionic conductor, with high chemical stability, high catalytic activity etc...
+Ideally want a perfect mixed electronic/ionic conductor, with high chemical stability, high catalytic activity etc...
 
 In reality, we can use a mixture of good (and chemically-stable) ionic and electronic conductors. Reactions will then occur at the **triple phase boundary**
 
 **Electronic Conductor**
 ![:width 40%](./images/triple_phase_boundary_electronic.svg) 
+
+--
 
 ** Mixed conductor**
 ![:width 40%](./images/triple_phase_boundary_mixedconductor.svg) 
