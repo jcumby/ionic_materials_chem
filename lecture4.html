@@ -57,7 +57,7 @@ $$
 --
 
 - Other fuels (*e.g.* CH<sub>3</sub>OH, CH<sub>4</sub>, NH<sub>3</sub>) can also be used, particularly for HT devices
-	- *e.g.* for CH<sub>4</sub>, steam reforming `\( (\ce{CH4 + H2O ->[>700 ^{\circ}C] CO + 3H2}) \)` can be achieved HT cells, but must be performed separately for LT cells.
+	- *e.g.* for CH<sub>4</sub>, steam reforming `\( (\ce{CH4 + H2O ->[>700 ^{\circ}C] CO + 3H2}) \)` can be achieved in HT cells, but must be performed separately for LT cells.
 	
 	
 ---
@@ -70,7 +70,7 @@ $$
 \text{Thermodynamic efficiency} = \frac{\Delta G}{\Delta H}
 $$
 
-*e.g.* for `\( \ce{2H2 + O2 -> 2H2O} \ (\Delta H = -571.6 \text{kJ mol}^{-1})\)`:
+*e.g.* for `\( \ce{2H2 + O2 -> 2H2O} \ (\Delta H = -571.6\ \text{kJ mol}^{-1})\)`:
 
 $$
 \begin{align}
@@ -82,7 +82,7 @@ $$
 $$
 \begin{align}
 \Delta G &= -nFE \\\\
-         &= -4 \times F \times 1.29 \\\\
+         &= -4 \times F \times 1.229 \\\\
 		 &= -474.3 \mathrm{\ kJ\ mol^{-1}} \qquad (\mathrm{per\ mole\ O_2})
 \end{align}
 $$
@@ -110,12 +110,22 @@ $$
 
 ![:width 60%](./images/fuel_cell_efficiency.png)
 
+???
+
+A heat engine is one that converts heat into work, for instance by repeatedly heating and cooling a substance while extracting (usually 
+mechanical) motion. The term covers a huge range of technologies including combustion engines, thermal power stations and fridges (a heat pump, 
+which is a heat engine operating in reverse).
+
+A really nice example (in which the heating/cooling is done on a sealed chamber of air) is the Stirling engine:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/taDHMw38aE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 # Types of fuel cell
 
-![:grid](.fourxsix[ 
-.c1r1[ **Type**
- ] &
+<br>
+![:grid](.fourxsix[.c1r1[**Type**
+]
 .c2r1[ **Mobile ion**]
 .c3r1[ **Operating temperature (&deg;C)** ] &
 .c4r1[ **Applications** ] &
@@ -124,13 +134,14 @@ $$
 .c3r2[ 50-100 ]
 .c4r2[ Stationary power, space missions]
 .c1r3[ Polymer ]
-.c2r3[ H<sup>+</sup>/OH<sup>-</sup> ]
+.c2r3[ H<sup>+</sup> or OH<sup>-</sup> ]
 .c3r3[ 50-100 ]
 .c4r3[ Portable devices, transport ]
 .c1r4[ Phosphoric acid (PAFC) ]
 .c2r4[ H<sup>+</sup> ]
 .c3r4[ 220 ]
-.c4r4.rspan3[ Medium to large scale combined heat and power (CHP) systems]
+.c4r4.rspan3[ Medium to large scale combined heat and power (CHP) systems <br>
+&vellip;<br>&vellip;]
 .c1r5[ Molten Carbonate (MCFC) ]
 .c2r5[ CO<sub>3</sub><sup>2-</sup> ]
 .c3r5[ 650 ]
@@ -148,9 +159,9 @@ $$
 
 $$
 \begin{align}
-\text{Anode:} & & \ce{H2 + 2OH- &-> 2H2O + 2e-} & & E &= 0 \mathrm{V} \\\\
-\text{Cathode:} & & \ce{\frac{1}{2}O2 + 2H2O + 2e- &-> 2OH- } & & E &= +1.23 \mathrm{V} \\\\
-\text{Overall:} & & \ce{H2 + \frac{1}{2}O2 &-> H2O } & & E &= +1.23 \mathrm{V} \\\\
+\text{Anode:} & & \ce{ 2H2O + 2e- &<- H2 + 2OH-} & & &E &= -0.829\ \mathrm{V} \\\\
+\text{Cathode:} & & \ce{\frac{1}{2}O2 + 2H2O + 2e- &-> 2OH- } & & &E &= +0.401\ \mathrm{V} \\\\
+\text{Overall:} & & \ce{H2 + \frac{1}{2}O2 &-> H2O } & & &E &= +1.23\ \mathrm{V} \\\\
 \end{align}
 $$
 
@@ -160,25 +171,27 @@ $$
 - First developed for the Apollo missions
 	- Updated version still used in current space shuttle
 - Based around concentrated KOH electrolyte with Ni anode and catalytic cathode (such as Pt, Pd or Ag)
-
-- Cheapest fuel cell to produce
+- Cheap fuel cell to produce .green[&#10004;]
 ]
-
 .pull-right.w30[ ![](./images/apollo16_image.jpg) ]
-
 --
 
 .pull-left.w66[
-- Susceptible to CO<sub>2</sub> poisoning:
+- Susceptible to CO<sub>2</sub> poisoning: .red[&#10008;]
 	- `\( \ce{2KOH + CO2 -> K2CO3 + H2O} \)`
 	- K<sub>2</sub>CO<sub>3</sub> goes on to block electrode
-- Requires pure H<sub>2</sub> and O<sub>2</sub>
+- Requires pure H<sub>2</sub> and O<sub>2</sub> .red[&#10008;]
 ]
 
+???
 
+Note, the potentials here are given for strongly basic conditions, pH = 14.
+The actual reduction potentials will vary with pH, but the overall cell potential will not.
+
+![:width 60%](./images/PourbaixWater.png)
 
 ---
-# Polymer [proton exchange membrane] fuel cell (PEMFC)
+# Proton exchange membrane fuel cell (PEMFC)
 
 - First developed for the Gemini space vehicle
 - Based around an acidic proton-conducting polymer
@@ -192,21 +205,27 @@ $$
 
 ]
 
+???
+
+Sometimes also known as polymer electrolyte membrane fuel cell
 ---
-# PEMFC
+# PEMFC + H<sub>2</sub>
 
 $$
 \begin{align}
-\text{Anode} & & \ce{2H+ + 2e- &-> H2} & & E = 0 V\\\\
-\text{Cathode} & & \ce{O2 + 2H+ + 2e- &-> H2O2} & & E = 0.695 V \\\\
-& & \ce{H2O2 + 2H+ + 2e- &-> 2H2O} & & E = 1.776 V\\\\
-\text{Cathode (Overall)} & & \ce{O2 + 4H+ + 4e- &-> 2H2O} & & E = 1.229 V \\\\
+\text{Anode:} & & \ce{2H+ + 2e- &<- H2} & & E = 0\ \mathrm{V}\\\\
+\text{Cathode:} & & \ce{O2 + 2H+ + 2e- &-> H2O2} & & E = 0.695\ \mathrm{V} \\\\
+& & \ce{H2O2 + 2H+ + 2e- &-> 2H2O} & & E = 1.776\ \mathrm{V}\\\\
+\text{Cathode (Overall):} & & \ce{O2 + 4H+ + 4e- &-> 2H2O} & & E = 1.229\ \mathrm{V} \\\\
 \end{align}
 $$
 
 --
 
-- In acidic conditions, H<sub>2</sub>O<sub>2</sub> forms
+- PEMFCs give good Low-temperature (< 100 &deg;C) operation .green[&#10004;]
+	- Quick to start/stop
+	- Suitable for portable applications
+- In acidic conditions, H<sub>2</sub>O<sub>2</sub> forms .red[&#10008;]
 	- Corrodes carbon-containing electrodes 
 	- Lowers cell voltage
 	- Requires Pt or Pd catalysts to promote H<sub>2</sub>O<sub>2</sub> decomposition
@@ -214,57 +233,56 @@ $$
 		- Expensive
 		- Poor tolerance to CO or NH<sub>3</sub>
 	
-
-- PEMFCs give good Low-temperature (< 100 &deg;C) operation
-	- Quick to start/stop
-	- Suitable for portable applications
-- Require careful hydration to ensure H<sup>+</sup> conduction
+- Require careful hydration to ensure H<sup>+</sup> conduction  .red[&#10008;]
 
 
 ---
-# Methanol fuel in PEMFC
+# PEMFC + Methanol
 
 Methanol is easier to store/transport than H<sub>2</sub> and almost as efficient
 - Readily oxidised, does not require C-C bond breaking
 
 $$
 \begin{align}
-\text{Anode} & & \ce{CO2 + 6H+ + 6e- &-> CH3OH + H2O} & & E = 0.046 \mathrm{\ V} \\\\
-\text{Cathode} & & \ce{\frac{3}{2}O2 + 6H+ + 6e- &-> 3H2O} & & E = 1.229 \mathrm{\ V} \\\\
-\text{Overall} & & \ce{ CH3OH + \frac{3}{2}O2 &-> CO2 + 2H2O} & & E= 1.183\mathrm{\ V}
+\text{Anode:} & & \ce{CO2 + 6H+ + 6e- &<- CH3OH + H2O} & & E = 0.046 \mathrm{\ V} \\\\
+\text{Cathode:} & & \ce{\frac{3}{2}O2 + 6H+ + 6e- &-> 3H2O} & & E = 1.229 \mathrm{\ V} \\\\
+\text{Overall:} & & \ce{ CH3OH + \frac{3}{2}O2 &-> CO2 + 2H2O} & & E= 1.183\mathrm{\ V}
 \end{align}
 $$
+.pull-right.w40[ ![](./images/PEMFC.jpg) ]
 --
 .pull-left.w60[
 Problems:
-- MeOH is fairly soluble in membrane, crossing from anode to cathode
+- MeOH is fairly soluble in membrane, crossing from anode to cathode  .red[&#10008;]
 	- Reduces cell voltage to ~0.5 V
-- CO is formed in a side-reaction, blocking reaction sites
+- CO is formed in a side-reaction, blocking reaction sites  .red[&#10008;]
 	- Improved by adding more Pt catalyst (~3 mg cm<sup>-2</sup>)
 ]
-.pull-right.w40[ ![](./images/PEMFC.jpg) ]
+
 
 ---
 # Towards alkaline polymers?
 
 - OH<sup>-</sup> conduction removes the problems associated with H<sub>2</sub>O<sub>2</sub> formation
+- Attaching the counter-cation to the polymer reduces the risk of electrode poisoning
 - pH change also modifies redox energies, allowing Ni catalysts to replace Pt
 
 ![:width 70%](./images/guanidimidazole_alkaline_polymer.jpg)
 
 
-Unfortunately, OH<sup>-</sup> conducting polymers currently have low ionic conductivity at practical temperatures!
+Unfortunately, current OH<sup>-</sup> conducting polymers currently have low ionic conductivity at practical temperatures!
 
+.footnote[Y-J. Wang et al., *Chem. Soc. Rev.* **2013**, 42, 5768-5787.]
 
 ---
 # Phosphoric Acid (PAFC)
 
 Operates at 200 &deg;C
-- Below 150 &deg;C conductivity is low
-- Above 20 &deg;C H<sub>3</sub>PO<sub>4</sub> is volatile and decomposes
-- High temperature acid prevents build up of H<sub>2</sub>O<sub>2</sub>
-- Temperature makes cell more tolerant to CO<sub>2</sub> impurities
-- Hot H<sub>3</sub>PO<sub>4</sub> is highly corrosive!
+- High temperature acid prevents build up of H<sub>2</sub>O<sub>2</sub> .green[&#10004;]
+- Temperature makes cell more tolerant to CO<sub>2</sub> impurities .green[&#10004;]
+- Below 150 &deg;C conductivity is low  .red[&#10008;]
+- Above 200 &deg;C H<sub>3</sub>PO<sub>4</sub> decomposes into a range of acids .red[&#10008;]
+- Hot H<sub>3</sub>PO<sub>4</sub> is highly corrosive! .red[&#10008;]
 	- Materials stability challenge
 
 ![:width 50%](./images/woking_fuel_cell.jpg)
