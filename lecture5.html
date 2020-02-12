@@ -14,7 +14,7 @@
 <body>
   <textarea id="source">
 
-class: beige-background
+class: white-background
 layout: true
     
     
@@ -34,11 +34,11 @@ All the technologies in this course rely on ionic motion. In the solid state, th
 --
 
 .pull-left[ 
-There is an energy barrier to ionic diffusion
+There is an energy barrier `\(E_\mathrm{a}\)` to ionic diffusion
 - This can be overcome by thermal energy
 - Follows an Arrhenius relationship:
 $$
-\sigma(T) = A e^{\frac{-E_a}{RT}}
+\sigma(T) = A e^{\frac{-E_\mathrm{a}}{RT}}
 $$
 ]
 
@@ -58,6 +58,24 @@ $$
 
 .footnote[ Y. Deng, *Chem. Mater.*, 2018, 2618.]
 
+???
+
+Three approaches to determining diffusion are shown here:
+
+**Molecular Dynamics (MD)**
+- Computational model of ionic motion over a time period (using either electronic structure calculations or atomic potentials methods)
+- Resulting trajectory is integrated to determine location of conducting ions
+
+** Bond Valence Energy Landscape (BVEL) **
+- Maps the bond valence sum (a measure of local electron density estimated from atomic positions) throughout the structure
+- Surface is the region where the probe ion (e.g. Na<sup>+</sup>) would experience optimum coordination
+
+** Maximum Entropy method (MEM) / Rietveld refinement**
+- Fits a model to **experimental** data to determine ionic positions
+- If Na<sup>+</sup> is diffusing throughout the measurement, the positional information is present within the
+diffraction data. MEM is one method to fit this.
+
+
 
 ---
 # Characterising diffusion
@@ -65,8 +83,11 @@ $$
 .pull-left.w60[
 Impedance spectroscopy allows us to determine the conductivity at different temperatures.
 
-![:width 60%](./images/randles_circuit_fitted.png)
+![:width 40%](./images/randles_circuit.png)
+![:width 60%](./images/randles_nyquist.png)
 ]
+
+.footnote[Conductivity, `\\(\sigma \propto \frac{1}{R}\\)`]
 --
 
 .pull-right.w40[ *e.g.* NASICON again:
@@ -78,8 +99,19 @@ $$
 \sigma(T) = A e^{\frac{-E_a}{RT}}
 $$
 - A plot of `\(\ln \sigma(T) \)` versus 1/T has slope `\( = \frac{-E_a}{R}\)`.
-- We usually plot log<sub>10</sub> &sigma;, then slope `\( = \frac{-E_a}{2.303R}\)`
+- We usually plot `\(\log_{10} \sigma\)` then slope `\( = \frac{-E_a}{2.303R}\)`
 ]
+
+???
+
+The electrical circuit shown here is known as the 'Randles' circuit, and is very commonly
+used to fit both solution-phase and solid-state electrochemistry results. It still contains the 
+parallel RC circuit and series resistance discussed earlier, but also now includes a Warburg impedance, W.
+Chemically, W corresponds to the limiting effect of diffusion in the system; at very low frequencies the rate at
+which ions can move starts to dominate the signal.
+
+In the case of solid ionic conductors, the Warburg impedance can be related to conducting ions diffusing (slowly)
+into the metal (e.g. Pt) electrodes attached to the sample.
 
 ---
 # Ionic conduction
@@ -88,8 +120,8 @@ $$
 \sigma(T) = A e^{\frac{-E_a}{RT}}
 $$
 
-- We expect A &prop; the number of charge carriers
-	- Expect conductivity &prop; the number of charge carriers
+- Normally, A &prop; the number of charge carriers
+	- (conductivity should increase with more charge carriers)
 --
 	
 - *However*, at high defect concentrations we can get **defect clusters**
@@ -98,7 +130,19 @@ $$
 *e.g.* YSZ: `\((\ce{(1-x)ZrO2 + \frac{x}{2}Y2O3 -> Y_{x}Zr_{1-x}O_{2-\frac{x}{2}} }) \)`:
 
 .pull-left[![](./images/YSZ_conductivity_doping.png)]
-.pull-right[ ![:width 70%](./images/willis_defect.jpg) ]
+.pull-right[ ![](./images/ysz_vacancy_ordering.gif) ]
+
+???
+
+In YSZ, introducing two Yttrium atoms (x=2) results in the formation of one oxygen vacancy.
+Locally, these are found to order; the optimum arrangement is for each OM<sub>4</sub> tetrahedron
+to contain 2 Zr and 2 Y, with oxygen vacancies arranging in a checkboard pattern.
+
+The figure shows the the equilibrium arrangement for Y<sub>2</sub>Zr<sub>2</sub>O<sub>7</sub> (x = 0.5). 
+Compare this with the ideal fluorite structure consisting of edge-sharing OM<sub>4</sub> tetrahedra:
+
+![:width 30%](./images/fluorite.gif)
+
 
 ---
 # Long-range ordering
@@ -155,10 +199,10 @@ Two possible mechanisms:
 ]
 
 --
-
-The Grotthuss mechanism dominates
-- Water incorporation fills anion vacancies, so there is no conduction pathway for OH<sup>-</sup>
-
+.pull-left.w100[
+- The Grotthuss mechanism dominates
+    - Water incorporation fills anion vacancies, so there is no conduction pathway for OH<sup>-</sup>
+]
 
 ---
 # Which fuel to chose?
@@ -214,6 +258,7 @@ $$
 	- Green algae (and others) can use sunlight to generate H<sub>2</sub>
 
 --
+
 ### Direct water splitting
 .pull-left.w60[
 - Electrolytic splitting
@@ -383,7 +428,7 @@ Three similar energy storage technologies (batteries, supercapacitors and fuel c
       highlightStyle: 'monokai',
       highlightLanguage: 'remark',
       highlightLines: true,
-      slideNumberFormat: '%current%',
+      slideNumberFormat: '',
       countIncrementalSlides: false,
     });
 	
