@@ -20,6 +20,10 @@ h1, h2, h3 {
   }
 }
 
+.video {
+	background-image: radial-gradient(#f4f9fb, #afd7e3);
+}
+
 .remark-slide-content h1 { font-size: 3rem; }
 .remark-slide-content h2 { font-size: 2em; }
 .remark-slide-content h3 { font-size: 1.6em; }

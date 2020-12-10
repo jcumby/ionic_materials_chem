@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="keywords" content="energy, materials, chemistry" />
-  <meta name="description" content="Lecture 1 - Energy Storage Materials" />
+  <meta name="description" content="Lecture 1 - Ionic Materials" />
   <title>Lecture1</title>
   <style type="text/css">
     @import url("common/style.css");
@@ -28,7 +28,7 @@ layout: true
 ---
 class: center, middle
 
-# Energy Storage Materials
+# Ionic Materials
 
 ## Dr. James Cumby
 
@@ -48,11 +48,11 @@ class: center, top
 <br>
 
 Lecture | Topic
----|-------------
-1 | Introduction to energy storage materials
-1-2 | Batteries
-3 | (Super) capacitors
-4-5 | Fuel Cells 
+--|-------------
+1 | Introduction to ionic materials
+2-3 | Batteries
+4 | (Super) capacitors
+5 | Fuel Cells 
 
 <br>
 
@@ -65,6 +65,26 @@ References given during course.
 ---
 
 # Introduction
+
+'Ionic materials' consist of both cations and anions:
+.pull-left.w60[
+- Many inorganic solids
+	- e.g. $\ce{Na+Cl-}$ and $\ce{Mg^2+O^2-}$
+- Organic 'salts'
+	- ammonium acetate $\ce{NH4+CH3COO-}$
+	- chlorphenirammonium maleate (Piriton &reg;)
+	
+- Ionic liquids
+]
+
+.pull-right.w40[![](./images/chlorphenirammonium_maleate_piriton_molecule.png)
+Chlorphenirammonium maleate]
+
+
+
+.full[In this course, we will focus on solid-state inorganic materials.]
+
+---
 
 Meeting global energy demand is one of the big challenges facing society.
 
@@ -591,6 +611,7 @@ For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_01821
     var slideshow = remark.create({
       slideNumberFormat: '',
       countIncrementalSlides: false,
+	  //ratio: '16:9',
     });
 	
 	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
@@ -697,7 +718,7 @@ For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_01821
 	
 	// Setup MathJax
     MathJax.Hub.Config({
-        tex2jax: { inlineMath: [['\\(','\\)']],
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']],
 				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
 				 },
 		TeX: {
