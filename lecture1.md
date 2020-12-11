@@ -1,44 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Lecture 1</title>
-		
-		<meta name="description" content="Lecture 1 - Ionic Materials.">
-
-		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
-		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
-		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
-		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
-		<style type="text/css">
-		@page {
-				  size:  1216px 684px; 
-				  margin: 0;
-		}
-		</style>
-		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
-		<!-- <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
-
-
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous"> -->
-		<!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script> -->
-		<!-- <script src="https://story.xaprb.com/js/auto-render.min.js"></script> -->
-		<!-- <script src="https://story.xaprb.com/js/abcjs_basic_5.6.3-min.js"></script> -->
-		<!-- <script src="https://story.xaprb.com/js/story.js"></script> -->
-		
-		<script type="text/javascript" src="./common/JSmol.min.js"></script>
-
-	</head>
-	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
-		
-  
-
-	<main role="main">
-		
-    <textarea id="source">
-
 class: title
 
 # Ionic Materials
@@ -78,7 +37,7 @@ class: compact
 	- e.g. $\ce{Na+Cl-}$ and $\ce{Mg^2+SO_4^2-}$
 --
 
-- Organic 'salts'
+- Organic salts
 	- ammonium acetate $\ce{NH4+CH3COO-}$
 	- [chlorphenirammonium maleate](https://www.nhs.uk/medicines/chlorphenamine-including-piriton/) (active part of Piriton&reg;)
 	![Piriton API](./images/chlorphenirammonium_maleate_piriton_molecule.png# w-3-12th r-2 absolute t-20pct )
@@ -93,22 +52,34 @@ class: compact
 	
 - Ionic liquids
 	- Either organic or inorganic, these are liquid below 100 &deg;C
-	
---
-
-In this course, we will focus on **solid-state inorganic materials**.
 
 ---
+class: compact
 
-# Why ionic materials?
+# Why are they interesting?
 
-- Large range of applications
-- Stable at high temperatures
-- Robust in harsh conditions
+- Large range of practical applications
+	- important for energy storage, but lots of other applications!
+	- ionic liquids are gaining attention for many applications
+--
 
-![:jmol 400](common/NaCl.cif)
+- High melting points due to Coloumbic energy
+--
+
+- Electrically insulating
+	- Electronegativity differences promote localised electrons
+	![Ceramic insulator](./images/ceramic_insulator.jpg# w-3-12th absolute t-50pct r-2)
+--
+
+- Usually hard, and often robust to harsh conditions
+	- e.g. Synroc is used to encapsulate nuclear waste
+
+![synroc](./images/synroc.jpg# w-33pct relative l-2-12th)
+
+
 
 ???
+
 Ionic solids find applications in a huge number of places, including:
 - Batteries
 - Dielectrics / ferroics (e.g. piezoelectrics)
@@ -118,25 +89,77 @@ Ionic solids find applications in a huge number of places, including:
 - Catalysts; $\ce{Bi2MoO6}$
 - Phosphors
 
----	
-class: title
+Synroc is a mixture of titanium oxide minerals
 
-# JMOL test
+---
+class: compact
 
-some content
+# We can divide solids into two categories:
+
+.pull-left[
+Molecular (e.g. paracetamol)
+- Strong bonds within molecules
+- Weaker intermolecular interactions
+![:jmol 400, 300, 2, 1, 1](files/paracetamol.cif)
+
+]
+
+.pull-right[
+Infinite (e.g. NaCl)
+- Strong bonds between all atoms
+- No discrete molecules
+![:jmol 400, 300, 2, 2, 2](files/NaCl.cif)
+]
+
+--
+
+We'll concentrate on **infinite materials**.
+
+---
+class: compact
+
+# Recap on crystal structure
+
+Infinite solids can be described by a unit cell
+- Defined by lengths ($a$, $b$, $c$) and angles ($\alpha$, $\beta$, $\gamma$)
+	- 'Lattice parameters'
+- Possesses 'space group' symmetry (extension to point groups)
+- Atom positions defined by fractional position along lattice directions
+
+![Unit cell](./images/unit_cell.png# db center)
+
+
+???
+
+## Space group symmetry
+Space group symmetry extends the idea of point groups to include translational symmetry (adding 'glide planes' and 'screw axes'
+to the more familiar symmetry elements such as mirror planes and rotations). The combination of **all** possible symmetry combinations
+generates a finite number (230) of space groups.
+
+---
+class: compact
+
+# Example: Sodium chloride
+
+![:jmol 600, 300, 1, 1, 1](files/NaCl.cif)
+
+ | |
+----------------|---|--
+Cubic structure | $a = b = c = 5.62 \AA{}$, $\alpha = \beta = \gamma = 90^\circ$  |
+Spacegroup      | $\mathrm{Fm\bar3 m}$ (#225) |
+Na atoms at:    | (0 0 0)       &emsp; (&half; &half; 0) &emsp;  (&half; 0 &half;) &emsp;  (0 &half; &half;) | (symmetry-related)
+Cl atoms at:    | (&half; 0 0)  &emsp; (0 &half; 0)      &emsp;  (0 0 &half;)      &emsp;  (&half; &half; &half;) | (symmetry-related)
 
 ---
 
-Meeting global energy demand is one of the big challenges facing society.
+# Ionic Bonding
 
-<br>
+Electrostatic interactions are between pairs of atoms
+- Lowest energy by maximising strong cation-anion interactions
+- Achieved by maximising cation-anion C.N.
+	- (as long as 
 
-.pull-left[![](./images/energy_consumption_by_region.svg)]
 
-.pull-right[![](./images/predicted_consumption_region.svg)]
-
-.footnote[&copy; Martin Kraus, ExxonMobil]
-.footnoteright[BTU = British Thermal Unit &asymp; 1055 J]
 
 
 ---
@@ -604,123 +627,3 @@ For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_01821
 .pull-right[ ![:width 40%](./images/battery_discharging_schematic.png)]
 
 
-
-
-
-
-
-
-
-
-
-
-
-</textarea>
-
-
-  <script src="common/remark-latest.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
-  <script>
-    var hljs = remark.highlighter.engine;
-  </script>
-  <script src="common/remark.language.js"></script>
-  <script>
-	remark.macros.width = function (width) {
-		var url = this;
-		return '<img src="' + url + '" style="width: ' + width + '" />';
-		};
-		
-	remark.macros.jmol = function (size) {
-		// Generate a jmol object of a given size (in pixels)
-		// The CIF file to read is given as the macro argument, i.e.
-		//  ![:jmol size](path/to/CIF)
-		
-		// Set up an object name to hold the jmol applet
-		var jmolId = "jmolId_" + this.replace(/^.*[\\\/]/, '').replace('.cif','');
-
-		// Info contains the parameters for initialising jsmol
-		var Info = {
-		  color: "#FFFFFF",
-		  height: size,
-		  width: size,
-		  script: "load " + this + " {1 1 1}; set displayCellParameters FALSE",
-		  use: "HTML5",
-		  j2sPath: "common/j2s"
-		};
-		
-		// Create the jmol object (called jmolId) and generate the HTML representation of it
-		// ._cover(false) is necessary to allow things to load when displayed
-		Jmol.setDocument(false);
-		var html = Jmol.getAppletHtml(jmolId, Info);
-		window[jmolId]._cover(false)
-		
-		// Return the HTML for the jmol object wrapped in a div
-		return '<div id=' + jmolId + '_div>' + html +  '</div>'
-
-		};
-		
-	remark.macros.colortable = function (color) {
-		console.log(this)
-		var cells = this.split('|');
-		console.log(cells)
-		var newcells = cells.map(function (val, idx, array) { 
-			return val.trim()
-			})
-		console.log(newcells)
-		return newcells.join("|");
-		
-	}
-	
-
-	
-	remark.macros.grid = function () {
-		var content = this.replace( /&\n/g, " ");
-		return ".grid[".concat(content).concat("]");
-	}
-  
-    var slideshow = remark.create({
-      slideNumberFormat: '',
-      countIncrementalSlides: false,
-	  ratio: '16:9',
-	  sourceUrl: 'lecture1.md'
-    });
-	
-	// Setup MathJax
-    MathJax.Hub.Config({
-        tex2jax: { inlineMath: [["$","$"]],
-				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-				 },
-		TeX: {
-			extensions: ["mhchem.js"],
-			noErrors: {
-				multiline: true,
-			}
-		},
-		"HTML-CSS": {
-			scale: 85,
-			},
-    });
-
-    MathJax.Hub.Configured();
-
-	
-	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
-			var $e = $(e);
-			var $p = $e.closest('div.remark-slide-container');
-			var needsToggle = !$p.hasClass('remark-visible');
-			if ( needsToggle ) $p.toggleClass('remark-visible');
-			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
-				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
-				
-				
-			}
-			if ( needsToggle ) $p.toggleClass('remark-visible');
-		});	
-	
-  </script>
-  
-</main>
-  
-</body>
-
-</html>

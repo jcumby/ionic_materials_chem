@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lecture 1</title>
+		
+		<meta name="description" content="Lecture 1 - Ionic Materials.">
+
+		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
+		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
+		<style type="text/css">
+		@page {
+				  size:  1216px 684px; 
+				  margin: 0;
+		}
+		</style>
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
+
+
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous"> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/auto-render.min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/abcjs_basic_5.6.3-min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/story.js"></script> -->
+		
+		<script type="text/javascript" src="./common/JSmol.min.js"></script>
+
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
+		
+  
+
+	<main role="main">
+		
+    <textarea id="source">
+
+
+	</textarea>
+
+
+  <script src="common/remark-latest.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <script src="common/remark.language.js"></script>
+  <script>
+	remark.macros.width = function (width) {
+		var url = this;
+		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.jmol = function (width, height, x=1, y=1, z=1) {
+		// Generate a jmol object of a given size (in pixels)
+		// The CIF file to read is given as the macro argument, i.e.
+		//  ![:jmol width, height, x, y, z](path/to/CIF)
+		// Note that x,y,z are optional, default =1
+		
+		// Set up an object name to hold the jmol applet
+		var i = 1;
+		var jmolId = "jmolId_" + this.replace(/^.*[\\\/]/, '').replace('.cif','');
+		if (typeof window[jmolId] !== 'undefined') {
+			while (true) {
+				var testid = jmolId + i;
+				if (typeof window[testid] == 'undefined') {
+					jmolId = testid;
+					break;
+				}
+				i += 1;
+			}
+		};
+
+		// Info contains the parameters for initialising jsmol
+		var Info = {
+		  color: "#FFFFFF",
+		  height: height,
+		  width: width,
+		  script: "load " + this + " {" + x + " " + y + " " + z + "}; set displayCellParameters FALSE",
+		  use: "HTML5",
+		  j2sPath: "common/j2s"
+		};
+		
+		// Create the jmol object (called jmolId) and generate the HTML representation of it
+		// ._cover(false) is necessary to allow things to load when displayed
+		Jmol.setDocument(false);
+		var html = Jmol.getAppletHtml(jmolId, Info);
+		window[jmolId]._cover(false)
+		
+		// Return the HTML for the jmol object wrapped in a div
+		return '<div id=' + jmolId + '_div>' + html +  '</div>'
+
+		};
+		
+	remark.macros.colortable = function (color) {
+		console.log(this)
+		var cells = this.split('|');
+		console.log(cells)
+		var newcells = cells.map(function (val, idx, array) { 
+			return val.trim()
+			})
+		console.log(newcells)
+		return newcells.join("|");
+		
+	}
+	
+
+	
+	remark.macros.grid = function () {
+		var content = this.replace( /&\n/g, " ");
+		return ".grid[".concat(content).concat("]");
+	}
+  
+    var slideshow = remark.create({
+      slideNumberFormat: '',
+      countIncrementalSlides: false,
+	  ratio: '16:9',
+	  sourceUrl: 'lecture1.md'
+    });
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [["$","$"]],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		},
+		"HTML-CSS": {
+			scale: 85,
+			},
+    });
+
+
+
+	
+	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
+			}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});	
+	
+    MathJax.Hub.Configured();
+	
+  </script>
+  
+</main>
+  
+</body>
+
+</html>
