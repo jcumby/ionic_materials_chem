@@ -28,7 +28,7 @@
 		<!-- <script src="https://story.xaprb.com/js/abcjs_basic_5.6.3-min.js"></script> -->
 		<!-- <script src="https://story.xaprb.com/js/story.js"></script> -->
 		
-		<script type="text/javascript" src="./common/JSmol.min.js"></script>
+
 
 	</head>
 	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
@@ -42,7 +42,7 @@
 
 	</textarea>
 
-
+		<script type="text/javascript" src="./common/JSmol.min.js"></script>
   <script src="common/remark-latest.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
   <script>
@@ -50,15 +50,41 @@
   </script>
   <script src="common/remark.language.js"></script>
   <script>
+
+  
+    var slideshow = remark.create({
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+	  ratio: '16:9',
+	  sourceUrl: 'lecture1.md'
+    });
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [["$","$"]],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		},
+		"HTML-CSS": {
+			scale: 85,
+			},
+    });
+
+
 	remark.macros.width = function (width) {
 		var url = this;
 		return '<img src="' + url + '" style="width: ' + width + '" />';
 		};
 		
-	remark.macros.jmol = function (width, height, x=1, y=1, z=1) {
+	remark.macros.jmol = function (width, height, x=1, y=1, z=1, other_commands='') {
 		// Generate a jmol object of a given size (in pixels)
 		// The CIF file to read is given as the macro argument, i.e.
-		//  ![:jmol width, height, x, y, z](path/to/CIF)
+		//  ![:jmol width, height, x, y, z, other_commands](path/to/CIF)
 		// Note that x,y,z are optional, default =1
 		
 		// Set up an object name to hold the jmol applet
@@ -75,12 +101,14 @@
 			}
 		};
 
+		//alert(other_commands)
+
 		// Info contains the parameters for initialising jsmol
 		var Info = {
 		  color: "#FFFFFF",
 		  height: height,
 		  width: width,
-		  script: "load " + this + " {" + x + " " + y + " " + z + "}; set displayCellParameters FALSE",
+		  script: "load " + this + " {" + x + " " + y + " " + z + "} packed; set displayCellParameters FALSE;" + other_commands,
 		  use: "HTML5",
 		  j2sPath: "common/j2s"
 		};
@@ -108,37 +136,10 @@
 		
 	}
 	
-
-	
 	remark.macros.grid = function () {
 		var content = this.replace( /&\n/g, " ");
 		return ".grid[".concat(content).concat("]");
 	}
-  
-    var slideshow = remark.create({
-      slideNumberFormat: '',
-      countIncrementalSlides: false,
-	  ratio: '16:9',
-	  sourceUrl: 'lecture1.md'
-    });
-	
-	// Setup MathJax
-    MathJax.Hub.Config({
-        tex2jax: { inlineMath: [["$","$"]],
-				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-				 },
-		TeX: {
-			extensions: ["mhchem.js"],
-			noErrors: {
-				multiline: true,
-			}
-		},
-		"HTML-CSS": {
-			scale: 85,
-			},
-    });
-
-
 
 	
 	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
@@ -154,7 +155,9 @@
 			if ( needsToggle ) $p.toggleClass('remark-visible');
 		});	
 	
-    MathJax.Hub.Configured();
+	// Delay mathjax loading so that it doesn't get clobbered by JSmol (fudge it to work...)
+    setTimeout(() => {MathJax.Hub.Configured(); }, 2000);
+	
 	
   </script>
   

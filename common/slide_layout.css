@@ -66,7 +66,7 @@ html {
   background: white url(data:image/gif;base64,R0lGODdhEAAQAPEAAADw/wDx/xXy/////ywAAAAAEAAQAAACIZyPKckYDQFsb6ZqD85jZ2+BkwiRFKehhqQCQgDHcgwEBQA7 ) repeat top left;
 }
 .remark-slide-content h1 {
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 .remark-slide-content h2 {
   font-size: 2rem;
@@ -93,13 +93,13 @@ html {
   font-size: 1.5rem;
 }
 .remark-slide-content.compact h1 {
-  font-size: 2.75rem;
+  font-size: 2.2rem;
 }
 .remark-slide-content.compact h2 {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
 }
 .remark-slide-content.compact h3 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 .remark-slide-content.compact p,
 .remark-slide-content.compact ul {
@@ -144,7 +144,10 @@ html {
 .remark-slide-content img {
   max-width: 100%;
 }
-.remark-slide-content h1,
+.remark-slide-content h1 {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em
+}
 .remark-slide-content h2,
 .remark-slide-content h3 {
   margin-top: 0.5em;
@@ -344,7 +347,7 @@ html {
 }
 .remark-slide-content .remark-slide-number,
 .remark-slide-content .footer li {
-  font-size: 1.25rem;
+  font-size: 1rem;
   display: block;
   list-style: none;
   position: absolute;
@@ -395,6 +398,9 @@ html {
   width: 49%;
 }
 .pull-center {
-  float: middle;
-  width: 49%;
+  width: 50%; 
+  float: left;
+  position: relative;
+  right: -25%;
+
 }
