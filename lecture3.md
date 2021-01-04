@@ -1,3 +1,36 @@
+
+class: title, no-number
+# Lecture 3 - Batteries
+
+---
+
+# Lecture summary
+
+- Electrochemistry fundamentals
+- Battery overview
+- 
+
+
+
+
+---
+
+background-image: url(./images/renewable_energy_bulb.jpg)
+
+# Essential electrochemistry
+
+Throughout this course, we will 
+
+Term | Symbol | Description | Units
+-----|-|-|-
+Potential (or voltage) | E or V | the 'push' moving the electrons | Volts (V)
+Current | I | the rate at which electrons move | Amperes (A)
+Charge | Q | amount of electrons | Coloumbs (C) or Amp-hours (Ah, 1 mAh = 3.6 C)
+Resistance | R | effects reducing the current | Ohms ($\Omega$)
+
+
+---
+
 # Efficient energy storage relies on *materials*
 ### Important properties for energy storage:
 

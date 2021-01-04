@@ -1,4 +1,4 @@
-class: title
+class: title, no-number
 
 # Ionic Materials
 
@@ -18,37 +18,14 @@ $\require{mediawiki-texvc}$
 Lecture | Topic
 --|-------------
 1 | Introduction to ionic materials
-2-3 | Batteries
-4 | (Super) capacitors
+2 | defects and ionic conduction
+3 | Batteries
+4 | Dielectric materials
 5 | Fuel Cells 
 
 ## Recommended Reading
 
 Basic Solid State Chemistry, A. R. West, *Wiley*, **1988** and references given during course.
-
----
-exclude: true
-
-# Course synopsis
-
-Lecture 1 - Ionic materials
-- Intro to ionic structures
-- Defects
-
-Lecture 2 - Defects
-- Ionic conductivity
-- Kroger-vink notation
-- Variation with temperature
-
-Lecture 3  - batteries
-- Electrochemistry
-
-Lecture 4 - dielectrics
-- Impedance spectroscopy
-- Dielectrics
-
-Lecture 5 - Fuel cells
-- Defect ordering
 
 
 ---
@@ -58,8 +35,6 @@ Lecture 5 - Fuel cells
 	- recap crystal structures
 	- Lattice energy and close packing
 	- Ionic structure types
-2. Defects
-	- 
 
 ---
 class: compact
@@ -98,7 +73,7 @@ class: compact
 	- ionic liquids are gaining attention for many applications
 --
 
-- High melting points due to Coloumbic energy
+- High melting points due to Coloumbic energy (see [later](#ionic_bonding))
 --
 
 - Electrically insulating
@@ -148,17 +123,34 @@ Infinite (e.g. NaCl)
 
 We'll concentrate on **infinite materials**.
 
+???
+Infinite materials are probably the most widely studied in terms of a broad range of ionic properties,
+but it is important to realise that there are a number of important appplications (and research into)
+molecular ionic materials, including:
+
+- polymeric ionic conductors (for fuel cells)
+- Molecular salts for phamaceutical applications
+	- Often better *in-vivo* properties than e.g. co-crystals
+- Ionic liquids for e.g. nuclear waste processing
+
+
 ---
 
 # Recap on crystal structure
 
-Infinite solids can be described by a unit cell
+Periodic solids can be described by a unit cell
+![Unit cell](./images/unit_cell.png# db center)
+
 - Defined by lengths ($a$, $b$, $c$) and angles ($\alpha$, $\beta$, $\gamma$)
 	- 'Lattice parameters'
+--
+
 - Possesses 'space group' symmetry (an extension to point groups)
+--
+
 - Atom positions defined by fractional position along lattice directions
 
-![Unit cell](./images/unit_cell.png# db center)
+
 
 
 ???
@@ -180,22 +172,26 @@ class: compact
  | |
 ----------------|---|--
 Cubic structure | $a = b = c = 5.62\ \AA{}$, $\alpha = \beta = \gamma = 90^\circ$  |
-Spacegroup      | $\mathrm{Fm\bar3 m}$ (#225) |
+Spacegroup      | $\mathrm{Fm\bar3 m}$ (#225, point group = $\mathrm{O_h}$) |
 Na atoms at:    | (0 0 0)       &emsp; (&half; &half; 0) &emsp;  (&half; 0 &half;) &emsp;  (0 &half; &half;) | (all symmetry-related)
 Cl atoms at:    | (&half; 0 0)  &emsp; (0 &half; 0)      &emsp;  (0 0 &half;)      &emsp;  (&half; &half; &half;) | (all symmetry-related)
 
 Because of symmetry, we only need to define one Na and one Cl position.
 ---
 
+name: ionic_bonding
+
 # Ionic Bonding
 
 - Ionic compounds stay together because of electrostatic interactions (strong)
+--
+
 - Total electrostatic energy is the (infinite) sum over *all* ion pairs,
-$$ E\_{\mathrm{Madelung}} = \sum_{i \neq j} \frac{q_i q_j}{4r} $$
+$$ E\_{\mathrm{Madelung}} = \sum_{i \neq j} \frac{q_i q_j}{4\pi \epsilon_0 r} $$
 	$q$ is the charge on ions $i$, $j$ and $r$ is the distance between them
+--
+
 - $\frac{1}{r}$ dependence makes long-range interactions important
-- For infinite solids, periodicity often means the sum converges
-	- Madelung constant - depends on structure type
 
 .footer[
 - see Chem 1-states of matter for a recap on ionic compounds]
@@ -203,9 +199,38 @@ $$ E\_{\mathrm{Madelung}} = \sum_{i \neq j} \frac{q_i q_j}{4r} $$
 	
 ???
 - One assumption here is that the ions act as hard spheres with integral charges; less valid for highly polarisable ions
-- Whilst the infinite sum converges for some structures, for others it actually diverges (as the number of neighbours at distance $r \propto 4 \pi r^2$).
-A number of methods exist to perform the summation, in particular the [Ewald Method](https://en.wikipedia.org/wiki/Ewald_summation) (commonly used in atomistic simulations) 
+- $\epsilon_0$ is the permittivity of free space
+
 	
+---
+
+class: compact
+
+# Infinite summations
+
+- For infinite solids, periodicity usually means the sum converges
+	- As $r$ increases, the contribution becomes smaller.
+--
+
+- An infinite sum can therefore be replaced by the Madelung constant
+	- depends on the structure type
+--
+
+- e.g. for $\ce{NaCl}$:
+$$
+\begin{align}
+E\_{\mathrm{Madelung}} &= \sum_{i \neq j} \frac{q_i q_j}{4\pi \epsilon_0 r} \\\\
+&= \frac{\mathrm{N_A} q_i q_j}{4\pi \epsilon_0 r} \left( 6 - \frac{12}{\sqrt{2}} + \frac{8}{\sqrt{3}} - \frac{6}{2} + \frac{24}{\sqrt{5}} - ... \right) \\\\
+&\simeq \frac{\mathrm{N_A} q_i q_j}{4\pi \epsilon_0 r} \times 1.74756
+\end{align}
+$$
+
+???
+- Whilst the infinite sum converges for some structures, for others it actually diverges (as the number of neighbours at distance $r \propto 4 \pi r^2$).
+- Note that for $\ce{NaCl}$ the series shown (based on expanding $r$ as a sphere) has actually been proved to diverge, but I include it as it is conceptually easier to understand!
+The correct value is obtained by expanding the cubic unit cell as a cube (rather than a sphere); this series does converge, but is more complex!
+
+In reality, a number of methods exist to perform the summation, in particular the [Ewald Method](https://en.wikipedia.org/wiki/Ewald_summation) (commonly used in atomistic simulations) 
 
 ---
 class: compact
@@ -258,7 +283,7 @@ Hexagonal close-packed (HCP)
 
 CP arrangements of large (an)ions [X] leave 'holes' within the structure, which can be occupied by smaller (cat)ions [M]
 
-![Close packing holes](./images/close_packed_holes.jpg# w-7-12ths)
+![Close packing holes](./images/close_packed_holes.jpg# w-7-12th)
 
 ---
 # Octahedral holes
@@ -310,7 +335,7 @@ Half | Zinc-blende (.gold[Zn].red[S]) | .gold[4]/.red[4] | &emsp; | Wurtzite (.g
 
 
 ---
-
+class: compact
 
 # Which structure type?
 
@@ -321,7 +346,8 @@ $\frac{r^{+}}{r^{-}}$  |  Cation C.N.  | MX Structure | MX<sub>2</sub> Structure
 -----------------------|---------------|--------------|---------------------------
 0.7 - 1.0              | 8             | $\ce{CsCl}$         | $\ce{CaF2}$
 0.4 - 0.7              | 6             | $\ce{NaCl}$         | $\ce{TiO2}$
-0.2 - 0.4              | 4             | $\ce{ZnS}$ (Wurtzite/Zinc-blende) | Anti-fluorite (e.g. $\ce{Li2S}$)    
+0.2 - 0.4              | 4             | $\ce{ZnS}$ (Wurtzite/Zinc-blende) | Anti-fluorite (e.g. $\ce{Li2S}$)
+
 
 These are only approximate 'rules', and other binary structures exist (e.g. $\ce{CdI2}$, $\ce{CdCl2}$, $\ce{PbO}$, etc...)
 - Very difficult to predict!
@@ -342,12 +368,6 @@ An important one is perovskite, $\ce{ABX3}$
 .pull-right[
 ![:jmol 400, 300, 1, 1, 1](files/cubic_perovskite.cif)
 ]
-
----
-
-# Defects
-
-
 
 
 

@@ -55,8 +55,9 @@
     var slideshow = remark.create({
       slideNumberFormat: '%current%',
       countIncrementalSlides: false,
+	  //ratio: '4:3',
 	  ratio: '16:9',
-	  sourceUrl: 'lecture1.md'
+	  sourceUrl: 'lecture3.md'
     });
 	
 	// Setup MathJax
@@ -87,6 +88,10 @@
 		//  ![:jmol width, height, x, y, z, other_commands](path/to/CIF)
 		// Note that x,y,z are optional, default =1
 		
+		// other_commands can be used to chain jmol commands together to be run on loading (semicolon separated lines)
+		// To use a literal [ ] characters (otherwise intercepted by remark) use \< or \>
+		// To use literal { } characters (for some reason broken?) use \( and \)
+		
 		// Set up an object name to hold the jmol applet
 		var i = 1;
 		var jmolId = "jmolId_" + this.replace(/^.*[\\\/]/, '').replace('.cif','');
@@ -102,7 +107,12 @@
 		};
 
 		//alert(other_commands)
+		
+		// For some reason remark inserts a backslash escape before passing through jmol...
+		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}");
 
+		//alert(other_commands)
+		
 		// Info contains the parameters for initialising jsmol
 		var Info = {
 		  color: "#FFFFFF",

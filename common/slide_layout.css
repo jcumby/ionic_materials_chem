@@ -114,23 +114,13 @@ html {
 }
 .remark-slide-content.roomy {
   padding: 20px 80px 0 80px;
-  font-size: 2.25rem;
 }
-.remark-slide-content.roomy h1 {
-  font-size: 4rem;
+.remark-slide-content.roomy p,
+.remark-slide-content.roomy ul {
+  margin: 1rem;
 }
-.remark-slide-content.roomy h2 {
-  font-size: 3rem;
-}
-.remark-slide-content.roomy h3 {
-  font-size: 2.75rem;
-}
-.remark-slide-content.roomy pre,
-.remark-slide-content.roomy code,
-.remark-slide-content.roomy kbd,
-.remark-slide-content.roomy tt,
-.remark-slide-content.roomy samp {
-  font-size: 1.75rem;
+.remark-slide-content.roomy ul > li {
+  margin: 0.2em
 }
 .remark-slide-content.title h1 {
   font-size: 4rem;
@@ -403,4 +393,7 @@ html {
   position: relative;
   right: -25%;
 
+}
+.remark-slide-content.no-number .remark-slide-number {
+  display: none;
 }

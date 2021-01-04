@@ -1,0 +1,50 @@
+# Course synopsis
+
+Lecture 1 - Ionic materials
+- Intro to ionic structures
+
+Lecture 2 - Defects
+- Defect types
+- Kroger-vink notation
+- Ionic conductivity
+	- Variation with temperature
+
+Lecture 3  - batteries
+- Electrochemistry
+
+Lecture 4 - dielectrics
+- Impedance spectroscopy
+- Dielectrics
+
+Lecture 5 - Fuel cells
+- Defect ordering
+
+
+# To-do list
+
+- update mathjax version
+	- should correct variable formatting
+	- possibly corrects floating atom amounts?
+- 
+
+
+
+# Course synopsis
+
+This course will cover:
+
+- techniques used to study ionic materials
+	- conductivity
+	- impedance spectroscopy
+	- 
+- Important properties of ionic materials
+- Applications
+	- batteries
+	- fuel cells
+	- dielectrics
+- Structural features important for ionic conductivity
+	- defects
+	- layers
+	- defect ordering (and cooperative defects)
+	
+	
