@@ -109,3 +109,6 @@
 .remark-slide-content .gold {
   color: goldenrod;
 }
+.remark-slide-content .gray,
+.remark-slide-content .grey {
+  color: gray;

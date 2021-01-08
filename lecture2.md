@@ -5,6 +5,7 @@ class: title, no-number
 ---
 
 # Lecture summary
+$\require{mediawiki-texvc}$
 
 - Introduction to defects
 - Types of defect
@@ -23,6 +24,8 @@ class: compact, no-number
 - Atoms in the 'wrong' place
 	- *interstitials* (between lattice sites) or *substitutions* (different atom types)
 - Extended defects of lines or planes of atoms (see lecture 5)
+
+--
 
 Defects are often the source of interesting properties
 
@@ -44,15 +47,15 @@ class: compact
 The amount of defects is a fine balance of entropy and enthalpy
 - Defects gain entropy but have a (often large) formation energy
 
-![Defect formation energy](./images/defect_formation.png# w-4-12th l-4-12th relative)
+![Defect formation energy](./images/defect_formation.png# w-6-12th l-2-12th relative)
 
 Minimum in $\mathrm{\Delta G}$ depends on structure and bonding, but typically << 1%.
 
 
 ---
 
-class: compact
 
+class: compact
 # Types of defect
 
 The three most common defect types in ionic solids are:
@@ -60,10 +63,9 @@ The three most common defect types in ionic solids are:
 
 Vacancy | Interstitial | Substitution |
 :-----|:----:|----:
-![Vacancy defect](./images/mx_vacancy.png# w-80pct) | ![Interstitial defect](./images/mx_interstitial.png# w-80pct) | ![Substitutional defect](./images/mx_substitution.png# w-80pct)
+![Vacancy defect](./images/mx_vacancy.png# w-90pct) | ![Interstitial defect](./images/mx_interstitial.png# w-90pct) | ![Substitutional defect](./images/mx_substitution.png# w-90pct)
 
-
-
+--
 
 Additionally, defects can be either 
 - *intrinsic* (maintaining stoichiometry) or 
@@ -101,7 +103,7 @@ Defects observed depend on both structure type and atoms involved.
 - Reduced density compared with the ideal material
 - e.g. $\ce{NaCl}$ - equal numbers of $\ce{Na}$ and $\ce{Cl}$ vacancies
 
-.pull-left[![NaCl Schottky Defect](./images/NaCl_schottky.png# w-50pct)]
+.pull-left[![NaCl Schottky Defect](./images/NaCl_schottky.png# w-70pct)]
 
 .pull-right[
 ![:jmol 400, 300, 2, 2, 2, select (Na1)\<33\>; spacefill ionic; color atoms TRANSLUCENT 0.8 gray; spacefill 0.9; select (Cl1)\<15\>; color atoms TRANSLUCENT 0.8 lightgreen; spacefill 0.9](files/NaCl.cif)
@@ -120,7 +122,7 @@ Careful density measurements can be useful for determining Schottky defect conce
 - e.g. $\ce{AgCl}$ ($\ce{NaCl}$-type)
 	- Smaller $\ce{Ag+}$ ion displaced to tetrahedral holes in CCP $\ce{Cl-}$ structure
 
-.pull-left[![AgCl Frenkel Defect](./images/AgCl_frenkel.png# w-60pct)]
+.pull-left[![AgCl Frenkel Defect](./images/AgCl_frenkel.png# w-70pct)]
 
 .pull-right[
 ![:jmol 400, 350, 1, 1, 1, unitcell OFF; select (Na1)\<13\>; spacefill ionic; color atoms TRANSLUCENT 0.8 gray](files/AgCl_interstitial.cif)
@@ -141,7 +143,7 @@ Useful to write equation for defects, using **Kroger-Vink** notation:
 - Charges shown relative to the ideal host site:
 	- $\ce{'}$ for $1-$, $\ce{''}$ for $2-$, etc.;
 	- $\ce{\bullet}$ for $1+$, $\ce{\bullet\bullet}$ for $2+$, etc.;
-	- $\mathrm{x}$ for no net charge.
+	- $\mathrm{x}$ for no net charge (sometimes omitted)
 --
 
 - For example:
@@ -165,9 +167,13 @@ $\ce{AgCl}$ interstitial formation again:
 
 $$ \ce{Ag\_{Ag} <=> Ag\_{i}^{\bullet} + V\_{Ag}{'} } $$
 
+--
+
 $\ce{NaCl}$ Schottky formation:
 
 $$ \ce{Na\_{Na} + Cl\_{Cl} <=> V\_{Na}{'} + V\_{Cl}^{\bullet} + NaCl } $$
+
+--
 
 Easily extended to substitutions, e.g. substituting $\ce{Al^{3+}}$ with $\ce{Cr^{3+}}$ in $\ce{Al2O3}$ (ruby):
 
@@ -241,13 +247,13 @@ class: compact
 
 Frequently, substitutional defect concentrations can exceed 1%
 - known as a 'solid solution'
-- Very important for experimentally tuning properties *via* synthesis
+- Very important for tuning properties *via* synthesis
 - Often useful to think of the "average ion" properties at each site
 	- e.g. ionic radius, resulting in *Vegard's Law*
 		- Lattice parameter is weighted average of the end-members, e.g. $\ce{Al\_{2-x}Cr\_{x}O3}$:
 
 .pull-left[	
-![Vegard's Law in Al2-xCrxO3](./images/vegards_law_AlCr_2O3.jpg# w-70pct)
+![Vegard's Law in Al2-xCrxO3](./images/vegards_law_AlCr_2O3.jpg# w-80pct)
 ]
 .pull-right[
 ![:jmol 400, 280, 1, 1, 1, polyhedra BONDS \(aluminium\); color polyhedra translucent gray;](files/Al2O3.cif)
@@ -268,12 +274,13 @@ represents the same as $\ce{Sc\_{1-x}Bi\_{x}VO4}$.
 Some materials are naturally non-stoichiometric even without extrinsic defects
 
 - Very common in transition metal compounds
-	- multiple oxidation states available - reduces formation enthalpy
+	- multiple oxidation states available
 - Example: $\ce{FeO}$ (wustite, $\ce{NaCl}$ structure) cannot actually form stoichiometrically at ambient pressure
 	- Actually $\ce{Fe\_{1-x}O}$, with $0.05 \leq x \leq 0.15$
 	
-**N.B. From cation:anion ratio alone you cannot determine the defect types**
+--
 
+**N.B. From cation:anion ratio alone you cannot determine the defect types** <br>
 e.g. Fe:O ratio of 0.9 could equally be $\ce{Fe\_{0.9}O}$ or $\ce{FeO\_{1.11}}$!
 
 ???
@@ -282,11 +289,13 @@ The exact composition formed is dependent on the exact synthesis conditions, in 
 would cause the entropy term to dominate, assuming the product could be 'quenched' to room temperature).
 
 ---
-
+class: roomy
 # Conductivity
 
 - Many ionic solids conduct electricity; due to *ionic* and/or *electronic* motion.
 - Most ionic solids are electrically insulating/semiconducting (localised electrons)
+--
+
 - Ionic conductivity is dominated by *defects*
 	- 'Ideal' lattice sites are fixed in place
 - Conductivity, $\sigma = nq\mu$, where
@@ -307,7 +316,7 @@ Three 'main' mechanisms of ionic migration
 Vacancies move throughout the lattice (atoms move into vacancy)
 
 .pull-center[
-<video width="400" height="400" controls loop autoplay muted>
+<video width="350" height="350" controls loop autoplay muted>
     <source src="./files/vacancy_migration.mp4" type="video/mp4">
 </video>
 ]
@@ -341,14 +350,14 @@ Interstitial ions 'push' into a neighbouring site
 </video>
 ]
 ---
-
-# Migration paths
 name: migration_paths
+# Migration paths
+
 
 Ion paths are rarely .red[direct], but will take the .gold[lowest energy route].
 
 .pull-left[
-![:jmol 450, 450, 1, 1, 1, rotate x 100; 
+![:jmol 350, 350, 1, 1, 1, rotate x 100; 
 rotate y 10; 
 select (Na1)\<20\>; 
 \(sodium\).radius=0.5; 
@@ -359,7 +368,7 @@ draw ID "direct" ARROW \(2.81 2.81 5.62\) \(5.2 5.2 5.62\) WIDTH 0.3 COLOR red](
 ]
 
 .pull-right[
-![Close-packed migration path](./images/migration_path_cp.svg)
+![Close-packed migration path](./images/migration_path_cp.svg# w-80pct)
 ]
 
 ---
@@ -372,7 +381,7 @@ class: compact
 
 *e.g.* **NASICON** $\ce{Na+}$ conductor, $\ce{Na3Zr2(SiO4)2(PO4)}$:
 
-![Nasicon migration paths](./images/ionic_conduction_pathway_nasicon.gif# w-70pct relative l-2-12th)
+![Nasicon migration paths](./images/ionic_conduction_pathway_nasicon.gif# w-100pct)
 
 .footer[
 - Y. Deng, *Chem. Mater.*, 2018, 2618.
@@ -405,11 +414,11 @@ class:compact
 $$ \mu = \mu_0 \exp \left( -\frac{\mathrm{E_a}}{\mathrm{RT}} \right) $$
 - interstitial sites are higher energy than vacancies, so smaller energy barrier ($E_i < E_a$) - dominates
 
-![Migration energy](./images/migration_energy.svg# w-50pct relative l-3-12th)
+![Migration energy](./images/migration_energy.svg# w-60pct relative l-20pct)
 
 ---
 
-class: compact
+class: compact, no-number
 
 # Variation with temperature
 
@@ -421,8 +430,17 @@ $$
 \end{align}
 $$
 
-Plotting $\ln \sigma$ vs. $\frac{1}{\mathrm{T}}$ (or more commonly $\log_{10} \sigma$ vs $\frac{1000}{\mathrm{T}}$ for high temperature measurements) should give a straight line, 
-gradient = $\frac{-E_a}{R}$ (or $\frac{-E_a}{2303R}$).
+--
+
+![Nasicon conductivity vs temperature](./images/nasicon_arrhenius.jpg# w-40pct fr relative b-1)
+Plotting $\ln \sigma$ vs. $\frac{1}{\mathrm{T}}$ (or more commonly $\log_{10} \sigma$ vs $\frac{1000}{\mathrm{T}}$ for high temperature measurements) should give a straight line
+- gradient = $\frac{-E_a}{R}$ (or $\frac{-E_a}{2303R}$).
+
+.footer[
+- 
+- Nasicon conductivity
+]
+
 
 ???
 
@@ -431,5 +449,24 @@ Because defects have an associated formation energy $(\Delta \mathrm{H_{f}})$, i
 (it is possible to derive this from the defect formation equations, see e.g. West). In practice, it is common to plot $\log(\sigma T)$ vs $\frac{1000}{T}
 to account for the T-dependence of A.
 
+---
 
+class: compact
+# Lecture recap
+
+- Crystals are never perfect!
+	- defects favoured at higher temperature
+- Three main types of defect:
+	- vacancy (called Schottky if stoichiometry maintained)
+	- interstitial (called Frenkel if stoichiometry maintained)
+	- substitution
+- Kroger-Vink notation is a way to write defect equations
+- Some materials can form solid solutions and/or non-stoichiometric compositions
+- Defects can give rise to ionic conduction
+	- Occurs by three main mechanisms:
+		- Vacancy hopping
+		- Interstitial hopping
+		- interstitialcy (knock-on) cooperation
+- Ionic conductivity is thermally-activated
+	- shows Arrhenius-like behaviour
 

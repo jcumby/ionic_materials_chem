@@ -15,6 +15,8 @@ Lecture 3  - batteries
 Lecture 4 - dielectrics
 - Impedance spectroscopy
 - Dielectrics
+- Piezoelectrics
+- Ferroelectrics
 
 Lecture 5 - Fuel cells
 - Defect ordering
@@ -25,7 +27,7 @@ Lecture 5 - Fuel cells
 - update mathjax version
 	- should correct variable formatting
 	- possibly corrects floating atom amounts?
-- 
+- Short out video embedding
 
 
 
@@ -36,7 +38,7 @@ This course will cover:
 - techniques used to study ionic materials
 	- conductivity
 	- impedance spectroscopy
-	- 
+	- galvanostatic measurement
 - Important properties of ionic materials
 - Applications
 	- batteries

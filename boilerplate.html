@@ -55,9 +55,8 @@
     var slideshow = remark.create({
       slideNumberFormat: '%current%',
       countIncrementalSlides: false,
-	  //ratio: '4:3',
-	  ratio: '16:9',
-	  sourceUrl: 'lecture3.md'
+	  ratio: '4:3',
+	  sourceUrl: 'lecture0.md'
     });
 	
 	// Setup MathJax
@@ -150,7 +149,7 @@
 		var content = this.replace( /&\n/g, " ");
 		return ".grid[".concat(content).concat("]");
 	}
-
+	
 	
 	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
 			var $e = $(e);

@@ -1,43 +1,20 @@
+
 class: title, no-number
 
-# Ionic Materials
-
-### Dr James Cumby
-### james.cumby@ed.ac.uk
-
-.footer[
-- Room 269
-- Try pressing 'h' for help!
-]
+# Lecture 1 - Ionic structures
 
 ---
 
-# Course Overview
+class: roomy
+# Lecture Summary
 $\require{mediawiki-texvc}$
 
-Lecture | Topic
---|-------------
-1 | Introduction to ionic materials
-2 | defects and ionic conduction
-3 | Batteries
-4 | Dielectric materials
-5 | Fuel Cells 
-
-## Recommended Reading
-
-Basic Solid State Chemistry, A. R. West, *Wiley*, **1988** and references given during course.
-
+- Types and applications of ionic materials
+- Crystallography recap
+- Lattice energy and ionic bonding 
+- Close-packing and ionic structure types
 
 ---
-# Lecture Summary
-
-1. Introduction to ionic structures
-	- recap crystal structures
-	- Lattice energy and close packing
-	- Ionic structure types
-
----
-class: compact
 
 # Introduction
 
@@ -49,19 +26,19 @@ class: compact
 
 - Organic salts
 	- ammonium acetate $\ce{NH4+CH3COO-}$
-	- [chlorphenirammonium maleate](https://www.nhs.uk/medicines/chlorphenamine-including-piriton/) (active part of Piriton&reg;)
-	![Piriton API](./images/chlorphenirammonium_maleate_piriton_molecule.png# w-3-12th r-2 absolute t-20pct )
+	- [chlorphenirammonium maleate](https://www.nhs.uk/medicines/chlorphenamine-including-piriton/) <br>(active part of Piriton&reg;)
+	![Piriton API](./images/chlorphenirammonium_maleate_piriton_molecule.png# w-3-12th r-2 absolute t-4-12th )
 --
 	
 - (in)organic salts
-	- Mono-/Di-/Tri-Sodium citrate $\ce{Na\_{x}C6H\_{8-x}O7}$ 
+	- Mono-/Di-/Tri-Sodium citrate <br>$\ce{Na\_{x}C6H\_{8-x}O7}$ 
 		- collectively used as E331 in food
 		- $\ce{x}$ can be varied from 1&ndash;3
-	![Trisodium citrate](./images/trisodium_citrate.png# w-20pct r-2 absolute t-60pct)
+	![Trisodium citrate](./images/trisodium_citrate.png# w-3-12th r-2 absolute t-60pct)
 --
 	
 - Ionic liquids
-	- Either organic or inorganic, these are liquid below 100 &deg;C
+	- Either organic or inorganic, liquid below 100 &deg;C
 
 ---
 class: compact
@@ -77,14 +54,15 @@ class: compact
 --
 
 - Electrically insulating
+	![Ceramic insulator](./images/ceramic_insulator.jpg# w-3-12th relative fr db  t-1)
 	- Electronegativity differences promote localised electrons
-	![Ceramic insulator](./images/ceramic_insulator.jpg# w-3-12th absolute t-50pct r-2)
+
 --
 
 - Usually hard, and often robust to harsh conditions
 	- e.g. Synroc is used to encapsulate nuclear waste
 
-![synroc](./images/synroc.jpg# w-33pct relative l-2-12th)
+![synroc](./images/synroc.jpg# w-50pct relative l-3-12th)
 
 
 
@@ -107,21 +85,24 @@ class: compact
 # We can divide solids into two categories:
 
 .pull-left[
-Molecular (e.g. paracetamol)
-- Strong bonds within molecules
+**Molecular** (e.g. paracetamol)
+- Strong intramolecular bonds
 - Weaker intermolecular interactions
 ![:jmol 400, 300, 2, 1, 1](files/paracetamol.cif)
 
 ]
 
 .pull-right[
-Infinite (e.g. NaCl)
+**Infinite** (e.g. NaCl)
 - Strong bonds between all atoms
 - No discrete molecules
 ![:jmol 400, 300, 2, 2, 2](files/NaCl.cif)
 ]
 
+.clear-both[
+<br>
 We'll concentrate on **infinite materials**.
+]
 
 ???
 Infinite materials are probably the most widely studied in terms of a broad range of ionic properties,
@@ -233,7 +214,6 @@ The correct value is obtained by expanding the cubic unit cell as a cube (rather
 In reality, a number of methods exist to perform the summation, in particular the [Ewald Method](https://en.wikipedia.org/wiki/Ewald_summation) (commonly used in atomistic simulations) 
 
 ---
-class: compact
 
 # Ionic Structures
 
@@ -263,15 +243,15 @@ be ignored. Often, it is not possible to predict which structure will occur base
 .pull-left[
 Face-centered cubic (FCC)<br>
 ... .blue[A].green[B].gold[C].blue[A].green[B].gold[C] ...
-<video width="400" height="350" controls loop autoplay muted>
+<video width="350" height="350" controls loop autoplay muted>
     <source src="./images/fcc_animated.mp4" type="video/mp4">
 </video>
 ]
 
 .pull-right[
-Hexagonal close-packed (HCP)
+Hexagonal close-packed (HCP) <br>
 ... .blue[A].green[B].blue[A].green[B].blue[A].green[B] ...
-<video width="400" height="350" controls loop autoplay muted>
+<video width="350" height="350" controls loop autoplay muted>
     <source src="./images/hcp_animated.mp4" type="video/mp4">
 </video>
 ]
@@ -283,7 +263,7 @@ Hexagonal close-packed (HCP)
 
 CP arrangements of large (an)ions [X] leave 'holes' within the structure, which can be occupied by smaller (cat)ions [M]
 
-![Close packing holes](./images/close_packed_holes.jpg# w-7-12th)
+![Close packing holes](./images/close_packed_holes.jpg# w-100pct)
 
 ---
 # Octahedral holes
@@ -292,12 +272,12 @@ One .gold[hole] per .red[cp ion] - both are 6-coordinate
 
 .pull-left[
 
-![:jmol 400, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/FCC_oct_holes.cif)
+![:jmol 350, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/FCC_oct_holes.cif)
 Rock salt (NaCl) structure
 ]
 
 .pull-right[
-![:jmol 400, 300, 2, 2, 1, connect 4 (O) (Hole); color BONDS aliceblue](files/HCP_octahedral_holes.cif)
+![:jmol 350, 300, 2, 2, 1, connect 4 (O) (Hole); color BONDS aliceblue](files/HCP_octahedral_holes.cif)
 Nickel Arsenide structure (e.g. FeS)
 ![Hard boild egg](./images/iron_sulfide_egg.jpg# w-4-12th fr)
 ]
@@ -316,17 +296,21 @@ CN = .gold[6] / .red[3]
 ]
 
 ---
+class: compact
+
 # Tetrahedral holes
 
 Two .gold[holes] per .red[cp ion]
 
 .pull-left[
-![:jmol 400, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/FCC_tet_holes.cif)
+![:jmol 350, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/FCC_tet_holes.cif)
 ]
 
 .pull-right[
-![:jmol 400, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/HCP_tetrahedral_holes.cif)
+![:jmol 350, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/HCP_tetrahedral_holes.cif)
 ]
+
+<br>
 
 Holes filled | FCC Type | CN(.gold[A]/.red[X]) |  | HCP Type | CN(.gold[A]/.red[X])
 -------------|------|-------------|------------|---|----
@@ -335,6 +319,7 @@ Half | Zinc-blende (.gold[Zn].red[S]) | .gold[4]/.red[4] | &emsp; | Wurtzite (.g
 
 
 ---
+
 class: compact
 
 # Which structure type?
@@ -363,16 +348,32 @@ With 3 or more elements, structures become much more complicated!
 An important one is perovskite, $\ce{ABX3}$
 - $r(\mathrm{A}) \simeq r(\mathrm{X})$, so can be considered as FCC $\ce{AX3}$ layer with $\ce{B}$ filling 25% of octahedral holes:
 
-.pull-left[![perovskite layer](./images/perovskite_layer.png# w-7-12th)]
+.pull-left[![perovskite layer](./images/perovskite_layer.png# w-80pct)]
 
 .pull-right[
-![:jmol 400, 300, 1, 1, 1](files/cubic_perovskite.cif)
+![:jmol 400, 300, 1, 1, 1, select \(lanthanum\);
+color atoms green;
+rotate x 45;
+rotate y 35;
+rotate z 35;
+connect (lanthanum)(oxygen) DELETE;
+select \(aluminium\); color atoms blue](files/cubic_perovskite.cif)
 ]
 
 
+---
 
+# Lecture recap
 
-
+- Variety of ionic materials with a range of applications
+- Revision of basic crystallography
+	- Unit cells, symmetry
+- Electrostatic interaction hold ionic crystals together
+	- Long-ranged
+	- Aim to maximise cation-anion interactions
+- Close-packing of anions often most stable
+	- Ratio of ionic radii suggests which structure is adopted
+	- Beyond binary compounds, predicting structures is hard!
 
 
 

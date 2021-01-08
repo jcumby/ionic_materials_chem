@@ -14,7 +14,7 @@ col-2, col-3                     |	Add a header, then any content desired.
 */
 
 html {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Futura', 'Helvetica', 'Arial';
 }
 .remark-slide {
@@ -379,15 +379,15 @@ html {
 .remark-slide-content.no-footer .footer {
   display: none;
 }
-.pull-left {
+.remark-slide-content .pull-left {
   float: left;
   width: 49%;
 }
-.pull-right {
+.remark-slide-content .pull-right {
   float: right;
   width: 49%;
 }
-.pull-center {
+.remark-slide-content .pull-center {
   width: 50%; 
   float: left;
   position: relative;
@@ -396,4 +396,31 @@ html {
 }
 .remark-slide-content.no-number .remark-slide-number {
   display: none;
+}
+.remark-slide-content .clear-both {
+	clear: both;
+}
+
+/* Modifications to presenter mode */
+.remark-container.remark-presenter-mode .remark-slides-area {
+	width: 65%;
+	height: 100%;
+	top: 0;
+	left: 0.5%;
+}
+.remark-container.remark-presenter-mode .remark-preview-area {
+	display: none;
+}
+.remark-container.remark-presenter-mode .remark-notes-area {
+	left: 66%;
+	top: 0%;
+}
+.remark-container.remark-presenter-mode .remark-notes-area .remark-notes-current-area {
+	height: 100%;
+}
+.remark-container.remark-presenter-mode .remark-notes-area .remark-top-area {
+	display: none
+}
+.remark-container.remark-presenter-mode .remark-notes-area .remark-bottom-area .remark-notes-preview-area {
+	display: none
 }
