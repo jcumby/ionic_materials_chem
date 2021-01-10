@@ -1,9 +1,14 @@
 
+time: 0
 class: title, no-number
 # Lecture 3 - Batteries
 
+.footer[- [Return to course contents](overview.html#overview)
+]
+
 ---
 
+time: 37
 class: roomy
 # Lecture summary
 $\require{mediawiki-texvc}$
@@ -20,8 +25,9 @@ $\require{mediawiki-texvc}$
 
 
 ---
-class:compact
 
+class:compact
+time: 1:47
 # Essential electrochemistry
 
 ## Quantities
@@ -40,6 +46,7 @@ Power | P | how much current, and with what force | Watts (W)
 ---
 
 class: compact
+time: 3:48
 ## Important relationships
 
 Ohm's law - current and potential are linked:
@@ -57,6 +64,7 @@ $Q = It$ helps to understand why charge can have units of (m)Ah (particularly co
 
 ---
 
+time: 6:44
 # Why batteries?
 
 - Portable electronics
@@ -72,6 +80,7 @@ This requires *new materials* from chemistry.
 
 ---
 
+time: 10:13
 class: compact
 # (Brief) Battery History ![Baghdad battery](./images/baghdad-battery-cutaway.jpg# fr w-20pct relative r-1)
 
@@ -110,6 +119,7 @@ Galvani asserted this was 'animal electricity'
 
 ---
 
+time: 15:07
 class: no-number, compact
 exclude: false
 # Chemistry Nobel prize 2019
@@ -129,9 +139,11 @@ exclude: false
 
 Check out John Goodenough's laugh (always makes me smile)!
 
-<iframe width="400" height="300" src="https://www.youtube-nocookie.com/embed/CkIKRoTFogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="300" height="250" src="https://www.youtube-nocookie.com/embed/CkIKRoTFogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
+
+time: 15:57
 class: compact
 # Definitions
 
@@ -145,6 +157,7 @@ Naming of *anode* and *cathode* is often unclear. Here we define:
 
 ---
 
+time: 17:13
 # Main approaches
 
 .pull-left[
@@ -171,6 +184,7 @@ some researchers are investigating alternative anions (e.g. $\ce{F-}$) to overco
 
 ---
 
+time: 18:27
 class: compact
 # What makes a 'good' battery?
 
@@ -201,6 +215,7 @@ Because capacity depends on the cell size (amount of electrode material) the vol
 Note that 1 Wh = 3600 J!
 ---
 
+time: 20:42
 # Improving batteries
 
 Ideally, we want to maximise *both* volumetric and gravimetric energy densities
@@ -213,6 +228,8 @@ Ideally, we want to maximise *both* volumetric and gravimetric energy densities
 
 
 ---
+
+time: 22:12
 # Approches to increase $\mathrm{E_{bat}}$
 
 ## 1. Increase *operating voltage*, $V$
@@ -224,6 +241,7 @@ large electronegativity differences (e.g. $\ce{Li+, F-}$)
 
 ---
 
+time: 24:35
 class: compact
 ## 2. Increase *charge stored*, $Q$
 
@@ -255,9 +273,12 @@ Effectively, this is charge stored (nF) per formula mass. The factor 3.6 convert
 
 NOTE: the total charge stored in a full cell is limited by the electrode with the smallest capacity (although this can
 be overcome by using more/less of each material).
+
+Clarification: during discharge, the $\ce{Li}$ is **removed** from $\ce{LiCoO2}$ (in contrast to the voice-over).
 	
 ---
 
+time: 28:09
 # Ideal materials properties
 
 Anode/Cathode | Electrolyte
@@ -285,6 +306,8 @@ ideas transfer to other technologies.
 
 
 ---
+
+time: 30:28
 class: compact
 # Conversion electrodes
 
@@ -311,6 +334,7 @@ The metal hydride example can be understood as $\ce{A = OH}$ and $\ce{B = H}$
 
 ---
 
+time: 34:36
 # Conversion electrodes (2)
 
 ### Advantages
@@ -332,6 +356,8 @@ The metal hydride example can be understood as $\ce{A = OH}$ and $\ce{B = H}$
 ]
 
 ---
+
+time: 38:28
 class: compact
 # Intercalation electrodes
 
@@ -350,17 +376,14 @@ color cobalt blue](files/LiCoO2.cif)
 .pull-right[
 - Close-packed hcp .red[oxygen] array
 - .blue[$\ce{Co}$] occupies alternate layers of octahedral holes
-- .gold[$\ce{Li+}$] can insert between Co layers, oxidising $\ce{Co^{III} -> Co^{IV}}$
+- .gold[$\ce{Li+}$] can insert between Co layers, reducing $\ce{Co^{IV} <=> Co^{III}}$
 	- Layer spacing varies with $x$
 	- High $\ce{Li+}$ conductivity due to 2D vacancy-hopping mechanism
 ]
 
-
-
-
-
 ---
 
+time: 40:40
 class: compact
 # Intercalation cathode families
 
@@ -378,6 +401,7 @@ $Q_{\mathrm{theo.}}$ / mAh g<sup>-1</sup> | 274 | 148 | 170
 
 ---
 
+time: 43:55
 class: compact
 # Charging rates
 
@@ -398,6 +422,7 @@ $\mathrm{E_{bat}}$ depends on the (dis)charge rate, so to compare different mate
 
 ---
 
+time: 47:17
 # High charging rates reduce $\mathrm{E_{bat}}$
 
 Rapid charging causes problems over a range of length scales:
@@ -414,6 +439,8 @@ Rapid charging causes problems over a range of length scales:
 	
 
 ---
+
+time: 49:56
 # Electrochemical measurements
 
 To avoid variations in rate, battery analysis uses *Galvanostatic* (constant current) electrochemistry
@@ -425,7 +452,9 @@ To avoid variations in rate, battery analysis uses *Galvanostatic* (constant cur
 
 
 ---
-# Electrochemical measurements
+
+time: 51:38
+# Electrochemical measurements (2)
 
 *e.g.* for a 2.2 Ah battery:
 
@@ -440,6 +469,8 @@ To avoid variations in rate, battery analysis uses *Galvanostatic* (constant cur
 
 
 ---
+
+time: 55:35
 # Material insights from galvanostats
 
 Solid Solution | Two-phase region 
@@ -456,11 +487,13 @@ $$
 In the case of phase mixtures, the free energy follows a linear combination of the two phase minima,
  so the potential is constant.
 
-![](./images/voltage_curves_free_energy.jpg)
+![](./images/voltage_curves_free_energy.jpg# w-100pct)
 
 For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
 
 ---
+
+time: 57:41 
 class: compact
 # Lecture recap
 
@@ -478,3 +511,6 @@ class: compact
 - high (dis)charge rates reduce capacity
 	- problems over different length scales
 - we can use galvanostatic measurements to learn a lot
+
+.footer[- [Return to course contents](overview.html#overview)
+]

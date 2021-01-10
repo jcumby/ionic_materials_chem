@@ -1,10 +1,14 @@
 
 class: title, no-number
-
+time: 0
 # Lecture 4 - Dielectrics
+
+.footer[- [Return to course contents](overview.html#overview)
+]
 
 ---
 
+time: 9
 class: roomy
 # Lecture Summary
 $\require{mediawiki-texvc}$
@@ -19,6 +23,7 @@ $\require{mediawiki-texvc}$
 
 ---
 
+time: 1:01
 class: roomy
 # Introduction
 
@@ -29,7 +34,9 @@ class: roomy
 	- Short-range atomic motion is important for electrical properties
 
 ---
+
 class: compact
+time: 3:05
 # Polarisation
 
 Ionic solids are made up of cations and anions
@@ -47,6 +54,7 @@ The overall polarisation is a combination of this electronic polarisation and th
 
 ---
 
+time: 5:25
 # Is this useful?
 
 If the dipoles do not cancel under an applied field, the crystal will develop an overall dipole moment
@@ -58,6 +66,7 @@ Can use this to screen electric fields
 
 ---
 
+time: 7:17
 class: compact
 # Capacitors
 
@@ -73,6 +82,7 @@ The maximum charge stored, $Q = CV$ where $C$ is the capacitance (in Farads).
 
 ---
 
+time: 9:32
 class: compact
 # Charge stored
 
@@ -91,6 +101,7 @@ where $C$ is the capacitance and $R$ is the resistance between voltage source an
 
 ---
 
+time: 11:43
 # Capacitance
 
 Two electrodes separated by vacuum have a capacitance $C$;
@@ -107,6 +118,7 @@ To increase $C$ (and therefore $Q$):
 
 ---
 
+time: 13:41
 class: compact
 # Improving charge stored
 
@@ -124,6 +136,8 @@ and &epsilon;<sub>r</sub> > &epsilon;<sub>0</sub>
 
 
 ---
+
+time: 16:14
 # Example permittivities
 
 Material       |  Relative Permittivity, &epsilon;<sub>r</sub>
@@ -143,6 +157,8 @@ BaTiO<sub>3</sub> | 1000 - 10000
 
 
 ---
+
+time: 18:39
 class: compact
 # Characterising dielectrics
 
@@ -159,6 +175,7 @@ class: compact
 
 ---
 
+time: 21:47
 # Impedance
 
 Similar to Ohm's law $(R=\frac{V}{I})$ for constant voltages, we can define *impedance* as the 'resistance' to an alternating voltage
@@ -191,6 +208,7 @@ $$
 
 ---
 
+time: 23:38
 class: compact
 # Impedance analysis
 
@@ -212,6 +230,7 @@ Two 'standard' ways to display data:
 
 ---
 
+time: 26:22
 class: compact
 # Ideal resistor response
 ![resistor circuit symbol](./images/simple_R_circuit.png# db fr relative b-3)
@@ -224,11 +243,9 @@ In an ideal resistor electrons should flow instantly under an applied potential
 
 ![Bode and Nyquist plots for perfect resistor](./images/simple_R_bode_nyquist.png)
 
-
-
-
 ---
 
+time: 29:33
 class: compact
 # 'Ideal' capacitor response
 ![Capacitor circuit symbol](./images/simple_C_circuit.png# db fr relative b-3)
@@ -253,6 +270,7 @@ $$
 
 ---
 
+time: 33:16
 class: compact
 # 'Real' Impedance ![Parallel RC circuit](./images/parallel_RC_circuit.png# db fr w-20pct)
 
@@ -267,6 +285,8 @@ More complex behaviour is often observed, and can be modelled using *equivalent 
 
 
 ---
+
+time: 37:04
 class: compact
 # Real dielectric response ![Dielectric equivalent circuit](./images/parallel_RC_seriesR_circuit.png# db fr w-30pct)
 
@@ -281,6 +301,7 @@ Dielectrics are not ideal-they leak!
 
 ---
 
+time: 39:54
 class: compact
 # Other materials
 
@@ -296,6 +317,7 @@ Real materials usually consist of closely-packed ceramic grains.
 - gives rise to two (often overlapping) semicircles.
 
 ---
+
 exclude: true
 # Dielectric breakdown
 
@@ -308,6 +330,7 @@ Dielectrics also break down under high electric fields
 
 ---
 
+time: 42:48
 class: compact
 # Piezoelectricity
 
@@ -330,6 +353,7 @@ Applications:
 
 ---
 
+time: 45:16
 # Structural Aspects
 
 Stresses arise due to unbalanced dipoles
@@ -345,6 +369,7 @@ Stresses arise due to unbalanced dipoles
 
 ---
 
+time: 47:27
 class: compact
 # Spontaneous polarisation
 
@@ -356,6 +381,7 @@ If the polarisation can be switched with an electric field - **Ferroelectric**
 
 ---
 
+time: 48:33
 class: compact
 # Structural origin
 
@@ -378,6 +404,7 @@ An alternative (and complementary) description is due to hybridisation of O-2p o
 
 ---
 
+time: 51:17
 # Applications
 
 - Ferroelectrics often have the largest $\epsilon_r$
@@ -391,9 +418,9 @@ An alternative (and complementary) description is due to hybridisation of O-2p o
 - [Nice summary of ferroelectric mechanisms and multiferroics]( https://doi.org/10.1103/Physics.2.20)
 ]
 
-
 ---
 
+time: 52:28
 # Hierarchy of dielectrics
 
 ![Dielectric family relationships](./images/dielectric_families.svg# w-100pct)
@@ -401,6 +428,7 @@ An alternative (and complementary) description is due to hybridisation of O-2p o
 
 ---
 
+time: 53:17
 class: compact
 # Lecture recap
 
@@ -419,7 +447,8 @@ class: compact
 	- current interest in multiferroics
 
 
-
+.footer[- [Return to course contents](overview.html#overview)
+]
 
 
 

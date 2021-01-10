@@ -1,9 +1,13 @@
 class: title, no-number
-
+time: 0
 # Lecture 2 - defects
+
+.footer[- [Return to course contents](overview.html#overview)
+]
 
 ---
 
+time: 12
 # Lecture summary
 $\require{mediawiki-texvc}$
 
@@ -16,7 +20,7 @@ $\require{mediawiki-texvc}$
 ---
 
 class: compact, no-number
-
+time: 54
 # Defects
 
 **All** crystals contain defects of some sort, for example:
@@ -41,7 +45,7 @@ Defects are often the source of interesting properties
 ---
 
 class: compact
-
+time: 5:12
 # Defect amounts
 
 The amount of defects is a fine balance of entropy and enthalpy
@@ -54,7 +58,7 @@ Minimum in $\mathrm{\Delta G}$ depends on structure and bonding, but typically <
 
 ---
 
-
+time: 464
 class: compact
 # Types of defect
 
@@ -74,7 +78,7 @@ Additionally, defects can be either
 ---
 
 class: no-number
-
+time: 612
 # Intrinsic defects
 
 Two of the most common stoichiometric defects are:
@@ -97,6 +101,7 @@ Defects observed depend on both structure type and atoms involved.
 ]
 ---
 
+time: 685
 # Schottky defects
 
 - Typically occur when anions and cations have similar size (e.g. $\ce{NaCl}$ structure)
@@ -115,6 +120,7 @@ Careful density measurements can be useful for determining Schottky defect conce
 
 ---
 
+time: 770
 # Frenkel defects
 
 - Smaller ion normally displaced
@@ -131,6 +137,7 @@ Careful density measurements can be useful for determining Schottky defect conce
 
 ---
 
+time: 856
 # Defect equations
 
 Useful to write equation for defects, using **Kroger-Vink** notation:
@@ -152,6 +159,7 @@ Useful to write equation for defects, using **Kroger-Vink** notation:
 
 ---
 
+time: 1077
 # Defect equations (2)
 
 Defect equations must balance for:
@@ -162,6 +170,7 @@ Defect equations must balance for:
 
 ---
 	
+time: 1126
 # Examples
 $\ce{AgCl}$ interstitial formation again:
 
@@ -191,7 +200,7 @@ Writing a iso-electronic subsitution with Kroger-Vink notation is somewhat unnec
 ---
 
 class: roomy
-
+time: 22:07
 # Substitution
 
 - Ions of similar size can often replace each other
@@ -210,6 +219,7 @@ class: roomy
 
 ---
 
+time: 24:46
 # Extrinsic defects
 
 Substitution can also drive formation of defects,
@@ -223,6 +233,7 @@ $$ \ce{2 Na\_{Na} + CaCl2 <=> Ca\_{Na}^{\bullet} + V\_{Na}{'} + 2NaCl} $$
 
 ---
 class: compact
+time: 26:33
 # More complex example
 
 Sometimes, substitution (or 'doping') can give rise to multiple potential defects.
@@ -242,7 +253,7 @@ particularly for small numbers of defects!
 ---
 
 class: compact
-
+time: 29:37
 # Solid solutions
 
 Frequently, substitutional defect concentrations can exceed 1%
@@ -269,6 +280,7 @@ represents the same as $\ce{Sc\_{1-x}Bi\_{x}VO4}$.
 
 ---
 
+time: 32:55
 # Non-stoichiometry
 
 Some materials are naturally non-stoichiometric even without extrinsic defects
@@ -289,7 +301,9 @@ The exact composition formed is dependent on the exact synthesis conditions, in 
 would cause the entropy term to dominate, assuming the product could be 'quenched' to room temperature).
 
 ---
+
 class: roomy
+time: 36:06
 # Conductivity
 
 - Many ionic solids conduct electricity; due to *ionic* and/or *electronic* motion.
@@ -306,7 +320,7 @@ class: roomy
 ---
 
 class: compact
-
+time: 38:58
 # Ion migration mechanisms
 
 Three 'main' mechanisms of ionic migration
@@ -328,6 +342,7 @@ mechanisms involving lattice vibrations [phonons] and multiple ion types).
 
 ---
 
+time: 39:53
 # 2. Interstitial mechanism
 
 Ions hop between interstitial sites
@@ -340,6 +355,7 @@ Ions hop between interstitial sites
 
 ---
 
+time: 40:24
 # 3. Interstitialcy (knock-on) mechanism
 
 Interstitial ions 'push' into a neighbouring site
@@ -350,7 +366,9 @@ Interstitial ions 'push' into a neighbouring site
 </video>
 ]
 ---
+
 name: migration_paths
+time: 42:58
 # Migration paths
 
 
@@ -374,7 +392,7 @@ draw ID "direct" ARROW \(2.81 2.81 5.62\) \(5.2 5.2 5.62\) WIDTH 0.3 COLOR red](
 ---
 
 class: compact
-
+time: 44:19
 # Pathways can be complex
 
 - Migration pathways can be calculated and/or experimentally determined
@@ -407,7 +425,7 @@ diffraction data. MEM is one method to fit this.
 ---
 
 class:compact
-
+time: 47:42
 # Migration energetics
 
 - Defect mobility is a thermally-activated process:
@@ -419,7 +437,7 @@ $$ \mu = \mu_0 \exp \left( -\frac{\mathrm{E_a}}{\mathrm{RT}} \right) $$
 ---
 
 class: compact, no-number
-
+time: 50:03
 # Variation with temperature
 
 As $\sigma = nq\mu$ and $\mu$ is thermally-activated,
@@ -452,6 +470,7 @@ to account for the T-dependence of A.
 ---
 
 class: compact
+time: 53:10
 # Lecture recap
 
 - Crystals are never perfect!
@@ -470,3 +489,5 @@ class: compact
 - Ionic conductivity is thermally-activated
 	- shows Arrhenius-like behaviour
 
+.footer[- [Return to course contents](overview.html#overview)
+]

@@ -1,10 +1,14 @@
-
+time: 0
 class: title, no-number
 
 # Lecture 5 - Fuel cells
 
+.footer[- [Return to course contents](overview.html#overview)
+]
+
 ---
 
+time: 14
 class: roomy
 # Lecture Summary
 $\require{mediawiki-texvc}$
@@ -19,6 +23,7 @@ $\require{mediawiki-texvc}$
 
 ---
 
+time: 1:12
 class: compact
 # Fuel Cells
 
@@ -29,6 +34,8 @@ Fuel cells are similar to batteries; they have a cathode, electrolyte and anode.
 Electricity can be generated as long as fuel is supplied (they don't need to be recharged)
 
 ---
+
+time: 3:25
 class: compact
 
 ![Fuel cell history](./images/fuel_cell_history.jpg# w-9-12th relative b-2 l-1-12th)
@@ -36,6 +43,7 @@ class: compact
 
 ---
 
+time: 6:13
 # Fuel cell fundamentals
 
 $$
@@ -56,6 +64,7 @@ $$
 	
 ---
 
+time: 9:00
 class: compact
 # Fuel cell efficiency
 
@@ -88,6 +97,7 @@ Efficiency = &eta; = -474.3 / 571.6 = **83%**
 
 ---
 
+time: 11:39
 class: compact
 # Efficiency with temperature
 
@@ -118,6 +128,7 @@ A really nice example (in which the heating/cooling is done on a sealed chamber 
 
 ---
 
+time: 13:40
 class: compact
 # Types of fuel cell
 
@@ -168,6 +179,8 @@ The actual reduction potentials will vary with pH, but the overall cell potentia
 ![:width 60%](./images/PourbaixWater.png)
 
 ---
+
+time: 15:45
 class: no-number
 # Polymer - Proton exchange membrane fuel cell (PEMFC)
 
@@ -190,6 +203,7 @@ Sometimes also known as polymer electrolyte membrane fuel cell
 
 ---
 
+time: 16:51
 class: compact
 # PEMFC + H<sub>2</sub>
 
@@ -215,6 +229,7 @@ $$
 
 ---
 
+time: 19:59
 class: compact
 # PEMFC + Methanol
 
@@ -239,6 +254,8 @@ $$
 
 
 ---
+
+time: 22:05
 # Alkaline polymers?
 
 - OH<sup>-</sup> as mobile ion prevents H<sub>2</sub>O<sub>2</sub> formation .green[&#10004;]
@@ -301,6 +318,7 @@ $$
 
 ---
 
+time: 23:23
 class: compact
 # Solid Oxide (SOFC)
 
@@ -333,6 +351,8 @@ $$
 
 
 ---
+
+time: 26:03
 class: compact
 # SOFC Limitations
 
@@ -352,6 +372,7 @@ Delicate balance between:
 
 ---
 
+time: 28:28
 # Requirements for SOFC materials
 
 Property | Anode              |       Electrolyte         |   Cathode
@@ -365,6 +386,7 @@ Also: chemical compatibility between materials, similar thermal expansion, low c
 
 ---
 
+time: 30:29
 class: compact
 # 'Perfect' electrodes
 
@@ -383,6 +405,7 @@ In reality, use a mixture of good ionic and electronic conductors.
 
 ---
 
+time: 32:18
 # Typical anode materials
 
 Usually a cermet (*i.e.* mixture) of Ni and electrolyte
@@ -394,6 +417,7 @@ Usually a cermet (*i.e.* mixture) of Ni and electrolyte
 
 ---
 
+time: 33:47
 class: compact
 # Typical cathode materials
 
@@ -425,6 +449,7 @@ Interest in mixed-conductors:
 
 ---
 
+time: 38:36
 class: compact
 # Electrolyte materials
 
@@ -453,10 +478,11 @@ Many other materials, but issues with cost, stability, manufacturing...
 
 ---
 
+time: 40:50
 class: compact, no-number
 # Improving Ionic conduction
 
-As $\sigma = nq\mu$, as [defects] &uarr;, $\sigma$ &uarr;
+As $\sigma = nq\mu$, so  as [defects] &uarr;, $\sigma$ &uarr;
 
 --
 
@@ -490,6 +516,7 @@ Compare this with the ideal fluorite structure consisting of edge-sharing OM<sub
 
 ---
 
+time: 44:22
 class: compact
 # Long-range defect ordering
 
@@ -506,6 +533,7 @@ In some cases defects can form long-range order
 
 ---
 
+time: 46:09
 class: compact, no-number
 # Stoichiometric defect phases
 
@@ -524,9 +552,14 @@ Derived from rutile ($\ce{MO_2}, n=1$) with structural rearrangement around vaca
 - $n=4$ Magneli phase schematic
 ]
 
+???
+
+The rutile structure can be viewed as chains of opposite-edge-sharing MO<sub>6</sub> octahedra (aligned along the *c* axis)
+with adjacent chains joined by corners. These schematics show the octahedra as squares in the *ab* plane.
 
 ---
 
+time: 48:56
 class: compact
 # Lecture recap
 
@@ -541,6 +574,7 @@ class: compact
 	- defect ordering occurs
 - Defect ordering can give rise to new structure types
 
-
+.footer[- [Return to course contents](overview.html#overview)
+]
 
 

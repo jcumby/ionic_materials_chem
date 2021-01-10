@@ -1,34 +1,100 @@
 
-layout:true
-
-???
-<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292?iframeembed=true&playerId=kaltura_player&entry_id=1_415iewn5&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[mediaProxy.mediaPlayFrom]=640&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_mje8yamr" width="304" height="231" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
-
----
 class: title, no-number
 
+Welcome to
 # Ionic Materials
 
 ### Dr James Cumby
-### james.cumby@ed.ac.uk
+### james.cumby@ed.ac.uk <br> Room 269
+
 
 .footer[
-- Room 269
-- Try pressing 'h' for help!
+- [Go directly to contents page](#overview)
+- [Help on using the presentation](#getting_started)
 ]
 
 ---
 
+class: no-number
+name: getting_started
+# Getting started
+
+Welcome to the Ionic Materials course. The lecture notes all display within a web browser* and can be accessed
+from the [contents page](#overview). The video lectures are embedded within the notes and synchronised with each slide
+for simplicity (and to allow you to easily take a break, rather than watch 50 minutes at once!).
+
+If you have any problems with the presentations, please get in touch (james.cumby@ed.ac.uk)!
+
+To continue, you can:
+- get more information about [using the slides](#usage),
+- learn about [interactive crystal structures](#jmol_use), or
+- go directly to the [contents page](#overview).
+
+
+.footer[-  
+- *Requires an internet connection
+
+]
+
+---
+
+name: usage
+class: no-number
+# Using the slides
+
+These slides are written using [remark.js](https://remarkjs.com/#1).
+Detailed instructions to use the slideshows can be found by pressing <kbd>H</kbd>*, but to advanced through the slides in order
+you can:
+- type <kbd>&darr;</kbd>, <kbd>&rarr;</kbd>, <kbd>Pg Dn</kbd> or <kbd>Space</kbd> on your keyboard
+- Scroll using a mouse/touchpad
+- Swipe on a touchscreen<sup>&dagger;</sup>
+
+Some slides also contain additional notes or points of interest; to access these press <kbd>P</kbd>.
+
+Move to the next slide to learn about [interactive structures](#jmol_use) or go to the [contents page](#overview).
+
+
+.footer[
+- *you may need to click on the slide area first
+- &dagger; I think... Let me know if not
+]
+---
+
+name: jmol_use
+class: compact, no-number
+# Interactive crystal structures
+
+On some slides there are interactive crystal structures, allowing you to rotate and zoom the 3D models. These are created using [Jmol](http://wiki.jmol.org/index.php/Jmol_Tutorials).
+
+
+
+.pull-right[
+![:jmol 400, 300, 1, 1, 1](files/NaCl.cif)
+]
+
+To rotate the crystal model, left-click and drag around the image area (this can take some practice!). Other useful actions can be found [here](http://wiki.jmol.org/index.php/Mouse_Manual).
+
+
+<br><br><br>To view the course materials, continue to the [contents page](#overview).
+
+
+.footer[- Structures in jmol can be viewed/edited in many different ways. If you are interested, see the [list of tutorials](http://wiki.jmol.org/index.php/Jmol_Tutorials)
+]
+
+---
+
+name: overview
 # Course Overview
+
 
 Lecture | Topic
 --|-------------
-1 | Introduction to ionic materials
-2 | defects and ionic conduction
-3 | Batteries
-4 | Dielectric materials
-5 | Fuel Cells 
+1 | [Introduction to ionic materials](lecture1.html)
+2 | [Defects and ionic conduction](lecture2.html)
+3 | [Batteries](lecture3.html)
+4 | [Dielectric materials](lecture4.html)
+5 | [Fuel Cells](lecture5.html)
 
 ## Recommended Reading
 
-Basic Solid State Chemistry, A. R. West, *Wiley*, **1988** and references given during course.
+Basic Solid State Chemistry, A. R. West, *Wiley*, **1988** and references given during lectures.

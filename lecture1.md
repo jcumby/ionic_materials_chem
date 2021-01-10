@@ -1,10 +1,15 @@
-
+time: 0
 class: title, no-number
 
 # Lecture 1 - Ionic structures
 
+
+.footer[- [Return to course contents](overview.html#overview)
+]
+
 ---
 
+time: 12
 class: roomy
 # Lecture Summary
 $\require{mediawiki-texvc}$
@@ -16,6 +21,7 @@ $\require{mediawiki-texvc}$
 
 ---
 
+time: 42
 # Introduction
 
 'Ionic materials' consist of both cations and anions:
@@ -41,8 +47,9 @@ $\require{mediawiki-texvc}$
 	- Either organic or inorganic, liquid below 100 &deg;C
 
 ---
-class: compact
 
+class: compact
+time: 215
 # Why are they interesting?
 
 - Large range of practical applications
@@ -80,6 +87,8 @@ Ionic solids find applications in a huge number of places, including:
 Synroc is a mixture of titanium oxide minerals
 
 ---
+
+time: 5:33
 class: compact
 
 # We can divide solids into two categories:
@@ -117,6 +126,7 @@ molecular ionic materials, including:
 
 ---
 
+time: 7:00
 # Recap on crystal structure
 
 Periodic solids can be described by a unit cell
@@ -142,8 +152,9 @@ to the more familiar symmetry elements such as mirror planes and rotations). The
 generates a finite number (230) of space groups.
 
 ---
-class: compact
 
+time: 9:02
+class: compact
 # Example: Sodium chloride
 
 .pull-center[
@@ -161,7 +172,7 @@ Because of symmetry, we only need to define one Na and one Cl position.
 ---
 
 name: ionic_bonding
-
+time: 10:49
 # Ionic Bonding
 
 - Ionic compounds stay together because of electrostatic interactions (strong)
@@ -186,7 +197,7 @@ $$ E\_{\mathrm{Madelung}} = \sum_{i \neq j} \frac{q_i q_j}{4\pi \epsilon_0 r} $$
 ---
 
 class: compact
-
+time: 13:26
 # Infinite summations
 
 - For infinite solids, periodicity usually means the sum converges
@@ -215,6 +226,7 @@ In reality, a number of methods exist to perform the summation, in particular th
 
 ---
 
+time: 16:26
 # Ionic Structures
 
 Generally, structures **maximise cation-anion** interactions (-ve energy) while **minimising like-charge** interactions (+ve energy)
@@ -232,12 +244,14 @@ be ignored. Often, it is not possible to predict which structure will occur base
 
 ---
 
+time: 18:53
 # Close packing
 
-![Close packing animation](./images/close_packed_layers.png)
+![Close packing](./images/close_packed_layers.png)
 
 ---
 
+time: 20:34
 # Close packing
 
 .pull-left[
@@ -259,6 +273,7 @@ Hexagonal close-packed (HCP) <br>
 
 ---
 
+time: 21:38
 # Holes
 
 CP arrangements of large (an)ions [X] leave 'holes' within the structure, which can be occupied by smaller (cat)ions [M]
@@ -266,6 +281,8 @@ CP arrangements of large (an)ions [X] leave 'holes' within the structure, which 
 ![Close packing holes](./images/close_packed_holes.jpg# w-100pct)
 
 ---
+
+time: 22:53
 # Octahedral holes
 
 One .gold[hole] per .red[cp ion] - both are 6-coordinate
@@ -285,6 +302,7 @@ Nickel Arsenide structure (e.g. FeS)
 
 ---
 
+time: 24:14
 # Rutile
 
 Although not strictly close-packed, rutile (.gold[Ti].red[O<sub>2</sub>]) is distorted HCP
@@ -296,8 +314,9 @@ CN = .gold[6] / .red[3]
 ]
 
 ---
-class: compact
 
+time: 25:58
+class: compact
 # Tetrahedral holes
 
 Two .gold[holes] per .red[cp ion]
@@ -321,7 +340,7 @@ Half | Zinc-blende (.gold[Zn].red[S]) | .gold[4]/.red[4] | &emsp; | Wurtzite (.g
 ---
 
 class: compact
-
+time: 28:07
 # Which structure type?
 
 Generally, the structure formed depends on the ratio of ionic radii
@@ -339,8 +358,9 @@ These are only approximate 'rules', and other binary structures exist (e.g. $\ce
 
 
 ---
-class: compact
 
+class: compact
+time: 31:37
 # Beyond binary compounds
 
 With 3 or more elements, structures become much more complicated!
@@ -363,6 +383,7 @@ select \(aluminium\); color atoms blue](files/cubic_perovskite.cif)
 
 ---
 
+time: 33:56
 # Lecture recap
 
 - Variety of ionic materials with a range of applications
@@ -375,7 +396,8 @@ select \(aluminium\); color atoms blue](files/cubic_perovskite.cif)
 	- Ratio of ionic radii suggests which structure is adopted
 	- Beyond binary compounds, predicting structures is hard!
 
-
+.footer[- [Return to course contents](overview.html#overview)
+]
 
 
 

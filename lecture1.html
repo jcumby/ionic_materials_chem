@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Lecture 4</title>
+		<title>Lecture 1</title>
 		
-		<meta name="description" content="Lecture 4 - Dielectrics.">
+		<meta name="description" content="Lecture 1 - Ionic Materials.">
 
 		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
 		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
@@ -53,6 +53,7 @@
   </script>
   <!-- Line to modify video source -->
   <script src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292"></script>
+  <!-- <script src="https://cdnapisec.kaltura.com/p/423851/sp/42385100/embedIframeJs/uiconf_id/11598752/partner_id/423851"></script> -->
   <script src="common/remark.language.js"></script>
   <script>
 	
@@ -60,14 +61,14 @@
       slideNumberFormat: '%current%',
       countIncrementalSlides: false,
 	  ratio: '4:3',
-	  sourceUrl: 'lecture4.md',
+	  sourceUrl: 'lecture1.md',
 	  container: document.getElementById('slideshow'),
     });
 
 
 	kWidget.embed({
 	  "targetId": "kaltura_player",
-	  "wid": "1_70aba1zm",
+	  "wid": "1_xm2mjoqi",
 	  "uiconf_id": "32599141",
 	  "flashvars": {
 					'streamerType' : 'auto',
@@ -86,7 +87,7 @@
 					
 					
 	  },
-	  "entry_id": "1_kv1sl3jy"
+	  "entry_id": "1_ncumtzdx"
 	});
 
 	
@@ -127,15 +128,7 @@
 		var kdp = document.getElementById( playerId );
 		slideshow.on('showSlide', function (slide) {
 			if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){
-				var times = slide.properties.time.split(':');
-				var seconds =0;
-				var m = 1;
-				while (times.length > 0){
-					seconds += m * parseInt(times.pop(), 10)
-					m *= 60
-				}
-				console.log(seconds)
-				kdp.sendNotification('doSeek', seconds );
+				kdp.sendNotification('doSeek', slide.properties.time );
 			}
 		});
 	});	
