@@ -57,6 +57,9 @@
   <script src="common/remark.language.js"></script>
   <script>
 	
+	// Necessary to make jmol play nicely with Learn (and avoid clobbering Kaltura updating)
+	delete Jmol._tracker
+	
     var slideshow = remark.create({
       slideNumberFormat: '%current%',
       countIncrementalSlides: false,
@@ -128,7 +131,15 @@
 		var kdp = document.getElementById( playerId );
 		slideshow.on('showSlide', function (slide) {
 			if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){
-				kdp.sendNotification('doSeek', slide.properties.time );
+				var times = slide.properties.time.split(':');
+				var seconds =0;
+				var m = 1;
+				while (times.length > 0){
+					seconds += m * parseInt(times.pop(), 10)
+					m *= 60
+				}
+				console.log(seconds)
+				kdp.sendNotification('doSeek', seconds );
 			}
 		});
 	});	

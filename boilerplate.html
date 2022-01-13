@@ -12,8 +12,9 @@
 		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
 		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
 		<style type="text/css">
+		<!-- Page size influences print to pdf. Originally 1216px 684px (from Story) but modified to suit 4:3 ratio -->
 		@page {
-				  size:  1216px 684px; 
+				  size:  1024px 768px; 
 				  margin: 0;
 		}
 		</style>
@@ -56,11 +57,15 @@
   <script src="common/remark.language.js"></script>
   <script>
 	
+	// Necessary to make jmol play nicely with Learn (and avoid clobbering Kaltura updating)
+	delete Jmol._tracker
+	
     var slideshow = remark.create({
       slideNumberFormat: '%current%',
       countIncrementalSlides: false,
 	  ratio: '4:3',
 	  sourceUrl: 'lecture4.md',
+	  // Comment out the following line to hide video frame (all done with CSS)
 	  container: document.getElementById('slideshow'),
     });
 

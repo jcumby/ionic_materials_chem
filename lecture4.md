@@ -219,13 +219,13 @@ Two 'standard' ways to display data:
 **Bode plot**: $|Z|$ and $\phi$ plotted vs frequency
 - often log axes
 
-![Example Bode plot](./images/parallel_RC_Bode.png# w-100pct)
+![Example Bode plot](./images/parallel_RC_bode.png# w-100pct)
 ]
 .pull-right[
 **Nyquist plot**: $Z$ plotted in a 2D plane (like an [Argand diagram](https://www.mathcentre.ac.uk/resources/Engineering%20maths%20first%20aid%20kit/latexsource%20and%20diagrams/7_3.pdf))
 - N.B. usually inverted y-axis
 
-![Example Nyquist plot](./images/complex_impedance.svg# db fr w-90pct)
+![Example Nyquist plot](./images/Complex_Impedance.svg# db fr w-90pct)
 ]
 
 ---

@@ -56,6 +56,9 @@
   <script src="common/remark.language.js"></script>
   <script>
 	
+	// Necessary to make jmol play nicely with Learn (and avoid clobbering Kaltura updating)
+	delete Jmol._tracker
+	
     var slideshow = remark.create({
       slideNumberFormat: '%current%',
       countIncrementalSlides: false,

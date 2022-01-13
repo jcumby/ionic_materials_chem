@@ -67,7 +67,7 @@ The three most common defect types in ionic solids are:
 
 Vacancy | Interstitial | Substitution |
 :-----|:----:|----:
-![Vacancy defect](./images/mx_vacancy.png# w-90pct) | ![Interstitial defect](./images/mx_interstitial.png# w-90pct) | ![Substitutional defect](./images/mx_substitution.png# w-90pct)
+![Vacancy defect](./images/MX_vacancy.png# w-90pct) | ![Interstitial defect](./images/mx_interstitial.png# w-90pct) | ![Substitutional defect](./images/mx_substitution.png# w-90pct)
 
 --
 
@@ -87,7 +87,7 @@ Two of the most common stoichiometric defects are:
 **Schottky**
 - Charge-balanced combination of anion and cation vacancies
 
-![Walter Schottky](./images/yakov_frenkel.jpg# w-10pct db fr)
+![Yakov Frenkel](./images/Yakov_Frenkel.jpg# w-10pct db fr)
 **Frenkel**
 - Ions displaced to interstitial sites
 
@@ -108,7 +108,7 @@ time: 685
 - Reduced density compared with the ideal material
 - e.g. $\ce{NaCl}$ - equal numbers of $\ce{Na}$ and $\ce{Cl}$ vacancies
 
-.pull-left[![NaCl Schottky Defect](./images/NaCl_schottky.png# w-70pct)]
+.pull-left[![NaCl Schottky Defect](./images/nacl_schottky.png# w-70pct)]
 
 .pull-right[
 ![:jmol 400, 300, 2, 2, 2, select (Na1)\<33\>; spacefill ionic; color atoms TRANSLUCENT 0.8 gray; spacefill 0.9; select (Cl1)\<15\>; color atoms TRANSLUCENT 0.8 lightgreen; spacefill 0.9](files/NaCl.cif)
@@ -128,7 +128,7 @@ time: 770
 - e.g. $\ce{AgCl}$ ($\ce{NaCl}$-type)
 	- Smaller $\ce{Ag+}$ ion displaced to tetrahedral holes in CCP $\ce{Cl-}$ structure
 
-.pull-left[![AgCl Frenkel Defect](./images/AgCl_frenkel.png# w-70pct)]
+.pull-left[![AgCl Frenkel Defect](./images/agcl_frenkel.png# w-70pct)]
 
 .pull-right[
 ![:jmol 400, 350, 1, 1, 1, unitcell OFF; select (Na1)\<13\>; spacefill ionic; color atoms TRANSLUCENT 0.8 gray](files/AgCl_interstitial.cif)
@@ -169,7 +169,7 @@ Defect equations must balance for:
 	- positions created/destroyed must balance
 
 ---
-	
+
 time: 1126
 # Examples
 $\ce{AgCl}$ interstitial formation again:

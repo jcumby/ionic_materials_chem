@@ -89,7 +89,7 @@ class: compact
 	- Iron and copper electrodes, filled with vinegar
 --
 
-- **1800**: Volta created the voltaic pile ![Voltaic pile](./images/VoltaBattery.jpg# w-20pct fr)
+- **1800**: Volta created the voltaic pile ![Voltaic pile](./images/VoltaBattery.JPG# w-20pct fr)
 	- Alternating Ag and Zn discs, NaCl electrolyte
 	- Enabled *chemistry* e.g. $\ce{2H2O -> H2 + O2}$
 --

@@ -450,3 +450,9 @@ html {
 	position: absolute;
 	overflow: hidden;
 }
+#slideshow.slideshow:not(.remark-container) {
+	display: none;
+}
+#slideshow.slideshow:not(.remark-container) + #presentervid.video {
+	display: none;
+}
