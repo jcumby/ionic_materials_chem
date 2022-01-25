@@ -1,15 +1,26 @@
 Lecture improvements still to do...
 ===================================
 
-Lecture 1
----------
+2021-22
+-------
 
-Lecture 2
----------
+- Lecture 2 overran; either too much content or too long spent on tasks
+- Lecture 4 too packed; not enough time to consider galvanostatic measurements and meaning
+	- Maybe drop galvanostats altogether?!
+- Too much maths/physics in lecture 5
+	- Direct more towards the chemistry and applications, with less number-crunching
+- Put more chemistry in lecture 6?
+- Tutorial is too long for 1 hour (esp. PGT); remove Q3 next time
 
-* Slide 4; add better arrows
+Comments
+- Mentimeters appreciated by students, but don't spend too long
+- Interactive structures are good
+	- Can I customise the right-click menu to allow easy polyhedra and bonds on/off?
 
-Lecture 3
----------
+2020-21
+=======
 
-Better arrows on electrolytes slide
+- Lecture 2:
+    - Slide 4; add better arrows
+- Lecture 3:
+    - Better arrows on electrolytes slide
