@@ -9,9 +9,52 @@ class: title, no-number
 
 ---
 
+class: roomy
+# Course Summary
+
+This course aims to introduce you to the importance of ionic materials in many applications.
+
+What do I want you to do?
+- Revise basic crystallography and ionic solids
+- Try to understand examples, **don't memorise them**
+- If in doubt - ask questions!
+
+
+---
+
+class: roomy
+# Lecture Notes
+
+- Interactive HTML notes
+	- Detailed instructions on overview page
+    - Explore the jmol structures!
+	- We'll have live quizzes during lectures - please engage
+- PDF notes also on Learn if needed
+
+
+.pull-center[
+![:jmol 400, 300, 1, 1, 1](files/NaCl.cif)
+]
+
+---
+
+# Test poll!
+
+![:vote](https://www.menti.com/i8mqs9wg3s)
+
+---
+
+# Results
+
+![:results](https://www.mentimeter.com/embed/108185ce9fe171d5b8dd94a3c830f3e6/7a22677b6492)
+
+
+---
+
+
 time: 12
 class: roomy
-# Lecture Summary
+# Lecture 1 Summary
 $\require{mediawiki-texvc}$
 
 - Types and applications of ionic materials
@@ -165,8 +208,8 @@ class: compact
 ----------------|---|--
 Cubic structure | $a = b = c = 5.62\ \AA{}$, $\alpha = \beta = \gamma = 90^\circ$  |
 Spacegroup      | $\mathrm{Fm\bar3 m}$ (#225, point group = $\mathrm{O_h}$) |
-Na atoms at:    | (0 0 0)       &emsp; (&half; &half; 0) &emsp;  (&half; 0 &half;) &emsp;  (0 &half; &half;) | (all symmetry-related)
-Cl atoms at:    | (&half; 0 0)  &emsp; (0 &half; 0)      &emsp;  (0 0 &half;)      &emsp;  (&half; &half; &half;) | (all symmetry-related)
+Na atoms at:    | (0 0 0)       &ensp; (&half; &half; 0) &ensp;  (&half; 0 &half;) &ensp;  (0 &half; &half;) | (all symmetry-related)
+Cl atoms at:    | (&half; 0 0)  &ensp; (0 &half; 0)      &ensp;  (0 0 &half;)      &ensp;  (&half; &half; &half;) | (all symmetry-related)
 
 Because of symmetry, we only need to define one Na and one Cl position.
 ---
@@ -270,7 +313,6 @@ Hexagonal close-packed (HCP) <br>
 </video>
 ]
 
-
 ---
 
 time: 21:38
@@ -279,6 +321,20 @@ time: 21:38
 CP arrangements of large (an)ions [X] leave 'holes' within the structure, which can be occupied by smaller (cat)ions [M]
 
 ![Close packing holes](./images/close_packed_holes.jpg# w-100pct)
+
+---
+
+# How are you getting on? Vote
+
+![:vote](https://www.menti.com/197zpjt3b5)
+
+---
+
+# How are you getting on? Results
+
+![:results](https://www.mentimeter.com/s/f5d6b6ece1f5b78c18b391183e14209e/9cb3695182fe)
+
+
 
 ---
 
@@ -396,9 +452,14 @@ time: 33:56
 	- Ratio of ionic radii suggests which structure is adopted
 	- Beyond binary compounds, predicting structures is hard!
 
+---
+
+# Feedback
+
+![:vote](https://www.menti.com/5jnmvofrd7)
+
 .footer[- [Return to course contents](overview.html#overview)
 ]
-
 
 
 

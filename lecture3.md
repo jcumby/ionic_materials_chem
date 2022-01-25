@@ -1,516 +1,305 @@
-
-time: 0
 class: title, no-number
-# Lecture 3 - Batteries
+time: 0
+# Lecture 3 - Ionic Conductivity
 
 .footer[- [Return to course contents](overview.html#overview)
 ]
 
 ---
 
-time: 37
-class: roomy
+time: 12
 # Lecture summary
 $\require{mediawiki-texvc}$
 
-- Electrochemistry fundamentals
-- Battery history and overview
-- Battery definitions
-- Improving capacity
-- Essential materials properties
-	- types of electrode behaviour
-- Effect of charging rate on capacity
-- Galvanostatic measurements
+- Recap of defect types
+- Ionic conductivity
+- Conduction mechanisms
+- Ionic migration paths
+- Energetics of conduction
+
+---
+
+# Defect recap
+
+![:vote](https://www.menti.com/xu5g5ogo27)
+
+---
+
+# Defect recap results
+
+![:results](https://www.mentimeter.com/s/b263ad5a60b54a924a4c8a7399ae89b4/3dc6c5216a2c)
+
+---
+
+class: compact
+time: 36:06
+# Conductivity
+
+- Many ionic solids conduct electricity; due to *ionic* and/or *electronic* motion.
+- Most ionic solids are electrically insulating/semiconducting (localised electrons)
+--
+
+- Ionic conductors are important!
 
 
+![Electric vehicle](./images/electric_vehicle.jpg# w-6-12th)| ![Gas sensor](./images/gas_sensor_H2.jpg# w-5-12th )
+:---------:|:-----------:
+Batteries ([Lecture 4](lecture4.html)) | Sensors 
+![Li separation from seawater membrane](./images/separation_membrane.jpg# w-5-12th ) | ![Fuel cell stack](./images/bloom_energy_fuel_cell.jpg# w-5-12th )
+Separation Membranes | Fuel Cells ([Lecture 6](lecture6.html))
+
+
+
+---
+
+# Origin of ionic conduction
+
+- Ionic conductivity is dominated by **defects**
+	- In an ideal crystal, ions can't easily move
+	- vacancies and/or interstitials are the main charge carriers
+--
+
+- Conductivity, $\sigma = nq\mu$, where
+	- $n$ is number of charge carriers
+	- $q$ is charge
+	- $\mu$ is the mobility of charge carriers
+--
+
+- In ionic solids, conductivity covers  $\ce{10^{-16}\bond{-} 10^3\ S\ m^{-1}}$
+	- most solids are limited to around $\ce{10^{-2}\ S\ m^{-1}}$
+	- Liquid electrolytes typically $\ce{10^{-1}\bond{-} 10^3\ S\ m^{-1}}$
+---
+
+
+# Measuring Conductivity
+
+- For electronic conductors, this is simple:
+	- Apply a voltage (V) and measure the resulting current (I)
+	- Link by Ohm's law; $ V = IR $
+	- Resistivity (in $\Omega\ cm$) of the material calculated from geometry
+	
+- Resistivity $\rho$ (in $\Omega\ cm$) = $\frac{1}{\text{Conductivity}\ \sigma\ \mathrm{(in\ S\ cm^{-1})}}$
+
+
+.pull-center[
+<video width="390" height="220" controls loop autoplay muted>
+    <source src="./images/electron_conduction.mp4" type="video/mp4">
+</video>
+]
+
+
+.footer[
+- In reality, we normally use two wires for V and two for I
+]
+
+---
+
+class: compact
+# Measuring Ionic Conductivity
+
+- Current flow is eventually restricted
+
+.center[
+<video width="390" height="220" controls autoplay muted>
+    <source src="./images/ionic_conduction.mp4" type="video/mp4">
+</video>
+]
+
+--
+
+
+- Instead, we use alternating current
+	- Impedance spectroscopy (see [lecture 5](./lecture5.html))
+
+.pull-center[
+<video width="390" height="220" controls loop autoplay muted>
+    <source src="./images/ionic_conduction_reverse.mp4" type="video/mp4">
+</video>
+]
+
+---
+
+class: compact
+time: 38:58
+# Ion migration mechanisms
+
+Three 'main' mechanisms of ionic migration
+
+## 1. Vacancy mechanism
+
+Vacancies move throughout the lattice (atoms move into vacancy)
+
+.pull-center[
+<video width="350" height="350" controls loop autoplay muted>
+    <source src="./files/vacancy_migration.mp4" type="video/mp4">
+</video>
+]
+
+???
+
+These are the most common suggested mechanisms, but others have been proposed in various materials (in particular cooperative 
+mechanisms involving lattice vibrations [phonons] and multiple ion types).
+
+---
+
+time: 39:53
+# 2. Interstitial mechanism
+
+Ions hop between interstitial sites
+
+.pull-center[
+<video width="400" height="400" controls loop autoplay muted>
+    <source src="./files/interstitial_migration.mp4" type="video/mp4">
+</video>
+]
+
+---
+
+time: 40:24
+# 3. Interstitialcy (knock-on) mechanism
+
+Interstitial ions 'push' into a neighbouring site
+
+.pull-center[
+<video width="400" height="400" controls loop autoplay muted>
+    <source src="./files/interstitialcy_knock_on_migration.mp4" type="video/mp4">
+</video>
+]
+---
+
+# Vacancy, Interstitial or Interstitialcy?
+
+![:vote](https://www.menti.com/2h16y82x7w)
+
+---
+
+# Suggestions
+
+![:results](https://www.mentimeter.com/s/4bdd96932d73ef5e1d1cb1bda1ade9b0/4e2c89b7d69c)
+
+---
+
+name: migration_paths
+time: 42:58
+# Migration paths
+
+
+Ion paths are rarely .red[direct], but will take the .gold[lowest energy route].
+
+.pull-left[
+![:jmol 350, 350, 1, 1, 1, rotate x 100; 
+rotate y 10; 
+select (Na1)\<20\>; 
+\(sodium\).radius=0.5; 
+\(chlorine\).radius=1.0; 
+color atoms TRANSLUCENT 0.8 gray; 
+draw ID "observed" ARROW \(2.81 2.81 5.62\) \(4.2 4.2 4.2\) \(5.3 5.3 5.2\) WIDTH 0.3 COLOR orange; 
+draw ID "direct" ARROW \(2.81 2.81 5.62\) \(5.2 5.2 5.62\) WIDTH 0.3 COLOR red](files/NaCl.cif)
+]
+
+.pull-right[
+![Close-packed migration path](./images/migration_path_cp.svg# w-80pct)
+]
+
+---
+
+class: compact
+time: 44:19
+# Pathways can be complex
+
+- Migration pathways can be calculated and/or experimentally determined
+
+*e.g.* **NASICON** $\ce{Na+}$ conductor, $\ce{Na3Zr2(SiO4)2(PO4)}$:
+
+![Nasicon migration paths](./images/ionic_conduction_pathway_nasicon.gif# w-100pct)
+
+.footer[
+- Y. Deng, *Chem. Mater.*, 2018, 2618.
+]
+
+???
+
+Three approaches to determining diffusion are shown here:
+
+**Molecular Dynamics (MD)**
+- Computational model of ionic motion over a time period (using either electronic structure calculations or atomic potentials methods)
+- Resulting trajectory is integrated to determine location of conducting ions
+
+** Bond Valence Energy Landscape (BVEL) **
+- Maps the bond valence sum (a measure of local electron density estimated from atomic positions) throughout the structure
+- Surface is the region where the probe ion (e.g. Na<sup>+</sup>) would experience optimum coordination
+
+** Maximum Entropy method (MEM) / Rietveld refinement**
+- Fits a model to **experimental** data to determine ionic positions
+- If Na<sup>+</sup> is diffusing throughout the measurement, the positional information is present within the
+diffraction data. MEM is one method to fit this.
 
 ---
 
 class:compact
-time: 1:47
-# Essential electrochemistry
+time: 47:42
+# Migration energetics
 
-## Quantities
+- Defect mobility is a thermally-activated process:
+$$ \mu = \mu_0 \exp \left( -\frac{\mathrm{E_a}}{\mathrm{RT}} \right) $$
+- interstitial sites are higher energy than vacancies, so smaller energy barrier ($E_i < E_a$) - dominates
 
-Throughout this course, we will see a number of electronics/electrochemistry terms, summarised here:
-
-Term | Symbol | Description | Units
-:-----|:-|:-|:-
-Potential (or voltage) | E or V | the 'push' moving the electrons | Volts (V)
-Current | I | the rate at which electrons move | Amperes (A)
-Charge | Q | amount of electrons | Coloumbs (C) or Amp-hours (Ah, 1 mAh = 3.6 C)
-Resistance | R | effects reducing the current | Ohms ($\Omega$)
-Capacitance | C | ability to store charge | Farads (F)
-Power | P | how much current, and with what force | Watts (W)
+![Migration energy](./images/migration_energy.svg# w-60pct relative l-20pct)
 
 ---
 
-class: compact
-time: 3:48
-## Important relationships
+class: compact, no-number
+time: 50:03
+# Variation with temperature
 
-Ohm's law - current and potential are linked:
-$$ V = IR $$ (Ohm's law)
-A current flowing for a period of time gives an overall charge:
-$$Q = It$$
-Power is a combination of current and voltage:
-$$ P = IV $$
-Resistivity $(\rho)$ and conductivity $(\sigma)$ are inversely related. Note that resistance $(R)$ is related to resistivity $(\rho)$ by accounting for the geometry of the object.
-$$\rho = \frac{1}{\sigma}$$
+As $\sigma = nq\mu$ and $\mu$ is thermally-activated,
+$$ 
+\begin{align}
+\sigma &= nq\mu_0 \exp \left(-\mathrm{\frac{E_a}{RT}} \right) \\\\
+       &= A \exp \left(-\mathrm{\frac{E_a}{RT}} \right) \\\\
+\end{align}
+$$
 
-???
-
-$Q = It$ helps to understand why charge can have units of (m)Ah (particularly common in the battery literature)
-
----
-
-time: 6:44
-# Why batteries?
-
-- Portable electronics
-- Electric vehicles
-- Grid-storage (e.g. from renewables)
-- ...
-
-Future batteries require more charge stored in a smaller volume and/or mass.
-
-This requires *new materials* from chemistry.
-
-![Renewable energy lightbulb](./images/renewable_energy_bulb.jpg# w-50pct relative l-3-12th)
-
----
-
-time: 10:13
-class: compact
-# (Brief) Battery History ![Baghdad battery](./images/baghdad-battery-cutaway.jpg# fr w-20pct relative r-1)
-
-
-- ***ca.* 190 AD**: Baghdad (or Parthian) battery
-	- Iron and copper electrodes, filled with vinegar
 --
 
-- **1800**: Volta created the voltaic pile ![Voltaic pile](./images/VoltaBattery.JPG# w-20pct fr)
-	- Alternating Ag and Zn discs, NaCl electrolyte
-	- Enabled *chemistry* e.g. $\ce{2H2O -> H2 + O2}$
---
-
-- **1836**: Daniell cell: <br>
-$\ce{Zn|Zn^{2+}, SO4^{2-} || SO4^{2-} | Cu^{2+} | Cu}$
-	- First practical electricity source (used to power telegraphs)
-	![Daniell cell](./images/Daniell_cell_combined.jpg# w-20pct fr)
-- **1859** Lead-acid battery (first rechargeable)
---
-
-- **1886** The first dry cell: $\ce{Zn | NH4Cl | MnO2 }$
-	- $\ce{NH4Cl}$ immobilised with plaster of Paris $(\ce{CaSO4 . {$0.5$} H2O})$
-- **1899** The first alkaline battery: $\ce{NiO(OH) | KOH | Cd}$
---
-
-- **1991** Li-ion battery commercialised by Sony
-
-
-
-???
-
-Voltaic pile came about as a disagreement between Volta and Galvani; the latter
-had discovered that frogs legs would move when forming a circuit from two different types of metal.
-Galvani asserted this was 'animal electricity'
-
-
----
-
-time: 15:07
-class: no-number, compact
-exclude: false
-# Chemistry Nobel prize 2019
-
-[Awarded for contributions to the development of the Li-ion battery](https://www.nobelprize.org/prizes/chemistry/2019/popular-information/)
-
-![Nobel medal](./images/Nobel_Prize.png# db absolute w-10pct t-2 r-2)
-![Nobel prize 2019](./images/nobel_prize_2019.jpg# w-100pct)
+![Nasicon conductivity vs temperature](./images/nasicon_arrhenius.jpg# w-40pct fr relative b-1)
+Plotting $\ln \sigma$ vs. $\frac{1}{\mathrm{T}}$ (or more commonly $\log_{10} \sigma$ vs $\frac{1000}{\mathrm{T}}$ for high temperature measurements) should give a straight line
+- gradient = $\frac{-E_a}{R}$ (or $\frac{-E_a}{2303R}$).
 
 .footer[
-- Akira Yoshino
-- M. Stanley Whittingham
-- John B. Goodenough
+- 
+- Nasicon conductivity
 ]
 
-???
-
-Check out John Goodenough's laugh (always makes me smile)!
-
-<iframe width="300" height="250" src="https://www.youtube-nocookie.com/embed/CkIKRoTFogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-
-time: 15:57
-class: compact
-# Definitions
-
-.pull-left[![Battery charging schematic](./images/battery_charging_schematic.png# w-60pct fl)]
-.pull-right[![Battery discharge schematic](./images/battery_discharging_schematic.png# w-60pct fr)]
-
-
-Naming of *anode* and *cathode* is often unclear. Here we define:
-- Cathode is **positive** electrode under **discharge** (being reduced)
-- Anode is **negative** electrode under **discharge** (oxidised)
-
----
-
-time: 17:13
-# Main approaches
-
-.pull-left[
-### Cationic battery
-Charge carried across electrolyte by cations
-- $\ce{Li+, Na+}$ ...
-- $\ce{Mg^{2+}, Ca^{2+}}$, ...
-- Even $\ce{Zn^{2+}, Al^{3+}}$
-]
-.pull-right[
-### Anionic battery
-Anion charge carrier in electrolyte
-- $\ce{OH-}$ (NiCd or NiMH)
-- $\ce{F^{-}, Cl^-}$
-- $\ce{HSO4-}$ (in Pb-acid)
-]
-![Battery types](./images/battery_types.png# w-80pct relative l-10pct)
 
 ???
 
-Anionic batteries were historically important (e.g. $\ce{OH-}$ and $\ce{HSO4-}$) but have dropped out of favour
-due to the focus on Li-ion batteries. $\ce{Na+}$ and $\ce{Mg^{2+}}$ batteries are currently in development, but 
-some researchers are investigating alternative anions (e.g. $\ce{F-}$) to overcome some of the limitations.
+In reality, the number of defects increases with temperature, so both $\mu$ and $n$ have a T-dependence. 
+Because defects have an associated formation energy $(\Delta \mathrm{H_{f}})$, it turns out that their formation is also thermally-activated
+(it is possible to derive this from the defect formation equations, see e.g. West). In practice, it is common to plot $\log(\sigma T)$ vs $\frac{1000}{T}
+to account for the T-dependence of A.
 
 ---
 
-time: 18:27
-class: compact
-# What makes a 'good' battery?
-
-Perhaps the most important parameter in batteries is the total *energy capacity*, $\mathrm{E_{bat}}$
-- Combination of cell voltage (*V*) and amount of charge (*Q*) stored in the material:
-.red[$$
-\mathrm{E_{bat}} = QV
-$$]
-.grey[*Q* is expressed in units of Ah, so *E*<sub>bat</sub> is in Wh (Watt-hours)]
---
-
-- *E*<sub>bat</sub> is dependent on the amount of battery material. More useful are:
-	- Specific (gravimetric) energy (Wh g<sup>-1</sup>). <br>
-	  .grey[ Q per unit mass (Ah g<sup>-1</sup>)]
-	- (Volumetric) energy density (Wh L<sup>-1</sup>). <br>
-	.grey[ Q per unit volume (Ah L<sup>-1</sup>)]
-	
-???
-
-Energy capacity is often also known as 'nominal energy' or just 'energy'. It is simply the amount of useful energy stored in the battery.
-
-The total energy capacity depends on the size of the cell; e.g. an AA battery has ~ 2000 mAh @ 1.5 V (= 3 Wh), while an AAA has ~1000 mAh @ 1.5 V (= 1.5 Wh).
-If you connected a 6 W LED lightbulb (equivalent brightness to a 40 W filament bulb) to them, an AA battery would last for 30 minutes, while an AAA would 
-last for 15 minutes!
-
-Because capacity depends on the cell size (amount of electrode material) the volumetric/gravimetric measures are better for comparing materials. 
-
-Note that 1 Wh = 3600 J!
----
-
-time: 20:42
-# Improving batteries
-
-Ideally, we want to maximise *both* volumetric and gravimetric energy densities
-	
-![Energy density](./images/cell_energy_density_mod.svg# w-100pct)
-	
-
-.footer[
-- &copy; Barrie Lawson]
-
-
----
-
-time: 22:12
-# Approches to increase $\mathrm{E_{bat}}$
-
-## 1. Increase *operating voltage*, $V$
-
-![Battery energy diagram](./images/energy_diagram_schematic.png# w-60pct relative l-20pct)
-
-Need large (+ve or -ve) electrode potentials: <br>
-large electronegativity differences (e.g. $\ce{Li+, F-}$)
-
----
-
-time: 24:35
-class: compact
-## 2. Increase *charge stored*, $Q$
-
-The charge stored in a material can be calculated using Faraday's Law:
-$$
-Q_{\mathrm{theoretical}} = \frac{nF}{3.6 M_w}\qquad(\text{in mAh g}^{-1})
-$$
-
---
-
-*e.g.* for the cathode $ \ce{LiCoO_2 -> Li^+ + e^- + CoO_2} $:
---
-
-$$
-n = 1,
-F = 96485.3 \: \mathrm{As\:mol}^{-1}, M_w = 97.873\: \mathrm{g\: mol^{-1}} \\\\
-\therefore Q = 274\: \mathrm{mAh\: g}^{-1}
-$$
-
---
-In reality, the charge stored is less than the theoretical maximum
-
-- CoO<sub>2</sub> is unstable: $ \ce{2Co^{IV}O_2 -> Co^{III}_2O_3 + \frac{1}{2}O_2} $
-	- We can only safely reach Li<sub>0.5</sub>CoO<sub>2</sub>, so the useful capacity is 137 mAh g<sup>-1</sup>
-
-???
-	
-Effectively, this is charge stored (nF) per formula mass. The factor 3.6 converts F from A.s mol^{-1}) into A.h mol^{-1}
-
-NOTE: the total charge stored in a full cell is limited by the electrode with the smallest capacity (although this can
-be overcome by using more/less of each material).
-
-Clarification: during discharge, the $\ce{Li}$ is **removed** from $\ce{LiCoO2}$ (in contrast to the voice-over).
-	
----
-
-time: 28:09
-# Ideal materials properties
-
-Anode/Cathode | Electrolyte
--|-
-High capacity for charge-carrying ion |           High ionic conductivity
-Large potential difference (cell voltage) |       Low electronic conductivity
-Good ionic and electronic conductor (ideally) |   Stable in contact with electrodes
-
---
-
-Electrode materials fall into two categories:
-- Conversion
-- Intercalation
-
-
-
-
-???
-
-While electrodes should ideally be electronic conductors (to allow electrons to reach the reaction sites) in 
-practice poor electron conduction can be overcome by additives (such as carbon particles)
-
-Note that the terms intercalation and conversion have been derived from Li-ion battery research, but the 
-ideas transfer to other technologies.
-
-
----
-
-time: 30:28
-class: compact
-# Conversion electrodes
-
-Electrochemical reaction proceeds during charge/discharge. <br>
-As a general equation, 
-$$
-\ce{A\_{$a$}B\_{$b$} + ($b\times c$)C^{n} + ($nbc - am$)e- <=> aA^{m} + $b$BC\_{$c$}}
-$$
---
-
-## Examples:
-Chloride-ion battery cathodes:
-$$\ce{BiCl3 + 3Li+ + 3e- <=> Bi^{0} + 3LiCl} $$
-Lithium-sulfur cathode (here, $a = 0)$:
-$$\ce{S + 2Li+ + 2e- <=> Li2S  }$$
-Metal hydride anode (used in NiMH):
-$$ \ce{ H2O + M^0 + e- <=> OH- + MH } $$
-
-
-???
-The metal hydride example can be understood as $\ce{A = OH}$ and $\ce{B = H}$
-
-
-
----
-
-time: 34:36
-# Conversion electrodes (2)
-
-### Advantages
-- Wide range of reactions possible
-	- could avoid scarce/expensive elements by using e.g. Fe, Cu, O...
-- Large theoretical capacities
-	- More than one charge carrier per heavy metal (see $\ce{BiCl3}$ example)
-
---
-
-### Disadvantages
-- Often low conductivity (ionic and/or electronic)
-- Substantial volume changes during cycling
-- Side reactions/dissolution of intermediate species
-
-
-.footer[
-- [Wu & Yushin, Energy Environ. Sci., 2017, 435.](https://doi.org/10.1007/s10008-017-3580-9)
-]
-
----
-
-time: 38:28
-class: compact
-# Intercalation electrodes
-
-No chemical 'reaction'; mobile species is 'inserted' into a material able to accommodate its charge/size.
-
-### Example: $\ce{Li_{$x$}CoO2}$
-
-.pull-left[
-![:jmol 400, 400, 3, 3, 1, polyhedra BONDS \(cobalt\); 
-rotate x 90; 
-color polyhedra translucent 0.7 blue; 
-color lithium orange
-color cobalt blue](files/LiCoO2.cif)
-]
-
-.pull-right[
-- Close-packed hcp .red[oxygen] array
-- .blue[$\ce{Co}$] occupies alternate layers of octahedral holes
-- .gold[$\ce{Li+}$] can insert between Co layers, reducing $\ce{Co^{IV} <=> Co^{III}}$
-	- Layer spacing varies with $x$
-	- High $\ce{Li+}$ conductivity due to 2D vacancy-hopping mechanism
-]
-
----
-
-time: 40:40
-class: compact
-# Intercalation cathode families
-
- | 2D conductor | 3D conductor | 1D conductor
-:---|:---:|:---:|:---:
-Type | $\ce{\alpha-NaFeO2}$ | spinel | olivine
-Structure | ![:jmol 200, 200, 3, 3, 1, polyhedra BONDS \(cobalt\); rotate x 90; color polyhedra translucent 0.7 blue; color lithium orange; color cobalt blue](files/LiCoO2.cif) | ![:jmol 200, 200, 1, 1, 1, polyhedra BONDS \(lithium\); color polyhedra translucent 0.7 orange; color lithium orange](files/LiMn2O4.cif) | ![:jmol 200, 200, 1, 2, 3, polyhedra BONDS \(iron\); polyhedra BONDS \(phosphorus\); select iron; color polyhedra translucent 0.7 brown; select phosphorus; color polyhedra translucent 0.7 green; color lithium orange; color iron brown; color phosphorus green; hide \< {lithium}.bonds \>; rotate x 90](files/LiFePO4.cif)
-Formula | $\ce{LiCoO2}$ | $\ce{LiMn2O4}$ | $\ce{LiFePO4}$
-$Q_{\mathrm{theo.}}$ / mAh g<sup>-1</sup> | 274 | 148 | 170
-
-&#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164;    Better Li conduction    &#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164; <br>
-&#11166;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11166;    Safer    &#11166;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11166; <br>
-&#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164;    (Higher cost)    &#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164; <br>
-
-
----
-
-time: 43:55
-class: compact
-# Charging rates
-
-A high $\mathrm{E_{bat}}$ is good, but we want to (dis)charge batteries quickly!
-- Tradeoff between *Power* ($P=IV$) and $\mathrm{E_{bat}} (=ItV)$
-- Seen on a Ragone plot:
-
-![Battery ragone plot](./images/ragone_plot.svg# w-50pct relative l-3-12th)
-
-.footer[
-- B.D. McCloskey, J. Phys. Chem. Lett., **2015**, 6, 3592.]
-
---
-
-$\mathrm{E_{bat}}$ depends on the (dis)charge rate, so to compare different materials we use the $C\mathrm{-rate} = \frac{I}{Q}$
-- e.g. for a 1000 mAh battery: $1C$ would sustain 1 A for 1 hour, $2C$ gives 2A for 30 mins, $\frac{C}{6}$ gives 0.167 A for 6 hours, etc.
-
-
----
-
-time: 47:17
-# High charging rates reduce $\mathrm{E_{bat}}$
-
-Rapid charging causes problems over a range of length scales:
-
-- inhomogeneous lattice strain traps mobile ions
-	- Defects can become 'pinned'
-- Irreversible damage to microstructure can occur
-- thermal gradients can cause additional side-reactions (engineering problem)
-
-![Microstructure degradation high C-rate](./images/cathode_degradation_schematic.gif# w-90pct)	
-	
-.footer[
-- B. Song, *J. Mat. Chem. A*, **2015**, 18171.]
-	
-
----
-
-time: 49:56
-# Electrochemical measurements
-
-To avoid variations in rate, battery analysis uses *Galvanostatic* (constant current) electrochemistry
-- measure the resulting potential.
-- easier to separate chemistry effects from rate effects
-
-![Galvanostat graph](./images/galvanostat_graph.jpg# w-60pct relative l-20pct )
-
-
-
----
-
-time: 51:38
-# Electrochemical measurements (2)
-
-*e.g.* for a 2.2 Ah battery:
-
-.pull-left[![galvanostat example](./images/22Ah_battery_galvanostat.svg)]
-
---
-
-.pull-right[![Potential versus capacity](./images/E_vs_capacity.svg)]
-
-.pull-left[<br> Capacity is often expressed in a number of formats]
-
-
-
----
-
-time: 55:35
-# Material insights from galvanostats
-
-Solid Solution | Two-phase region 
----------------|------------------
-![Voltage-capacity curve for solid solution](./images/voltage_curves_solid_soln.png# w-100pct) | ![Voltage-capacity curve for two-phase mixture](./images/voltage_curves_2phase.png# w-100pct) 
-Ions can be continously added/removed from the material without a structural transition | Two distinct compositions exist together, and the relative proportions change with $x$
-
-???
-
-To a first approximation, the voltage depends linearly on the curvature of free energy with x,
-$$
-V \propto -\frac{\partial G(x)}{\partial x}.
-$$
-In the case of phase mixtures, the free energy follows a linear combination of the two phase minima,
- so the potential is constant.
-
-![](./images/voltage_curves_free_energy.jpg# w-100pct)
-
-For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
-
----
-
-time: 57:41 
-class: compact
+time: 53:10
 # Lecture recap
 
-- we define cathode and anode under discharge conditions!
-- two main categories of battery (based on mobile ion):
-	- cationic or anionic
-- we want to maximise	
-	- Charge stored $Q$ in materials, and
-	- operating voltage $V$
-- Two types of electrode operation:
-	- Conversion
-		- wide range of chemistry, but problems with volume change and side reactions
-	- intercalation
-		- limited number of suitable materials
-- high (dis)charge rates reduce capacity
-	- problems over different length scales
-- we can use galvanostatic measurements to learn a lot
+- Defects can give rise to ionic conduction
+	- Occurs by three main mechanisms:
+		- Vacancy hopping
+		- Interstitial hopping
+		- interstitialcy (knock-on) cooperation
+- Ionic conductivity is thermally-activated
+	- shows Arrhenius-like behaviour
+- Different defects have different conduction energetics
+	- Pathways can sometimes be determined experimentally
 
 .footer[- [Return to course contents](overview.html#overview)
 ]
+
+---
+
+# Feedback
+
+![:vote](https://www.menti.com/v1z7bmhzwv)
+

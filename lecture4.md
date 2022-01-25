@@ -1,464 +1,531 @@
 
-class: title, no-number
 time: 0
-# Lecture 4 - Dielectrics
+class: title, no-number
+# Lecture 4 - Batteries
 
 .footer[- [Return to course contents](overview.html#overview)
 ]
 
 ---
 
-time: 9
+time: 37
 class: roomy
-# Lecture Summary
+# Lecture summary
 $\require{mediawiki-texvc}$
 
-- Origin of ionic polarisation
-- Capacitor operation and definitions
-- Impedance spectroscopy
-	- definitions
-	- ideal responses
-- piezoelectricity
-- ferroelectricity
+- Electrochemistry fundamentals
+- Battery history and overview
+- Battery definitions
+- Improving capacity
+- Essential materials properties
+	- types of electrode behaviour
+- Effect of charging rate on capacity
+- Galvanostatic measurements
+
+
 
 ---
 
-time: 1:01
-class: roomy
-# Introduction
+class:compact
+time: 1:47
+# Essential electrochemistry
 
-- Ionic conduction is a long-range effect
-	- Important in batteries, fuel cells etc.
-- In some situations, a highly insulating material is preferred
-- Remember, ions are not static with time (e.g. phonons)
-	- Short-range atomic motion is important for electrical properties
+## Quantities
+
+Throughout this course, we will see a number of electronics/electrochemistry terms, summarised here:
+
+Term | Symbol | Description | Units
+:-----|:-|:-|:-
+Potential (or voltage) | E or V | the 'push' moving the electrons | Volts (V)
+Current | I | the rate at which electrons move | Amperes (A)
+Charge | Q | amount of electrons | Coloumbs (C) or Amp-hours (Ah, 1 mAh = 3.6 C)
+Resistance | R | effects reducing the current | Ohms ($\Omega$)
+Capacitance | C | ability to store charge | Farads (F)
+Power | P | how much current, and with what force | Watts (W)
 
 ---
 
 class: compact
-time: 3:05
-# Polarisation
+time: 3:48
+## Important relationships
 
-Ionic solids are made up of cations and anions
-- locally, this creates dipoles $(\mu)$
-- across a whole crystal at equilibrium, these dipoles normally cancel
-
-Under an applied electric field, ions displace from equilibrium
-
-![Ionic polarisation](./images/ionic_polarisation_schematic.jpg# w-90pct relative l-1)
+Ohm's law - current and potential are linked:
+$$ V = IR $$ (Ohm's law)
+A current flowing for a period of time gives an overall charge:
+$$Q = It$$
+Power is a combination of current and voltage:
+$$ P = IV $$
+Resistivity $(\rho)$ and conductivity $(\sigma)$ are inversely related. Note that resistance $(R)$ is related to resistivity $(\rho)$ by accounting for the geometry of the object.
+$$\rho = \frac{1}{\sigma}$$
 
 ???
 
-Note that we're assuming that ions are hard spheres, but in reality the ions will themselves be polarisable to different extents. 
-The overall polarisation is a combination of this electronic polarisation and the ionic polarisation.
+$Q = It$ helps to understand why charge can have units of (m)Ah (particularly common in the battery literature)
 
 ---
 
-time: 5:25
-# Is this useful?
+time: 6:44
+# Why batteries?
 
-If the dipoles do not cancel under an applied field, the crystal will develop an overall dipole moment
-- can occur if e.g. number of cations $\neq$ number of anions
+- Portable electronics
+- Electric vehicles
+- Grid-storage (e.g. from renewables)
+- ...
 
-Can use this to screen electric fields
-- Useful in e.g. wireless communication filters, sensor devices, transformers, and **capacitors**
+Future batteries require more charge stored in a smaller volume and/or mass.
 
+This requires *new materials* from chemistry.
+
+![Renewable energy lightbulb](./images/renewable_energy_bulb.jpg# w-50pct relative l-3-12th)
 
 ---
 
-time: 7:17
+time: 10:13
 class: compact
-# Capacitors
+# (Brief) Battery History ![Baghdad battery](./images/baghdad-battery-cutaway.jpg# fr w-20pct relative r-1)
 
-- Vital component of most electronic devices
-	- Used to store charge, smooth signals, filter, etc...
-	- $20bn per year industry
 
-Essentially, a capacitor is an arrangement of two electrodes of area *A*, separated by a distance *d*.
-
-![capacitor schematic](./images/capacitor_diagram.png# w-60pct relative l-20pct)
-
-The maximum charge stored, $Q = CV$ where $C$ is the capacitance (in Farads).
-
----
-
-time: 9:32
-class: compact
-# Charge stored
-
-With constant voltage $V$, current $(I)$ decays with time, while charge stored $(Q)$ increases:
-$$
-I_t = I_0 e^{\left(\frac{-t}{RC}\right)} \qquad\qquad Q_t = CV\left[1- e^{\left(\frac{-t}{RC}\right)}\right]
-$$
-where $C$ is the capacitance and $R$ is the resistance between voltage source and capacitor (e.g. in the wires)
-
-![Capacitor charge versus time](./images/capacitor_charge_current.png# w-50pct db fl relative)
-
-.pull-right[
-- As charge increases on the plates, it becomes harder to increase further.
-- At infinite time, $Q = CV$.
-]
-
----
-
-time: 11:43
-# Capacitance
-
-Two electrodes separated by vacuum have a capacitance $C$;
-$$
-C = \frac{\epsilon_0 A}{d}
-$$
-where $\epsilon_0$ is the permittivity of free space = 8.854 &times; 10<sup>-12</sup> C<sup>2</sup> J<sup>-1</sup> m<sup>-1</sup>
-
+- ***ca.* 190 AD**: Baghdad (or Parthian) battery
+	- Iron and copper electrodes, filled with vinegar
 --
 
-To increase $C$ (and therefore $Q$):
-- decrease $d$ or increase $A$, **but**
-- electrons will tunnel from one plate to the other if $d$ gets too small.
-
----
-
-time: 13:41
-class: compact
-# Improving charge stored
-
-Alternatively, we can use a **dielectric**
-- opposing electric field stabilises charge on capacitor plates
-
-$$
-C_{\mathrm{dielec}} = \frac{\epsilon_r \epsilon_0 A}{d}
-$$
-where &epsilon;<sub>r</sub> is the relative permittivity of the dielectric (&epsilon;<sub>r</sub>= &epsilon; / &epsilon;<sub>0</sub>)
-and &epsilon;<sub>r</sub> > &epsilon;<sub>0</sub>
-
-
-![Dielectric capacitor](./images/dielectric_capacitor.jpg# w-80pct relative l-10pct)
-
-
----
-
-time: 16:14
-# Example permittivities
-
-Material       |  Relative Permittivity, &epsilon;<sub>r</sub>
----------------|-----------------------------------------------:
-Vacuum         | 1
-Paper          | 2.0 - 6.0
-Polymers       | 2.0 - 6.0
-Silicon oil    | 2.7 - 2.8
-Quartz         | 3.8 - 4.4
-Glass          | 4 - 15
-Al<sub>2</sub>O<sub>3</sub> | 10
-Ta<sub>2</sub>O<sub>5</sub> | 26
-TiO<sub>2</sub> | 100
-CaTiO<sub>3</sub> | 130
-SrTiO<sub>3</sub> | 285
-BaTiO<sub>3</sub> | 1000 - 10000
-
-
----
-
-time: 18:39
-class: compact
-# Characterising dielectrics
-
-- Because dielectrics are insulating, conductivity measurements are not very useful
-- Alternatively, oscillate between +ve and -ve potentials to change polarisation direction
-
+- **1800**: Volta created the voltaic pile ![Voltaic pile](./images/VoltaBattery.JPG# w-20pct fr)
+	- Alternating Ag and Zn discs, NaCl electrolyte
+	- Enabled *chemistry* e.g. $\ce{2H2O -> H2 + O2}$
 --
 
-**Impedance spectroscopy** applies an alternating (sinusoidal) field at different frequencies $f$, and measures the resulting current 
-- Applied field, $E_t = E_0 \sin(\omega t)$, where $\omega = 2\pi f$
-- Response current, $I_t = I_0 \sin(\omega t + \phi) $
+- **1836**: Daniell cell: <br>
+$\ce{Zn|Zn^{2+}, SO4^{2-} || SO4^{2-} | Cu^{2+} | Cu}$
+	- First practical electricity source (used to power telegraphs)
+	![Daniell cell](./images/Daniell_cell_combined.jpg# w-20pct fr)
+- **1859** Lead-acid battery (first rechargeable)
+--
 
-![Impedance current and voltage example](./images/capacitor_impedance_sinusoid.gif# w-50pct relative l-3-12th)
+- **1886** The first dry cell: $\ce{Zn | NH4Cl | MnO2 }$
+	- $\ce{NH4Cl}$ immobilised with plaster of Paris $(\ce{CaSO4 . {$0.5$} H2O})$
+- **1899** The first alkaline battery: $\ce{NiO(OH) | KOH | Cd}$
+--
+
+- **1991** Li-ion battery commercialised by Sony
+
+
+
+???
+
+Voltaic pile came about as a disagreement between Volta and Galvani; the latter
+had discovered that frogs legs would move when forming a circuit from two different types of metal.
+Galvani asserted this was 'animal electricity'
+
 
 ---
 
-time: 21:47
-# Impedance
+time: 15:07
+class: no-number, compact
+exclude: false
+# Chemistry Nobel prize 2019
 
-Similar to Ohm's law $(R=\frac{V}{I})$ for constant voltages, we can define *impedance* as the 'resistance' to an alternating voltage
-$$Z(\omega) = \frac{E_t}{I_t}$$
---
+[Awarded for contributions to the development of the Li-ion battery](https://www.nobelprize.org/prizes/chemistry/2019/popular-information/)
 
-The total impedance can be represented as a complex number: 
-$$Z(\omega) = Z_0 e^{i \phi} = Z_0 (\cos \phi + i \sin \phi )$$
-
-- $\phi$ is the 'phase-shift' between voltage and current.
+![Nobel medal](./images/Nobel_Prize.png# db absolute w-10pct t-2 r-2)
+![Nobel prize 2019](./images/nobel_prize_2019.jpg# w-100pct)
 
 .footer[
-- Useful introduction to impedance [here](https://www.gamry.com/application-notes/EIS/basics-of-electrochemical-impedance-spectroscopy/)]
+- Akira Yoshino
+- M. Stanley Whittingham
+- John B. Goodenough
+]
 
 ???
 
-Note that impedance $Z$ depends on the frequency $\omega$.
+Check out John Goodenough's laugh (always makes me smile)!
 
-The leap from $Z_0 e^{i \phi}$ to $Z_0 (\cos \phi + i \sin \phi )$ can feel mathematically overwhelming! It all stems from Euler's relationship
-$$ \exp(i\phi) = \cos \phi + i \sin \phi$$
-so a sinusoidal (or cosine) signal can be represented as a complex number. In this case, if we represent $E_t$ and $I_t$ as complex, then we can divide them:
-$$
-E_t = E_0 \exp(i \omega t) \quad\mathrm{and}\quad I_t = I_0 \exp(i [\omega t - \phi]) \\\\
-Z(\omega) = \frac{E}{I} \\\\
-\therefore \\\\
-Z(\omega) = \frac{E_0}{I_0} \frac{\exp(i \omega t)}{\exp(i [\omega t - \phi])} = Z_0 \left( \exp([i \omega t] -  i [\omega t - \phi]) \right) = Z_0 \exp(i\phi)
-$$
-
-
+<iframe width="300" height="250" src="https://www.youtube-nocookie.com/embed/CkIKRoTFogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-time: 23:38
+time: 15:57
 class: compact
-# Impedance analysis
+# Definitions
 
-$\phi$, $Z$ and $\omega$ (or $f$) are all important features of impedance. <br>
-Two 'standard' ways to display data:
+.pull-left[![Battery charging schematic](./images/battery_charging_schematic.png# w-60pct fl)]
+.pull-right[![Battery discharge schematic](./images/battery_discharging_schematic.png# w-60pct fr)]
+
+
+Naming of *anode* and *cathode* is often unclear. Here we define:
+- Cathode is **positive** electrode under **discharge** (being reduced)
+- Anode is **negative** electrode under **discharge** (oxidised)
+
+---
+
+time: 17:13
+# Main approaches
 
 .pull-left[
-**Bode plot**: $|Z|$ and $\phi$ plotted vs frequency
-- often log axes
-
-![Example Bode plot](./images/parallel_RC_bode.png# w-100pct)
+### Cationic battery
+Charge carried across electrolyte by cations
+- $\ce{Li+, Na+}$ ...
+- $\ce{Mg^{2+}, Ca^{2+}}$, ...
+- Even $\ce{Zn^{2+}, Al^{3+}}$
 ]
 .pull-right[
-**Nyquist plot**: $Z$ plotted in a 2D plane (like an [Argand diagram](https://www.mathcentre.ac.uk/resources/Engineering%20maths%20first%20aid%20kit/latexsource%20and%20diagrams/7_3.pdf))
-- N.B. usually inverted y-axis
-
-![Example Nyquist plot](./images/Complex_Impedance.svg# db fr w-90pct)
+### Anionic battery
+Anion charge carrier in electrolyte
+- $\ce{OH-}$ (NiCd or NiMH)
+- $\ce{F^{-}, Cl^-}$
+- $\ce{HSO4-}$ (in Pb-acid)
 ]
-
----
-
-time: 26:22
-class: compact
-# Ideal resistor response
-![resistor circuit symbol](./images/simple_R_circuit.png# db fr relative b-3)
-
-In an ideal resistor electrons should flow instantly under an applied potential
-- $E$ and $I$ should match (i.e. $\phi = 0$)
-- $\phi=0$ so $Z(\omega) = Z_0(\cos 0 + i\sin 0) = Z_0$
-- Ideally, $Z$ is also independent of $\omega$
-	- Electrons can change direction 'infinitely' fast
-
-![Bode and Nyquist plots for perfect resistor](./images/simple_R_bode_nyquist.png)
-
----
-
-time: 29:33
-class: compact
-# 'Ideal' capacitor response
-![Capacitor circuit symbol](./images/simple_C_circuit.png# db fr relative b-3)
-
-- No electrons can flow between the plates
-	- For small $\omega$, very large impedance
-- Current is largest when potential is first applied (near 0), decreasing as potential gets larger
-	- Overall, $\phi=90$
-- At high $\omega$, $I$ is always near maximum
-	- $|Z| \rightarrow 0 $ as $\omega$ increases
-
-![Bode and Nyquist plots for ideal capacitor](./images/simple_C_bode_nyquist.png# w-80pct relative l-10pct)
-
+![Battery types](./images/battery_types.png# w-80pct relative l-10pct)
 
 ???
 
-$Z''$ for a perfect capacitor can be related to $f$ by:
+Anionic batteries were historically important (e.g. $\ce{OH-}$ and $\ce{HSO4-}$) but have dropped out of favour
+due to the focus on Li-ion batteries. $\ce{Na+}$ and $\ce{Mg^{2+}}$ batteries are currently in development, but 
+some researchers are investigating alternative anions (e.g. $\ce{F-}$) to overcome some of the limitations.
 
+---
+
+time: 18:27
+class: compact
+# What makes a 'good' battery?
+
+Perhaps the most important parameter in batteries is the total *energy capacity*, $\mathrm{E_{bat}}$
+- Combination of cell voltage (*V*) and amount of charge (*Q*) stored in the material:
+.red[$$
+\mathrm{E_{bat}} = QV
+$$]
+.grey[*Q* is expressed in units of Ah, so *E*<sub>bat</sub> is in Wh (Watt-hours)]
+--
+
+- *E*<sub>bat</sub> is dependent on the amount of battery material. More useful are:
+	- Specific (gravimetric) energy (Wh g<sup>-1</sup>). <br>
+	  .grey[ Q per unit mass (Ah g<sup>-1</sup>)]
+	- (Volumetric) energy density (Wh L<sup>-1</sup>). <br>
+	.grey[ Q per unit volume (Ah L<sup>-1</sup>)]
+	
+???
+
+Energy capacity is often also known as 'nominal energy' or just 'energy'. It is simply the amount of useful energy stored in the battery.
+
+The total energy capacity depends on the size of the cell; e.g. an AA battery has ~ 2000 mAh @ 1.5 V (= 3 Wh), while an AAA has ~1000 mAh @ 1.5 V (= 1.5 Wh).
+If you connected a 6 W LED lightbulb (equivalent brightness to a 40 W filament bulb) to them, an AA battery would last for 30 minutes, while an AAA would 
+last for 15 minutes!
+
+Because capacity depends on the cell size (amount of electrode material) the volumetric/gravimetric measures are better for comparing materials. 
+
+Note that 1 Wh = 3600 J!
+---
+
+time: 20:42
+# Improving batteries
+
+Ideally, we want to maximise *both* volumetric and gravimetric energy densities
+	
+![Energy density](./images/cell_energy_density_mod.svg# w-100pct)
+	
+
+.footer[
+- &copy; Barrie Lawson]
+
+
+---
+
+time: 22:12
+# Approches to increase $\mathrm{E_{bat}}$
+
+## 1. Increase *operating voltage*, $V$
+
+![Battery energy diagram](./images/energy_diagram_schematic.png# w-60pct relative l-20pct)
+
+Need large (+ve or -ve) electrode potentials: <br>
+large electronegativity differences (e.g. $\ce{Li+, F-}$)
+
+---
+
+time: 24:35
+class: compact
+## 2. Increase *charge stored*, $Q$
+
+The charge stored in a material can be calculated using Faraday's Law:
 $$
-Z'' = \frac{1}{\omega C} = \frac{1}{2 \pi f C}
+Q_{\mathrm{theoretical}} = \frac{nF}{3.6 M_w}\qquad(\text{in mAh g}^{-1})
 $$
-
----
-
-time: 33:16
-class: compact
-# 'Real' Impedance ![Parallel RC circuit](./images/parallel_RC_circuit.png# db fr w-20pct)
-
-
-- Many materials behave like a parallel RC circuit:
-	- Ions flowing in solution, forming a layer on the electrode
-	- Ionic conduction in a ceramic forming a charge gradient
-
-![Parallel RC bode and nyquist plots](./images/parallel_RC_bode_nyquist2.png)
-
-More complex behaviour is often observed, and can be modelled using *equivalent circuits*
-
-
----
-
-time: 37:04
-class: compact
-# Real dielectric response ![Dielectric equivalent circuit](./images/parallel_RC_seriesR_circuit.png# db fr w-30pct)
-
-Dielectrics are not ideal-they leak!
-- Ions have mass, so cannot move instantly
-- At high $\omega$, some resistance remains
-	- energy lost as heat
-- peak in $\phi$ vs $\omega$, corresponding to the maximum energy loss.
-	- often reported as $\tan \delta$ (where $\delta = 90^{\circ} - \phi$)
-
-![Dielectric equivalent circuit bode and nyquist plot](./images/parallel_RC_seriesR_bode_nyquist.png)
-
----
-
-time: 39:54
-class: compact
-# Other materials
-
-In ionically conducting materials, an additional signal is often observed at low $\omega$
-- Interactions between mobile ion and electrode(s)
-
-![Randles circuit bode and nyquist plots](./images/randles_circuit_bode_nyquist2.png# w-60pct relative l-20pct)
 
 --
 
-Real materials usually consist of closely-packed ceramic grains. 
-- different R/C effects for grain boundaries *vs.* bulk
-- gives rise to two (often overlapping) semicircles.
+*e.g.* for the cathode $ \ce{LiCoO_2 -> Li^+ + e^- + CoO_2} $:
+--
 
+$$
+n = 1,
+F = 96485.3 \: \mathrm{As\:mol}^{-1}, M_w = 97.873\: \mathrm{g\: mol^{-1}} \\\\
+\therefore Q = 274\: \mathrm{mAh\: g}^{-1}
+$$
+
+--
+In reality, the charge stored is less than the theoretical maximum
+
+- CoO<sub>2</sub> is unstable: $ \ce{2Co^{IV}O_2 -> Co^{III}_2O_3 + \frac{1}{2}O_2} $
+	- We can only safely reach Li<sub>0.5</sub>CoO<sub>2</sub>, so the useful capacity is 137 mAh g<sup>-1</sup>
+
+???
+	
+Effectively, this is charge stored (nF) per formula mass. The factor 3.6 converts F from A.s mol^{-1}) into A.h mol^{-1}
+
+NOTE: the total charge stored in a full cell is limited by the electrode with the smallest capacity (although this can
+be overcome by using more/less of each material).
+
+Clarification: during discharge, the $\ce{Li}$ is **removed** from $\ce{LiCoO2}$ (in contrast to the voice-over).
+	
 ---
 
-exclude: true
-# Dielectric breakdown
+# Which will give the highest energy capacity
 
-Dielectrics also break down under high electric fields
-- Electrons start to conduct, causing localised heating and breakdown
-- This is quantified as the **Dielectric Strength** (in *e.g.* V m<sup>-1</sup>)
+Which of the following cathode combinations will give the highest E<sub>bat</sub>?
 
-.pull-left[ ![](./images/dielectric_breakdown_lightning.jpg) ]
-.pull-right[ ![](./images/dielectric_strength_temp.png)]
+Reaction | Potential vs. Li/Li<sup>+</sup> (V)
+-------|--------------
+$\ce{LiCoPO4 -> Li^+ + CoPO4 + e^-}$ | 4.7
+$\ce{LiF + Ag^0 -> AgF + Li^{+} + e^{-}}$ | 4.1
+$\ce{LiTiS2 -> Li^+ + TiS2 + e^{-}}$ | 2.0
 
----
-
-time: 42:48
-class: compact
-# Piezoelectricity
-
-In some dielectric materials, applying $E$ can result in a mechanical stress (or *vice versa*)
-- Stress = change in lattice parameters
-
-![direct and converse piezoeletric effect](./images/piezoelectric_schematic.png# w-80pct relative l-10pct)
-.pull-left[
-**Direct effect** <br>
-Applications:
-- pressure sensors
-- ultrasonic imaging
+.footer[
+- Calculate per mole of reactants as written
 ]
-.pull-right[
-**Converse effect** <br>
-Applications:
-- Actuators/motors
-- crystal oscillator (watches)
-]
 
 ---
 
-time: 45:16
-# Structural Aspects
+# Vote
 
-Stresses arise due to unbalanced dipoles
-- Can only occur if the structure is **non-centrosymmetric**
-
-
-
-### Example: Quartz $(\ce{SiO2})$
-
-![Quartz piezoelectric effect](./images/piezoelectric_effect_quartz.jpg# w-100pct)
-
-
+![:vote](https://www.menti.com/ab77octuab)
 
 ---
 
-time: 47:27
-class: compact
-# Spontaneous polarisation
+# Results
 
-Some materials exhibit a net dipole *without* an applied electric field (**pyroelectric**)
-
-If the polarisation can be switched with an electric field - **Ferroelectric**
-
-![Ferroelectric hysteresis loop](./images/ferroelectric_hysteresis.gif# w-80pct relative l-10pct)
+![:results](https://www.mentimeter.com/s/eeb2f2c2292ed89f112e9d23e2ce666d/4c39a964ddd3)
 
 ---
 
-time: 48:33
-class: compact
-# Structural origin
+time: 28:09
+# Ideal materials properties
 
-Precise origin of ferroelectricity is unknown! <br>
-Often, displacement of small ion in a large 'cavity' is partly reponsible
-- Driven by anharmonicity or pseudo-Jahn-Teller effects
-- *sometimes* this results in long-range order of dipoles...
-- Many perovskites are ferroelectric (e.g. $\ce{BaTiO3}$)
+Anode/Cathode | Electrolyte
+-|-
+High capacity for charge-carrying ion |           High ionic conductivity
+Large potential difference (cell voltage) |       Low electronic conductivity
+Good ionic and electronic conductor (ideally) |   Stable in contact with electrodes
 
-![ferroelectric displacement mechanism](./images/ferroelectric_displacement.png# w-60pct fl)
+--
 
-![Barium titante](./images/batio3_displacement.png# w-30pct fr)
+Electrode materials fall into two categories:
+- Conversion
+- Intercalation
+
+
+
 
 ???
 
-Pseudo-JT effects can occur when low-lying excited electronic states are degenerate (even though the ground state is not). If interactions between ground
-and excited-states are strong enough, this can result in an overall distortion.
+While electrodes should ideally be electronic conductors (to allow electrons to reach the reaction sites) in 
+practice poor electron conduction can be overcome by additives (such as carbon particles)
 
-An alternative (and complementary) description is due to hybridisation of O-2p orbitals with empty Ti-3d orbitals ($\ce{Ti^{4+}}$ is $d^0$).
+Note that the terms intercalation and conversion have been derived from Li-ion battery research, but the 
+ideas transfer to other technologies.
+
 
 ---
 
-time: 51:17
-# Applications
+time: 30:28
+class: compact
+# Conversion electrodes
 
-- Ferroelectrics often have the largest $\epsilon_r$
-	- important for high-$C$ capacitors
-- Could be coupled with e.g. ferromagnetism
-	- **Multiferroics** are currently popular for electrical control of magnetic fields (e.g. in hard drives)
+Electrochemical reaction proceeds during charge/discharge. <br>
+As a general equation, 
+$$
+\ce{A\_{$a$}B\_{$b$} + ($b\times c$)C^{n} + ($nbc - am$)e- <=> aA^{m} + $b$BC\_{$c$}}
+$$
+--
 
-![Multiferroic Venn diagram](./images/multiferroic_venn.jpg# w-60pct relative l-20pct)
+## Examples:
+Chloride-ion battery cathodes:
+$$\ce{BiCl3 + 3Li+ + 3e- <=> Bi^{0} + 3LiCl} $$
+Lithium-sulfur cathode (here, $a = 0)$:
+$$\ce{S + 2Li+ + 2e- <=> Li2S  }$$
+Metal hydride anode (used in NiMH):
+$$ \ce{ H2O + M^0 + e- <=> OH- + MH } $$
+
+
+???
+The metal hydride example can be understood as $\ce{A = OH}$ and $\ce{B = H}$
+
+
+
+---
+
+time: 34:36
+# Conversion electrodes (2)
+
+### Advantages
+- Wide range of reactions possible
+	- could avoid scarce/expensive elements by using e.g. Fe, Cu, O...
+- Large theoretical capacities
+	- More than one charge carrier per heavy metal (see $\ce{BiCl3}$ example)
+
+--
+
+### Disadvantages
+- Often low conductivity (ionic and/or electronic)
+- Substantial volume changes during cycling
+- Side reactions/dissolution of intermediate species
+
 
 .footer[
-- [Nice summary of ferroelectric mechanisms and multiferroics]( https://doi.org/10.1103/Physics.2.20)
+- [Wu & Yushin, Energy Environ. Sci., 2017, 435.](https://doi.org/10.1007/s10008-017-3580-9)
 ]
 
 ---
 
-time: 52:28
-# Hierarchy of dielectrics
+time: 38:28
+class: compact
+# Intercalation electrodes
 
-![Dielectric family relationships](./images/dielectric_families.svg# w-100pct)
+No chemical 'reaction'; mobile species is 'inserted' into a material able to accommodate its charge/size.
+
+### Example: $\ce{Li_{$x$}CoO2}$
+
+.pull-left[
+![:jmol 400, 400, 3, 3, 1, polyhedra BONDS \(cobalt\); 
+rotate x 90; 
+color polyhedra translucent 0.7 blue; 
+color lithium orange
+color cobalt blue](files/LiCoO2.cif)
+]
+
+.pull-right[
+- Close-packed hcp .red[oxygen] array
+- .blue[$\ce{Co}$] occupies alternate layers of octahedral holes
+- .gold[$\ce{Li+}$] can insert between Co layers, reducing $\ce{Co^{IV} <=> Co^{III}}$
+	- Layer spacing varies with $x$
+	- High $\ce{Li+}$ conductivity due to 2D vacancy-hopping mechanism
+]
+
+---
+
+time: 40:40
+class: compact
+# Intercalation cathode families
+
+ | 2D conductor | 3D conductor | 1D conductor
+:---|:---:|:---:|:---:
+Type | $\ce{\alpha-NaFeO2}$ | spinel | olivine
+Structure | ![:jmol 200, 200, 3, 3, 1, polyhedra BONDS \(cobalt\); rotate x 90; color polyhedra translucent 0.7 blue; color lithium orange; color cobalt blue](files/LiCoO2.cif) | ![:jmol 200, 200, 1, 1, 1, polyhedra BONDS \(lithium\); color polyhedra translucent 0.7 orange; color lithium orange](files/LiMn2O4.cif) | ![:jmol 200, 200, 1, 2, 3, polyhedra BONDS \(iron\); polyhedra BONDS \(phosphorus\); select iron; color polyhedra translucent 0.7 brown; select phosphorus; color polyhedra translucent 0.7 green; color lithium orange; color iron brown; color phosphorus green; hide \< {lithium}.bonds \>; rotate x 90](files/LiFePO4.cif)
+Formula | $\ce{LiCoO2}$ | $\ce{LiMn2O4}$ | $\ce{LiFePO4}$
+$Q_{\mathrm{theo.}}$ / mAh g<sup>-1</sup> | 274 | 148 | 170
+
+&#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164;    Better Li conduction    &#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164; <br>
+&#11166;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11166;    Safer    &#11166;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11166; <br>
+&#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164;    (Higher cost)    &#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164; <br>
 
 
 ---
 
-time: 53:17
+time: 43:55
+class: compact
+# Charging rates
+
+A high $\mathrm{E_{bat}}$ is good, but we want to (dis)charge batteries quickly!
+- Tradeoff between *Power* ($P=IV$) and $\mathrm{E_{bat}} (=ItV)$
+- Seen on a Ragone plot:
+
+![Battery ragone plot](./images/ragone_plot.svg# w-50pct relative l-3-12th)
+
+.footer[
+- B.D. McCloskey, J. Phys. Chem. Lett., **2015**, 6, 3592.]
+
+--
+
+$\mathrm{E_{bat}}$ depends on the (dis)charge rate, so to compare different materials we use the $C\mathrm{-rate} = \frac{I}{Q}$
+- e.g. for a 1000 mAh battery: $1C$ would sustain 1 A for 1 hour, $2C$ gives 2A for 30 mins, $\frac{C}{6}$ gives 0.167 A for 6 hours, etc.
+
+
+
+---
+
+time: 49:56
+# Electrochemical measurements
+
+To avoid variations in rate, battery analysis uses *Galvanostatic* (constant current) electrochemistry
+- measure the resulting potential.
+- easier to separate chemistry effects from rate effects
+
+![Galvanostat graph](./images/galvanostat_graph.jpg# w-60pct relative l-20pct )
+
+
+
+---
+
+time: 51:38
+# Electrochemical measurements (2)
+
+*e.g.* for a 2.2 Ah battery:
+
+.pull-left[![galvanostat example](./images/22Ah_battery_galvanostat.svg)]
+
+--
+
+.pull-right[![Potential versus capacity](./images/E_vs_capacity.svg)]
+
+.pull-left[<br> Capacity is often expressed in a number of formats]
+
+
+
+---
+
+time: 55:35
+# Material insights from galvanostats
+
+Solid Solution | Two-phase region 
+---------------|------------------
+![Voltage-capacity curve for solid solution](./images/voltage_curves_solid_soln.png# w-100pct) | ![Voltage-capacity curve for two-phase mixture](./images/voltage_curves_2phase.png# w-100pct) 
+Ions can be continously added/removed from the material without a structural transition | Two distinct compositions exist together, and the relative proportions change with $x$
+
+???
+
+To a first approximation, the voltage depends linearly on the curvature of free energy with x,
+$$
+V \propto -\frac{\partial G(x)}{\partial x}.
+$$
+In the case of phase mixtures, the free energy follows a linear combination of the two phase minima,
+ so the potential is constant.
+
+![](./images/voltage_curves_free_energy.jpg# w-100pct)
+
+For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_018210.html#close
+
+---
+
+time: 57:41 
 class: compact
 # Lecture recap
 
-- Polarisation arises from cation-anion dipoles
-	- Can be modified by external electric field
-- Important in capacitors
-	- charge stored increased by high $\epsilon_r$ dielectric
-- Impedance spectroscopy can characterise ionic motion
-	- Oscillating potential generates oscillating current
-	- Impedance $Z(\omega)$ has both phase $(\phi)$ and magnitude $(|Z|)$
-	- Many materials behave like parallel RC circuits
-- Piezoelectricity is the linear relationship between polarisation and mechanical stress
-	- requires non-centrosymmetric structures
-- Pyro- and ferro-electrics exhibit spontaneous polarisation without applied electric fields
-	- used where high permittivity is needed (e.g. capacitors)
-	- current interest in multiferroics
-
+- we define cathode and anode under discharge conditions!
+- two main categories of battery (based on mobile ion):
+	- cationic or anionic
+- we want to maximise	
+	- Charge stored $Q$ in materials, and
+	- operating voltage $V$
+- Two types of electrode operation:
+	- Conversion
+		- wide range of chemistry, but problems with volume change and side reactions
+	- intercalation
+		- limited number of suitable materials
+- we can use galvanostatic measurements to learn a lot
 
 .footer[- [Return to course contents](overview.html#overview)
 ]
 
+---
 
+# Feedback
 
-
-
-
-
-
-
-
-
-
-
+![:vote](https://www.menti.com/v1z7bmhzwv)

@@ -20,8 +20,9 @@ name: getting_started
 # Getting started
 
 Welcome to the Ionic Materials course. The lecture notes all display within a web browser* and can be accessed
-from the [contents page](#overview). The video lectures are embedded within the notes and synchronised with each slide
-for simplicity (and to allow you to easily take a break, rather than watch 50 minutes at once!).
+from the [contents page](#overview).
+
+After the lecture, a version with synchronised video and notes will be uploaded to Learn.
 
 If you have any problems with the presentations, please get in touch (james.cumby@ed.ac.uk)!
 
@@ -90,10 +91,11 @@ name: overview
 Lecture | Topic
 --|-------------
 1 | [Introduction to ionic materials](lecture1.html)
-2 | [Defects and ionic conduction](lecture2.html)
-3 | [Batteries](lecture3.html)
-4 | [Dielectric materials](lecture4.html)
-5 | [Fuel Cells](lecture5.html)
+2 | [Defects](lecture2.html)
+3 | [Ionic Conduction](lecture3.html)
+4 | [Batteries](lecture4.html)
+5 | [Dielectric materials](lecture5.html)
+6 | [Fuel Cells](lecture6.html)
 
 ## Recommended Reading
 

@@ -33,11 +33,7 @@
 	</head>
 	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
 	
-	<div id="slideshow" class="slideshow"></div>
-	<div id="presentervid" class="video">
-		<div id="dummy" style="margin-top 56%;"></div>
-		<div id="kaltura_player" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;"></div>
-	</div>
+
 
 	<main role="main">
 		
@@ -51,8 +47,25 @@
   <script>
     var hljs = remark.highlighter.engine;
   </script>
+  
+
+  <!-- ******************************************************* -->
+  <!-- Uncomment this block to enable embedded video playback -->
+  <!--  -->
+  <!-- Container to hold slides -->
+  <!-- <div id="slideshow" class="slideshow"></div> -->
+  <!-- Container to hold video -->
+  <!-- <div id="presentervid" class="video"> -->
+  	<!-- <div id="dummy" style="margin-top 56%;"></div> -->
+  	<!-- <div id="kaltura_player" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;"></div> -->
+  <!-- </div> -->
+  
   <!-- Line to modify video source -->
-  <script src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292"></script>
+  <!-- <script src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292"></script> -->
+  
+  <!-- ******************************************************** -->
+
+  
   <script src="common/remark.language.js"></script>
   <script>
 	
@@ -68,30 +81,64 @@
     });
 
 
-	kWidget.embed({
-	  "targetId": "kaltura_player",
-	  "wid": "1_j9ix7v9k",
-	  "uiconf_id": "32599141",
-	  "flashvars": {
-					'streamerType' : 'auto',
-					'localizationCode': 'en',
-					'leadWithHTML5' : 'true',
-					'sideBarContainer.plugin' : 'true',
-					'sideBarContainer.position' : 'left',
-					'sideBarContainer.clickToClose' : 'true',
-					'chapters.plugin' : 'true',
-					'chapters.layout' : 'vertical',
-					'chapters.thumbnailRotator' : 'false',
-					'streamSelector.plugin': 'true',
-					'EmbedPlayer.SpinnerTarget' : 'videoHolder',
-					'dualScreen.plugin' : 'true',
-					'Kaltura.addCrossoriginToIframe' : 'true',
-					
-					
-	  },
-	  "entry_id": "1_ljfcnu7k"
-	});
-
+	//// Uncomment the following block to enable video embedding
+	//kWidget.embed({
+	//  "targetId": "kaltura_player",
+	//  "wid": "1_xm2mjoqi",
+	//  "uiconf_id": "32599141",
+	//  "flashvars": {
+	//				'streamerType' : 'auto',
+	//				'localizationCode': 'en',
+	//				'leadWithHTML5' : 'true',
+	//				'sideBarContainer.plugin' : 'true',
+	//				'sideBarContainer.position' : 'left',
+	//				'sideBarContainer.clickToClose' : 'true',
+	//				'chapters.plugin' : 'true',
+	//				'chapters.layout' : 'vertical',
+	//				'chapters.thumbnailRotator' : 'false',
+	//				'streamSelector.plugin': 'true',
+	//				'EmbedPlayer.SpinnerTarget' : 'videoHolder',
+	//				'dualScreen.plugin' : 'true',
+	//				'Kaltura.addCrossoriginToIframe' : 'true',
+	//				
+	//				
+	//  },
+	//  "entry_id": "1_ncumtzdx"
+	//});
+	//
+	//kWidget.addReadyCallback( function( playerId ){
+	//	var kdp = document.getElementById( playerId );
+	//	// Add a binding for when seek is completed: 
+	//	kdp.kBind('playerSeekEnd', function(){
+	//		if( console ) 
+	//		console.log( 'playerSeekEnd, playhead should have moved');
+	//	});
+	//
+	//	// Wait for "media ready" before starting playback: 
+	//	kdp.kBind('mediaReady', function(){
+	//		kdp.sendNotification('doPlay');
+	//	})
+	//});
+	//
+	//// Adds the showSlide event to the kWidget callback, so that every time the
+	//// slide is changed the video will seek to the slide property 'time'.
+	//kWidget.addReadyCallback( function(playerId){
+	//	var kdp = document.getElementById( playerId );
+	//	slideshow.on('showSlide', function (slide) {
+	//		if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){
+	//			var times = slide.properties.time.split(':');
+	//			var seconds =0;
+	//			var m = 1;
+	//			while (times.length > 0){
+	//				seconds += m * parseInt(times.pop(), 10)
+	//				m *= 60
+	//			}
+	//			console.log(seconds)
+	//			kdp.sendNotification('doSeek', seconds );
+	//		}
+	//	});
+	//});		
+	
 	
 	// Setup MathJax
     MathJax.Hub.Config({
@@ -99,7 +146,7 @@
 				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
 				 },
 		TeX: {
-			extensions: ["mhchem.js"],
+			extensions: ["mhchem.js", "color.js"],
 			noErrors: {
 				multiline: true,
 			}
@@ -110,43 +157,28 @@
     });
 
 
-	kWidget.addReadyCallback( function( playerId ){
-		var kdp = document.getElementById( playerId );
-		// Add a binding for when seek is completed: 
-		kdp.kBind('playerSeekEnd', function(){
-			if( console ) 
-			console.log( 'playerSeekEnd, playhead should have moved');
-		});
 
-		// Wait for "media ready" before starting playback: 
-		kdp.kBind('mediaReady', function(){
-			kdp.sendNotification('doPlay');
-		})
-	});
-
-	// Adds the showSlide event to the kWidget callback, so that every time the
-	// slide is changed the video will seek to the slide property 'time'.
-	kWidget.addReadyCallback( function(playerId){
-		var kdp = document.getElementById( playerId );
-		slideshow.on('showSlide', function (slide) {
-			if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){
-				var times = slide.properties.time.split(':');
-				var seconds =0;
-				var m = 1;
-				while (times.length > 0){
-					seconds += m * parseInt(times.pop(), 10)
-					m *= 60
-				}
-				console.log(seconds)
-				kdp.sendNotification('doSeek', seconds );
-			}
-		});
-	});	
 	
 	
 	remark.macros.width = function (width) {
 		var url = this;
 		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.vote = function () {
+		// return vote from mentimeter
+		// To use in remark, do
+		//    [:vote](link/to/voting/page)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 60%; height: 0; width:80%; left:10%; overflow: hidden;"><iframe src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>';
+		};
+		
+	remark.macros.results = function () {
+		// return results from mentimeter without mouse interaction (pointer-events: none)
+		// To use in remark, do
+		//    [:results](link/to/results/slide)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden; pointer-events: none"><iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="false" allowtransparency="true" frameborder="0" height="315" src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>'
 		};
 		
 	remark.macros.jmol = function (width, height, x=1, y=1, z=1, other_commands='') {
@@ -174,7 +206,7 @@
 		};
 		
 		// For some reason remark inserts a backslash escape before passing through jmol...
-		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}");
+		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}").replaceAll("\\~",",");
 
 		//alert(other_commands)
 		
