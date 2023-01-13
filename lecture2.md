@@ -34,7 +34,7 @@ Defects are often the source of interesting properties
 
 ![corundum-based gems](./images/corundum_gems.jpg# w-7-12th db fl)
 
-![Strength of iron-carbon alloy](./images/steel_strength.gif# w-4-12th db fr)
+![Strength of iron-carbon alloy](./images/steel_strength.png# w-4-12th db fr)
 
 .footer[
 - ~1% Substitution in $\ce{Al2O3}$

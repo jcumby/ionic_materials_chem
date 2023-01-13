@@ -51,6 +51,38 @@ class: roomy
 
 ---
 
+# Let's get you thinking in 3D!
+
+Picture a cube. Starting from one corner, imagine touching every corner that is two edges away from it.
+
+![:vote](https://www.menti.com/alygz2nf5w9x)
+
+---
+
+# Results
+
+![:results](https://www.mentimeter.com/app/presentation/alzxqc64839giz5p56eamyme8wq154uk)
+
+???
+
+# Example
+
+If nothing is loaded here, try refreshing the browser (F5).
+
+![:jmol 400,350, 0.9, 0.9, 0.9, unitcell off;
+axes off;
+select (all);
+color bonds white;
+select none;
+select add (all)\<1\>;
+select add (all)\<6\>;
+select add (all)\<7\>;
+select add (all)\<8\>;
+color atoms red;
+connect (selected) (selected)](files/primitive_cube.cif)
+
+---
+
 
 time: 12
 class: roomy
@@ -249,6 +281,7 @@ time: 13:26
 
 - An infinite sum can therefore be replaced by the Madelung constant
 	- depends on the structure type
+	
 --
 
 .pull-left[

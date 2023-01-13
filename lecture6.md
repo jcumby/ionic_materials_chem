@@ -550,6 +550,11 @@ class: compact
 	- defect ordering occurs
 - Defect ordering can give rise to new structure types
 
+---
+
+# Feedback
+
+![:vote](https://www.menti.com/ydj19byaq6)
 .footer[- [Return to course contents](overview.html#overview)
 ]
 
