@@ -440,7 +440,7 @@ A high $\mathrm{E_{bat}}$ is good, but we want to (dis)charge batteries quickly!
 ![Battery ragone plot](./images/ragone_plot.svg# w-50pct relative l-3-12th)
 
 .footer[
-- B.D. McCloskey, J. Phys. Chem. Lett., **2015**, 6, 3592.]
+- [B.D. McCloskey, J. Phys. Chem. Lett., **2015**, 6, 3592.](https://doi.org/10.1021/acs.jpclett.5b01813)]
 
 --
 
@@ -521,11 +521,12 @@ class: compact
 		- limited number of suitable materials
 - we can use galvanostatic measurements to learn a lot
 
-.footer[- [Return to course contents](overview.html#overview)
-]
+
 
 ---
 
 # Feedback
 
-![:vote](https://www.menti.com/v1z7bmhzwv)
+![:vote](https://www.menti.com/gdwftssnux)
+.footer[- [Return to course contents](overview.html#overview)
+]

@@ -206,7 +206,7 @@
 		};
 		
 		// For some reason remark inserts a backslash escape before passing through jmol...
-		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}");
+		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}").replaceAll("\\~",",");
 
 		//alert(other_commands)
 		

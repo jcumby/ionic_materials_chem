@@ -202,7 +202,7 @@ class: compact
 # Quick test - $\ce{BaTiO3}$ Schottky Formation
 
 $$
-\ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> v\_{Ba}{''} + v\_{Ti}{''''} +\ ?? + BaTiO3}
+\ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} +\ ?? + BaTiO3}
 $$
 
 
@@ -211,7 +211,7 @@ $$
 ---
 
 $$
-\ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> v\_{Ba}{''} + v\_{Ti}{''''} +\ ?? + BaTiO3}
+\ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} +\ ?? + BaTiO3}
 $$
 
 ![:results](https://www.mentimeter.com/s/5da2441c8b1554ad6a8903da2cf46e83/be09f0058c0a)
@@ -245,7 +245,7 @@ Substitution can also drive formation of defects,
 e.g. doping $\ce{NaCl}$ with $\ce{CaCl2}$:
 
 Overall synthesis reaction:
-$$ \ce{(1-2x)NaCl + xCaCl2 -> Na\_{1-2x}Ca\_{x}Cl} $$
+$$ (1-2x)\mathrm{NaCl} + x\mathrm{CaCl}\_2 \rightarrow \mathrm{Na}\_{1-2x}\mathrm{Ca}\_{x}\mathrm{Cl} $$
 
 --
 
@@ -331,7 +331,7 @@ Some materials are naturally non-stoichiometric even without extrinsic defects
 --
 
 **N.B. From cation:anion ratio alone you cannot determine the defect types** <br>
-e.g. Fe:O ratio of 0.9 could equally be $\ce{Fe\_{0.9}O}$ or $\ce{FeO\_{1.11}}$!
+e.g. Fe:O ratio of 0.9 could equally be $\mathrm{Fe\_{0.9}O}$ or $\mathrm{FeO\_{1.11}}$!
 
 ???
 
@@ -385,8 +385,17 @@ select add (all)\<267\>;
 select add (all)\<188\>;
 select add (all)\<192\>;
 color atoms white;
-select WITHIN(-3.5\~ plane\~ @\(plane((all)\<481\> (all)\<485\> (all)\<267\>)\));
+draw plane1 ((all)\<481\>) ((all)\<485\>) ((all)\<267\>)
+draw off;
+#select WITHIN(-3.5\~ plane\~ @\(plane((all)\<481\> (all)\<485\> (all)\<267\>)\));
+select WITHIN(-3.5\~ plane\~ $plane1);
 color polyhedra translucent orange;
+select none;
+draw plane2 ((all)\<474\>) ((all)\<478\>) ((all)\<260\>);
+draw off;
+#select WITHIN(-3.5\~ plane\~ @\(plane((all)\<474\> (all)\<478\> (all)\<260\>)\));
+select WITHIN(-3.5\~ plane\~ $plane2);
+color polyhedra translucent green;
 ](files/cubic_WO3.cif)
 ]
 
@@ -400,6 +409,15 @@ color polyhedra translucent gray;
 unitcell off;
 rotate x 90;
 zoom 150;
+select none;
+draw plane3 ((all)\<470\>) ((all)\<730\>) ((all)\<650\>);
+draw off;
+select WITHIN(-3.5\~ plane\~ $plane3);
+color polyhedra translucent green;
+draw plane4 ((all)\<430\>) ((all)\<350\>) ((all)\<170\>);
+draw off;
+select WITHIN(2.5\~ plane\~ $plane4);
+color polyhedra translucent orange;
 ](files/beta_WO3.cif)
 ]
 

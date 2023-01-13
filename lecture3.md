@@ -214,7 +214,7 @@ time: 44:19
 ![Nasicon migration paths](./images/ionic_conduction_pathway_nasicon.gif# w-100pct)
 
 .footer[
-- Y. Deng, *Chem. Mater.*, 2018, 2618.
+- [Y. Deng, *Chem. Mater.*, 2018, 2618.](https://doi.org/10.1021/acs.chemmater.7b05237)
 ]
 
 ???
@@ -294,8 +294,7 @@ time: 53:10
 - Different defects have different conduction energetics
 	- Pathways can sometimes be determined experimentally
 
-.footer[- [Return to course contents](overview.html#overview)
-]
+
 
 ---
 
@@ -303,3 +302,5 @@ time: 53:10
 
 ![:vote](https://www.menti.com/v1z7bmhzwv)
 
+.footer[- [Return to course contents](overview.html#overview)
+]

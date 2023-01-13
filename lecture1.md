@@ -229,7 +229,7 @@ $$ E\_{\mathrm{Madelung}} = \sum_{i \neq j} \frac{q_i q_j}{4\pi \epsilon_0 r} $$
 - $\frac{1}{r}$ dependence makes long-range interactions important
 
 .footer[
-- see Chem 1-states of matter for a recap on ionic compounds]
+- see Chemistry 1 "States of Matter" for a recap on ionic compounds]
 
 	
 ???
@@ -251,7 +251,37 @@ time: 13:26
 	- depends on the structure type
 --
 
-- e.g. for $\ce{NaCl}$:
+.pull-left[
+For example $\ce{NaCl}$:
+]
+.pull-right[
+![:jmol 350, 150, 2, 2, 2, unitcell off; axes off;
+while (TRUE) \(
+hide all;
+display (all)\<79\>;
+select (all)\<79\>;
+delay 3;
+color atoms translucent;
+display add WITHIN(3.5\~ (all)\<79\>);
+select WITHIN(3.5\~ (all)\<79\>);
+delay 3;
+color atoms translucent;
+display add WITHIN(4\~ (all)\<79\>);
+select WITHIN(4\~ (all)\<79\>);
+delay 3;
+color atoms translucent;
+display add WITHIN(5\~ (all)\<79\>);
+select WITHIN(5\~ (all)\<79\>);
+delay 3;
+color atoms translucent;
+display add WITHIN(6\~ (all)\<79\>);
+delay 3;
+select all;
+color opaque;
+\);
+](files/NaCl.cif)
+]
+
 $$
 \begin{align}
 E\_{\mathrm{Madelung}} &= \sum_{i \neq j} \frac{q_i q_j}{4\pi \epsilon_0 r} \\\\
@@ -259,6 +289,7 @@ E\_{\mathrm{Madelung}} &= \sum_{i \neq j} \frac{q_i q_j}{4\pi \epsilon_0 r} \\\\
 &\simeq \frac{\mathrm{N_A} q_i q_j}{4\pi \epsilon_0 r} \times 1.74756
 \end{align}
 $$
+
 
 ???
 - Whilst the infinite sum converges for some structures, for others it actually diverges (as the number of neighbours at distance $r \propto 4 \pi r^2$).
@@ -268,6 +299,7 @@ The correct value is obtained by expanding the cubic unit cell as a cube (rather
 In reality, a number of methods exist to perform the summation, in particular the [Ewald Method](https://en.wikipedia.org/wiki/Ewald_summation) (commonly used in atomistic simulations) 
 
 ---
+
 
 time: 16:26
 # Ionic Structures
@@ -366,7 +398,11 @@ with $\ce{Ti^{4+}}$ filling half the octahedral holes
 CN = .gold[6] / .red[3]
 
 .pull-center[
-![:jmol 400,300, 2, 2, 2, connect 3.5 (Ti) (O); color BONDS aliceblue ](files/rutile.cif)
+![:jmol 400,300, 2, 2, 2, connect 3.5 (Ti) (O);
+#isosurface cutoff 0.8 origin \( 0 0 0\) steps \(0.2 0.2 0.2\) points \(100 10 30\) functionxyz = "cos((x-5.5)*80)+1";
+isosurface cutoff 1.9 origin \( 0 3 0\) steps \(0.2 0.2 0.2\) points \(48 4 30\) functionxyz = "cos((x+1.5)*78)+5*(y-3)";
+color isosurface translucent red;
+color BONDS aliceblue;](files/rutile.cif)
 ]
 
 ---
