@@ -47,7 +47,7 @@ time: 6:13
 # Fuel cell fundamentals
 
 $$
-\ce{{Fuel} + O2 -> H2O + nCO2}
+\ce{ {Fuel} + O2 -> H2O + nCO2}
 $$
 
 - Fuel cells classed as *low-temperature* (LT, < 200 &deg;C) and *high-temperature* (HT, > 450 &deg;C). 
