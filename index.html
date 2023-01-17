@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Ionic Materials Overview</title>
+		
+		<meta name="description" content="Lecture 1 - Ionic Materials.">
+
+		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
+		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
+		<style type="text/css">
+		@page {
+				  size:  1216px 684px; 
+				  margin: 0;
+		}
+		</style>
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
+
+
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous"> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/auto-render.min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/abcjs_basic_5.6.3-min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/story.js"></script> -->
+		
+
+
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
+	
+	<!-- <div id="slideshow" class="slideshow"></div> -->
+	<!-- <div id="presentervid" class="video"> -->
+		<!-- <div id="dummy" style="margin-top 56%;"></div> -->
+		<!-- <div id="kaltura_player" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;"></div> -->
+	<!-- </div> -->
+
+	<main role="main">
+		
+    <textarea id="source">
+
+	</textarea>
+
+	<script type="text/javascript" src="./common/JSmol.min.js"></script>
+  <script src="common/remark-latest.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+  <script>
+    var hljs = remark.highlighter.engine;
+  </script>
+  <!-- Line to modify video source -->
+  <!-- <script src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292"></script> -->
+  <script src="common/remark.language.js"></script>
+  <script>
+	
+    var slideshow = remark.create({
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+	  ratio: '4:3',
+	  sourceUrl: 'lecture0.md',
+	  //container: document.getElementById('slideshow'),
+    });
+
+
+	<!-- kWidget.embed({ -->
+	  <!-- "targetId": "kaltura_player", -->
+	  <!-- "wid": "1_xm2mjoqi", -->
+	  <!-- "uiconf_id": "32599141", -->
+	  <!-- "flashvars": { -->
+					<!-- 'streamerType' : 'auto', -->
+					<!-- 'localizationCode': 'en', -->
+					<!-- 'leadWithHTML5' : 'true', -->
+					<!-- 'sideBarContainer.plugin' : 'true', -->
+					<!-- 'sideBarContainer.position' : 'left', -->
+					<!-- 'sideBarContainer.clickToClose' : 'true', -->
+					<!-- 'chapters.plugin' : 'true', -->
+					<!-- 'chapters.layout' : 'vertical', -->
+					<!-- 'chapters.thumbnailRotator' : 'false', -->
+					<!-- 'streamSelector.plugin': 'true', -->
+					<!-- 'EmbedPlayer.SpinnerTarget' : 'videoHolder', -->
+					<!-- 'dualScreen.plugin' : 'true', -->
+					<!-- 'Kaltura.addCrossoriginToIframe' : 'true', -->
+					
+					
+	  <!-- }, -->
+	  <!-- "entry_id": "1_ncumtzdx" -->
+	<!-- }); -->
+
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [["$","$"]],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		},
+		"HTML-CSS": {
+			scale: 85,
+			},
+    });
+
+
+	<!-- kWidget.addReadyCallback( function( playerId ){ -->
+		<!-- var kdp = document.getElementById( playerId ); -->
+		<!-- // Add a binding for when seek is completed:  -->
+		<!-- kdp.kBind('playerSeekEnd', function(){ -->
+			<!-- if( console )  -->
+			<!-- console.log( 'playerSeekEnd, playhead should have moved'); -->
+		<!-- }); -->
+
+		<!-- // Wait for "media ready" before starting playback:  -->
+		<!-- kdp.kBind('mediaReady', function(){ -->
+			<!-- kdp.sendNotification('doPlay'); -->
+		<!-- }) -->
+	<!-- }); -->
+
+	<!-- // Adds the showSlide event to the kWidget callback, so that every time the -->
+	<!-- // slide is changed the video will seek to the slide property 'time'. -->
+	<!-- kWidget.addReadyCallback( function(playerId){ -->
+		<!-- var kdp = document.getElementById( playerId ); -->
+		<!-- slideshow.on('showSlide', function (slide) { -->
+			<!-- if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){ -->
+				<!-- kdp.sendNotification('doSeek', slide.properties.time ); -->
+			<!-- } -->
+		<!-- }); -->
+	<!-- });	 -->
+	
+	
+	remark.macros.width = function (width) {
+		var url = this;
+		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.jmol = function (width, height, x=1, y=1, z=1, other_commands='') {
+		// Generate a jmol object of a given size (in pixels)
+		// The CIF file to read is given as the macro argument, i.e.
+		//  ![:jmol width, height, x, y, z, other_commands](path/to/CIF)
+		// Note that x,y,z are optional, default =1
+		
+		// other_commands can be used to chain jmol commands together to be run on loading (semicolon separated lines)
+		// To use a literal [ ] characters (otherwise intercepted by remark) use \< or \>
+		// To use literal { } characters (for some reason broken?) use \( and \)
+		
+		// Set up an object name to hold the jmol applet
+		var i = 1;
+		var jmolId = "jmolId_" + this.replace(/^.*[\\\/]/, '').replace('.cif','');
+		if (typeof window[jmolId] !== 'undefined') {
+			while (true) {
+				var testid = jmolId + i;
+				if (typeof window[testid] == 'undefined') {
+					jmolId = testid;
+					break;
+				}
+				i += 1;
+			}
+		};
+		
+		// For some reason remark inserts a backslash escape before passing through jmol...
+		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}");
+
+		//alert(other_commands)
+		
+		// Info contains the parameters for initialising jsmol
+		var Info = {
+		  color: "#FFFFFF",
+		  height: height,
+		  width: width,
+		  script: "load " + this + " {" + x + " " + y + " " + z + "} packed; set displayCellParameters FALSE;" + other_commands,
+		  use: "HTML5",
+		  j2sPath: "common/j2s"
+		};
+		
+		// Create the jmol object (called jmolId) and generate the HTML representation of it
+		// ._cover(false) is necessary to allow things to load when displayed
+		Jmol.setDocument(false);
+		var html = Jmol.getAppletHtml(jmolId, Info);
+		window[jmolId]._cover(false)
+		
+		// Return the HTML for the jmol object wrapped in a div
+		return '<div id=' + jmolId + '_div>' + html +  '</div>'
+
+		};
+		
+	remark.macros.colortable = function (color) {
+		console.log(this)
+		var cells = this.split('|');
+		console.log(cells)
+		var newcells = cells.map(function (val, idx, array) { 
+			return val.trim()
+			})
+		console.log(newcells)
+		return newcells.join("|");
+		
+	}
+	
+	remark.macros.grid = function () {
+		var content = this.replace( /&\n/g, " ");
+		return ".grid[".concat(content).concat("]");
+	}
+	
+	
+	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
+			}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});	
+	
+	// Delay mathjax loading so that it doesn't get clobbered by JSmol (fudge it to work...)
+    setTimeout(() => {MathJax.Hub.Configured(); }, 2000);
+	
+  </script>
+  
+	
+</main>
+
+
+
+</body>
+
+</html>
