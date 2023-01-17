@@ -43,9 +43,9 @@ Ionic solids are made up of cations and anions
 - locally, this creates dipoles $(\mu)$
 - across a whole crystal at equilibrium, these dipoles normally cancel
 
-Under an applied electric field, ions displace from equilibrium
+Under an applied electric field ($E$), ions displace from equilibrium
 
-![Ionic polarisation](./images/ionic_polarisation_schematic.jpg# w-90pct relative l-1)
+![Ionic polarisation](./images/dipole_moments.svg# w-90pct relative l-1)
 
 ???
 
@@ -218,16 +218,22 @@ Two 'standard' ways to display data:
 
 .pull-left[
 **Bode plot**: $|Z|$ and $\phi$ plotted vs frequency
-- often log axes
 
 ![Example Bode plot](./images/parallel_RC_bode.png# w-100pct)
 ]
 .pull-right[
-**Nyquist plot**: $Z$ plotted in a 2D plane (like an [Argand diagram](https://www.mathcentre.ac.uk/resources/Engineering%20maths%20first%20aid%20kit/latexsource%20and%20diagrams/7_3.pdf))
-- N.B. usually inverted y-axis
+**Nyquist plot**: $Z$ plotted in a 2D plane
 
 ![Example Nyquist plot](./images/Complex_Impedance.svg# db fr w-90pct)
 ]
+--
+.clear-right[In order to analyse these data, it is useful to fit an electrical circuit that gives the same behaviour]
+
+???
+
+Things to note:
+- Bode plots normally have log axes
+- Nyquist plots are usually plotted with a negative y-axis
 
 ---
 
@@ -236,11 +242,9 @@ class: compact
 # Ideal resistor response
 ![resistor circuit symbol](./images/simple_R_circuit.png# db fr relative b-3)
 
-In an ideal resistor electrons should flow instantly under an applied potential
-- $E$ and $I$ should match (i.e. $\phi = 0$)
-- $\phi=0$ so $Z(\omega) = Z_0(\cos 0 + i\sin 0) = Z_0$
-- Ideally, $Z$ is also independent of $\omega$
-	- Electrons can change direction 'infinitely' fast
+Ideal resistor has no dependence on $\omega$
+- Current is instantaneous on applying potential $E$
+- e.g. ions moving with a constant "drag" due to interactions between them
 
 ![Bode and Nyquist plots for perfect resistor](./images/simple_R_bode_nyquist.png)
 
@@ -251,12 +255,10 @@ class: compact
 # 'Ideal' capacitor response
 ![Capacitor circuit symbol](./images/simple_C_circuit.png# db fr relative b-3)
 
-- No electrons can flow between the plates
-	- For small $\omega$, very large impedance
-- Current is largest when potential is first applied (near 0), decreasing as potential gets larger
-	- Overall, $\phi=90$
-- At high $\omega$, $I$ is always near maximum
-	- $|Z| \rightarrow 0 $ as $\omega$ increases
+- Current $I$ increases with $\omega$, approaching 0
+- $I$ is always out-of-phase with $E$ by $\phi=90^{\circ}$
+	- The maximum $I(t)$ occurs when $E(t) = 0$
+- Represents stored charge building up, for instance ions accumulating on a surface
 
 ![Bode and Nyquist plots for ideal capacitor](./images/simple_C_bode_nyquist.png# w-80pct relative l-10pct)
 
@@ -277,10 +279,10 @@ class: compact
 
 
 - Many materials behave like a parallel RC circuit:
-	- Ions flowing in solution, forming a layer on the electrode
-	- Ionic conduction in a ceramic forming a charge gradient
+	- Ions moving due to $E$, but motion is limited to a maximum displacement
+	- Ionic conduction in a ceramic forming a charge gradient on the electrode surface
 
-![Parallel RC bode and nyquist plots](./images/parallel_RC_bode_nyquist2.png)
+![Parallel RC bode and nyquist plots](./images/parallel_RC_bode_nyquist2.png# w-90pct)
 
 More complex behaviour is often observed, and can be modelled using *equivalent circuits*
 

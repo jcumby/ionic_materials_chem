@@ -227,11 +227,11 @@ time: 22:07
 
 - While an integer number are substituted across a crystal, the average can be non-stoichiometric
 	- often represented by a variable such as $\ce{x}$:
-	- i.e. Ruby is $\ce{Al\_{2-x}Cr\_{x}O3}\quad(0 \leq x \leq 2)$ 
+	- i.e. Ruby is $\mathrm{Al}\_{2-x}\mathrm{Cr}\_{x}\mathrm{O}\_3\quad(0 \leq x \leq 2)$ 
 --
 
 - Substitution can dramatically affect properties:
-	- e.g. $\ce{La\_{2-x}Sr_{x}CuO4}$:
+	- e.g. $\mathrm{La}\_{2-x}\mathrm{Sr}_{x}\mathrm{CuO\_4}$:
 		- semiconducting for $x = 0$
 		- superconducting (below 40 K) for $x = 0.15$
 	

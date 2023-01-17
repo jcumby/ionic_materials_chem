@@ -431,6 +431,7 @@ $Q_{\mathrm{theo.}}$ / mAh g<sup>-1</sup> | 274 | 148 | 170
 
 time: 43:55
 class: compact
+exclude: true
 # Charging rates
 
 A high $\mathrm{E_{bat}}$ is good, but we want to (dis)charge batteries quickly!
@@ -441,8 +442,6 @@ A high $\mathrm{E_{bat}}$ is good, but we want to (dis)charge batteries quickly!
 
 .footer[
 - [B.D. McCloskey, J. Phys. Chem. Lett., **2015**, 6, 3592.](https://doi.org/10.1021/acs.jpclett.5b01813)]
-
---
 
 $\mathrm{E_{bat}}$ depends on the (dis)charge rate, so to compare different materials we use the $C\mathrm{-rate} = \frac{I}{Q}$
 - e.g. for a 1000 mAh battery: $1C$ would sustain 1 A for 1 hour, $2C$ gives 2A for 30 mins, $\frac{C}{6}$ gives 0.167 A for 6 hours, etc.
@@ -477,6 +476,10 @@ time: 51:38
 
 .pull-left[<br> Capacity is often expressed in a number of formats]
 
+???
+
+$\mathrm{E_{bat}}$ depends on the (dis)charge rate, so to compare different materials we use the $C\mathrm{-rate} = \frac{I}{Q}$
+- e.g. for a 1000 mAh battery: $1C$ would sustain 1 A for 1 hour, $2C$ gives 2A for 30 mins, $\frac{C}{6}$ gives 0.167 A for 6 hours, etc.
 
 
 ---
@@ -519,7 +522,7 @@ class: compact
 		- wide range of chemistry, but problems with volume change and side reactions
 	- intercalation
 		- limited number of suitable materials
-- we can use galvanostatic measurements to learn a lot
+- we can understand the mechanism using galvanostatic electrochemistry
 
 
 
