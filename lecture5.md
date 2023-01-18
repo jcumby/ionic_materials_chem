@@ -370,6 +370,7 @@ Applications:
 ---
 
 time: 45:16
+class: compact
 # Structural Aspects
 
 Stresses arise due to unbalanced dipoles
@@ -379,7 +380,7 @@ Stresses arise due to unbalanced dipoles
 
 ### Example: Quartz $(\ce{SiO2})$
 
-![Quartz piezoelectric effect](./images/piezoelectric_effect_quartz.jpg# w-100pct)
+![Quartz piezoelectric effect](./images/quartz_piezoelectric.svg# w-75pct relative l-10pct)
 
 
 
@@ -463,15 +464,14 @@ class: compact
 	- current interest in multiferroics
 
 
-.footer[- [Return to course contents](overview.html#overview)
-]
-
 ---
 
 # Feedback
 
 ![:vote](https://www.menti.com/i2p6urbnk1)
 
+.footer[- [Return to course contents](overview.html#overview)
+]
 
 
 

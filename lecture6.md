@@ -140,7 +140,7 @@ Phosphoric acid (PAFC) | H<sup>+</sup> | 220 | Medium to large scale combined he
 Molten Carbonate (MCFC) | CO<sub>3</sub><sup>2-</sup> | 650 | &vellip;
 **Solid Oxide (SOFC)** | O<sup>2-</sup> | 500 - 1000 | &vellip;
 
-.footer[ - L. Carrette, *Fuel Cells*, 2001, 5.
+.footer[ - [L. Carrette, *Fuel Cells*, 2001, 5.](https://doi.org/10.1002/1615-6854(200105%291:1%3C5::AID-FUCE5%3E3.0.CO;2-G)
 ]
 
 ---
@@ -266,7 +266,7 @@ time: 22:05
 
 - Current OH<sup>-</sup> polymers have low ionic conductivity! .red[&#10008;]
 
-.footer[- Y-J. Wang et al., *Chem. Soc. Rev.* **2013**, 42, 5768-5787.
+.footer[- [Y-J. Wang et al., *Chem. Soc. Rev.* **2013**, 42, 5768-5787.](https://doi.org/10.1039/C3CS60053J)
 ]
 
 ---
@@ -470,7 +470,7 @@ color atoms TRANSLUCENT 0.8 red
 ](./files/CaF2.cif)
 ]
 
-Another commercial material is $\ce{Gd\_{0.1}Ce\_{0.9}O\_{1.95}}$ (CGO)
+Another commercial material is $\mathrm{Gd\_{0.1}Ce\_{0.9}O\_{1.95}}$ (CGO)
 - Better for lower temperature
 	- e<sup>-</sup> conductor above 600 &deg;C
 	
