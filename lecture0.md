@@ -22,7 +22,7 @@ name: getting_started
 Welcome to the Ionic Materials course. The lecture notes all display within a web browser* and can be accessed
 from the [contents page](#overview).
 
-After the lecture, a version with synchronised video and notes will be uploaded to Learn.
+PDF versions of the notes are also available on Learn.
 
 If you have any problems with the presentations, please get in touch (james.cumby@ed.ac.uk)!
 

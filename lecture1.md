@@ -48,12 +48,11 @@ class: roomy
 
 ![:results](https://www.mentimeter.com/embed/108185ce9fe171d5b8dd94a3c830f3e6/7a22677b6492)
 
-
 ---
 
 # Let's get you thinking in 3D!
 
-Picture a cube. Starting from one corner, imagine touching every corner that is two edges away from it.
+Picture a cube. Imagine touching one corner, and then also touch every corner that is two edges away from it.
 
 ![:vote](https://www.menti.com/alygz2nf5w9x)
 
@@ -61,7 +60,7 @@ Picture a cube. Starting from one corner, imagine touching every corner that is 
 
 # Results
 
-![:results](https://www.mentimeter.com/app/presentation/alzxqc64839giz5p56eamyme8wq154uk)
+![:results](https://www.mentimeter.com/embed/alzxqc64839giz5p56eamyme8wq154uk)
 
 ???
 
@@ -96,7 +95,6 @@ $\require{mediawiki-texvc}$
 
 ---
 
-time: 42
 # Introduction
 
 'Ionic materials' consist of both cations and anions:
@@ -107,15 +105,15 @@ time: 42
 
 - Organic salts
 	- ammonium acetate $\ce{NH4+CH3COO-}$
-	- [chlorphenirammonium maleate](https://www.nhs.uk/medicines/chlorphenamine-including-piriton/) <br>(active part of Piriton&reg;)
-	![Piriton API](./images/chlorphenirammonium_maleate_piriton_molecule.png# w-3-12th r-2 absolute t-4-12th )
+	- [chlorphenirammonium maleate](https://www.nhs.uk/medicines/chlorphenamine-including-piriton/) (active part of Piriton&reg;)
+	![Piriton API](./images/chlorphenirammonium_maleate_piriton_molecule.png# w-3-12th r-2 absolute t-3-12th )
 --
 	
 - (in)organic salts
-	- Mono-/Di-/Tri-Sodium citrate <br>$\ce{Na\_{x}C6H\_{8-x}O7}$ 
+	- Mono-/Di-/Tri-Sodium citrate $\ce{Na\_{x}C6H\_{8-x}O7}$ 
 		- collectively used as E331 in food
 		- $\ce{x}$ can be varied from 1&ndash;3
-	![Trisodium citrate](./images/trisodium_citrate.png# w-3-12th r-2 absolute t-60pct)
+	![Trisodium citrate](./images/trisodium_citrate.png# w-3-12th r-2 absolute t-70pct)
 --
 	
 - Ionic liquids
@@ -124,7 +122,6 @@ time: 42
 ---
 
 class: compact
-time: 215
 # Why are they interesting?
 
 - Large range of practical applications
@@ -142,10 +139,9 @@ time: 215
 --
 
 - Usually hard, and often robust to harsh conditions
-	- e.g. Synroc is used to encapsulate nuclear waste
+	- e.g. Synroc* is used to encapsulate nuclear waste
 
-![synroc](./images/synroc.jpg# w-50pct relative l-3-12th)
-
+![synroc](./images/synroc.jpg# w-50pct relative l-1-12th)
 
 
 ???
@@ -163,7 +159,6 @@ Synroc is a mixture of titanium oxide minerals
 
 ---
 
-time: 5:33
 class: compact
 
 # We can divide solids into two categories:
@@ -195,13 +190,12 @@ molecular ionic materials, including:
 
 - polymeric ionic conductors (for fuel cells)
 - Molecular salts for phamaceutical applications
-	- Often better *in-vivo* properties than e.g. co-crystals
-- Ionic liquids for e.g. nuclear waste processing
+	- Often better *in-vivo* properties than *e.g.* co-crystals
+- Ionic liquids for *e.g.* nuclear waste processing
 
 
 ---
 
-time: 7:00
 # Recap on crystal structure
 
 Periodic solids can be described by a unit cell
@@ -211,7 +205,7 @@ Periodic solids can be described by a unit cell
 	- 'Lattice parameters'
 --
 
-- Possesses 'space group' symmetry (an extension to point groups)
+- Possesses 'space group' symmetry (an extension of point groups)
 --
 
 - Atom positions defined by fractional position along lattice directions
@@ -236,18 +230,19 @@ class: compact
 ![:jmol 500, 300, 1, 1, 1](files/NaCl.cif)
 ]
 
+.center[
  | |
 ----------------|---|--
 Cubic structure | $a = b = c = 5.62\ \AA{}$, $\alpha = \beta = \gamma = 90^\circ$  |
 Spacegroup      | $\mathrm{Fm\bar3 m}$ (#225, point group = $\mathrm{O_h}$) |
 Na atoms at:    | (0 0 0)       &ensp; (&half; &half; 0) &ensp;  (&half; 0 &half;) &ensp;  (0 &half; &half;) | (all symmetry-related)
 Cl atoms at:    | (&half; 0 0)  &ensp; (0 &half; 0)      &ensp;  (0 0 &half;)      &ensp;  (&half; &half; &half;) | (all symmetry-related)
+]
 
 Because of symmetry, we only need to define one Na and one Cl position.
 ---
 
 name: ionic_bonding
-time: 10:49
 # Ionic Bonding
 
 - Ionic compounds stay together because of electrostatic interactions (strong)
@@ -272,7 +267,6 @@ $$ E\_{\mathrm{Madelung}} = \sum_{i \neq j} \frac{q_i q_j}{4\pi \epsilon_0 r} $$
 ---
 
 class: compact
-time: 13:26
 # Infinite summations
 
 - For infinite solids, periodicity usually means the sum converges
@@ -326,15 +320,14 @@ $$
 
 ???
 - Whilst the infinite sum converges for some structures, for others it actually diverges (as the number of neighbours at distance $r \propto 4 \pi r^2$).
-- Note that for $\ce{NaCl}$ the series shown (based on expanding $r$ as a sphere) has actually been proved to diverge, but I include it as it is conceptually easier to understand!
-The correct value is obtained by expanding the cubic unit cell as a cube (rather than a sphere); this series does converge, but is more complex!
+- Note that for $\ce{NaCl}$ the series shown (based on expanding $r$ as a sphere) actually diverges, but I include it as it is conceptually easier to understand!
+The correct value is obtained by considering an expanding cube around each atom, rather than a sphere (but is more complex!)
 
 In reality, a number of methods exist to perform the summation, in particular the [Ewald Method](https://en.wikipedia.org/wiki/Ewald_summation) (commonly used in atomistic simulations) 
 
 ---
 
 
-time: 16:26
 # Ionic Structures
 
 Generally, structures **maximise cation-anion** interactions (-ve energy) while **minimising like-charge** interactions (+ve energy)
@@ -352,14 +345,13 @@ be ignored. Often, it is not possible to predict which structure will occur base
 
 ---
 
-time: 18:53
+
 # Close packing
 
 ![Close packing](./images/close_packed_layers.png)
 
 ---
 
-time: 20:34
 # Close packing
 
 .pull-left[
@@ -380,7 +372,6 @@ Hexagonal close-packed (HCP) <br>
 
 ---
 
-time: 21:38
 # Holes
 
 CP arrangements of large (an)ions [X] leave 'holes' within the structure, which can be occupied by smaller (cat)ions [M]
@@ -397,13 +388,12 @@ CP arrangements of large (an)ions [X] leave 'holes' within the structure, which 
 
 # How are you getting on? Results
 
-![:results](https://www.mentimeter.com/s/f5d6b6ece1f5b78c18b391183e14209e/9cb3695182fe)
+![:results](https://www.mentimeter.com/embed/f5d6b6ece1f5b78c18b391183e14209e/9cb3695182fe)
 
 
 
 ---
 
-time: 22:53
 # Octahedral holes
 
 One .gold[hole] per .red[cp ion] - both are 6-coordinate
@@ -423,7 +413,6 @@ Nickel Arsenide structure (e.g. FeS)
 
 ---
 
-time: 24:14
 # Rutile
 
 Although not strictly close-packed, rutile (.gold[Ti].red[O<sub>2</sub>]) is distorted HCP
@@ -440,7 +429,6 @@ color BONDS aliceblue;](files/rutile.cif)
 
 ---
 
-time: 25:58
 class: compact
 # Tetrahedral holes
 
@@ -464,8 +452,6 @@ Half | Zinc-blende (.gold[Zn].red[S]) | .gold[4]/.red[4] | &emsp; | Wurtzite (.g
 
 ---
 
-class: compact
-time: 28:07
 # Which structure type?
 
 Generally, the structure formed depends on the ratio of ionic radii
@@ -485,7 +471,6 @@ These are only approximate 'rules', and other binary structures exist (e.g. $\ce
 ---
 
 class: compact
-time: 31:37
 # Beyond binary compounds
 
 With 3 or more elements, structures become much more complicated!
@@ -493,7 +478,7 @@ With 3 or more elements, structures become much more complicated!
 An important one is perovskite, $\ce{ABX3}$
 - $r(\mathrm{A}) \simeq r(\mathrm{X})$, so can be considered as FCC $\ce{AX3}$ layer with $\ce{B}$ filling 25% of octahedral holes:
 
-.pull-left[![perovskite layer](./images/perovskite_layer.png# w-80pct)]
+.pull-left[![perovskite layer](./images/perovskite_layer.png# w-75pct)]
 
 .pull-right[
 ![:jmol 400, 300, 1, 1, 1, select \(lanthanum\);
@@ -508,7 +493,6 @@ select \(aluminium\); color atoms blue](files/cubic_perovskite.cif)
 
 ---
 
-time: 33:56
 # Lecture recap
 
 - Variety of ionic materials with a range of applications
