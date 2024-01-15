@@ -1,6 +1,72 @@
 Lecture improvements still to do...
 ===================================
 
+2022-23
+-------
+
+**Lecture 1**
+- Perfect timing
+- Needs more time devoted to explaining close packing and holes
+	- Perspex balls in a box works well in small groups, but didn't appear well on the visualiser
+	- Better animation/interactive demo?
+- Consider removing spacegroup references to avoid confusion?
+
+	
+** Lecture 2**
+
+- Overran, but probably due to close packing demo at the start
+- Quiz 2 needs quite a lot of time to complete
+	- Make sure to be clear on the answer in advance!
+- Can (should) it be made clear why Ag interstitial in AgCl is 4-coordinate?
+- IS defect ordering section required?
+
+** Lecture 3**
+
+- Overran slightly due to finishing off Lecture 2 (defect ordering)
+- Too much time discussing conduction pathways
+	- Need a way to distribute 'good' techniques without giving the answers away
+
+** Lecture 4**
+
+- Overran by almost 5 mins; too much material
+- Boring lecture with lots of examples
+	- Can I add a demonstration/interactive thing?
+	- Too many examples/definitions; can anything be dropped?
+- Galvanostats still not useful
+
+** Lecture 5**
+- Consider adding interactive 3D plot of Z',Z" and f to make relationship clear
+- Conceptual understanding of capacitance phase shift remains tough
+- 
+
+** Lecture 6**
+- Well-timed
+- Needs some degree of interactivity
+	- Ordering of defects in class?
+- Quite dry - can the key points be got across without so many examples?!
+	
+**Tutorial**
+
+- Too many questions	
+    - Students get slowed down by the number crunching of Q2; could we remove/simplify the charge storage calculation?
+	- Although interesting, the oxidation/reduction question could be reduced in size/removed (not totally relevant?)
+- Leave more time to go through structure visualisation/packing hunting. Can students do this in the tutorial themselves with support?
+- Tutorial Qs do not fully reflect the assessment questions in places
+    - Should they?
+    - Can more guidance be given around the assessment?
+
+**General Improvements**
+
+- Many students struggle with visualising close-packing. Make more use of the PhysChem ball models?
+- Wide concern over impedance spectroscopy; should it be chopped?!
+- Add in the observation that every octahedral hole shares its faces with tetrahedral holes for CCP, and show same
+  idea for HCP
+- Demonstrate partially-occupied sites more completely, perhaps using fuel cell or battery lecture examples?
+
+
+
+	
+
 2021-22
 -------
 
