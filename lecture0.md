@@ -59,6 +59,13 @@ Move to the next slide to learn about [interactive structures](#jmol_use) or go 
 - *you may need to click on the slide area first
 - &dagger; I think... Let me know if not
 ]
+
+???
+
+Congratulations, you found the notes!
+
+I'll use this area for extra information which you might find interesting or helpful.
+
 ---
 
 name: jmol_use

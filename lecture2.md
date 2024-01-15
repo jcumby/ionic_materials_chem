@@ -7,7 +7,6 @@ time: 0
 
 ---
 
-time: 12
 # Lecture summary
 $\require{mediawiki-texvc}$
 
@@ -19,7 +18,6 @@ $\require{mediawiki-texvc}$
 ---
 
 class: compact, no-number
-time: 54
 # Defects
 
 **All** crystals contain defects of some sort, for example:
@@ -34,7 +32,7 @@ Defects are often the source of interesting properties
 
 ![corundum-based gems](./images/corundum_gems.jpg# w-7-12th db fl)
 
-![Strength of iron-carbon alloy](./images/steel_strength.png# w-4-12th db fr)
+![Strength of iron-carbon alloy](./images/steel_strength.png# w-3-12th db fr)
 
 .footer[
 - ~1% Substitution in $\ce{Al2O3}$
@@ -44,20 +42,18 @@ Defects are often the source of interesting properties
 ---
 
 class: compact
-time: 5:12
 # Defect amounts
 
 The number of defects is a fine balance of entropy and enthalpy
 - Defects gain entropy but have a (often large) formation energy
 
-![Defect formation energy](./images/defect_formation.png# w-6-12th l-2-12th relative)
+![Defect formation energy](./images/defect_formation.png# w-5-12th l-2-12th relative)
 
 Minimum in $\mathrm{\Delta G}$ depends on structure and bonding, but typically << 1%.
 
 
 ---
 
-time: 464
 class: compact
 # Types of defect
 
@@ -66,7 +62,7 @@ The three most common defect types in ionic solids are:
 
 Vacancy | Interstitial | Substitution |
 :-----|:----:|----:
-![Vacancy defect](./images/MX_vacancy.png# w-90pct) | ![Interstitial defect](./images/mx_interstitial.png# w-90pct) | ![Substitutional defect](./images/mx_substitution.png# w-90pct)
+![Vacancy defect](./images/MX_vacancy.png# w-80pct) | ![Interstitial defect](./images/mx_interstitial.png# w-80pct) | ![Substitutional defect](./images/mx_substitution.png# w-80pct)
 
 --
 
@@ -77,17 +73,18 @@ Additionally, defects can be either
 ---
 
 class: no-number
-time: 612
 # Intrinsic defects
 
+![Walter Schottky](./images/walter_schottky.jpg# w-4 db fr relative t-100pct)
 Two of the most common stoichiometric defects are:
 
-![Walter Schottky](./images/walter_schottky.jpg# w-10pct db fr relative t-50pct)
+
 **Schottky**
 - Charge-balanced combination of anion and cation vacancies
 
-![Yakov Frenkel](./images/Yakov_Frenkel.jpg# w-10pct db fr)
+
 **Frenkel**
+![Yakov Frenkel](./images/Yakov_Frenkel.jpg# w-4 fr db relative t-11-12th)
 - Ions displaced to interstitial sites
 
 
@@ -100,14 +97,13 @@ Defects observed depend on both structure type and atoms involved.
 ]
 ---
 
-time: 685
 # Schottky defects
 
 - Typically occur when anions and cations have similar size (e.g. $\ce{NaCl}$ structure)
 - Reduced density compared with the ideal material
 - e.g. $\ce{NaCl}$ - equal numbers of $\ce{Na}$ and $\ce{Cl}$ vacancies
 
-.pull-left[![NaCl Schottky Defect](./images/nacl_schottky.png# w-70pct)]
+.pull-left[![NaCl Schottky Defect](./images/nacl_schottky.png# w-60pct)]
 
 .pull-right[
 ![:jmol 400, 300, 2, 2, 2, select (Na1)\<33\>; spacefill ionic; color atoms TRANSLUCENT 0.8 gray; spacefill 0.9; select (Cl1)\<15\>; color atoms TRANSLUCENT 0.8 lightgreen; spacefill 0.9](files/NaCl.cif)
@@ -127,7 +123,7 @@ time: 770
 - e.g. $\ce{AgCl}$ ($\ce{NaCl}$-type)
 	- Smaller $\ce{Ag+}$ ion displaced to tetrahedral holes in CCP $\ce{Cl-}$ structure
 
-.pull-left[![AgCl Frenkel Defect](./images/agcl_frenkel.png# w-70pct)]
+.pull-left[![AgCl Frenkel Defect](./images/agcl_frenkel.png# w-60pct)]
 
 .pull-right[
 ![:jmol 400, 350, 1, 1, 1, unitcell OFF; select (Na1)\<13\>; spacefill ionic; color atoms TRANSLUCENT 0.8 gray](files/AgCl_interstitial.cif)
@@ -136,7 +132,6 @@ time: 770
 
 ---
 
-time: 856
 # Defect equations
 
 Useful to write equation for defects, using **Kroger-Vink** notation:
@@ -158,19 +153,21 @@ Useful to write equation for defects, using **Kroger-Vink** notation:
 
 ---
 
-time: 1077
+class: roomy
 # Defect equations (2)
 
-Defect equations must balance for:
-- mass (atoms)
-- charge
-- sites
-	- positions created/destroyed must balance
+like normal, defect equations must balance in terms of:
+- composition
+	- vacancies are not treated as an atom
+- charges
+- **sites**
+	- *specified* atomic positions cannot be created or destroyed
+	- interstitials are ignored in balancing
 
 ---
 
-time: 1126
 # Examples
+
 $\ce{AgCl}$ interstitial formation again:
 
 $$ \ce{Ag\_{Ag} <=> Ag\_{i}^{\bullet} + V\_{Ag}{'} } $$
@@ -194,7 +191,7 @@ $$ \ce{ 2Al\_{Al} + Cr2O3 <=> 2 Cr\_{Al} + Al2O3 } $$
 Another way to think about $\ce{NaCl}$ Schottky formation is displacing one $\ce{Na+}$ and one $\ce{Cl-}$ to a 'new' unit cell on the 
 edge of the crystal.
 
-Writing a iso-electronic subsitution with Kroger-Vink notation is somewhat unnecessary, but will hopefully serve as an introduction to substitution!
+Writing an iso-electronic subsitution with Kroger-Vink notation is somewhat unnecessary, but will hopefully serve as an introduction to substitution!
 
 ---
 
@@ -214,12 +211,11 @@ $$
 \ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} +\ ?? + BaTiO3}
 $$
 
-![:results](https://www.mentimeter.com/s/5da2441c8b1554ad6a8903da2cf46e83/be09f0058c0a)
+![:results](https://www.mentimeter.com/embed/5da2441c8b1554ad6a8903da2cf46e83/be09f0058c0a)
 
 ---
 
 class: roomy
-time: 22:07
 # Ionic Substitution
 
 - Ions of similar size can often replace each other
@@ -235,10 +231,12 @@ time: 22:07
 		- semiconducting for $x = 0$
 		- superconducting (below 40 K) for $x = 0.15$
 	
+???
+
+Measuring the size of an atom is difficult, but here I'll refer to the ionic radius.
 
 ---
 
-time: 24:46
 # Extrinsic defects
 
 Substitution can also drive formation of defects,
@@ -253,8 +251,7 @@ Kroger-Vink notation:
 $$ \ce{2 Na\_{Na} + CaCl2 <=> Ca\_{Na}^{\bullet} + V\_{Na}{'} + 2NaCl} $$
 
 ---
-class: compact
-time: 26:33
+
 # More complex example
 
 Sometimes, substitution (or 'doping') can give rise to multiple potential defects.
@@ -265,6 +262,9 @@ For example, replacing $\ce{La^{3+}}$ by $\ce{Sr^{2+}}$ in $\ce{LaCoO3}$ could o
 
 - by creating oxygen vacancies;
 $$ \ce{ 2La\_{La} + 2SrO + O\_{O} <=> 2Sr\_{La}{'} + V\_{O}^{\bullet\bullet} + La2O3 } $$
+
+--
+
 - or by oxidising $\ce{Co^{3+}}$ to $\ce{Co^{4+}}$
 $$ \ce{ 2La\_{La} + 2SrO + \frac{1}{2} O2 + 2Co\_{Co} <=> 2Sr\_{La}{'} + 2Co\_{Co}^{\bullet} + La2O3 } $$
 
@@ -285,13 +285,12 @@ At high pressure, oxygen vacancies in $\ce{Mg2SiO4}$ can react with $\ce{H2O}$ t
 
 # Results - Extrinsic defects
 
-![:results](https://www.mentimeter.com/s/4a2eb2674200a5468dec683c4e2742e1/947fb0d5e600)
+![:results](https://www.mentimeter.com/embed/4a2eb2674200a5468dec683c4e2742e1/947fb0d5e600)
 
 ---
 
 
 class: compact
-time: 29:37
 # Solid solutions
 
 Frequently, substitutional defect concentrations can exceed 1%
@@ -318,7 +317,6 @@ represents the same as $\ce{Sc\_{1-x}Bi\_{x}VO4}$.
 
 ---
 
-time: 32:55
 # Non-stoichiometry
 
 Some materials are naturally non-stoichiometric even without extrinsic defects
@@ -330,7 +328,7 @@ Some materials are naturally non-stoichiometric even without extrinsic defects
 	
 --
 
-**N.B. From cation:anion ratio alone you cannot determine the defect types** <br>
+**Note: From cation:anion ratio alone you cannot determine the defect type(s)** <br>
 e.g. Fe:O ratio of 0.9 could equally be $\mathrm{Fe\_{0.9}O}$ or $\mathrm{FeO\_{1.11}}$!
 
 ???
@@ -340,7 +338,6 @@ would cause the entropy term to dominate, assuming the product could be 'quenche
 
 ---
 
-time: 46:09
 class: compact
 # Defect ordering
 
@@ -351,7 +348,7 @@ class: compact
 	- lines ('1D')
 	- planes ('2D')
 
-Often seen in microscopy, e.g. $\ce{ZrNb\_{24}O\_{62}}$ shows 2D order in two directions:
+Often seen from electron microscopy, e.g. $\ce{ZrNb\_{24}O\_{62}}$ shows 2D order in two directions:
 
 ![Microscopy of shear structure in ZrNb24O62](./images/ZrNb24O62_shear_structures.png# w-6-12th l-3-12th relative)
 
@@ -360,7 +357,7 @@ Often seen in microscopy, e.g. $\ce{ZrNb\_{24}O\_{62}}$ shows 2D order in two di
 
 # Example - $\ce{WO3}$
 
-Plane-like defects often described as shear phases
+Plane-like defects are often described as *shear phases*
 
 .pull-left[
 $\ce{WO3}$
@@ -423,8 +420,6 @@ color polyhedra translucent orange;
 
 ---
 
-class: compact
-time: 53:10
 # Lecture recap
 
 - Crystals are never perfect!
@@ -432,7 +427,7 @@ time: 53:10
 - Three main types of defect:
 	- vacancy (called Schottky if stoichiometry maintained)
 	- interstitial (called Frenkel if stoichiometry maintained)
-	- substitution
+	- substitution or extrinsic
 - Kroger-Vink notation is a way to write defect equations
 - Some materials can form solid solutions and/or non-stoichiometric compositions
 - If defects order, this can lead to new stoichiometric structure types
