@@ -7,7 +7,6 @@ time: 0
 
 ---
 
-time: 12
 # Lecture summary
 $\require{mediawiki-texvc}$
 
@@ -27,12 +26,11 @@ $\require{mediawiki-texvc}$
 
 # Defect recap results
 
-![:results](https://www.mentimeter.com/s/b263ad5a60b54a924a4c8a7399ae89b4/3dc6c5216a2c)
+![:results](https://www.mentimeter.com/embed/b263ad5a60b54a924a4c8a7399ae89b4/3dc6c5216a2c)
 
 ---
 
 class: compact
-time: 36:06
 # Conductivity
 
 - Many ionic solids conduct electricity; due to *ionic* and/or *electronic* motion.
@@ -41,17 +39,19 @@ time: 36:06
 
 - Ionic conductors are important!
 
+.pull-center[
 
-![Electric vehicle](./images/electric_vehicle.jpg# w-6-12th)| ![Gas sensor](./images/gas_sensor_H2.jpg# w-5-12th )
+![Electric vehicle](./images/electric_vehicle.jpg# db maxh-4)| ![Gas sensor](./images/gas_sensor_H2.jpg# maxh-4 )
 :---------:|:-----------:
 Batteries ([Lecture 4](lecture4.html)) | Sensors 
-![Li separation from seawater membrane](./images/separation_membrane.jpg# w-5-12th ) | ![Fuel cell stack](./images/bloom_energy_fuel_cell.jpg# w-5-12th )
+![Li separation from seawater membrane](./images/separation_membrane.jpg# maxh-4 ) | ![Fuel cell stack](./images/bloom_energy_fuel_cell.jpg# maxh-4 )
 Separation Membranes | Fuel Cells ([Lecture 6](lecture6.html))
-
+]
 
 
 ---
 
+class: roomy
 # Origin of ionic conduction
 
 - Ionic conductivity is dominated by **defects**
@@ -65,17 +65,22 @@ Separation Membranes | Fuel Cells ([Lecture 6](lecture6.html))
 	- $\mu$ is the mobility of charge carriers
 --
 
-- In ionic solids, conductivity covers  $\ce{10^{-16}\bond{-} 10^3\ S\ m^{-1}}$
+- In ionic solids, conductivity covers  $\ce{10^{-16}\ S\ m^{-1}\ \bond{-} 10^3\ S\ m^{-1}}$
 	- most solids are limited to around $\ce{10^{-2}\ S\ m^{-1}}$
 	- Liquid electrolytes typically $\ce{10^{-1}\bond{-} 10^3\ S\ m^{-1}}$
+
+???
+
+The Siemen $(S)$ is the unit of conductance and is the inverse of resistance, measured in Ohms $(\Omega)$.
+
 ---
 
-
+class: roomy
 # Measuring Conductivity
 
 - For electronic conductors, this is simple:
-	- Apply a voltage (V) and measure the resulting current (I)
-	- Link by Ohm's law; $ V = IR $
+	- Apply a voltage $(V)$ and measure the resulting current $(I)$
+	- Resistance (in $\Omega$) is found through Ohm's law; $ V = IR $
 	- Resistivity (in $\Omega\ cm$) of the material calculated from geometry
 	
 - Resistivity $\rho$ (in $\Omega\ cm$) = $\frac{1}{\text{Conductivity}\ \sigma\ \mathrm{(in\ S\ cm^{-1})}}$
@@ -92,12 +97,16 @@ Separation Membranes | Fuel Cells ([Lecture 6](lecture6.html))
 - In reality, we normally use two wires for V and two for I
 ]
 
+???
+
+Resistance (in $\Omega$) depends on how much material there is; twice the length of material will give twice the resistance. Resistivity is a material property and therefore allows us to compare materials.
+
 ---
 
 class: compact
 # Measuring Ionic Conductivity
 
-- Current flow is eventually restricted
+- Ions cannot flow round a circuit, so current drops with a constant applied voltage
 
 .center[
 <video width="390" height="220" controls autoplay muted>
@@ -108,19 +117,26 @@ class: compact
 --
 
 
-- Instead, we use alternating current
-	- Impedance spectroscopy (see [lecture 5](./lecture5.html))
+- Instead, we use an alternating voltage - this is called Impedance spectroscopy (see [lecture 5](./lecture5.html))
 
-.pull-center[
+
+.center[
 <video width="390" height="220" controls loop autoplay muted>
     <source src="./images/ionic_conduction_reverse.mp4" type="video/mp4">
 </video>
 ]
 
+
+???
+
+For comparison, during cyclic voltammetry the voltage is continuously varied but over a much slower timescale than impedance spectroscopy.
+
+At each measured point in a CV the current due to ionic motion is 0 A, but current still arises due to the chemistry occurring at the electrodes.
+
+
 ---
 
 class: compact
-time: 38:58
 # Ion migration mechanisms
 
 Three 'main' mechanisms of ionic migration
@@ -129,7 +145,7 @@ Three 'main' mechanisms of ionic migration
 
 Vacancies move throughout the lattice (atoms move into vacancy)
 
-.pull-center[
+.center[
 <video width="350" height="350" controls loop autoplay muted>
     <source src="./files/vacancy_migration.mp4" type="video/mp4">
 </video>
@@ -142,12 +158,11 @@ mechanisms involving lattice vibrations [phonons] and multiple ion types).
 
 ---
 
-time: 39:53
 # 2. Interstitial mechanism
 
 Ions hop between interstitial sites
 
-.pull-center[
+.center[
 <video width="400" height="400" controls loop autoplay muted>
     <source src="./files/interstitial_migration.mp4" type="video/mp4">
 </video>
@@ -155,12 +170,11 @@ Ions hop between interstitial sites
 
 ---
 
-time: 40:24
 # 3. Interstitialcy (knock-on) mechanism
 
 Interstitial ions 'push' into a neighbouring site
 
-.pull-center[
+.center[
 <video width="400" height="400" controls loop autoplay muted>
     <source src="./files/interstitialcy_knock_on_migration.mp4" type="video/mp4">
 </video>
@@ -175,7 +189,7 @@ Interstitial ions 'push' into a neighbouring site
 
 # Suggestions
 
-![:results](https://www.mentimeter.com/s/4bdd96932d73ef5e1d1cb1bda1ade9b0/4e2c89b7d69c)
+![:results](https://www.mentimeter.com/embed/4bdd96932d73ef5e1d1cb1bda1ade9b0/4e2c89b7d69c)
 
 ---
 
@@ -204,14 +218,13 @@ draw ID "direct" ARROW \(2.81 2.81 5.62\) \(5.2 5.2 5.62\) WIDTH 0.3 COLOR red](
 ---
 
 class: compact
-time: 44:19
 # Pathways can be complex
 
 - Migration pathways can be calculated and/or experimentally determined
 
 *e.g.* **NASICON** $\ce{Na+}$ conductor, $\ce{Na3Zr2(SiO4)2(PO4)}$:
 
-![Nasicon migration paths](./images/ionic_conduction_pathway_nasicon.gif# w-100pct)
+![Nasicon migration paths](./images/ionic_conduction_pathway_nasicon.gif# w-75pct absolute l-10pct)
 
 .footer[
 - [Y. Deng, *Chem. Mater.*, 2018, 2618.](https://doi.org/10.1021/acs.chemmater.7b05237)
@@ -237,19 +250,23 @@ diffraction data. MEM is one method to fit this.
 ---
 
 class:compact
-time: 47:42
 # Migration energetics
 
-- Defect mobility is a thermally-activated process:
+- Defect mobility $(\mu)$ is a thermally-activated process:
 $$ \mu = \mu_0 \exp \left( -\frac{\mathrm{E_a}}{\mathrm{RT}} \right) $$
-- interstitial sites are higher energy than vacancies, so smaller energy barrier ($E_i < E_a$) - dominates
+- interstitial sites are higher energy than vacancies, so will have be more mobile.
 
-![Migration energy](./images/migration_energy.svg# w-60pct relative l-20pct)
+![Migration energy](./images/migration_energy.svg# w-50pct relative l-3-12th)
+
+???
+
+Here, $\mu_0$ is the mobility at 0 K, $E_a$ is the activation energy for migration, $R$ is the gas constant and $T$ is the temperature.
+
+Inserting an atom into an interstitial site creates a high density region which is energetically unfavourable. Creating a vacancy is also unfavourable, but atoms can normally "relax" around the vacancy, reducing the enthalpic cost. This (usually) means creating an interstitial is more energetically costly than creating a vacancy. (Assuming the migration pathway goes through the same high energy state).
 
 ---
 
-class: compact, no-number
-time: 50:03
+class: no-number
 # Variation with temperature
 
 As $\sigma = nq\mu$ and $\mu$ is thermally-activated,
@@ -260,11 +277,16 @@ $$
 \end{align}
 $$
 
+???
+
+Here, $n$ is the number of charge carriers, and $q$ is the charge on the charge carrier. It is difficult to measure the carrier mobility $(\mu)$ directly, so these terms are combined into a single pre-exponential factor $A$.
+
 --
 
-![Nasicon conductivity vs temperature](./images/nasicon_arrhenius.jpg# w-40pct fr relative b-1)
-Plotting $\ln \sigma$ vs. $\frac{1}{\mathrm{T}}$ (or more commonly $\log_{10} \sigma$ vs $\frac{1000}{\mathrm{T}}$ for high temperature measurements) should give a straight line
-- gradient = $\frac{-E_a}{R}$ (or $\frac{-E_a}{2303R}$).
+![Nasicon conductivity vs temperature](./images/nasicon_arrhenius.jpg# w-third fr relative b-3)
+Plotting $\ln \sigma$ *vs.* $\frac{1}{\mathrm{T}}$ should give a straight line
+- more commonly we plot $\log_{10} \sigma$ *vs.* $\frac{1000}{\mathrm{T}}$ for high temperature measurements
+- gradient is $\frac{-E_a}{R}$ (or $\frac{-E_a}{2303R}$ using base 10).
 
 .footer[
 - 
@@ -281,7 +303,7 @@ to account for the T-dependence of A.
 
 ---
 
-time: 53:10
+class: roomy
 # Lecture recap
 
 - Defects can give rise to ionic conduction

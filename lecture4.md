@@ -8,7 +8,6 @@ class: title, no-number
 
 ---
 
-time: 37
 class: roomy
 # Lecture summary
 $\require{mediawiki-texvc}$
@@ -19,34 +18,33 @@ $\require{mediawiki-texvc}$
 - Improving capacity
 - Essential materials properties
 	- types of electrode behaviour
-- Effect of charging rate on capacity
-- Galvanostatic measurements
+- average vs local structure effects
 
 
 
 ---
 
 class:compact
-time: 1:47
 # Essential electrochemistry
 
 ## Quantities
 
 Throughout this course, we will see a number of electronics/electrochemistry terms, summarised here:
 
+.center[
 Term | Symbol | Description | Units
 :-----|:-|:-|:-
-Potential (or voltage) | E or V | the 'push' moving the electrons | Volts (V)
-Current | I | the rate at which electrons move | Amperes (A)
-Charge | Q | amount of electrons | Coloumbs (C) or Amp-hours (Ah, 1 mAh = 3.6 C)
-Resistance | R | effects reducing the current | Ohms ($\Omega$)
-Capacitance | C | ability to store charge | Farads (F)
-Power | P | how much current, and with what force | Watts (W)
+Potential (or voltage) | $E$ or $V$ | the 'push' moving the electrons | Volts (V)
+Current | $I$ | the rate at which electrons move | Amperes (A)
+Charge | $Q$ | amount of electrons | Coloumbs (C) or <br>Amp-hours (Ah, 1 mAh = 3.6 C)
+Resistance | $R$ | effects reducing the current | Ohms ($\Omega$)
+Capacitance | $C$ | ability to store charge | Farads (F)
+Power | $P$ | how much current, and with what force | Watts (W)
+]
 
 ---
 
 class: compact
-time: 3:48
 ## Important relationships
 
 Ohm's law - current and potential are linked:
@@ -64,7 +62,7 @@ $Q = It$ helps to understand why charge can have units of (m)Ah (particularly co
 
 ---
 
-time: 6:44
+class: compact
 # Why batteries?
 
 - Portable electronics
@@ -80,32 +78,28 @@ This requires *new materials* from chemistry.
 
 ---
 
-time: 10:13
-class: compact
-# (Brief) Battery History ![Baghdad battery](./images/baghdad-battery-cutaway.jpg# fr w-20pct relative r-1)
+# (Brief) Battery History ![Baghdad battery](./images/baghdad-battery-cutaway.jpg# fr w-2-12th relative r-1 b-1)
 
 
 - ***ca.* 190 AD**: Baghdad (or Parthian) battery
-	- Iron and copper electrodes, filled with vinegar
 --
 
-- **1800**: Volta created the voltaic pile ![Voltaic pile](./images/VoltaBattery.JPG# w-20pct fr)
+- **1800**: Volta created the voltaic pile
 	- Alternating Ag and Zn discs, NaCl electrolyte
 	- Enabled *chemistry* e.g. $\ce{2H2O -> H2 + O2}$
+![Voltaic pile](./images/VoltaBattery.JPG# w-2-12th fr r-1 relative)
 --
 
 - **1836**: Daniell cell: <br>
 $\ce{Zn|Zn^{2+}, SO4^{2-} || SO4^{2-} | Cu^{2+} | Cu}$
 	- First practical electricity source (used to power telegraphs)
-	![Daniell cell](./images/Daniell_cell_combined.jpg# w-20pct fr)
+![Daniell cell](./images/Daniell_cell_combined.jpg# w-20pct fr absolute t-70pct)
 - **1859** Lead-acid battery (first rechargeable)
 --
 
 - **1886** The first dry cell: $\ce{Zn | NH4Cl | MnO2 }$
 	- $\ce{NH4Cl}$ immobilised with plaster of Paris $(\ce{CaSO4 . {$0.5$} H2O})$
 - **1899** The first alkaline battery: $\ce{NiO(OH) | KOH | Cd}$
---
-
 - **1991** Li-ion battery commercialised by Sony
 
 
@@ -119,46 +113,32 @@ Galvani asserted this was 'animal electricity'
 
 ---
 
-time: 15:07
-class: no-number, compact
-exclude: false
-# Chemistry Nobel prize 2019
+# Definitions
 
-[Awarded for contributions to the development of the Li-ion battery](https://www.nobelprize.org/prizes/chemistry/2019/popular-information/)
+A battery consists of two electrodes (cathode and anode) and an electrolyte.
 
-![Nobel medal](./images/Nobel_Prize.png# db absolute w-10pct t-2 r-2)
-![Nobel prize 2019](./images/nobel_prize_2019.jpg# w-100pct)
+.pull-left.w60[
+Defining the *anode* and *cathode* depends whether we are charging or discharging.
 
-.footer[
-- Akira Yoshino
-- M. Stanley Whittingham
-- John B. Goodenough
+In this course, we will use **discharge** definitions:
+
+- Cathode is the **positive** electrode (gets reduced)
+- Anode is the  **negative** electrode (gets oxidised)
 ]
+
+![Battery discharge schematic](./images/battery_discharging_schematic.png# db h-100pct relative l-20pct)
+
+
 
 ???
 
-Check out John Goodenough's laugh (always makes me smile)!
+The chemistry of a battery occurs at the cathode and anode, i.e. this is where reduction and oxidation occur. The electrolyte is required to stop the electrodes reacting directly, whilst also allowing ions (charge carriers) to move between the electrodes.
 
-<iframe width="300" height="250" src="https://www.youtube-nocookie.com/embed/CkIKRoTFogU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-time: 15:57
 class: compact
-# Definitions
-
-.pull-left[![Battery charging schematic](./images/battery_charging_schematic.png# w-60pct fl)]
-.pull-right[![Battery discharge schematic](./images/battery_discharging_schematic.png# w-60pct fr)]
-
-
-Naming of *anode* and *cathode* is often unclear. Here we define:
-- Cathode is **positive** electrode under **discharge** (being reduced)
-- Anode is **negative** electrode under **discharge** (oxidised)
-
----
-
-time: 17:13
-# Main approaches
+# Charge carriers
 
 .pull-left[
 ### Cationic battery
@@ -184,8 +164,7 @@ some researchers are investigating alternative anions (e.g. $\ce{F-}$) to overco
 
 ---
 
-time: 18:27
-class: compact
+
 # What makes a 'good' battery?
 
 Perhaps the most important parameter in batteries is the total *energy capacity*, $\mathrm{E_{bat}}$
@@ -193,35 +172,46 @@ Perhaps the most important parameter in batteries is the total *energy capacity*
 .red[$$
 \mathrm{E_{bat}} = QV
 $$]
-.grey[*Q* is expressed in units of Ah, so *E*<sub>bat</sub> is in Wh (Watt-hours)]
+.grey[*Q* is expressed in units of Ah, so *E*<sub>bat</sub> is in Wh (Watt-hours).<br>
+A 3 Wh battery can supply 3 W  of power for 1 hour]
+
+???
+
+Energy capacity (E<sub>bat</sub>) is often also known as 'nominal energy' or just 'energy'. It is simply the amount of useful energy stored in the battery.
+The total energy capacity depends on the size of the cell; e.g. an AA battery has ~ 2000 mAh @ 1.5 V (= 3 Wh), while an AAA has ~1000 mAh @ 1.5 V (= 1.5 Wh).
+
+It's difficult to appreciate how much energy 1 Wh (or 3.6 kJ) equates to. Some rough examples:
+
+Item | Energy required to run for one hour (Wh)
+-----|--------------------------
+42 inch LED TV | 60
+Amazon Echo | 3
+Leaf Blower | 2,500
+Kettle | 2,000
+Electric Car charging | 7,000
+Smoke detector | 0.5
+Average UK household | 2,700,000
+
+
 --
 
 - *E*<sub>bat</sub> is dependent on the amount of battery material. More useful are:
-	- Specific (gravimetric) energy (Wh g<sup>-1</sup>). <br>
-	  .grey[ Q per unit mass (Ah g<sup>-1</sup>)]
-	- (Volumetric) energy density (Wh L<sup>-1</sup>). <br>
-	.grey[ Q per unit volume (Ah L<sup>-1</sup>)]
+	- Specific (gravimetric) energy (Wh g<sup>-1</sup>).
+	- (Volumetric) energy density (Wh L<sup>-1</sup>).
 	
 ???
 
-Energy capacity is often also known as 'nominal energy' or just 'energy'. It is simply the amount of useful energy stored in the battery.
+Because capacity depends on the cell size (amount of electrode material) the volumetric/gravimetric measures are more useful when considering chemistry. 
 
-The total energy capacity depends on the size of the cell; e.g. an AA battery has ~ 2000 mAh @ 1.5 V (= 3 Wh), while an AAA has ~1000 mAh @ 1.5 V (= 1.5 Wh).
-If you connected a 6 W LED lightbulb (equivalent brightness to a 40 W filament bulb) to them, an AA battery would last for 30 minutes, while an AAA would 
-last for 15 minutes!
-
-Because capacity depends on the cell size (amount of electrode material) the volumetric/gravimetric measures are better for comparing materials. 
-
-Note that 1 Wh = 3600 J!
 ---
 
-time: 20:42
 # Improving batteries
 
 Ideally, we want to maximise *both* volumetric and gravimetric energy densities
 	
-![Energy density](./images/cell_energy_density_mod.svg# w-100pct)
-	
+.center[
+![Energy density](./images/cell_energy_density_mod.svg# w-75pct)
+]
 
 .footer[
 - &copy; Barrie Lawson]
@@ -229,8 +219,8 @@ Ideally, we want to maximise *both* volumetric and gravimetric energy densities
 
 ---
 
-time: 22:12
-# Approches to increase $\mathrm{E_{bat}}$
+
+# Approaches to increase $\mathrm{E_{bat}}$
 
 ## 1. Increase *operating voltage*, $V$
 
@@ -241,14 +231,17 @@ large electronegativity differences (e.g. $\ce{Li+, F-}$)
 
 ---
 
-time: 24:35
-class: compact
+
 ## 2. Increase *charge stored*, $Q$
 
 The charge stored in a material can be calculated using Faraday's Law:
 $$
 Q_{\mathrm{theoretical}} = \frac{nF}{3.6 M_w}\qquad(\text{in mAh g}^{-1})
 $$
+
+???
+where $n$ is the charge (moles of electrons) stored per formula unit, $F$ is Faraday's constant (96485.3 C mol<sup>-1</sup>), and $M_w$ is the formula mass (g mol<sup>-1</sup>).
+The factor 3.6 converts F from A.s mol<sup>-1</sup> into A.h mol<sup>-1</sup>
 
 --
 
@@ -262,25 +255,26 @@ F = 96485.3 \: \mathrm{As\:mol}^{-1}, M_w = 97.873\: \mathrm{g\: mol^{-1}} \\\\
 $$
 
 --
-In reality, the charge stored is less than the theoretical maximum
 
-- CoO<sub>2</sub> is unstable: $ \ce{2Co^{IV}O_2 -> Co^{III}_2O_3 + \frac{1}{2}O_2} $
-	- We can only safely reach Li<sub>0.5</sub>CoO<sub>2</sub>, so the useful capacity is 137 mAh g<sup>-1</sup>
+In reality, the charge stored is less than the theoretical value.
+
+- In this case, CoO<sub>2</sub> is unstable: $ \ce{2Co^{IV}O_2 -> Co^{III}_2O_3 + \frac{1}{2}O_2} $
+	- We can only safely reach Li<sub>0.5</sub>CoO<sub>2</sub>, so the useful capacity is 137 mAh g<sup>-1</sup> or less
 
 ???
-	
-Effectively, this is charge stored (nF) per formula mass. The factor 3.6 converts F from A.s mol^{-1}) into A.h mol^{-1}
 
 NOTE: the total charge stored in a full cell is limited by the electrode with the smallest capacity (although this can
 be overcome by using more/less of each material).
 
-Clarification: during discharge, the $\ce{Li}$ is **removed** from $\ce{LiCoO2}$ (in contrast to the voice-over).
-	
 ---
 
-# Which will give the highest energy capacity
+class: roomy
+# **Quiz**:  Energy capacity
 
-Which of the following cathode combinations will give the highest E<sub>bat</sub>?
+The following table shows the charging half reactions for three potential cathodes.
+
+Which will give the highest gravimetric energy storage?
+
 
 Reaction | Potential vs. Li/Li<sup>+</sup> (V)
 -------|--------------
@@ -288,9 +282,16 @@ $\ce{LiCoPO4 -> Li^+ + CoPO4 + e^-}$ | 4.7
 $\ce{LiF + Ag^0 -> AgF + Li^{+} + e^{-}}$ | 4.1
 $\ce{LiTiS2 -> Li^+ + TiS2 + e^{-}}$ | 2.0
 
-.footer[
-- Calculate per mole of reactants as written
-]
+---
+
+exclude: true
+# Quiz Answers
+
+Cathode | FW (g mol<sup>-1</sup> | Q (mAh g<sup>-1</sup>) | V (V) | E (Wh g<sup>-1</sup>)
+-----------|----|-------------------|-------|---------------------
+$\ce{LiCoPO4}$ | 160.85 | 166.6 | 4.7 | 0.783
+$\ce{LiF + Ag^0}$ | 133.81 (25.94 + 107.87) | 200.3 | 4.1 | 0.821
+$\ce{LiTiS2}$ | 118.94 | 225.3 | 2.0 | 0.451
 
 ---
 
@@ -302,32 +303,34 @@ $\ce{LiTiS2 -> Li^+ + TiS2 + e^{-}}$ | 2.0
 
 # Results
 
-![:results](https://www.mentimeter.com/s/eeb2f2c2292ed89f112e9d23e2ce666d/4c39a964ddd3)
+![:results](https://www.mentimeter.com/embed/eeb2f2c2292ed89f112e9d23e2ce666d/4c39a964ddd3)
 
 ---
 
-time: 28:09
-# Ideal materials properties
+# "Design rules" for battery materials
 
-Anode/Cathode | Electrolyte
--|-
-High capacity for charge-carrying ion |           High ionic conductivity
-Large potential difference (cell voltage) |       Low electronic conductivity
-Good ionic and electronic conductor (ideally) |   Stable in contact with electrodes
-
---
-
-Electrode materials fall into two categories:
-- Conversion
-- Intercalation
-
-
-
+- Electrodes need to store lots of charge
+	- High proportion of carrier ion *and/or* highly charged ions
+- Anode and cathode should have large potential difference
+	- Large electronegativity difference helps (hence Li and F)
+- Electrodes should (ideally) conduct ions and electrons
+- Electrolyte should conduct ions, but not electrons
 
 ???
 
 While electrodes should ideally be electronic conductors (to allow electrons to reach the reaction sites) in 
 practice poor electron conduction can be overcome by additives (such as carbon particles)
+
+--
+
+Electrode materials are grouped into two categories:
+- Conversion
+	- .grey[Redox reactions result in a significant structural change]
+- Intercalation
+	- .grey[Ions are inserted into the structure, but the structure remains largely unchanged]
+
+
+???
 
 Note that the terms intercalation and conversion have been derived from Li-ion battery research, but the 
 ideas transfer to other technologies.
@@ -335,12 +338,12 @@ ideas transfer to other technologies.
 
 ---
 
-time: 30:28
+
 class: compact
 # Conversion electrodes
 
-Electrochemical reaction proceeds during charge/discharge. <br>
-As a general equation, 
+This category covers a wide range of chemistries.<br>
+As a general equation:
 $$
 \ce{A\_{$a$}B\_{$b$} + ($b\times c$)C^{n} + ($nbc - am$)e- <=> aA^{m} + $b$BC\_{$c$}}
 $$
@@ -352,17 +355,16 @@ $$\ce{BiCl3 + 3Li+ + 3e- <=> Bi^{0} + 3LiCl} $$
 Lithium-sulfur cathode (here, $a = 0)$:
 $$\ce{S + 2Li+ + 2e- <=> Li2S  }$$
 Metal hydride anode (used in NiMH):
-$$ \ce{ H2O + M^0 + e- <=> OH- + MH } $$
+$$ \ce{ OH- + MH <=> H2O + M^0 + e- } $$
 
 
 ???
-The metal hydride example can be understood as $\ce{A = OH}$ and $\ce{B = H}$
+The metal hydride example can be understood as $\ce{A = OH}$ and $\ce{B = H}$. Note that this is an anode during discharge, so the half-reaction is written as an oxidation.
 
 
 
 ---
 
-time: 34:36
 # Conversion electrodes (2)
 
 ### Advantages
@@ -385,13 +387,11 @@ time: 34:36
 
 ---
 
-time: 38:28
-class: compact
 # Intercalation electrodes
 
-No chemical 'reaction'; mobile species is 'inserted' into a material able to accommodate its charge/size.
+Material acts like an electrochemical "sponge", reversibly incorporating carrier ions.
 
-### Example: $\ce{Li_{$x$}CoO2}$
+### Example: $\ce{CoO2 + Li+ + e- <=> LiCoO2} $
 
 .pull-left[
 ![:jmol 400, 400, 3, 3, 1, polyhedra BONDS \(cobalt\); 
@@ -411,21 +411,58 @@ color cobalt blue](files/LiCoO2.cif)
 
 ---
 
-time: 40:40
 class: compact
-# Intercalation cathode families
+# Local vs Average structure
 
- | 2D conductor | 3D conductor | 1D conductor
-:---|:---:|:---:|:---:
-Type | $\ce{\alpha-NaFeO2}$ | spinel | olivine
-Structure | ![:jmol 200, 200, 3, 3, 1, polyhedra BONDS \(cobalt\); rotate x 90; color polyhedra translucent 0.7 blue; color lithium orange; color cobalt blue](files/LiCoO2.cif) | ![:jmol 200, 200, 1, 1, 1, polyhedra BONDS \(lithium\); color polyhedra translucent 0.7 orange; color lithium orange](files/LiMn2O4.cif) | ![:jmol 200, 200, 1, 2, 3, polyhedra BONDS \(iron\); polyhedra BONDS \(phosphorus\); select iron; color polyhedra translucent 0.7 brown; select phosphorus; color polyhedra translucent 0.7 green; color lithium orange; color iron brown; color phosphorus green; hide \< {lithium}.bonds \>; rotate x 90](files/LiFePO4.cif)
-Formula | $\ce{LiCoO2}$ | $\ce{LiMn2O4}$ | $\ce{LiFePO4}$
-$Q_{\mathrm{theo.}}$ / mAh g<sup>-1</sup> | 274 | 148 | 170
+Different measurement techniques probe different length scales
 
-&#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164;    Better Li conduction    &#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164; <br>
-&#11166;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11166;    Safer    &#11166;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11166; <br>
-&#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164;    (Higher cost)    &#11164;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#129180;&#11164; <br>
+.pull-left[
+**Local picture (e.g. NMR)**
 
+Single Li atoms are removed at random
+
+![:jmol 400, 400, 3, 3, 1, polyhedra BONDS \(cobalt\); 
+rotate x 90; 
+color polyhedra translucent 0.7 blue; 
+color lithium orange;
+color cobalt blue;
+var i=0;
+var x=0;
+while (TRUE) \(
+if (i == 50) \(
+display (all);
+i = 0;
+\);
+x=random(50);
+hide add (lithium)\<i\>;
+delay 0.5;
+i = i + 1;
+\);
+](files/LiCoO2.cif)
+]
+
+.pull-right[
+**Long-range picture (Crystallography)**
+
+Li position shows a *fractional occupancy*
+![:jmol 400, 400, 3 ,3 ,1 , polyhedra BONDS \(cobalt\); 
+rotate x 90; 
+color polyhedra translucent 0.7 blue; 
+color lithium orange;
+color cobalt blue;
+var i=0.0;
+select (lithium);
+while (TRUE) \(
+if (i >=1.0) \(
+color atoms opaque;
+i = 0.0;
+\);
+color atoms translucent @i;
+delay 0.5;
+i = i + 0.02;
+\);
+](files/LiCoO2.cif)
+]
 
 ---
 
@@ -450,7 +487,7 @@ $\mathrm{E_{bat}}$ depends on the (dis)charge rate, so to compare different mate
 
 ---
 
-time: 49:56
+exclude: true
 # Electrochemical measurements
 
 To avoid variations in rate, battery analysis uses *Galvanostatic* (constant current) electrochemistry
@@ -463,14 +500,12 @@ To avoid variations in rate, battery analysis uses *Galvanostatic* (constant cur
 
 ---
 
-time: 51:38
+exclude: true
 # Electrochemical measurements (2)
 
 *e.g.* for a 2.2 Ah battery:
 
 .pull-left[![galvanostat example](./images/22Ah_battery_galvanostat.svg)]
-
---
 
 .pull-right[![Potential versus capacity](./images/E_vs_capacity.svg)]
 
@@ -484,7 +519,7 @@ $\mathrm{E_{bat}}$ depends on the (dis)charge rate, so to compare different mate
 
 ---
 
-time: 55:35
+exclude: true
 # Material insights from galvanostats
 
 Solid Solution | Two-phase region 
@@ -507,7 +542,6 @@ For more information, see http://cpb.iphy.ac.cn/article/2016/1806/cpb_25_1_01821
 
 ---
 
-time: 57:41 
 class: compact
 # Lecture recap
 
