@@ -18,7 +18,7 @@ $\require{mediawiki-texvc}$
 
 ---
 
-# Defect recap
+# Defect recap (4905 4669)
 
 ![:vote](https://www.menti.com/xu5g5ogo27)
 
@@ -181,7 +181,7 @@ Interstitial ions 'push' into a neighbouring site
 ]
 ---
 
-# Vacancy, Interstitial or Interstitialcy?
+# Vacancy, Interstitial or Interstitialcy? (1458 2331)
 
 ![:vote](https://www.menti.com/2h16y82x7w)
 
@@ -320,7 +320,7 @@ class: roomy
 
 ---
 
-# Feedback
+# Feedback (4914 7161)
 
 ![:vote](https://www.menti.com/v1z7bmhzwv)
 

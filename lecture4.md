@@ -295,7 +295,7 @@ $\ce{LiTiS2}$ | 118.94 | 225.3 | 2.0 | 0.451
 
 ---
 
-# Vote
+# Vote (6716 7736)
 
 ![:vote](https://www.menti.com/ab77octuab)
 
@@ -562,7 +562,7 @@ class: compact
 
 ---
 
-# Feedback
+# Feedback (4556 3717)
 
 ![:vote](https://www.menti.com/gdwftssnux)
 .footer[- [Return to course contents](overview.html#overview)

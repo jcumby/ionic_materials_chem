@@ -196,7 +196,7 @@ Writing an iso-electronic subsitution with Kroger-Vink notation is somewhat unne
 ---
 
 class: compact
-# Quick test - $\ce{BaTiO3}$ Schottky Formation
+# Quick test - $\ce{BaTiO3}$ Schottky Formation (8192 0837)
 
 $$
 \ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} +\ ?? + BaTiO3}
@@ -275,7 +275,7 @@ particularly for small numbers of defects!
 
 ---
 
-# Quiz 2 - Extrinsic defects
+# Quiz 2 - Extrinsic defects (5660 1656)
 
 At high pressure, oxygen vacancies in $\ce{Mg2SiO4}$ can react with $\ce{H2O}$ to form new defects.
 
@@ -436,7 +436,7 @@ color polyhedra translucent orange;
 
 ---
 
-# Feedback
+# Feedback (2367 2902)
 
 ![:vote](https://www.menti.com/dxaabe4acm)
 
