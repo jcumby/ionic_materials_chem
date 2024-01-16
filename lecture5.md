@@ -8,6 +8,7 @@ time: 0
 
 ---
 
+time: 9
 class: roomy
 # Lecture Summary
 $\require{mediawiki-texvc}$
@@ -22,6 +23,7 @@ $\require{mediawiki-texvc}$
 
 ---
 
+time: 1:01
 class: roomy
 # Introduction
 
@@ -34,6 +36,7 @@ class: roomy
 ---
 
 class: compact
+time: 3:05
 # Polarisation
 
 Ionic solids are made up of cations and anions
@@ -51,6 +54,7 @@ The overall polarisation is a combination of this electronic polarisation and th
 
 ---
 
+time: 5:25
 # Is this useful?
 
 If the dipoles do not cancel under an applied field, the crystal will develop an overall dipole moment
@@ -62,6 +66,7 @@ Can use this to screen electric fields
 
 ---
 
+time: 7:17
 class: compact
 # Capacitors
 
@@ -71,12 +76,13 @@ class: compact
 
 Essentially, a capacitor is an arrangement of two electrodes of area *A*, separated by a distance *d*.
 
-![capacitor schematic](./images/capacitor_diagram.png# w-50pct relative l-3-12th)
+![capacitor schematic](./images/capacitor_diagram.png# w-60pct relative l-20pct)
 
 The maximum charge stored, $Q = CV$ where $C$ is the capacitance (in Farads).
 
 ---
 
+time: 9:32
 class: compact
 exclude: true
 # Charge stored
@@ -96,7 +102,7 @@ where $C$ is the capacitance and $R$ is the resistance between voltage source an
 
 ---
 
-class: roomy
+time: 11:43
 # Capacitance
 
 Two electrodes separated by vacuum have a capacitance $C$;
@@ -113,6 +119,7 @@ To increase $C$ (and therefore $Q$):
 
 ---
 
+time: 13:41
 class: compact
 # Improving charge stored
 
@@ -126,14 +133,14 @@ where &epsilon;<sub>r</sub> is the relative permittivity of the dielectric (&eps
 and &epsilon;<sub>r</sub> > &epsilon;<sub>0</sub>
 
 
-![Dielectric capacitor](./images/dielectric_capacitor.jpg# w-8-12th relative l-2-12th)
+![Dielectric capacitor](./images/dielectric_capacitor.jpg# w-80pct relative l-10pct)
 
 
 ---
 
+time: 16:14
 # Example permittivities
 
-.pull-center[
 Material       |  Relative Permittivity, &epsilon;<sub>r</sub>
 ---------------|-----------------------------------------------:
 Vacuum         | 1
@@ -149,9 +156,10 @@ CaTiO<sub>3</sub> | 130
 SrTiO<sub>3</sub> | 285
 BaTiO<sub>3</sub> | 1000 - 10000
 
-]
+
 ---
 
+time: 18:39
 class: compact
 # Characterising dielectrics
 
@@ -168,6 +176,7 @@ class: compact
 
 ---
 
+time: 21:47
 # Impedance
 
 Similar to Ohm's law $(R=\frac{V}{I})$ for constant voltages, we can define *impedance* as the 'resistance' to an alternating voltage
@@ -200,6 +209,7 @@ $$
 
 ---
 
+time: 23:38
 class: compact
 # Impedance analysis
 
@@ -227,6 +237,7 @@ Things to note:
 
 ---
 
+time: 26:22
 class: compact
 # Ideal resistor response
 ![resistor circuit symbol](./images/simple_R_circuit.png# db fr relative b-3)
@@ -235,10 +246,11 @@ Ideal resistor has no dependence on $\omega$
 - Current is instantaneous on applying potential $E$
 - e.g. ions moving with a constant "drag" due to interactions between them
 
-![Bode and Nyquist plots for perfect resistor](./images/simple_R_bode_nyquist.png# db w-90pct relative l-1)
+![Bode and Nyquist plots for perfect resistor](./images/simple_R_bode_nyquist.png)
 
 ---
 
+time: 29:33
 class: compact
 # 'Ideal' capacitor response
 ![Capacitor circuit symbol](./images/simple_C_circuit.png# db fr relative b-3)
@@ -248,7 +260,7 @@ class: compact
 	- The maximum $I(t)$ occurs when $E(t) = 0$
 - Represents stored charge building up, for instance ions accumulating on a surface
 
-![Bode and Nyquist plots for ideal capacitor](./images/simple_C_bode_nyquist.png# w-90pct relative l-1)
+![Bode and Nyquist plots for ideal capacitor](./images/simple_C_bode_nyquist.png# w-80pct relative l-10pct)
 
 
 ???
@@ -261,6 +273,7 @@ $$
 
 ---
 
+time: 33:16
 class: compact
 # 'Real' Impedance ![Parallel RC circuit](./images/parallel_RC_circuit.png# db fr w-20pct)
 
@@ -276,21 +289,22 @@ More complex behaviour is often observed, and can be modelled using *equivalent 
 
 ---
 
-
+time: 37:04
 class: compact
 # Real dielectric response ![Dielectric equivalent circuit](./images/parallel_RC_seriesR_circuit.png# db fr w-30pct)
 
 Dielectrics are not ideal-they leak!
 - Ions have mass, so cannot move instantly
 - At high $\omega$, some resistance remains
-- peak in $\phi$ vs $\omega$ corresponds to the maximum energy loss.
+	- energy lost as heat
+- peak in $\phi$ vs $\omega$, corresponding to the maximum energy loss.
+	- often reported as $\tan \delta$ (where $\delta = 90^{\circ} - \phi$)
 
-![Dielectric equivalent circuit bode and nyquist plot](./images/parallel_RC_seriesR_bode_nyquist.png# w-90pct)
+![Dielectric equivalent circuit bode and nyquist plot](./images/parallel_RC_seriesR_bode_nyquist.png)
 
-???
-The peak in $\phi$ vs $\omega$ is sometimes reported as $\tan \delta$ (where $\delta = 90^{\circ} - \phi$), particularly in the dielectric research literature. It is important, because this energy loss occurs as heat in real devices.
 ---
 
+time: 39:54
 class: compact
 exclude: true
 # Other materials
@@ -308,6 +322,18 @@ Real materials usually consist of closely-packed ceramic grains.
 
 ---
 
+exclude: true
+# Dielectric breakdown
+
+Dielectrics also break down under high electric fields
+- Electrons start to conduct, causing localised heating and breakdown
+- This is quantified as the **Dielectric Strength** (in *e.g.* V m<sup>-1</sup>)
+
+.pull-left[ ![](./images/dielectric_breakdown_lightning.jpg) ]
+.pull-right[ ![](./images/dielectric_strength_temp.png)]
+
+---
+
 # Question
 
 ![:vote](https://www.menti.com/cn7ebu36tz)
@@ -316,30 +342,34 @@ Real materials usually consist of closely-packed ceramic grains.
 
 # Results
 
-![:results](https://www.mentimeter.com/embed/abe953278222a06c30be66aec26306bf/94e1c444d39d)
+![:results](https://www.mentimeter.com/s/abe953278222a06c30be66aec26306bf/94e1c444d39d)
 
 ---
 
+time: 42:48
 class: compact
 # Piezoelectricity
 
 In some dielectric materials, applying $E$ can result in a mechanical stress (or *vice versa*)
 - Stress = change in lattice parameters
 
-![direct and converse piezoeletric effect](./images/piezoelectric_schematic.png# w-70pct relative l-10pct)
+![direct and converse piezoeletric effect](./images/piezoelectric_schematic.png# w-80pct relative l-10pct)
 .pull-left[
 **Direct effect** <br>
+Applications:
 - pressure sensors
 - ultrasonic imaging
 ]
 .pull-right[
 **Converse effect** <br>
+Applications:
 - Actuators/motors
 - crystal oscillator (watches)
 ]
 
 ---
 
+time: 45:16
 class: compact
 # Structural Aspects
 
@@ -350,12 +380,13 @@ Stresses arise due to unbalanced dipoles
 
 ### Example: Quartz $(\ce{SiO2})$
 
-![Quartz piezoelectric effect](./images/quartz_piezoelectric.svg# w-60pct relative l-20pct b-1)
+![Quartz piezoelectric effect](./images/quartz_piezoelectric.svg# w-75pct relative l-10pct)
 
 
 
 ---
 
+time: 47:27
 class: compact
 # Spontaneous polarisation
 
@@ -367,6 +398,7 @@ If the polarisation can be switched with an electric field - **Ferroelectric**
 
 ---
 
+time: 48:33
 class: compact
 # Structural origin
 
@@ -389,7 +421,7 @@ An alternative (and complementary) description is due to hybridisation of O-2p o
 
 ---
 
-class: compact
+time: 51:17
 # Applications
 
 - Ferroelectrics often have the largest $\epsilon_r$
@@ -405,6 +437,7 @@ class: compact
 
 ---
 
+time: 52:28
 # Hierarchy of dielectrics
 
 ![Dielectric family relationships](./images/dielectric_families.svg# w-100pct)
@@ -412,6 +445,7 @@ class: compact
 
 ---
 
+time: 53:17
 class: compact
 # Lecture recap
 

@@ -18,7 +18,7 @@ $\require{mediawiki-texvc}$
 - Improving capacity
 - Essential materials properties
 	- types of electrode behaviour
-- average vs local structure picture
+- average vs local structure effects
 
 
 
@@ -556,7 +556,7 @@ class: compact
 		- wide range of chemistry, but problems with volume change and side reactions
 	- intercalation
 		- limited number of suitable materials
-- the picture from crystallography is an average, while other techniques (e.g. NMR) give a more local picture
+- we can understand the mechanism using galvanostatic electrochemistry
 
 
 
