@@ -109,7 +109,7 @@ For 'ideal' combustion engine (heat engine) the maximum efficiency is the Carnot
 
 --
 
-![Fuel cell and heat engine efficiency versus temperature](./images/fuel_cell_efficiency.png# w-50pct relative l-20pct)
+![Fuel cell and heat engine efficiency versus temperature](./images/fuel_cell_efficiency2.png# w-50pct relative l-20pct)
 
 ???
 
