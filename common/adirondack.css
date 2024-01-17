@@ -96,3 +96,19 @@
   height: 1.25em;
   overflow: hidden;
 }
+
+.remark-slide-content .blue {
+  color: blue;
+}
+.remark-slide-content .red {
+  color: red;
+}
+.remark-slide-content .green {
+  color: green;
+}
+.remark-slide-content .gold {
+  color: goldenrod;
+}
+.remark-slide-content .gray,
+.remark-slide-content .grey {
+  color: gray;

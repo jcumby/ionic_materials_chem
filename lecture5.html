@@ -1,412 +1,235 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="keywords" content="energy, materials, chemistry" />
-  <meta name="description" content="Lecture 5 - Energy Storage Materials" />
-  <title>Lecture5</title>
-  <style type="text/css">
-    @import url("common/style.css");
-  </style>
-</head>
-
-<body>
-  <textarea id="source">
-
-class: white-background
-layout: true
-    
-    
----
-class: center, middle
-
-# Fuel Cells 2
-
----
-
-# Ionic conduction
-
-All the technologies in this course rely on ionic motion. In the solid state, this occurs through two main mechanisms:
-
-![:width 60%](./images/ionic_conduction_mechanism.jpg)
-
---
-
-.pull-left[ 
-There is an energy barrier `\(E_\mathrm{a}\)` to ionic diffusion
-- This can be overcome by thermal energy
-- Follows an Arrhenius relationship:
-$$
-\sigma(T) = A e^{\frac{-E_\mathrm{a}}{RT}}
-$$
-]
-
-.pull-right[![:width 70%](./images/ionic_conduction_energy.png)]
-
-
-
----
-# Diffusion pathways are often complex
-
-- Often there are competing pathways, with different energy barriers.
-- Diffusion pathways can be calculated and/or experimentally determined
-
-*e.g.* **NASICON** Na<sup>+</sup> conductor, Na<sub>3</sub>Zr<sub>2</sub>(SiO<sub>4</sub>)<sub>2</sub>(PO<sub>4</sub>):
-
-![:width 90%](./images/ionic_conduction_pathway_nasicon.gif)
-
-.footnote[ Y. Deng, *Chem. Mater.*, 2018, 2618.]
-
-???
-
-Three approaches to determining diffusion are shown here:
-
-**Molecular Dynamics (MD)**
-- Computational model of ionic motion over a time period (using either electronic structure calculations or atomic potentials methods)
-- Resulting trajectory is integrated to determine location of conducting ions
-
-** Bond Valence Energy Landscape (BVEL) **
-- Maps the bond valence sum (a measure of local electron density estimated from atomic positions) throughout the structure
-- Surface is the region where the probe ion (e.g. Na<sup>+</sup>) would experience optimum coordination
-
-** Maximum Entropy method (MEM) / Rietveld refinement**
-- Fits a model to **experimental** data to determine ionic positions
-- If Na<sup>+</sup> is diffusing throughout the measurement, the positional information is present within the
-diffraction data. MEM is one method to fit this.
-
-
-
----
-# Characterising diffusion
-
-.pull-left.w60[
-Impedance spectroscopy allows us to determine the conductivity at different temperatures.
-
-![:width 40%](./images/randles_circuit.png)
-![:width 60%](./images/randles_nyquist.png)
-]
-
-.footnote[Conductivity, `\\(\sigma \propto \frac{1}{R}\\)`]
---
-
-.pull-right.w40[ *e.g.* NASICON again:
-![:width 90%](./images/nasicon_impedance.gif) ]
---
-
-.pull-left.w60[
-$$
-\sigma(T) = A e^{\frac{-E_a}{RT}}
-$$
-- A plot of `\(\ln \sigma(T) \)` versus 1/T has slope `\( = \frac{-E_a}{R}\)`.
-- We usually plot `\(\log_{10} \sigma\)` then slope `\( = \frac{-E_a}{2.303R}\)`
-]
-
-???
-
-The electrical circuit shown here is known as the 'Randles' circuit, and is very commonly
-used to fit both solution-phase and solid-state electrochemistry results. It still contains the 
-parallel RC circuit and series resistance discussed earlier, but also now includes a Warburg impedance, W.
-Chemically, W corresponds to the limiting effect of diffusion in the system; at very low frequencies the rate at
-which ions can move starts to dominate the signal.
-
-In the case of solid ionic conductors, the Warburg impedance can be related to conducting ions diffusing (slowly)
-into the metal (e.g. Pt) electrodes attached to the sample.
-
----
-# Ionic conduction
-
-$$
-\sigma(T) = A e^{\frac{-E_a}{RT}}
-$$
-
-- Normally, A &prop; the number of charge carriers
-	- (conductivity should increase with more charge carriers)
---
-	
-- *However*, at high defect concentrations we can get **defect clusters**
-	- Local ordering of vacancies (or other defects) reduces conduction
-
-*e.g.* YSZ: `\((\ce{(1-x)ZrO2 + \frac{x}{2}Y2O3 -> Y_{x}Zr_{1-x}O_{2-\frac{x}{2}} }) \)`:
-
-.pull-left[![](./images/YSZ_conductivity_doping.png)]
-.pull-right[ ![](./images/ysz_vacancy_ordering.gif) ]
-
-???
-
-In YSZ, introducing two Yttrium atoms (x=2) results in the formation of one oxygen vacancy.
-Locally, these are found to order; the optimum arrangement is for each OM<sub>4</sub> tetrahedron
-to contain 2 Zr and 2 Y, with oxygen vacancies arranging in a 'grid-like'p pattern.
-
-The figure (a) shows the the equilibrium arrangement for Y<sub>2</sub>Zr<sub>2</sub>O<sub>7</sub> (x = 0.5). 
-Compare this with the ideal fluorite structure consisting of edge-sharing OM<sub>4</sub> tetrahedra, shown below:
-
-![:width 30%](./images/fluorite.gif)
-
-
----
-# Long-range ordering
-
-In some cases, long-range ordering of anions or cations can influence conductivity.
-
-Ba<sub>2</sub>In<sub>2</sub>O<sub>5</sub>
-- Brownmillerite structure (essentially ABO<sub>2.5</sub> perovskite with ordered vacancies)
-- Low conductivity at low T due to anion ordering
-- Large increase in conductivity as vacancies disorder
-
-.pull-left[ ![:width 50%](./images/brownmillerite_struct.jpg)]
-.pull-right[ ![:width 70%](./images/brownmillerite_conductivity.jpg) ]
-
-
----
-# Oxide/Proton conductors
-
-*e.g.* Perovskite `\( \ce{BaTi_{2.98}Ca_{0.02}O_{2.98} } \)`:
-
-- In dry N<sub>2</sub> is an oxide ion conductor
-- In wet N<sub>2</sub>, shows proton conduction below 600 K, and oxide ion conduction above this
-.pull-right[ ![](./images/BaTiCaO3_proton_oxide_conduction.gif) ]
-
---
-
-.pull-left[
-Why?
-- In the presence of anion vacancies:
-$$
-\ce{ H2O + O^{2-} -> 2OH-}
-$$
-]
-
-
-.pull-left[
-In theory this could occur for *any* oxide-vacancy conductor, but depends strongly on
-the enthalpy change during water incorporation.
-]
-
-.footnote[P. Ren, *J. Mater. Chem. C*, 2013, 2426.]
-
----
-# How are protons transported?
-.pull-left.w33[
-Two possible mechanisms:
-
-
-- **Vehicle** mechanism
-	- Direct diffusion of OH<sup>-</sup>
-- **Grotthuss** mechanism
-	- Exchange of H<sup>+</sup> between neighbouring OH<sup>-</sup>
-]
-.pull-right.w66[
-![](./images/vehicle_vs_grotthus.png)
-]
-
---
-.pull-left.w100[
-- The Grotthuss mechanism dominates
-    - Water incorporation fills anion vacancies, so there is no conduction pathway for OH<sup>-</sup>
-]
-
----
-# Which fuel to chose?
-
-Lots of economic parameters to consider. Some work has been done in relation to fuel cell vehicles
-- 'Well-to-wheel' analysis
-
-![:width 80%](./images/fuel_economy_vehicle_technologies.gif)
-
-H<sub>2</sub> is the most efficient fuel (ignoring many other factors), but there are two important obstacles to a *hydrogen economy*:
-- Generation
-- Storage
-
----
-# Hydrogen generation
-
-### Chemical methods
-.pull-left.w60[
-- Steam reforming
-	- High temperatures and pressures required
-	- Requires catalyst (*e.g.* Ni, Pt, Rh)
-	- Produces a mixture of H<sub>2</sub>, CO, CO<sub>2</sub> and H<sub>2</sub>O
-]
-.pull-right.w40[ ![](./images/steam_reformer.jpg) ]
---
-
-.pull-left.w60[
-- Pyrolysis
-	- Thermal cracking of hydrocarbons in the absence of oxygen
-	- Precious-metal catalyst required
-	- Produces carbon waste]
---
-.pull-left.w60[
-- Iodine-sulfur cycle:
-]
-$$
-\begin{align}
-\ce{I2 + SO2 + 2H2O &-> 2HI + H2SO4} & (T &= 120^{\circ}C) \\\\
-\ce{2HI &-> I2 + H2} & (T &= 450 ^{\circ}C) \\\\
-\ce{H2SO4 &-> SO2 + H2O + \frac{1}{2}O2} & (T &= 850^{\circ}C) \\\\
-\end{align}
-$$
-
-
----
-# Hydrogen generation
-### Biological sources
-
-- Fermentation
-	- Enzymatic conversion of sugars to H<sub>2</sub>
-	- *e.g.* `\( \ce{C6H12O6 + 2H2O -> 2CH3CO2H + 2CO2 + 4H2} \)`
-- Photosynthesis
-	- Green algae (and others) can use sunlight to generate H<sub>2</sub>
-
---
-
-### Direct water splitting
-.pull-left.w60[
-- Electrolytic splitting
-	- Use electricity to split water directly
-	- Can use renewable energy sources
-- Direct solar splitting
-	- Use solar furnace to reach the ~2000 K required to split water directly
-]
-.pull-right.w40[ ![](./images/solar_furnace.jpg) ]
-	
-.footnote[https://www.energy.gov/eere/fuelcells/hydrogen-production-processes]
-
----
-# Hydrogen Storage
-
-### Under pressure
-
-- Compressed gases are an established technology, *but*
-- H<sub>2</sub> is not an ideal gas
-	- Extremely high pressures are required to achieve a reasonable density (much higher than hydrocarbons)
-- Safety concerns over compressed H<sub>2</sub>
-
-![:width 60%](./images/H2_pressure_density.jpg)
-
----
-# Hydrogen Storage
-### Cryogenically
-
-- Liquid H<sub>2</sub> (LH2) has a density of 70.6 kg m<sup>-3</sup>
-- Boiling point = 21.2 K (at ambient pressure)
-- *but* hydrogen liquifaction is technically challenging
-	- At room temperature, H<sub>2</sub> **warms** on **expansion**
-	- Conversion between ortho and para H<sub>2</sub> is exothermic
-		- at RT, 75% ortho, but para is the low-temperature stable form
-- Liquifaction takes ~35% of the energy stored in H<sub>2</sub>!
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lecture 5</title>
 		
-![:width 45%](./images/H2_phase_diagram.png)
+		<meta name="description" content="Lecture 5 - Dielectric Materials.">
 
-???
+		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
+		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
+		<style type="text/css">
+		@page {
+				  size:  1366px 768px; 
+				  margin: 0;
+		}
+		</style>
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
 
-A litre of liquid gasoline contains more hydrogen than a litre of liquid hydrogen!
 
----
-# Hydrogen Storage
-### Chemically - Physisorption
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous"> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/auto-render.min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/abcjs_basic_5.6.3-min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/story.js"></script> -->
+		
 
-- High surface area materials (*e.g.* activated carbon) can adsorb H<sub>2</sub>
-- How much?
-	- `\( A = \left( \frac{M_{ads}}{\rho_{\mathrm{liq}} N_A} \right) ^{\frac{2}{3}} \)`
---
 
-- So, for a carbon with surface area of 1000 m<sup>2</sup> kg<sup>-1</sup>:
-	- A = 1.304 &times; 10<sup>-19</sup> m<sup>2</sup> per molecule, or 78240 m<sup>2</sup> mol<sup>-1</sup>
-	- 1 g carbon can store 0.026 g H<sub>2</sub>, *i.e.* **2.6 wt %**
---
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
 	
-- Relatively cheap materials
-- Storage capacity depends on surface area; dificult to exceed ~4000 m<sup>2</sup> g<sup>-1</sup>
-- Could be used to enhance LH2 storage (as a trap for boil-off)
-
----
-# Hydrogen storage
-### Chemically - Hydride phases
-	
-- Challenging &rarr; H-H bond is remarkably strong 
-	- `\( \ce{H2 -> 2H} \qquad \Delta H = 436\ \mathrm{kJ\ mol}^{-1} \)`
-- Dissociation can still occur if balanced by an exothermic reaction
-	- *e.g.* formation of (metal) hydride phase
-
-.pull-left.w60[ ![:width 90%](./images/hydride_formation.jpg)]
---
-.pull-right.w40[ 
-Metal  | Hydride | wt% | p (bar) | T (K)
--------|---------|------|---------|------
-Pd | PdH<sub>0.6</sub> | 0.56 | 0.02 | 298
-LaNi<sub>5</sub> | LaNi<sub>5</sub>H<sub>6</sub> | 1.37 | 2 | 298
-ZrV<sub>2</sub> |  ZrV<sub>2</sub>H<sub>5.5</sub> | 3.01 | 10<sup>-8</sup> | 323
- FeTi | FeTiH<sub>2</sub> | 1.89 | 5 | 303
-Mg<sub>2</sub>Ni | Mg<sub>2</sub>NiH<sub>4</sub> | 3.59 | 1 | 555
-]
-
---
-
-.pull-left.w60[
-- Good volumetric storage (up to 150 kg m<sup>-3</sup>)
-- hydrogen is extracted at constant pressure
-- Often pyrophoric in air
-- Large volume changes on hydridation cause material breakdown
-- Metals are typically heavy!
-]
-
----
-# Hydrogen storage
-### Chemically - lighter hydrides
-
-One way to increase H<sub>2</sub> capacity (per kg) is to use lighter elements
-
-- *e.g.* MgH<sub>2</sub> has 7.6 wt% H<sub>2</sub>
-- They are often cheaper than heavier metals
-- **but** formation of lighter hydrides is kinetically slow
-- Often complex sequence of reactions to yield full H<sub>2</sub> content
-
-![:width 65%](./images/hydrogen_storage_volumetric_gravimetric.jpg)
-
-.footnote[ A. Zuttel, *Materials Today*, 2003, 24.]
-
----
-# Summary
-
-Three similar energy storage technologies (batteries, supercapacitors and fuel cells) all share very similar chemistry requirements:
-
-- High ionic conductivity at relevant temperatures
-- High (or low) electronic conductivity depending on component
-- Chemical stability under different operating conditions / between neighbouring materials
-- Device compatibility (*e.g.* thermal expansion, cyclability, cost...)
-
-![:width 60%](./images/all_tech_ragone.png)
-
-.footnote[ If you read one reference, read M. Winter, *Chem. Rev.*, 2004, 4245!]
 
 
+	<main role="main">
+		
+    <textarea id="source">
 
+	</textarea>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  </textarea>
+	<script type="text/javascript" src="./common/JSmol.min.js"></script>
   <script src="common/remark-latest.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
   <script>
     var hljs = remark.highlighter.engine;
   </script>
+  
+
+  <!-- ******************************************************* -->
+  <!-- Uncomment this block to enable embedded video playback -->
+  <!--  -->
+  <!-- Container to hold slides -->
+  <!-- <div id="slideshow" class="slideshow"></div> -->
+  <!-- Container to hold video -->
+  <!-- <div id="presentervid" class="video"> -->
+  	<!-- <div id="dummy" style="margin-top 56%;"></div> -->
+  	<!-- <div id="kaltura_player" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;"></div> -->
+  <!-- </div> -->
+  
+  <!-- Line to modify video source -->
+  <!-- <script src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292"></script> -->
+  
+  <!-- ******************************************************** -->
+
+  
   <script src="common/remark.language.js"></script>
   <script>
+	
+	// Necessary to make jmol play nicely with Learn (and avoid clobbering Kaltura updating)
+	delete Jmol._tracker
+	
+    var slideshow = remark.create({
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+	  ratio: '16:9',
+	  sourceUrl: 'lecture5.md',
+	  container: document.getElementById('slideshow'),
+    });
+
+
+	//// Uncomment the following block to enable video embedding
+	//kWidget.embed({
+	//  "targetId": "kaltura_player",
+	//  "wid": "1_xm2mjoqi",
+	//  "uiconf_id": "32599141",
+	//  "flashvars": {
+	//				'streamerType' : 'auto',
+	//				'localizationCode': 'en',
+	//				'leadWithHTML5' : 'true',
+	//				'sideBarContainer.plugin' : 'true',
+	//				'sideBarContainer.position' : 'left',
+	//				'sideBarContainer.clickToClose' : 'true',
+	//				'chapters.plugin' : 'true',
+	//				'chapters.layout' : 'vertical',
+	//				'chapters.thumbnailRotator' : 'false',
+	//				'streamSelector.plugin': 'true',
+	//				'EmbedPlayer.SpinnerTarget' : 'videoHolder',
+	//				'dualScreen.plugin' : 'true',
+	//				'Kaltura.addCrossoriginToIframe' : 'true',
+	//				
+	//				
+	//  },
+	//  "entry_id": "1_ncumtzdx"
+	//});
+	//
+	//kWidget.addReadyCallback( function( playerId ){
+	//	var kdp = document.getElementById( playerId );
+	//	// Add a binding for when seek is completed: 
+	//	kdp.kBind('playerSeekEnd', function(){
+	//		if( console ) 
+	//		console.log( 'playerSeekEnd, playhead should have moved');
+	//	});
+	//
+	//	// Wait for "media ready" before starting playback: 
+	//	kdp.kBind('mediaReady', function(){
+	//		kdp.sendNotification('doPlay');
+	//	})
+	//});
+	//
+	//// Adds the showSlide event to the kWidget callback, so that every time the
+	//// slide is changed the video will seek to the slide property 'time'.
+	//kWidget.addReadyCallback( function(playerId){
+	//	var kdp = document.getElementById( playerId );
+	//	slideshow.on('showSlide', function (slide) {
+	//		if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){
+	//			var times = slide.properties.time.split(':');
+	//			var seconds =0;
+	//			var m = 1;
+	//			while (times.length > 0){
+	//				seconds += m * parseInt(times.pop(), 10)
+	//				m *= 60
+	//			}
+	//			console.log(seconds)
+	//			kdp.sendNotification('doSeek', seconds );
+	//		}
+	//	});
+	//});		
+	
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [["$","$"]],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		},
+		"HTML-CSS": {
+			scale: 85,
+			},
+    });
+
+
+
+	
+	
 	remark.macros.width = function (width) {
 		var url = this;
 		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.vote = function () {
+		// return vote from mentimeter
+		// To use in remark, do
+		//    [:vote](link/to/voting/page)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 60%; height: 0; width:80%; left:10%; overflow: hidden;"><iframe src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>';
+		};
+		
+	remark.macros.results = function () {
+		// return results from mentimeter without mouse interaction (pointer-events: none)
+		// To use in remark, do
+		//    [:results](link/to/results/slide)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden; pointer-events: none"><iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="false" allowtransparency="true" frameborder="0" height="315" src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>'
+		};
+		
+	remark.macros.jmol = function (width, height, x=1, y=1, z=1, other_commands='') {
+		// Generate a jmol object of a given size (in pixels)
+		// The CIF file to read is given as the macro argument, i.e.
+		//  ![:jmol width, height, x, y, z, other_commands](path/to/CIF)
+		// Note that x,y,z are optional, default =1
+		
+		// other_commands can be used to chain jmol commands together to be run on loading (semicolon separated lines)
+		// To use a literal [ ] characters (otherwise intercepted by remark) use \< or \>
+		// To use literal { } characters (for some reason broken?) use \( and \)
+		// To use commas internal to jmol commands, replace them with \~ to avoid them being intercepted
+		
+		// Set up an object name to hold the jmol applet
+		var i = 1;
+		var jmolId = "jmolId_" + this.replace(/^.*[\\\/]/, '').replace('.cif','');
+		if (typeof window[jmolId] !== 'undefined') {
+			while (true) {
+				var testid = jmolId + i;
+				if (typeof window[testid] == 'undefined') {
+					jmolId = testid;
+					break;
+				}
+				i += 1;
+			}
+		};
+		
+		// For some reason remark inserts a backslash escape before passing through jmol...
+		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}").replaceAll("\\~",",");
+
+		//alert(other_commands)
+		
+		// Info contains the parameters for initialising jsmol
+		var Info = {
+		  color: "#FFFFFF",
+		  height: height,
+		  width: width,
+		  script: "load " + this + " {" + x + " " + y + " " + z + "} packed; set displayCellParameters FALSE;" + other_commands,
+		  use: "HTML5",
+		  j2sPath: "common/j2s"
+		};
+		
+		// Create the jmol object (called jmolId) and generate the HTML representation of it
+		// ._cover(false) is necessary to allow things to load when displayed
+		Jmol.setDocument(false);
+		var html = Jmol.getAppletHtml(jmolId, Info);
+		window[jmolId]._cover(false)
+		
+		// Return the HTML for the jmol object wrapped in a div
+		return '<div id=' + jmolId + '_div>' + html +  '</div>'
+
 		};
 		
 	remark.macros.colortable = function (color) {
@@ -421,126 +244,35 @@ Three similar energy storage technologies (batteries, supercapacitors and fuel c
 		
 	}
 	
-	remark.macros.overbox = function (top, left, height, width, color) {
-		return '<span class="outlinebox" style="top: ' + top + '; left: ' + left + '; height: ' + height + '; width: ' + width + '; border-color: ' + color + ';"></span>';
-	};
-	
 	remark.macros.grid = function () {
 		var content = this.replace( /&\n/g, " ");
-		return content;
-	}
-  
-    var slideshow = remark.create({
-      highlightStyle: 'monokai',
-      highlightLanguage: 'remark',
-      highlightLines: true,
-      slideNumberFormat: '',
-      countIncrementalSlides: false,
-    });
-	
-	function doanim() {
-		// Modify visibility of 'hidden' elements in order,
-		// only operating on the first non-hidden one
-		var vis = document.getElementsByClassName('remark-visible');
-		// Assume there is only one remark-visible object
-		var anim = vis[0].getElementsByClassName('hidden');
-		var i;
-		for (i=0; i<anim.length; i++) {
-				if (anim[i].style['visibility'] == 'hidden' || anim[i].style['visibility'] == '') {
-					anim[i].style['visibility'] = 'visible';
-					return 0;
-
-				}
-			}
-		return -1;
+		return ".grid[".concat(content).concat("]");
 	}
 	
-	function hasanim() {
-		// Determine if a slide has any 'hidden' components
-		var vis = document.getElementsByClassName('remark-visible');
-		// Assume there is only one remark-visible object
-		var anim = vis[0].getElementsByClassName('hidden');
-		if (anim.length > 0) {
-			return true;
+	
+	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
 			}
-		else {
-			return false;
-			}
-	}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});	
 	
-	function listenanim (event) {
-		// Listen for keyboard events, for use on custom
-		// animation slides
-		if (event.defaultPrevented) {
-			return;
-			}
-		
-		var key = event.key || event.keyCode
-		switch (key) {
-			case 'PageUp': // pge up
-			case 'ArrowLeft': // Left
-			case 'ArrowUp': // up
-				//slideshow.gotoPreviousSlide();
-				document.removeEventListener('keydown', listenanim);
-				slideshow.resume();
-				//
-				break;
-			case " ": // space
-			case 'PageDown': // Page Down
-			case 'ArrowRight': // Right
-			case 'ArrowDown': // Down
-				var i = doanim()
-				//slideshow.resume();
-				if ( i == -1 ) {
-					document.removeEventListener('keydown', listenanim);
-					slideshow.resume();
-					break;
-					}
-		
-		}
-		
-		//var scroll = event.deltaY
-		//if (scroll < 0) {
-		//	document.removeEventListener('wheel', listenanim);
-		//	slideshow.resume();
-		//}
-		//else {
-		//	var i = doanim()
-		//	if ( i == -1 ) {
-		//		document.removeEventListener('wheel', listenanim);
-		//		slideshow.resume();
-		//		}
-		//}
-	}
+	// Delay mathjax loading so that it doesn't get clobbered by JSmol (fudge it to work...)
+    setTimeout(() => {MathJax.Hub.Configured(); }, 2000);
 	
-	slideshow.on('afterShowSlide', function (slide) {
-		// Check if slide has 'hidden' components, and if so pause remark
-		// and perform manual keyboard listening
-		if (hasanim()) {
-			slideshow.pause();
-			document.addEventListener('keydown', listenanim );
-			//document.addEventListener('wheel', listenanim );
-	
-		}
-	
-	});
-	
-	
-	// Setup MathJax
-    MathJax.Hub.Config({
-        tex2jax: { inlineMath: [['\\(','\\)']],
-				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-				 },
-		TeX: {
-			extensions: ["mhchem.js"],
-			noErrors: {
-				multiline: true,
-			}
-		}	
-    });
-
-    MathJax.Hub.Configured();
   </script>
+  
+	
+</main>
+
+
+
 </body>
 
 </html>

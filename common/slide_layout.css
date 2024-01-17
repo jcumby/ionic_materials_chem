@@ -14,7 +14,7 @@ col-2, col-3                     |	Add a header, then any content desired.
 */
 
 html {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Futura', 'Helvetica', 'Arial';
 }
 .remark-slide {
@@ -39,7 +39,7 @@ html {
   line-height: 1.2;
   padding: 20px 80px 0 80px;
   font-size: 1.7rem;
-  margin: 0.8rem;
+  /* margin: 0.8rem; */
 }
 .remark-slide-content * {
   box-sizing: border-box;
@@ -66,7 +66,7 @@ html {
   background: white url(data:image/gif;base64,R0lGODdhEAAQAPEAAADw/wDx/xXy/////ywAAAAAEAAQAAACIZyPKckYDQFsb6ZqD85jZ2+BkwiRFKehhqQCQgDHcgwEBQA7 ) repeat top left;
 }
 .remark-slide-content h1 {
-  font-size: 3rem;
+  font-size: 2.7rem;
 }
 .remark-slide-content h2 {
   font-size: 2rem;
@@ -93,13 +93,13 @@ html {
   font-size: 1.5rem;
 }
 .remark-slide-content.compact h1 {
-  font-size: 2.75rem;
+  font-size: 2.2rem;
 }
 .remark-slide-content.compact h2 {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
 }
 .remark-slide-content.compact h3 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 .remark-slide-content.compact p,
 .remark-slide-content.compact ul {
@@ -114,23 +114,13 @@ html {
 }
 .remark-slide-content.roomy {
   padding: 20px 80px 0 80px;
-  font-size: 2.25rem;
 }
-.remark-slide-content.roomy h1 {
-  font-size: 4rem;
+.remark-slide-content.roomy p,
+.remark-slide-content.roomy ul {
+  margin: 1rem;
 }
-.remark-slide-content.roomy h2 {
-  font-size: 3rem;
-}
-.remark-slide-content.roomy h3 {
-  font-size: 2.75rem;
-}
-.remark-slide-content.roomy pre,
-.remark-slide-content.roomy code,
-.remark-slide-content.roomy kbd,
-.remark-slide-content.roomy tt,
-.remark-slide-content.roomy samp {
-  font-size: 1.75rem;
+.remark-slide-content.roomy ul > li {
+  margin: 0.2em
 }
 .remark-slide-content.title h1 {
   font-size: 4rem;
@@ -144,7 +134,10 @@ html {
 .remark-slide-content img {
   max-width: 100%;
 }
-.remark-slide-content h1,
+.remark-slide-content h1 {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em
+}
 .remark-slide-content h2,
 .remark-slide-content h3 {
   margin-top: 0.5em;
@@ -344,7 +337,7 @@ html {
 }
 .remark-slide-content .remark-slide-number,
 .remark-slide-content .footer li {
-  font-size: 1.25rem;
+  font-size: 1rem;
   display: block;
   list-style: none;
   position: absolute;
@@ -386,15 +379,80 @@ html {
 .remark-slide-content.no-footer .footer {
   display: none;
 }
-.pull-left {
+.remark-slide-content .pull-left {
   float: left;
   width: 49%;
 }
-.pull-right {
+.remark-slide-content .pull-right {
   float: right;
   width: 49%;
 }
-.pull-center {
-  float: middle;
-  width: 49%;
+.remark-slide-content .pull-center {
+  width: 50%; 
+  float: left;
+  position: relative;
+  right: -25%;
+
+}
+.remark-slide-content.no-number .remark-slide-number {
+  display: none;
+}
+.remark-slide-content .clear-both {
+	clear: both;
+}
+
+/* Modifications to presenter mode */
+.remark-container.remark-presenter-mode .remark-slides-area {
+	width: 65%;
+	height: 100%;
+	top: 0;
+	left: 0.5%;
+}
+.remark-container.remark-presenter-mode .remark-preview-area {
+	display: none;
+}
+.remark-container.remark-presenter-mode .remark-notes-area {
+	left: 66%;
+	/* top: 50%; */
+}
+.remark-container.remark-presenter-mode .remark-notes-area .remark-notes-current-area {
+	height: 100%;
+}
+.remark-container.remark-presenter-mode .remark-notes-area .remark-top-area {
+	display: none;
+}
+.remark-container.remark-presenter-mode .remark-notes-area .remark-bottom-area .remark-notes-preview-area {
+	display: none;
+}
+/* Formatting for embedded video in presenter mode */
+/* .remark-container .remark-video-area { */
+	/* display: none; */
+/* } */
+/* .remark-container.remark-presenter-mode .remark-video-area { */
+	/* left: 66%; */
+	/* top: 0%; */
+	/* display: block; */
+	/* position: absolute; */
+	/* bottom: 0; */
+	
+/* } */
+.slideshow {
+	height: 100%;
+	width: 69%;
+	display: block;
+	overflow: hidden;
+	border: solid thin gray;
+}
+.video {
+	left: 70%;
+	width: 29%;
+	height: 40%;
+	position: absolute;
+	overflow: hidden;
+}
+#slideshow.slideshow:not(.remark-container) {
+	display: none;
+}
+#slideshow.slideshow:not(.remark-container) + #presentervid.video {
+	display: none;
 }

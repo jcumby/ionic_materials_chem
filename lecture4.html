@@ -1,511 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lecture 4</title>
+		
+		<meta name="description" content="Lecture 4 - Battery Materials.">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="keywords" content="energy, materials, chemistry" />
-  <meta name="description" content="Lecture 4 - Energy Storage Materials" />
-  <title>Lecture4</title>
-  <style type="text/css">
-    @import url("common/style.css");
-  </style>
-</head>
-
-<body>
-  <textarea id="source">
-
-class: white-background
-layout: true
-    
-    
----
-class: center, middle
-
-# Fuel Cells
+		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
+		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
+		<style type="text/css">
+		@page {
+				  size:  1366px 768px; 
+				  margin: 0;
+		}
+		</style>
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
 
 
----
-# Fuel Cells
-
-Fuel cells are similar to batteries; they have a cathode, electrolyte and anode.
-
-![:width 80%](./images/fuel_cell_schematic.svg)
-
-Electricity can be generated as long as fuel is supplied.
-
----
-# Fuel cell history
-
-![:width 58%](./images/fuel_cell_history.jpg)
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous"> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/auto-render.min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/abcjs_basic_5.6.3-min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/story.js"></script> -->
+		
 
 
----
-# Fuel cell fundamentals
-
-<br>
-$$
-\ce{{Fuel} + O2 -> H2O + nCO2}
-$$
-<br>
-
-- Fuel cells a divided into *low-temperature (LT)* (< 200 &degC) and *high-temperature (HT)* (> 450 &deg;C). 
-
-- H<sub>2</sub> is the preferred fuel 
-	- Particularly for LT devices.
-	- Doesn't produce CO<sub>2</sub>
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
 	
---
 
-- Other fuels (*e.g.* CH<sub>3</sub>OH, CH<sub>4</sub>, NH<sub>3</sub>) can also be used, particularly for HT devices
-	- *e.g.* for CH<sub>4</sub>, steam reforming `\( (\ce{CH4 + H2O ->[>700 ^{\circ}C] CO + 3H2}) \)` can be achieved in HT cells, but must be performed separately for LT cells.
-	
-	
----
-# Fuel cell efficiency
 
-Fuel cells are *very* efficient
-- Convert fuel &rarr; electricity directly, rather than fuel &rarr; heat &rarr; electricity (as in combustion)
+	<main role="main">
+		
+    <textarea id="source">
 
-$$
-\text{Thermodynamic efficiency} = \frac{\Delta G}{\Delta H}
-$$
+	</textarea>
 
-*e.g.* for `\( \ce{2H2 + O2 -> 2H2O} \ (\Delta H = -571.6\ \text{kJ mol}^{-1})\)`:
-
-$$
-\begin{align}
-\text{Cathode:} & & \ce{4H+ + O2 + 4e- &-> 2H2O & & E} = +1.229 \mathrm{\ V} \\\\
-\text{Anode:} & & \ce{4H+ + 4e- &<- 2H2} & & E = 0.00 \mathrm{\ V} \\\\
-\end{align}
-$$
---
-$$
-\begin{align}
-\Delta G &= -nFE \\\\
-         &= -4 \times F \times 1.229 \\\\
-		 &= -474.3 \mathrm{\ kJ\ mol^{-1}} \qquad (\mathrm{per\ mole\ O_2})
-\end{align}
-$$
---
-Efficiency = &eta; = -474.3 / 571.6 = **83%**
-
----
-# Efficiency with temperature
-
-$$
-\Delta G = \Delta H - T\Delta S, \quad
-\therefore \quad
-\frac{\Delta G}{\Delta H} = \eta = 1 - \frac{T \Delta S}{\Delta H}
-$$
-
---
-
-For an 'ideal' heat engine (a perfectly efficient combustion engine) the maximum efficiency 
-is determined by the Carnot limit:
-$$
-\eta = \frac{T\_{\mathrm{hot}} - T\_{\mathrm{cold}}}{T\_{\mathrm{hot}}}
-$$
-
---
-
-![:width 60%](./images/fuel_cell_efficiency.png)
-
-???
-
-A heat engine is one that converts heat into work, for instance by repeatedly heating and cooling a substance while extracting (usually 
-mechanical) motion. The term covers a huge range of technologies including combustion engines, thermal power stations and fridges (a heat pump, 
-which is a heat engine operating in reverse).
-
-A really nice example (in which the heating/cooling is done on a sealed chamber of air) is the Stirling engine:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/taDHMw38aE0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-# Types of fuel cell
-
-<br>
-![:grid](.fourxsix[.c1r1[**Type**
-]
-.c2r1[ **Mobile ion**]
-.c3r1[ **Operating temperature (&deg;C)** ] &
-.c4r1[ **Applications** ] &
-.c1r2[ Alkaline ]
-.c2r2[ OH<sup>-</sup> ]
-.c3r2[ 50-100 ]
-.c4r2[ Stationary power, space missions]
-.c1r3[ Polymer ]
-.c2r3[ H<sup>+</sup> or OH<sup>-</sup> ]
-.c3r3[ 50-100 ]
-.c4r3[ Portable devices, transport ]
-.c1r4[ Phosphoric acid (PAFC) ]
-.c2r4[ H<sup>+</sup> ]
-.c3r4[ 220 ]
-.c4r4.rspan3[ Medium to large scale combined heat and power (CHP) systems <br>
-&vellip;<br>&vellip;]
-.c1r5[ Molten Carbonate (MCFC) ]
-.c2r5[ CO<sub>3</sub><sup>2-</sup> ]
-.c3r5[ 650 ]
-.c1r6[ Solid Oxide (SOFC) ]
-.c2r6[ O<sup>2-</sup> ]
-.c3r6[ 500 - 1000]
-])
-
-
-
-.footnote[ L. Carrette, *Fuel Cells*, 2001, 5.]
-
----
-# Alkaline Fuel cell (AFC)
-
-$$
-\begin{align}
-\text{Anode:} & & \ce{ 2H2O + 2e- &<- H2 + 2OH-} & & &E &= -0.829\ \mathrm{V} \\\\
-\text{Cathode:} & & \ce{\frac{1}{2}O2 + 2H2O + 2e- &-> 2OH- } & & &E &= +0.401\ \mathrm{V} \\\\
-\text{Overall:} & & \ce{H2 + \frac{1}{2}O2 &-> H2O } & & &E &= +1.23\ \mathrm{V} \\\\
-\end{align}
-$$
-
---
-
-.pull-left.w66[
-- First developed for the Apollo missions
-	- Updated version still used in current space shuttle
-- Based around concentrated KOH electrolyte with Ni anode and catalytic cathode (such as Pt, Pd or Ag)
-- Cheap fuel cell to produce .green[&#10004;]
-]
-.pull-right.w30[ ![](./images/apollo16_image.jpg) ]
---
-
-.pull-left.w66[
-- Susceptible to CO<sub>2</sub> poisoning: .red[&#10008;]
-	- `\( \ce{2KOH + CO2 -> K2CO3 + H2O} \)`
-	- K<sub>2</sub>CO<sub>3</sub> goes on to block electrode
-- Requires pure H<sub>2</sub> and O<sub>2</sub> .red[&#10008;]
-]
-
-???
-
-Note, the potentials here are given for strongly basic conditions, pH = 14.
-The actual reduction potentials will vary with pH, but the overall cell potential will not.
-
-![:width 60%](./images/PourbaixWater.png)
-
----
-# Proton exchange membrane fuel cell (PEMFC)
-
-- First developed for the Gemini space vehicle
-- Based around an acidic proton-conducting polymer
-	- *e.g.* Nafion
-	
-.pull-left.w50[ ![](./images/nafion.png) ]
-.pull-right.w50[ ![:width 80%](./images/gemini_spacecraft.jpg) ]
-
-.pull-left.w100[
-- Use H<sub>2</sub> as fuel, but can work with MeOH (less efficiently)
-
-]
-
-???
-
-Sometimes also known as polymer electrolyte membrane fuel cell
----
-# PEMFC + H<sub>2</sub>
-
-$$
-\begin{align}
-\text{Anode:} & & \ce{2H+ + 2e- &<- H2} & & E = 0\ \mathrm{V}\\\\
-\text{Cathode:} & & \ce{O2 + 2H+ + 2e- &-> H2O2} & & E = 0.695\ \mathrm{V} \\\\
-& & \ce{H2O2 + 2H+ + 2e- &-> 2H2O} & & E = 1.776\ \mathrm{V}\\\\
-\text{Cathode (Overall):} & & \ce{O2 + 4H+ + 4e- &-> 2H2O} & & E = 1.229\ \mathrm{V} \\\\
-\end{align}
-$$
---
-
-- PEMFCs give good Low-temperature (< 100 &deg;C) operation .green[&#10004;]
-	- Quick to start/stop
-	- Suitable for portable applications
-- In acidic conditions, H<sub>2</sub>O<sub>2</sub> forms .red[&#10008;]
-	- Corrodes carbon-containing electrodes 
-	- Lowers cell voltage
-	- Requires Pt or Pd catalysts to promote H<sub>2</sub>O<sub>2</sub> decomposition
-		- ~0.5 mg cm<sup>-3</sup>
-		- Expensive
-		- Poor tolerance to CO or NH<sub>3</sub>
-	
-- Require careful hydration to ensure H<sup>+</sup> conduction  .red[&#10008;]
-
-
----
-# PEMFC + Methanol
-
-Methanol is easier to store/transport than H<sub>2</sub> and almost as efficient
-- Readily oxidised, does not require C-C bond breaking
-
-$$
-\begin{align}
-\text{Anode:} & & \ce{CO2 + 6H+ + 6e- &<- CH3OH + H2O} & & E = 0.046 \mathrm{\ V} \\\\
-\text{Cathode:} & & \ce{\frac{3}{2}O2 + 6H+ + 6e- &-> 3H2O} & & E = 1.229 \mathrm{\ V} \\\\
-\text{Overall:} & & \ce{ CH3OH + \frac{3}{2}O2 &-> CO2 + 2H2O} & & E= 1.183\mathrm{\ V}
-\end{align}
-$$
-.pull-right.w40[ ![](./images/PEMFC.jpg) ]
---
-.pull-left.w60[
-Problems:
-- MeOH is fairly soluble in membrane, crossing from anode to cathode  .red[&#10008;]
-	- Reduces cell voltage to ~0.5 V
-- CO is formed in a side-reaction, blocking reaction sites  .red[&#10008;]
-	- Improved by adding more Pt catalyst (~3 mg cm<sup>-2</sup>)
-]
-
-
----
-# Towards alkaline polymers?
-
-- OH<sup>-</sup> conduction removes the problems associated with H<sub>2</sub>O<sub>2</sub> formation
-- Attaching the counter-cation to the polymer reduces the risk of electrode poisoning
-- pH change also modifies redox energies, allowing Ni catalysts to replace Pt
-
-![:width 70%](./images/guanidimidazole_alkaline_polymer.jpg)
-
-
-Unfortunately, current OH<sup>-</sup> conducting polymers currently have low ionic conductivity at practical temperatures!
-
-.footnote[Y-J. Wang et al., *Chem. Soc. Rev.* **2013**, 42, 5768-5787.]
-
----
-# Phosphoric Acid (PAFC)
-
-Operates at 200 &deg;C
-- High temperature acid prevents build up of H<sub>2</sub>O<sub>2</sub> .green[&#10004;]
-- Temperature makes cell more tolerant to CO<sub>2</sub> impurities .green[&#10004;]
-- Below 150 &deg;C conductivity is low  .red[&#10008;]
-- Above 200 &deg;C H<sub>3</sub>PO<sub>4</sub> decomposes into a range of acids .red[&#10008;]
-- Hot H<sub>3</sub>PO<sub>4</sub> is highly corrosive! .red[&#10008;]
-	- Materials stability challenge
-
-![:width 50%](./images/woking_fuel_cell.jpg)
-.footnote[Woking leisure centre]
-
----
-# Molten Carbonate (MCFC)
-
-- Optimum temperature 560 &deg;C
-- Range of fuel choices
-	- High temperature allows steam reforming (water-gas shift reaction) to generate H<sub>2</sub>:
-	
-$$
-\begin{align}
-&\ce{CH4 + 2H2O -> & CO2 + 4H2 } \quad &\text{or} \quad  \ce{CH4 + H2O -> CO + 3H2 } \\\\
-&\text{followed by:} & \ce{CO + H2O &<=> CO2 + H2}
-\end{align}
-$$
-
-$$
-\begin{align}
-&\text{Anode:} & \ce{CO2 + H2O + 2e- &<- H2 + CO3^{2-}} \\\\
-&\text{Cathode:} & \ce{\frac{1}{2}O2 + CO2 + 2e- &-> CO3^{2-}} \\\\
-\end{align}
-$$
---
-.pull-left.w60[
-- Cathode - porous NiO
-- Anode - porous Ni
-- No need for expensive catalyst materials
-- Molten alkali-metal carbonates are highly corrosive
-	- Conductivity is also limited
-- Ni electrodes are sensitive to sulfur contaminants
-]
-.pull-right.w40[ ![:width 80%](./images/molten_carbonate_cell.jpg) ]
-
----
-# Solid Oxide (SOFC)
-
-- All solid state system (*i.e.* solid electrolyte)
-- Two sub-groups
-	- High-temperature (HT) SOFC: 800 - 1000 &deg;C
-	- Intermediate temperature (IT) SOFC: 500 - 700 &deg;C	
---
-
-- Based around redox and conduction of O<sup>2-</sup>:
-
-$$
-\begin{align}
-&\text{Anode (depending on fuel):} & &\begin{cases}
-\ce{2H2O + 4e- &<- 2H2 + 2O^{2-}} \\\\
-\ce{2CO2 + 4e- &<- 2CO + 2O^{2-}} \\\\
-\ce{H2O + \frac{1}{2}CO2 + 4e- &<- \frac{1}{2}CH4 + 2O^{2-}} \\\\
-\end{cases}  \\\\
-&\text{Cathode:} & &\quad\ce{O2 + 4e- -> 2O^{2-}} \\\\
-\end{align}
-$$
-
-
---
-- The high temperature operation means that internal steam reforming occurs readily
-	- a wide range of fuels can be used
-- No precious metal catalysts are required
-- Excess heat from exhaust gas can be used to increase efficiency (can reach ~90%)
-	- *e.g.* drive a turbine to generate extra electricity
-	- Combined heat and power (CHP)
-
-
-
----
-# SOFC Limitations
-
-High temperatures:
-- Prevent rapid start/stop. SOFCs are limited to stationary power applications
-- Cause problems in terms of reactivity between electrolyte and electrodes
-- Make sealing the cell difficult
-
---
-
-There is a delicate balance between optimum temperature for redox and/or ionic conductivity, 
-and issues with thermal expansion, reactivity and device construction
-- Intermediate-temperature (IT) SOFCs are the current optimum.
-
-![:width 55%](./images/bloom_energy_fuel_cell.jpg)
-
----
-# Requirements for SOFC materials
-.pull-left.w33[
-**Anode**
-- High electronic conductivity
-- High catalytic activity for fuel oxidation
-- High ionic conductivity
-- High stability under HT reducing conditions
-]
-
-.pull-left.center.w33[
-**Electrolyte**
-- High ionic conductivity
-- Negligible electronic conductivity
-- High stability in oxidising *and* reducing environments
-]
-.pull-right.w33[
-**Cathode**
-- High electronic conductivity
-- High catalytic activity for O<sub>2</sub> reduction
-- High ionic conductivity
-- Stable in HT oxidising conditions
-]
-
---
-
-.pull-left.clear-both.w33[
-Typically a cermet (*i.e.* mixture) of Ni and electrolyte
-- Ni has high electronic conductivity and catalytic activity
-- High ionic conductivity from electrolyte
-]
-.pull-left.center.w33[
-*e.g.* 
-- `\(\ce{Gd_{0.1}Ce_{0.9}O_{1.95}}\)` (CGO)
-- `\( \ce{Y_{0.15}Zr_{0.85}O_{1.925} }\)` (YSZ)
-![:width 95%](./images/YSZ_structure.gif)
-]
-.pull-right.w33[
-- `\(\ce{La_{1-x}Sr_{x}CoO_{3-y}} \)`: a good mixed conductor, 
-but with high thermal expansion
-- `\( \ce{La2NiO_{4+x}} \)`: an intersitial oxide ion conductor
-]
-
---
-
-.pull-left.w100[<br>As well as: Chemical stability, similar thermal expansion, cost, ...]
-
-???
-
-Most of the existing ionic conductors found in SOFCs have structures related to either fluorite, CaF<sub>2</sub>
-or perovskite CaTiO<sub>3</sub>. The introduction of oxygen vacancies (necessary for good conduction) can either 
-be disordered (maintaining the 'ideal' crystal structure, e.g. `\(\ce{La_{1-x}Sr_{x}CoO_{3-y}} \)`) 
-or ordered (resulting in modified crystal structures). The Ruddlesden-Popper structure (example below) is frequently observed
-for perovskite-derived materials (e.g. `\( \ce{La2NiO_{4+x}} \)`)
-
-![:width 60%](./images/ruddlesden_popper.png)
-
-
----
-# Improving electrodes
-
-Ideally want a perfect mixed electronic/ionic conductor, with high chemical stability, high catalytic activity etc...
-
-In reality, we can use a mixture of good (and chemically-stable) ionic and electronic conductors. Reactions will then occur at the **triple phase boundary**
-
-**Electronic Conductor**
-![:width 40%](./images/triple_phase_boundary_electronic.svg) 
-
---
-
-** Mixed conductor**
-![:width 40%](./images/triple_phase_boundary_mixedconductor.svg) 
-
-
----
-# Practical efficiency
-
-We can calculate maximum thermodynamic efficiencies, but how do realistic efficiencies compare?
-
-Like batteries, the obtainable voltage (and efficiency) depends on the current rate:
-
-![:width 70%](./images/fuel_cell_losses.png)
-
-
----
-# Practical efficiency
-
-- The difference between theoretical and **zero-current** voltage is due to issues such as small electronic conductivity of electrolyte and crossover of fuel
-	- More pronounced for LT than HT cells
---
-
-- At low currents, **kinetic (or activation) losses** cause a rapid drop in voltage
-	- O<sub>2</sub> reduction is kinetically slow
-	- Improved by higher temperatures or presence of catalysts
---
-
-- At intermediate currents, **Ohmic losses** dominate
-	- Caused by the resistance of ionic motion in the electrolyte
-	- R constant with T, so voltage varies linearly with current (V = IR)
-	- Major loss in both HT and LT cells
-	- Can be decreased by thinner electrolyte layers
---
-
-- At high currents, **Mass transport** causes rapid voltage drop
-	- At high rates, the concentration of fuel and/or O<sub>2</sub> at the electrode surface gets depleted
-	- Occurs for both HT and LT cells
-	- Higher rates can be achieved by better controlling gas flow
-
-
----
-# Power limits
-Because voltage &darr; as current &uarr;, power (= IV) will show a peak:
-
-![:width 80%](./images/fuel_cell_power_density.jpg)
-
-Typically, these peak powers are lower than batteries
-
----
-
-<br>
-![](./images/all_tech_ragone.png)
-
-
-
-
-
-
-
-  </textarea>
+	<script type="text/javascript" src="./common/JSmol.min.js"></script>
   <script src="common/remark-latest.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
   <script>
     var hljs = remark.highlighter.engine;
   </script>
+  
+
+  <!-- ******************************************************* -->
+  <!-- Uncomment this block to enable embedded video playback -->
+  <!--  -->
+  <!-- Container to hold slides -->
+  <!-- <div id="slideshow" class="slideshow"></div> -->
+  <!-- Container to hold video -->
+  <!-- <div id="presentervid" class="video"> -->
+  	<!-- <div id="dummy" style="margin-top 56%;"></div> -->
+  	<!-- <div id="kaltura_player" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;"></div> -->
+  <!-- </div> -->
+  
+  <!-- Line to modify video source -->
+  <!-- <script src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292"></script> -->
+  
+  <!-- ******************************************************** -->
+
+  
   <script src="common/remark.language.js"></script>
   <script>
+	
+	// Necessary to make jmol play nicely with Learn (and avoid clobbering Kaltura updating)
+	delete Jmol._tracker
+	
+    var slideshow = remark.create({
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+	  ratio: '16:9',
+	  sourceUrl: 'lecture4.md',
+	  container: document.getElementById('slideshow'),
+    });
+
+
+	//// Uncomment the following block to enable video embedding
+	//kWidget.embed({
+	//  "targetId": "kaltura_player",
+	//  "wid": "1_xm2mjoqi",
+	//  "uiconf_id": "32599141",
+	//  "flashvars": {
+	//				'streamerType' : 'auto',
+	//				'localizationCode': 'en',
+	//				'leadWithHTML5' : 'true',
+	//				'sideBarContainer.plugin' : 'true',
+	//				'sideBarContainer.position' : 'left',
+	//				'sideBarContainer.clickToClose' : 'true',
+	//				'chapters.plugin' : 'true',
+	//				'chapters.layout' : 'vertical',
+	//				'chapters.thumbnailRotator' : 'false',
+	//				'streamSelector.plugin': 'true',
+	//				'EmbedPlayer.SpinnerTarget' : 'videoHolder',
+	//				'dualScreen.plugin' : 'true',
+	//				'Kaltura.addCrossoriginToIframe' : 'true',
+	//				
+	//				
+	//  },
+	//  "entry_id": "1_ncumtzdx"
+	//});
+	//
+	//kWidget.addReadyCallback( function( playerId ){
+	//	var kdp = document.getElementById( playerId );
+	//	// Add a binding for when seek is completed: 
+	//	kdp.kBind('playerSeekEnd', function(){
+	//		if( console ) 
+	//		console.log( 'playerSeekEnd, playhead should have moved');
+	//	});
+	//
+	//	// Wait for "media ready" before starting playback: 
+	//	kdp.kBind('mediaReady', function(){
+	//		kdp.sendNotification('doPlay');
+	//	})
+	//});
+	//
+	//// Adds the showSlide event to the kWidget callback, so that every time the
+	//// slide is changed the video will seek to the slide property 'time'.
+	//kWidget.addReadyCallback( function(playerId){
+	//	var kdp = document.getElementById( playerId );
+	//	slideshow.on('showSlide', function (slide) {
+	//		if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){
+	//			var times = slide.properties.time.split(':');
+	//			var seconds =0;
+	//			var m = 1;
+	//			while (times.length > 0){
+	//				seconds += m * parseInt(times.pop(), 10)
+	//				m *= 60
+	//			}
+	//			console.log(seconds)
+	//			kdp.sendNotification('doSeek', seconds );
+	//		}
+	//	});
+	//});		
+	
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [["$","$"]],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		},
+		"HTML-CSS": {
+			scale: 85,
+			},
+    });
+
+
+
+	
+	
 	remark.macros.width = function (width) {
 		var url = this;
 		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.vote = function () {
+		// return vote from mentimeter
+		// To use in remark, do
+		//    [:vote](link/to/voting/page)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 60%; height: 0; width:80%; left:10%; overflow: hidden;"><iframe src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>';
+		};
+		
+	remark.macros.results = function () {
+		// return results from mentimeter without mouse interaction (pointer-events: none)
+		// To use in remark, do
+		//    [:results](link/to/results/slide)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden; pointer-events: none"><iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="false" allowtransparency="true" frameborder="0" height="315" src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>'
+		};
+		
+	remark.macros.jmol = function (width, height, x=1, y=1, z=1, other_commands='') {
+		// Generate a jmol object of a given size (in pixels)
+		// The CIF file to read is given as the macro argument, i.e.
+		//  ![:jmol width, height, x, y, z, other_commands](path/to/CIF)
+		// Note that x,y,z are optional, default =1
+		
+		// other_commands can be used to chain jmol commands together to be run on loading (semicolon separated lines)
+		// To use a literal [ ] characters (otherwise intercepted by remark) use \< or \>
+		// To use literal { } characters (for some reason broken?) use \( and \)
+		// To use commas internal to jmol commands, replace them with \~ to avoid them being intercepted
+		
+		// Set up an object name to hold the jmol applet
+		var i = 1;
+		var jmolId = "jmolId_" + this.replace(/^.*[\\\/]/, '').replace('.cif','');
+		if (typeof window[jmolId] !== 'undefined') {
+			while (true) {
+				var testid = jmolId + i;
+				if (typeof window[testid] == 'undefined') {
+					jmolId = testid;
+					break;
+				}
+				i += 1;
+			}
+		};
+		
+		// For some reason remark inserts a backslash escape before passing through jmol...
+		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}").replaceAll("\\~",",");
+
+		//alert(other_commands)
+		
+		// Info contains the parameters for initialising jsmol
+		var Info = {
+		  color: "#FFFFFF",
+		  height: height,
+		  width: width,
+		  script: "load " + this + " {" + x + " " + y + " " + z + "} packed; set displayCellParameters FALSE;" + other_commands,
+		  use: "HTML5",
+		  j2sPath: "common/j2s"
+		};
+		
+		// Create the jmol object (called jmolId) and generate the HTML representation of it
+		// ._cover(false) is necessary to allow things to load when displayed
+		Jmol.setDocument(false);
+		var html = Jmol.getAppletHtml(jmolId, Info);
+		window[jmolId]._cover(false)
+		
+		// Return the HTML for the jmol object wrapped in a div
+		return '<div id=' + jmolId + '_div>' + html +  '</div>'
+
 		};
 		
 	remark.macros.colortable = function (color) {
@@ -520,126 +244,35 @@ Typically, these peak powers are lower than batteries
 		
 	}
 	
-	remark.macros.overbox = function (top, left, height, width, color) {
-		return '<span class="outlinebox" style="top: ' + top + '; left: ' + left + '; height: ' + height + '; width: ' + width + '; border-color: ' + color + ';"></span>';
-	};
-	
 	remark.macros.grid = function () {
 		var content = this.replace( /&\n/g, " ");
-		return content;
-	}
-  
-    var slideshow = remark.create({
-      highlightStyle: 'monokai',
-      highlightLanguage: 'remark',
-      highlightLines: true,
-      slideNumberFormat: '',
-      countIncrementalSlides: false,
-    });
-	
-	function doanim() {
-		// Modify visibility of 'hidden' elements in order,
-		// only operating on the first non-hidden one
-		var vis = document.getElementsByClassName('remark-visible');
-		// Assume there is only one remark-visible object
-		var anim = vis[0].getElementsByClassName('hidden');
-		var i;
-		for (i=0; i<anim.length; i++) {
-				if (anim[i].style['visibility'] == 'hidden' || anim[i].style['visibility'] == '') {
-					anim[i].style['visibility'] = 'visible';
-					return 0;
-
-				}
-			}
-		return -1;
+		return ".grid[".concat(content).concat("]");
 	}
 	
-	function hasanim() {
-		// Determine if a slide has any 'hidden' components
-		var vis = document.getElementsByClassName('remark-visible');
-		// Assume there is only one remark-visible object
-		var anim = vis[0].getElementsByClassName('hidden');
-		if (anim.length > 0) {
-			return true;
+	
+	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
 			}
-		else {
-			return false;
-			}
-	}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});	
 	
-	function listenanim (event) {
-		// Listen for keyboard events, for use on custom
-		// animation slides
-		if (event.defaultPrevented) {
-			return;
-			}
-		
-		var key = event.key || event.keyCode
-		switch (key) {
-			case 'PageUp': // pge up
-			case 'ArrowLeft': // Left
-			case 'ArrowUp': // up
-				//slideshow.gotoPreviousSlide();
-				document.removeEventListener('keydown', listenanim);
-				slideshow.resume();
-				//
-				break;
-			case " ": // space
-			case 'PageDown': // Page Down
-			case 'ArrowRight': // Right
-			case 'ArrowDown': // Down
-				var i = doanim()
-				//slideshow.resume();
-				if ( i == -1 ) {
-					document.removeEventListener('keydown', listenanim);
-					slideshow.resume();
-					break;
-					}
-		
-		}
-		
-		//var scroll = event.deltaY
-		//if (scroll < 0) {
-		//	document.removeEventListener('wheel', listenanim);
-		//	slideshow.resume();
-		//}
-		//else {
-		//	var i = doanim()
-		//	if ( i == -1 ) {
-		//		document.removeEventListener('wheel', listenanim);
-		//		slideshow.resume();
-		//		}
-		//}
-	}
+	// Delay mathjax loading so that it doesn't get clobbered by JSmol (fudge it to work...)
+    setTimeout(() => {MathJax.Hub.Configured(); }, 2000);
 	
-	slideshow.on('afterShowSlide', function (slide) {
-		// Check if slide has 'hidden' components, and if so pause remark
-		// and perform manual keyboard listening
-		if (hasanim()) {
-			slideshow.pause();
-			document.addEventListener('keydown', listenanim );
-			//document.addEventListener('wheel', listenanim );
-	
-		}
-	
-	});
-	
-	
-	// Setup MathJax
-    MathJax.Hub.Config({
-        tex2jax: { inlineMath: [['\\(','\\)']],
-				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-				 },
-		TeX: {
-			extensions: ["mhchem.js"],
-			noErrors: {
-				multiline: true,
-			}
-		}	
-    });
-
-    MathJax.Hub.Configured();
   </script>
+  
+	
+</main>
+
+
+
 </body>
 
 </html>

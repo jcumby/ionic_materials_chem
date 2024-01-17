@@ -308,7 +308,6 @@ In reality, use a mixture of good ionic and electronic conductors.
 
 ---
 
-
 # Typical anode materials
 
 Usually a cermet (*i.e.* mixture) of Ni and electrolyte

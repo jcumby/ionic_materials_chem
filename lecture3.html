@@ -1,491 +1,235 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="keywords" content="energy, materials, chemistry" />
-  <meta name="description" content="Lecture 3 - Energy Storage Materials" />
-  <title>Lecture3</title>
-  <style type="text/css">
-    @import url("common/style.css");
-  </style>
-</head>
-
-<body>
-  <textarea id="source">
-
-class: white-background
-layout: true
-    
-    
----
-class: center, middle
-
-# (Super) Capacitors
-
-![:width 30%](./images/supercapacitor_images.jpg)
-
----
-
-# Faster (dis)charging
-
-Batteries are a good charge-storage solution, but are limited in how quickly they can discharge (safely).
-- Ultimately, redox processes can only occur so fast...
-
---
-
-Why not separate charges directly?
-
-.pull-left[![:width 70%](./images/capacitor_uncharged.png)]
-.pull-right[![:width 70%](./images/capacitor_charged.png)]
-
----
-# This is a **Capacitor**
-
-An arrangement of electrodes of area *A*, separated by a distance *d*.
-
-![:width 60%](./images/capacitor_diagram.png)
-
-Two electrodes separated by vacuum have a capacitance *C*:
-
-$$
-C = \frac{\epsilon_0 A}{d}
-$$
-
-where &epsilon;<sub>0</sub> is the permittivity of free space = 8.854 &times; 10<sup>-12</sup> C<sup>2</sup> J<sup>-1</sup> m<sup>-1</sup>
-
-
----
-# Charge stored
-
-On charging a capacitor with a constant voltage, current decays with time:
-
-$$
-I_t = I_0 e^{\left(\frac{-t}{RC}\right)}
-$$
-
-The charge stored increases with time:
-
-$$
-Q_t = CV\left[1- e^{\left(\frac{-t}{RC}\right)}\right]
-$$
-
-![:width 50%](./images/capacitor_charge_current.png)
-
-The maximum charge stored, `\( Q = CV \)`
-
----
-# Increasing the charge stored
-
-`\(C = \frac{\epsilon_0 A}{d}\)`, so decreasing `\(d\)` or increasing `\(A\)` will increase stored charge. If `\(d\)` gets
-too small, however, electrons will tunnel from one plate to the other.
-
---
-
-Alternatively, use a **dielectric**
-- *An electrically insulating material in which an applied electric field causes a **displacement** (but not a flow) of charge.*
-
-![:width 80%](./images/ionic_polarisation_schematic.jpg)
-
-
----
-# Dielectric capacitor
-
-Adding a dielectric between the plates increases the charge capacity.
-
-$$
-C_{\mathrm{dielec}} = \frac{\epsilon_r \epsilon_0 A}{d}
-$$
-where &epsilon;<sub>r</sub> is the relative permittivity of the dielectric (&epsilon;<sub>r</sub>= &epsilon; / &epsilon;<sub>0</sub>)
-and &epsilon;<sub>r</sub> > &epsilon;<sub>0</sub>
-
-
-![](./images/dielectric_capacitor.jpg)
-
-
----
-# Example permittivities
-
-
-Material       |  Relative Permittivity, &epsilon;<sub>r</sub>
----------------|-----------------------------:
-Vacuum         | 1
-Paper          | 2.0 - 6.0
-Polymers       | 2.0 - 6.0
-Silicon oil    | 2.7 - 2.8
-Quartz         | 3.8 - 4.4
-Glass          | 4 - 15
-Al<sub>2</sub>O<sub>3</sub> | 10
-Ta<sub>2</sub>O<sub>5</sub> | 26
-TiO<sub>2</sub> | 100
-CaTiO<sub>3</sub> | 130
-SrTiO<sub>3</sub> | 285
-BaTiO<sub>3</sub> | 1000 - 10000
-
-
-
----
-# Characterising dielectrics
-
-Apply an alternating (sinusoidal) field, and measure the resulting current *and phase shift* - **Impedance spectroscopy**
-- Applied field, `\( E_t = E_0 \sin(\omega t) \)`, where `\(\omega = 2\pi f\)`
-- Response current, `\(I_t = I_0 \sin(\omega t + \phi) \)`
-
-![:width 50%](./images/capacitor_impedance_sinusoid.gif)
---
-
-The total impedance `\((Z(\omega) = \frac{E_t}{I_t} )\)` can be represented as a complex number: 
-- `\(Z(\omega) = Z_0 (\cos \phi + i \sin \phi )\)`
-
-
-- In an ideal dielectric, current and voltage should be 90&deg; out-of-phase (&phi; = 90&deg;).
-- For a resistive material, current and voltage should be in phase (&phi; = 0&deg;).
-
-.footnote[https://www.gamry.com/application-notes/EIS/basics-of-electrochemical-impedance-spectroscopy/]
-
-
-
-
----
-# Impedance analysis
-
-.pull-right.w30[![:width 70%](./images/complex_impedance.svg)]
-.pull-left.w70[
-Two standard ways to display data:
-
-- **Bode plot**: |Z| and &phi; plotted against frequency
-- **Nyquist plot**: -Z'' (90&deg; out-of-phase) against Z' (in phase).
-	]
-
---
-
-
-##Ideal Response
-
-.pull-left[ ![:width 50%](./images/simple_R_circuit.png)]
-.pull-right[ ![:width 50%](./images/simple_C_circuit.png)]
-
-
-.pull-left.w50[![](./images/simple_R_bode_nyquist.png)]
-.pull-right.w50[![](./images/simple_C_bode_nyquist.png)]
-
-.pull-left[
-- Single Z' value for all frequencies
-    - Z'' = 0
-- 0&deg; phase shift
-]
-
-.pull-right[
-- Z'' varies with frequency
-    - Z' = 0
-- 90&deg; phase shift
-]
-
-
-???
-
-Z'' for a capacitor can be related to f by the formula:
-
-$$
-Z'' = \frac{1}{2 \pi f C}
-$$
-where f is frequency and C is the capacitance (in farads)
-
----
-# 'Real' Impedance
-
-.pull-right.w20[![](./images/parallel_RC_circuit.png)]
-
-.pull-left.w80[<br>Many real materials exhibit behaviour like a parallel RC circuit:
-]
-
-.pull-left.w100[![:width 85%](./images/parallel_RC_bode_nyquist2.png)]
-
-- Ions flowing through a solution and building up a layer on the electrode (see later)
-- Ionic conduction in a ceramic material building up a charge gradient
-
-More complex behaviour is often observed, and can be modelled using *equivalent circuits*
-
-
----
-# Real dielectric response
-
-Changing the electric field direction causes the dipoles to rearrange with a characteristic timescale. This timescale means *real* dielectrics
-show a peak in &phi; with frequency, corresponding to the maximum energy loss.
-
-.pull-right.w20[![](./images/parallel_RC_seriesR_circuit.png)]
-.pull-left.w80[![](./images/parallel_RC_seriesR_bode_nyquist.png)]
-
---
-
-.pull-left.w70[
-This *dielectric loss* is often characterised as `\( \tan \delta = \frac{Z'}{-Z''} \)`, where `\( \delta = 90^{\circ}-\phi \)` 
-
-- tan &delta; must be minimised for applications]
-
-.pull-right.w30[![:width 60%](./images/complex_impedance.svg)]
-
-???
-
-Note: In ionically conducting materials, an additional signal is often also observed at low frequencies due to interaction
-between the conducting ion and the measurement electrode(s).
-
-![:width 60%](./images/randles_circuit_bode_nyquist2.png)
-
-Real materials also usually consist of closely-packed ceramic grains. For many materials, different R/C effects are seen
-at the grain boundaries *vs.* in the bulk, giving rise to 2 (often overlapping) semicircles.
-
----
-# Dielectric breakdown
-
-Dielectrics also break down under high electric fields
-- Electrons start to conduct, causing localised heating and breakdown
-- This is quantified as the **Dielectric Strength** (in *e.g.* V m<sup>-1</sup>)
-
-.pull-left[ ![](./images/dielectric_breakdown_lightning.jpg) ]
-.pull-right[ ![](./images/dielectric_strength_temp.png)]
-
----
-# How good is a capacitor for energy storage?
-
-Take *e.g.* a BaTiO<sub>3</sub>-based capacitor:
-
-- &epsilon;<sub>r</sub> &approx; 1000
-- Dielectric strength &approx; 10 MV m<sup>-1</sup>
-- Thickness `\((d)\)` &approx; 1 &mu;m
-
-Assuming a total volume of 5 cm<sup>3</sup> (similar to an AA battery):
---
-
-$$
-A = \frac{5 \times 10^{-6}}{1 \times 10^{-6}} = 5 \mathrm{\ m}^2
-$$
-$$
-C = \frac{\epsilon_r \epsilon_0 A}{d} =  0.04427 \mathrm{\ F}
-$$
---
-Maximum voltage = `\(10 \times 10^6 / 1 \times 10^{-6} = 10 \mathrm{\ V} \)`, therefore:
-$$
-Q = CV = 0.4427 \mathrm{\ Coulombs} = 0.1229 \mathrm{\ mAh}
-$$
-Volumetric charge storage of 24.6 mAh L<sup>-1</sup>: Energy capacity = 0.245 Wh L<sup>-1</sup>
-
-.footnote[This is a higher than realistic estimate due to ignoring electrodes, packaging etc. but is still less than a battery!]
-
-
----
-# Why are they useful then?
-
-Although energy capacity is worse than for batteries (often by a lot), capacitors can discharge the charge very rapidly
-- A discharge current of 100 Amps can be easily achieved.
-
-This gives a high specific power. For the BaTiO<sub>3</sub> capacitor considered before,
-this gives power density approximately 1000 W L<sup>-1</sup>!
-
---
-
-![:width 70%](./images/power_energy_different_tech.png)
-
-
----
-# Supercapacitors
-
-- Higher capacitance (but lower voltage limits) than other capacitors
-- Sometimes known as ultracapacitors or electrostatic double layer capacitors (EDLCs)
-
---
-
-Rather than a ceramic dielectric, supercapacitors rely on an ionic electrolyte solution, and an ion-permeable membrane to
-prevent electronic conduction.
-
-![:width 100%](./images/supercapacitor_charging_schematic.gif)
-
-.footnote[M. Winter, *Chem. Rev.* 2004, 4245.]
-
----
-# Supercapacitor operation
-
-Charge is stored in a **Helmholtz double layer** at each electrode:
-
-![:width 65%](./images/EDLC_simplified_principle.png)
-
-This separation of +ve and -ve charges occurs over a few angstroms
-- This is effectively a capacitor with very small *d*
-
-
----
-# Capacitance
-
-.pull-left.w70[
-Because there are two double-layers, a supercapacitor behaves as two capacitors connected in series:
-]
-.pull-right.w30[ ![](./images/parallel_series_capacitors.gif) ]
-
-$$
-\frac{1}{C} = \frac{1}{C_a} + \frac{1}{C_c}
-$$
---
-For a symmetric supercapacitor (commonly called ultracapacitor, where anode and cathode are the same material):
-$$
-C = \frac{C_A}{2}
-$$
---
-The total energy stored is:
-$$
-E = \frac{CV^2}{2}
-$$
-Charging voltages are typically 1-3 V (depending on electrolyte). 
-
----
-
-# Electrolytes
-
-.pull-left[
-## Aqueous
-- Acids (*e.g.* H<sub>2</sub>SO<sub>4</sub>)
-- Alkalis (KOH)
-- NaClO<sub>4</sub> or LiClO<sub>4</sub>
-- LiAsF<sub>6</sub>
-]
-
-.pull-right[
-## Organic
-*e.g.* acetonitrile, propylene carbonate, tetrahydrofuran with:
-- Tetraethylammonium tetrafluoroborate, N(Et)<sub>4</sub>BF<sub>4</sub>
-- Triethyl(methyl) tetrafluoroborate, NMe(Et)<sub>3</sub>BF<sub>4</sub>
-]
-
---
-.clear-both.center[
-&larr; Cheaper <br>
-Higher voltage &rarr; <br>
-Wider temperature range &rarr; <br>
-&larr; Higher conductivity <br>
-&larr; Higher specific power <br>
-Higher specific energy &rarr; <br>
-]
-
-
----
-# Electrode materials
-
-- .large[C &prop; amount of double-layer &prop; A &rarr;]
-    - electrodes are designed to have maximum area
-
-### Porous (activated) carbon
-
-.pull-left.w60[
-- Surface area exceeding 3000 m<sup>2</sup> g<sup>-1</sup>
-- Trade-off between surface area and pore size
-	- Smaller pores limit maximum current (power density) but increase energy capacity
-]
-.pull-right.w40[ ![:width 80%](./images/activated_carbon_pores.jpg) ]
-
---
-
-.pull-left.w60[
-- Activated carbon is relatively expensive and potentially unsustainable
-	- High temperatures and aggressive chemical activation required
-	- *Biochar* (a by-product of biofuel production) is one alternative
-]
-.pull-right.w40[ <br> ![:width 90%](./images/activated_carbon_synth.gif) ]
-
-
-
-
----
-# Pseudocapacitance
-
-One way to increase energy storage in supercapacitors is to add redox-active species.
-
-![:width 40%](./images/pseudocapacitance_schematic.png)
-
---
-
-- Must be fast, reversible redox processes (so that power density remains high)
-- Pseudocapacitance can contribute 100 times the double-layer capacitance
-- Redox ions must have affinity for the electrode(s)
-	- MnO<sub>2</sub> is commonly used as an electrode
-	
-NOTE: In order to be considered pseudocapacitance, charge stored must depend linearly on the applied voltage
-(otherwise it is behaving like a battery)
-
-.footnote[ T. Brousse, *J. Electrochem. Soc.*, 2015, A5185 ]
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Lecture 3</title>
+		
+		<meta name="description" content="Lecture 3 - Ionic Conductivity.">
+
+		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
+		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
+		<style type="text/css">
+		@page {
+				  size:  1366px 768px; 
+				  margin: 0;
+		}
+		</style>
+		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Spectral:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> -->
+
+
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous"> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.9.0/dist/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/auto-render.min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/abcjs_basic_5.6.3-min.js"></script> -->
+		<!-- <script src="https://story.xaprb.com/js/story.js"></script> -->
+		
+
+
+	</head>
+	<body class="ma0 bg-white section-slides page-kind-page is-page-true feature-nohighlight">
 	
 
----
-# Hybrid technologies
 
-One of the main drawbacks of supercapacitors is that their voltage drops with time
-.lessvspace[- Not ideal for powering devices]
+	<main role="main">
+		
+    <textarea id="source">
 
---
+	</textarea>
 
-Hybrid capacitors combine a battery-electrode with a supercapacitor electrode
-- *e.g.* replace carbon cathode with NiOOH
-- C<sub>battery</sub> &approx; 10 &times; C<sub>supercap</sub>
-	- `\( \frac{1}{C} = \frac{1}{C_A} + \frac{1}{10 C_A} \approx \frac{1}{C_A} \)`
-- In some cases (*e.g.* thin-film Li electrodes) fast redox kinetics still allow high power applications
-
-![:width 35%](./images/hybrid_capacitor_voltage_time.gif)
-
-
-
-
-
-
-
----
-# (Super) Capacitor applications
-
-.pull-left.w60[ ![](./images/capacitor_pcb.jpg)]
-
---
-
-.pull-right.w40[ ![width: 60%](./images/regenerative_braking_schematic.png)]
-
-.pull-left.w60[
-**Regenerative braking**
-- Recovers kinetic energy lost when braking
-- Large currents generated; supercapacitors required to store charge
-]
-
---
-
-.pull-left.w50[
-**Medical devices** *i.e.* pacemakers
-- Takes advantage of their low-maintenance / long life
-]
-
-.pull-left.w25[ ![](./images/pacemaker.jpg)]
---
-.pull-right.w25[ ![:width 60%](./images/supercapacitor_drill.jpg)]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </textarea>
+	<script type="text/javascript" src="./common/JSmol.min.js"></script>
   <script src="common/remark-latest.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
   <script>
     var hljs = remark.highlighter.engine;
   </script>
+  
+
+  <!-- ******************************************************* -->
+  <!-- Uncomment this block to enable embedded video playback -->
+  <!--  -->
+  <!-- Container to hold slides -->
+  <!-- <div id="slideshow" class="slideshow"></div> -->
+  <!-- Container to hold video -->
+  <!-- <div id="presentervid" class="video"> -->
+  	<!-- <div id="dummy" style="margin-top 56%;"></div> -->
+  	<!-- <div id="kaltura_player" style="position:absolute;top:0;left:0;left: 0;right: 0;bottom:0;border:solid thin black;"></div> -->
+  <!-- </div> -->
+  
+  <!-- Line to modify video source -->
+  <!-- <script src="https://cdnapisec.kaltura.com/p/2010292/sp/201029200/embedIframeJs/uiconf_id/32599141/partner_id/2010292"></script> -->
+  
+  <!-- ******************************************************** -->
+
+  
   <script src="common/remark.language.js"></script>
   <script>
+	
+	// Necessary to make jmol play nicely with Learn (and avoid clobbering Kaltura updating)
+	delete Jmol._tracker
+	
+    var slideshow = remark.create({
+      slideNumberFormat: '%current%',
+      countIncrementalSlides: false,
+	  ratio: '16:9',
+	  sourceUrl: 'lecture3.md',
+	  container: document.getElementById('slideshow'),
+    });
+
+
+	//// Uncomment the following block to enable video embedding
+	//kWidget.embed({
+	//  "targetId": "kaltura_player",
+	//  "wid": "1_xm2mjoqi",
+	//  "uiconf_id": "32599141",
+	//  "flashvars": {
+	//				'streamerType' : 'auto',
+	//				'localizationCode': 'en',
+	//				'leadWithHTML5' : 'true',
+	//				'sideBarContainer.plugin' : 'true',
+	//				'sideBarContainer.position' : 'left',
+	//				'sideBarContainer.clickToClose' : 'true',
+	//				'chapters.plugin' : 'true',
+	//				'chapters.layout' : 'vertical',
+	//				'chapters.thumbnailRotator' : 'false',
+	//				'streamSelector.plugin': 'true',
+	//				'EmbedPlayer.SpinnerTarget' : 'videoHolder',
+	//				'dualScreen.plugin' : 'true',
+	//				'Kaltura.addCrossoriginToIframe' : 'true',
+	//				
+	//				
+	//  },
+	//  "entry_id": "1_ncumtzdx"
+	//});
+	//
+	//kWidget.addReadyCallback( function( playerId ){
+	//	var kdp = document.getElementById( playerId );
+	//	// Add a binding for when seek is completed: 
+	//	kdp.kBind('playerSeekEnd', function(){
+	//		if( console ) 
+	//		console.log( 'playerSeekEnd, playhead should have moved');
+	//	});
+	//
+	//	// Wait for "media ready" before starting playback: 
+	//	kdp.kBind('mediaReady', function(){
+	//		kdp.sendNotification('doPlay');
+	//	})
+	//});
+	//
+	//// Adds the showSlide event to the kWidget callback, so that every time the
+	//// slide is changed the video will seek to the slide property 'time'.
+	//kWidget.addReadyCallback( function(playerId){
+	//	var kdp = document.getElementById( playerId );
+	//	slideshow.on('showSlide', function (slide) {
+	//		if (typeof slide.properties.time !== 'undefined' && slide.properties.continued !== "true"){
+	//			var times = slide.properties.time.split(':');
+	//			var seconds =0;
+	//			var m = 1;
+	//			while (times.length > 0){
+	//				seconds += m * parseInt(times.pop(), 10)
+	//				m *= 60
+	//			}
+	//			console.log(seconds)
+	//			kdp.sendNotification('doSeek', seconds );
+	//		}
+	//	});
+	//});		
+	
+	
+	// Setup MathJax
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [["$","$"]],
+				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+				 },
+		TeX: {
+			extensions: ["mhchem.js"],
+			noErrors: {
+				multiline: true,
+			}
+		},
+		"HTML-CSS": {
+			scale: 85,
+			},
+    });
+
+
+
+	
+	
 	remark.macros.width = function (width) {
 		var url = this;
 		return '<img src="' + url + '" style="width: ' + width + '" />';
+		};
+		
+	remark.macros.vote = function () {
+		// return vote from mentimeter
+		// To use in remark, do
+		//    [:vote](link/to/voting/page)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 60%; height: 0; width:80%; left:10%; overflow: hidden;"><iframe src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>';
+		};
+		
+	remark.macros.results = function () {
+		// return results from mentimeter without mouse interaction (pointer-events: none)
+		// To use in remark, do
+		//    [:results](link/to/results/slide)
+		var url = this;
+		return '<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden; pointer-events: none"><iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="false" allowtransparency="true" frameborder="0" height="315" src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>'
+		};
+		
+	remark.macros.jmol = function (width, height, x=1, y=1, z=1, other_commands='') {
+		// Generate a jmol object of a given size (in pixels)
+		// The CIF file to read is given as the macro argument, i.e.
+		//  ![:jmol width, height, x, y, z, other_commands](path/to/CIF)
+		// Note that x,y,z are optional, default =1
+		
+		// other_commands can be used to chain jmol commands together to be run on loading (semicolon separated lines)
+		// To use a literal [ ] characters (otherwise intercepted by remark) use \< or \>
+		// To use literal { } characters (for some reason broken?) use \( and \)
+		// To use commas internal to jmol commands, replace them with \~ to avoid them being intercepted
+		
+		// Set up an object name to hold the jmol applet
+		var i = 1;
+		var jmolId = "jmolId_" + this.replace(/^.*[\\\/]/, '').replace('.cif','');
+		if (typeof window[jmolId] !== 'undefined') {
+			while (true) {
+				var testid = jmolId + i;
+				if (typeof window[testid] == 'undefined') {
+					jmolId = testid;
+					break;
+				}
+				i += 1;
+			}
+		};
+		
+		// For some reason remark inserts a backslash escape before passing through jmol...
+		other_commands = other_commands.replaceAll('\\<', '[').replaceAll("\\>", "]").replaceAll("\\(","{").replaceAll("\\)","}").replaceAll("\\~",",");
+
+		//alert(other_commands)
+		
+		// Info contains the parameters for initialising jsmol
+		var Info = {
+		  color: "#FFFFFF",
+		  height: height,
+		  width: width,
+		  script: "load " + this + " {" + x + " " + y + " " + z + "} packed; set displayCellParameters FALSE;" + other_commands,
+		  use: "HTML5",
+		  j2sPath: "common/j2s"
+		};
+		
+		// Create the jmol object (called jmolId) and generate the HTML representation of it
+		// ._cover(false) is necessary to allow things to load when displayed
+		Jmol.setDocument(false);
+		var html = Jmol.getAppletHtml(jmolId, Info);
+		window[jmolId]._cover(false)
+		
+		// Return the HTML for the jmol object wrapped in a div
+		return '<div id=' + jmolId + '_div>' + html +  '</div>'
+
 		};
 		
 	remark.macros.colortable = function (color) {
@@ -500,126 +244,35 @@ Hybrid capacitors combine a battery-electrode with a supercapacitor electrode
 		
 	}
 	
-	remark.macros.overbox = function (top, left, height, width, color) {
-		return '<span class="outlinebox" style="top: ' + top + '; left: ' + left + '; height: ' + height + '; width: ' + width + '; border-color: ' + color + ';"></span>';
-	};
-	
 	remark.macros.grid = function () {
 		var content = this.replace( /&\n/g, " ");
-		return content;
-	}
-  
-    var slideshow = remark.create({
-      highlightStyle: 'monokai',
-      highlightLanguage: 'remark',
-      highlightLines: true,
-      slideNumberFormat: '',
-      countIncrementalSlides: false,
-    });
-	
-	function doanim() {
-		// Modify visibility of 'hidden' elements in order,
-		// only operating on the first non-hidden one
-		var vis = document.getElementsByClassName('remark-visible');
-		// Assume there is only one remark-visible object
-		var anim = vis[0].getElementsByClassName('hidden');
-		var i;
-		for (i=0; i<anim.length; i++) {
-				if (anim[i].style['visibility'] == 'hidden' || anim[i].style['visibility'] == '') {
-					anim[i].style['visibility'] = 'visible';
-					return 0;
-
-				}
-			}
-		return -1;
+		return ".grid[".concat(content).concat("]");
 	}
 	
-	function hasanim() {
-		// Determine if a slide has any 'hidden' components
-		var vis = document.getElementsByClassName('remark-visible');
-		// Assume there is only one remark-visible object
-		var anim = vis[0].getElementsByClassName('hidden');
-		if (anim.length > 0) {
-			return true;
+	
+	$(".remark-slide-content.fit-h1 h1").each(function(i, e) {
+			var $e = $(e);
+			var $p = $e.closest('div.remark-slide-container');
+			var needsToggle = !$p.hasClass('remark-visible');
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+			while (e.scrollHeight > e.clientHeight + 1 && $e.css('font-size') != '1px') {
+				$e.css('font-size', (parseInt($e.css('font-size')) - 1) + "px");
+				
+				
 			}
-		else {
-			return false;
-			}
-	}
+			if ( needsToggle ) $p.toggleClass('remark-visible');
+		});	
 	
-	function listenanim (event) {
-		// Listen for keyboard events, for use on custom
-		// animation slides
-		if (event.defaultPrevented) {
-			return;
-			}
-		
-		var key = event.key || event.keyCode
-		switch (key) {
-			case 'PageUp': // pge up
-			case 'ArrowLeft': // Left
-			case 'ArrowUp': // up
-				//slideshow.gotoPreviousSlide();
-				document.removeEventListener('keydown', listenanim);
-				slideshow.resume();
-				//
-				break;
-			case " ": // space
-			case 'PageDown': // Page Down
-			case 'ArrowRight': // Right
-			case 'ArrowDown': // Down
-				var i = doanim()
-				//slideshow.resume();
-				if ( i == -1 ) {
-					document.removeEventListener('keydown', listenanim);
-					slideshow.resume();
-					break;
-					}
-		
-		}
-		
-		//var scroll = event.deltaY
-		//if (scroll < 0) {
-		//	document.removeEventListener('wheel', listenanim);
-		//	slideshow.resume();
-		//}
-		//else {
-		//	var i = doanim()
-		//	if ( i == -1 ) {
-		//		document.removeEventListener('wheel', listenanim);
-		//		slideshow.resume();
-		//		}
-		//}
-	}
+	// Delay mathjax loading so that it doesn't get clobbered by JSmol (fudge it to work...)
+    setTimeout(() => {MathJax.Hub.Configured(); }, 2000);
 	
-	slideshow.on('afterShowSlide', function (slide) {
-		// Check if slide has 'hidden' components, and if so pause remark
-		// and perform manual keyboard listening
-		if (hasanim()) {
-			slideshow.pause();
-			document.addEventListener('keydown', listenanim );
-			//document.addEventListener('wheel', listenanim );
-	
-		}
-	
-	});
-	
-	
-	// Setup MathJax
-    MathJax.Hub.Config({
-        tex2jax: { inlineMath: [['\\(','\\)']],
-				   skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-				 },
-		TeX: {
-			extensions: ["mhchem.js"],
-			noErrors: {
-				multiline: true,
-			}
-		}	
-    });
-
-    MathJax.Hub.Configured();
   </script>
+  
+	
+</main>
+
+
+
 </body>
 
 </html>
