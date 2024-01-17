@@ -209,15 +209,15 @@ Two 'standard' ways to display data:
 .pull-left[
 **Bode plot**: $|Z|$ and $\phi$ plotted vs frequency
 
-![Example Bode plot](./images/parallel_RC_bode.png# w-100pct)
+![Example Bode plot](./images/parallel_RC_bode.png# w-80pct)
 ]
 .pull-right[
 **Nyquist plot**: $Z$ plotted in a 2D plane
 
-![Example Nyquist plot](./images/Complex_Impedance.svg# db fr w-90pct)
+![Example Nyquist plot](./images/Complex_Impedance.svg# db fr w-70pct)
 ]
 --
-.clear-right[In order to analyse these data, it is useful to fit an electrical circuit that gives the same behaviour]
+<div class=clear-both>In&nbsp;order to analyse these data, it is useful to fit an electrical circuit that gives the same behaviour</div>
 
 ???
 
@@ -363,7 +363,7 @@ Some materials exhibit a net dipole *without* an applied electric field (**pyroe
 
 If the polarisation can be switched with an electric field - **Ferroelectric**
 
-![Ferroelectric hysteresis loop](./images/ferroelectric_hysteresis.gif# w-80pct relative l-10pct)
+![Ferroelectric hysteresis loop](./images/ferroelectric_hysteresis.gif# w-75pct relative l-10pct)
 
 ---
 
