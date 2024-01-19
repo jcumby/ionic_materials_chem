@@ -1,5 +1,33 @@
-Lecture improvements still to do...
+		Lecture improvements still to do...
 ===================================
+
+2023-24
+-------
+
+**Lecture 1**
+- Slightly rushed towards the end (although tried to end at 12:50 rather than 13:00). Needed to cover final two slides in lecture 2
+- Demo with polos/malteasers collapsed after layer 2
+- 3D printed octahedra nicely show face sharing, but black colour does not come out on doc cam
+- Too much time spent on intro, not enough on hole filling
+
+** Lecture 2**
+
+- Ran to time (but only just)
+- Need to be clearer on Quiz 2, i.e. why an interstitial proton does not form
+    - Are there examples of interstitial protons in oxides, or do they always associate with an O2-?
+- Need to work through Kroger-Vink notation more slowly
+- Defect ordering and non-stoichiometry felt a bit like an after-thought...
+
+** Lecture 3**
+
+** Lecture 4**
+
+** Lecture 5 **
+
+- Ran out of time to cover structural aspects of ferroelectric
+    - Perhaps took too long on impedance question
+- "Circuit" demonstration well-received, but not sure that covered the most difficult aspects
+- 
 
 2022-23
 -------
