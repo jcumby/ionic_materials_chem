@@ -27,7 +27,28 @@
 - Ran out of time to cover structural aspects of ferroelectric
     - Perhaps took too long on impedance question
 - "Circuit" demonstration well-received, but not sure that covered the most difficult aspects
+- Might be difficult to get enough volunteers; male-dominated
+- Need to highlight the distinction between individual frequency-time measurement and series of frequencies on plots
 - 
+
+** Lecture 6**
+
+- Perfect timing to cover final slides of L5 and all of L6 (i.e. too short)
+- First part of examples/definitions is very boring!
+    - Is there opportunity to add a quiz?
+    - How to focus on the structure-property behaviour, rather than engineering controls?
+- Sheep farming demo works quite well, although slow to modify on a document camera
+- Would be good to clarify how brownmillerite-perovskite transition looks (jmol?)
+
+# General comments
+- Remove slide transitions when generating PDF (can this be automated with git commits?)
+- Mentimeter quizzes don't automatically update
+    - This can be useful to hide other student's answers...
+- Is there a way to link the Mentimeter number with the previous slide contents?
+    - Otherwise there is no way to start the vote without showing the answers
+- Multiple people told me in person how much they enjoyed the lectures!
+    - Interactive demos definitely make it more fun
+
 
 2022-23
 -------
