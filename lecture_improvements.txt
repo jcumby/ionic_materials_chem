@@ -50,6 +50,10 @@
     - Interactive demos definitely make it more fun
 
 
+## Comments from Assessment
+
+- Highlight that radius ratios don't work for fluorite materials (and others); emphasise that predicting structures is tough!
+
 2022-23
 -------
 
