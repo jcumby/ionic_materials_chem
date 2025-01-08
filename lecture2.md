@@ -196,14 +196,14 @@ Writing an iso-electronic subsitution with Kroger-Vink notation is somewhat unne
 ---
 
 class: compact
-# Quick test - $\ce{BaTiO3}$ Schottky Formation (8192 0837)
+# Quick test - $\ce{BaTiO3}$ Schottky Formation
 
 $$
 \ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} +\ ?? + BaTiO3}
 $$
 
 
-![:vote](https://www.menti.com/ybwgg3gso4)
+![:vote](https://app.wooclap.com/MPXRTM/questionnaires/677d2fbedeb91d7cf8d4ed85)
 
 ---
 
@@ -211,7 +211,7 @@ $$
 \ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} +\ ?? + BaTiO3}
 $$
 
-![:results](https://www.mentimeter.com/embed/5da2441c8b1554ad6a8903da2cf46e83/be09f0058c0a)
+![:results](./quiz_results/current/kroger_vink_test.png)
 
 ---
 
@@ -275,17 +275,18 @@ particularly for small numbers of defects!
 
 ---
 
-# Quiz 2 - Extrinsic defects (5660 1656)
+class: compact
+# Quiz 2 - Extrinsic defects
 
 At high pressure, oxygen vacancies in $\ce{Mg2SiO4}$ can react with $\ce{H2O}$ to form new defects.
 
-![:vote](https://www.menti.com/2mdz9f9mvh)
+![:vote](https://app.wooclap.com/MPXRTM/questionnaires/677d3009f7d5c8b84d1b184b)
 
 ---
 
 # Results - Extrinsic defects
 
-![:results](https://www.mentimeter.com/embed/4a2eb2674200a5468dec683c4e2742e1/947fb0d5e600)
+![:results](./quiz_results/current/extrinsic_KV_test.png)
 
 ---
 
@@ -436,9 +437,9 @@ color polyhedra translucent orange;
 
 ---
 
-# Feedback (2367 2902)
+# Feedback
 
-![:vote](https://www.menti.com/dxaabe4acm)
+![:vote](https://app.wooclap.com/MPXRTM/questionnaires/677d2c460ae60b483cc4e944)
 
 .footer[- [Return to course contents](overview.html#overview)
 ]

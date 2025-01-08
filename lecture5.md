@@ -1,6 +1,5 @@
 
 class: title, no-number
-time: 0
 # Lecture 5 - Dielectrics
 
 .footer[- [Return to course contents](overview.html#overview)
@@ -310,13 +309,13 @@ Real materials usually consist of closely-packed ceramic grains.
 
 # Question
 
-![:vote](https://www.menti.com/cn7ebu36tz)
+![:vote](https://app.wooclap.com/ECHIRB/questionnaires/677e70a78c20adf28c877405)
 
 ---
 
 # Results
 
-![:results](https://www.mentimeter.com/embed/abe953278222a06c30be66aec26306bf/94e1c444d39d)
+![:results](./quiz_results/current/impedance_test.png)
 
 ---
 
@@ -434,7 +433,7 @@ class: compact
 
 # Feedback
 
-![:vote](https://www.menti.com/i2p6urbnk1)
+![:vote](https://app.wooclap.com/ECHIRB/questionnaires/677d2d20ffe192f60df239f8)
 
 .footer[- [Return to course contents](overview.html#overview)
 ]

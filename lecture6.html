@@ -170,7 +170,7 @@
 		// To use in remark, do
 		//    [:vote](link/to/voting/page)
 		var url = this;
-		return '<div style="position: relative; padding-bottom: 60%; height: 0; width:80%; left:10%; overflow: hidden;"><iframe src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>';
+		return '<div style="position: relative; height: 70%; padding-left: 10%; overflow: visible;"><iframe src="' + url + '" height="100%" frameborder=0 style="min-width: 300px" width="80%" ></iframe></div>';
 		};
 		
 	remark.macros.results = function () {
@@ -178,7 +178,11 @@
 		// To use in remark, do
 		//    [:results](link/to/results/slide)
 		var url = this;
-		return '<div style="position: relative; padding-bottom: 56.25%; padding-top: 35px; height: 0; overflow: hidden; pointer-events: none"><iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="false" allowtransparency="true" frameborder="0" height="315" src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="420"></iframe></div>'
+		//return '<div style="position: relative; height: 80%; overflow: visible; pointer-events: none"><iframe sandbox="allow-scripts allow-same-origin allow-presentation" allowfullscreen="false" allowtransparency="true" frameborder="0" height="315" src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>'
+		//return '<div style="position: relative; height: 80%; overflow: visible"><iframe allowfullscreen="false" allowtransparency="true" frameborder="0" height="315" src="' + url + '" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>'
+		
+		// Just return a simple png image
+		return '<img src="' + url + '" alt = "Quiz Results"></img>'
 		};
 		
 	remark.macros.jmol = function (width, height, x=1, y=1, z=1, other_commands='') {
@@ -190,7 +194,6 @@
 		// other_commands can be used to chain jmol commands together to be run on loading (semicolon separated lines)
 		// To use a literal [ ] characters (otherwise intercepted by remark) use \< or \>
 		// To use literal { } characters (for some reason broken?) use \( and \)
-		// To use commas internal to jmol commands, replace them with \~ to avoid them being intercepted
 		
 		// Set up an object name to hold the jmol applet
 		var i = 1;

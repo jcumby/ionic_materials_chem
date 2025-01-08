@@ -7,6 +7,7 @@ time: 0
 
 ---
 
+class: roomy
 # Lecture summary
 $\require{mediawiki-texvc}$
 
@@ -18,15 +19,15 @@ $\require{mediawiki-texvc}$
 
 ---
 
-# Defect recap (4905 4669)
+# Defect recap
 
-![:vote](https://www.menti.com/xu5g5ogo27)
+![:vote](https://app.wooclap.com/SUJNYY/questionnaires/677e6679ab729ecc44fc41e2)
 
 ---
 
 # Defect recap results
 
-![:results](https://www.mentimeter.com/embed/b263ad5a60b54a924a4c8a7399ae89b4/3dc6c5216a2c)
+![:results](./quiz_results/current/defect_recap.png)
 
 ---
 
@@ -181,20 +182,19 @@ Interstitial ions 'push' into a neighbouring site
 ]
 ---
 
-# Vacancy, Interstitial or Interstitialcy? (1458 2331)
+# Vacancy, Interstitial or Interstitialcy?
 
-![:vote](https://www.menti.com/2h16y82x7w)
+![:vote](https://app.wooclap.com/SUJNYY/questionnaires/677e6e978c20adf28c85c796)
 
 ---
 
 # Suggestions
 
-![:results](https://www.mentimeter.com/embed/4bdd96932d73ef5e1d1cb1bda1ade9b0/4e2c89b7d69c)
+![:results](./quiz_results/current/conductivity_distinction.png)
 
 ---
 
 name: migration_paths
-time: 42:58
 # Migration paths
 
 
@@ -320,9 +320,9 @@ class: roomy
 
 ---
 
-# Feedback (4914 7161)
+# Feedback
 
-![:vote](https://www.menti.com/v1z7bmhzwv)
+![:vote](https://app.wooclap.com/SUJNYY/questionnaires/677d2ca6deb91d7cf8d0326c)
 
 .footer[- [Return to course contents](overview.html#overview)
 ]

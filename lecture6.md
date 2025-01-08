@@ -1,4 +1,3 @@
-time: 0
 class: title, no-number
 
 # Lecture 6 - Fuel cells
@@ -453,7 +452,7 @@ class: compact
 
 # Feedback
 
-![:vote](https://www.menti.com/ydj19byaq6)
+![:vote](https://app.wooclap.com/SUARKZ/questionnaires/677d2d23f7d5c8b84d16386d)
 .footer[- [Return to course contents](overview.html#overview)
 ]
 

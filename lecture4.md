@@ -1,5 +1,4 @@
 
-time: 0
 class: title, no-number
 # Lecture 4 - Batteries
 
@@ -295,15 +294,15 @@ $\ce{LiTiS2}$ | 118.94 | 225.3 | 2.0 | 0.451
 
 ---
 
-# Vote (6716 7736)
+# Vote
 
-![:vote](https://www.menti.com/ab77octuab)
+![:vote](https://app.wooclap.com/PASDYD/questionnaires/677e6f82ab729ecc44036a23)
 
 ---
 
 # Results
 
-![:results](https://www.mentimeter.com/embed/eeb2f2c2292ed89f112e9d23e2ce666d/4c39a964ddd3)
+![:results](./quiz_results/current/energy_capacity.png)
 
 ---
 
@@ -562,8 +561,8 @@ class: compact
 
 ---
 
-# Feedback (4556 3717)
+# Feedback
 
-![:vote](https://www.menti.com/gdwftssnux)
+![:vote](https://app.wooclap.com/PASDYD/questionnaires/677d2d1df7d5c8b84d162510)
 .footer[- [Return to course contents](overview.html#overview)
 ]
