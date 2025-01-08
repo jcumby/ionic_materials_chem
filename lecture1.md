@@ -1,4 +1,3 @@
-time: 0
 class: title, no-number
 
 # Lecture 1 - Ionic structures
@@ -40,27 +39,29 @@ class: roomy
 
 # Test poll!
 
-![:vote](https://www.menti.com/i8mqs9wg3s)
+![:vote](https://app.wooclap.com/TMJZNM/questionnaires/677d1774f7d5c8b84df7559a)
 
 ---
 
 # Results
 
-![:results](https://www.mentimeter.com/embed/108185ce9fe171d5b8dd94a3c830f3e6/7a22677b6492)
+![:results](./quiz_results/current/lecture_engagement.png)
 
 ---
 
+class: compact
 # Let's get you thinking in 3D!
 
 Picture a cube. Imagine touching one corner, and then also touch every corner that is two edges away from it.
 
-![:vote](https://www.menti.com/alygz2nf5w9x)
+![:vote](https://app.wooclap.com/TMJZNM/questionnaires/677d299b22d750b0bc6cab5f)
+
 
 ---
 
 # Results
 
-![:results](https://www.mentimeter.com/embed/alzxqc64839giz5p56eamyme8wq154uk)
+![:results](./quiz_results/current/3d_visualising.png)
 
 ???
 
@@ -79,11 +80,28 @@ select add (all)\<7\>;
 select add (all)\<8\>;
 color atoms red;
 connect (selected) (selected)](files/primitive_cube.cif)
+???
+
+# Example
+
+If nothing is loaded here, try refreshing the browser (F5).
+
+![:jmol 400,350, 0.9, 0.9, 0.9, unitcell off;
+axes off;
+select (all);
+color bonds white;
+select none;
+select add (all)\<1\>;
+select add (all)\<6\>;
+select add (all)\<7\>;
+select add (all)\<8\>;
+color atoms red;
+connect (selected) (selected)](files/primitive_cube.cif)
+
 
 ---
 
 
-time: 12
 class: roomy
 # Lecture 1 Summary
 $\require{mediawiki-texvc}$
@@ -222,7 +240,6 @@ generates a finite number (230) of space groups.
 
 ---
 
-time: 9:02
 class: compact
 # Example: Sodium chloride
 
@@ -382,13 +399,14 @@ CP arrangements of large (an)ions [X] leave 'holes' within the structure, which 
 
 # How are you getting on? Vote
 
-![:vote](https://www.menti.com/197zpjt3b5)
+![:vote](https://app.wooclap.com/TMJZNM/questionnaires/677d2a5c410283253e7731b9)
 
 ---
 
+
 # How are you getting on? Results
 
-![:results](https://www.mentimeter.com/embed/f5d6b6ece1f5b78c18b391183e14209e/9cb3695182fe)
+![:results](./quiz_results/current/close_packing_comfort.png)
 
 
 
@@ -507,9 +525,9 @@ select \(aluminium\); color atoms blue](files/cubic_perovskite.cif)
 
 ---
 
-# Feedback (1234 8570)
+# Feedback
 
-![:vote](https://www.menti.com/5jnmvofrd7)
+![:vote](https://app.wooclap.com/TMJZNM/questionnaires/677d2b68ffe192f60def8021)
 
 .footer[- [Return to course contents](overview.html#overview)
 ]
