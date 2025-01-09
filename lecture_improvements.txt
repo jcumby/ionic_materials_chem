@@ -22,8 +22,11 @@
 
 ** Lecture 4**
 
+[- Demonstration of conversion vs intercalation electrodes using balloons + volunteers]
+
 ** Lecture 5 **
 
+[- Demonstration of impedance of capacitor/resistor using people running]
 - Ran out of time to cover structural aspects of ferroelectric
     - Perhaps took too long on impedance question
 - "Circuit" demonstration well-received, but not sure that covered the most difficult aspects
@@ -33,6 +36,7 @@
 
 ** Lecture 6**
 
+[- Demonstration with sheep and cows as defect clusters]
 - Perfect timing to cover final slides of L5 and all of L6 (i.e. too short)
 - First part of examples/definitions is very boring!
     - Is there opportunity to add a quiz?
