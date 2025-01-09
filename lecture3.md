@@ -254,7 +254,7 @@ class:compact
 
 - Defect mobility $(\mu)$ is a thermally-activated process:
 $$ \mu = \mu_0 \exp \left( -\frac{\mathrm{E_a}}{\mathrm{RT}} \right) $$
-- interstitial sites are higher energy than vacancies, so will have be more mobile.
+- interstitial sites are higher energy than vacancies, so will be more mobile.
 
 ![Migration energy](./images/migration_energy.svg# w-50pct relative l-3-12th)
 
