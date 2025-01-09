@@ -1,3 +1,5 @@
 mentimeter_results/*
 quiz_results/results*
 *.zip
+.vscode
+_build
