@@ -32,6 +32,42 @@ $\require{mediawiki-texvc}$
 ---
 
 class: compact
+
+**NaCl Schottky**
+- Intrinsic defect (composition doesn't change) so formula mass change is 0
+- Vacancies essentially create a hole in the structure, so density decreases
+
+**AgCl Frenkel**
+- Intrinsic defect
+- Vacancies and interstitials created at the same rate, so density doesn't change significantly
+
+**TiO2 substitution with Zr**
+- Zr is heavier than Ti (91.224 vs 47.867) so formula mass will increase
+- Zr<sup>4+</sup> is slightly larger than Ti<sup>4+</sup> so we might expect volume to increase slightly, but overall the density will increase
+	- NOTE: I *wrongly* said Zr<sup>4+</sup> was smaller than Ti<sup>4+</sup> in the lecture - sorry!
+
+**Shear phase in WO<sub>3</sub>**
+- $\ce{WO\_{3} -> WO\_{3-x}}$, so the formula mass will decrease
+- Shear phase formation is a substantial rearrangement which is driven by reducing the overall volume. The result is that decrease in volume far outweighs the decrease in formula mass, so density will increase.
+
+---
+class: compact
+
+
+
+** Replacing O by F in CeO<sub>2</sub>**
+- $\ce{CeO\_2 -> CeO\_{2-x}F\_{x}}$
+- F is slightly heavier than O (18.998 vs 15.999) so formula mass will increase slightly
+- Charge balance requires us to reduce some Ce<sup>4+</sup> to Ce<sup>3+</sup>. There are a few ways to imagine this with KV notation:
+	1. Replacing $O^{2-}$ by $F^{1-}$ occurs directly during synthesis:
+		- $\ce{O\_{O} + Ce\_{Ce} + H\_{2} + \frac{1}{2}F\_{2} -> F\_{O}^{\bullet} + Ce\_{Ce}^{'} + H2O}$
+		- (H<sub>2</sub> and F<sub>2</sub> are used to balance the equation here, but a real experiment would use a different fluorinating reagent such as CeF<sub>3</sub>)
+	2. As-synthesised CeO<sub>2</sub> is fluorinated by filling existing oxygen vacancies:
+		- $\ce{V\_{O}^{\bullet\bullet} + Ce\_{Ce}^{'} + \frac{1}{2}F\_{2} -> F\_{O}^{\bullet} + Ce\_{Ce}^{x}}$
+		- Note that the fluorite structure is often prone to anion vacancies due to the mismatch between ionic radii and the geometry (this is particularly prevalent when the cation can be reduced). We'll see why this again in lecture 6.
+---
+
+class: compact
 # Conductivity
 
 - Many ionic solids conduct electricity; due to *ionic* and/or *electronic* motion.
