@@ -85,7 +85,7 @@ This requires *new materials* from chemistry.
 
 - **1800**: Volta created the voltaic pile
 	- Alternating Ag and Zn discs, NaCl electrolyte
-	- Enabled *chemistry* e.g. $\ce{2H2O -> H2 + O2}$
+	- Enabled *chemistry* e.g. $\ce{2H2O -> 2H2 + O2}$
 ![Voltaic pile](./images/VoltaBattery.JPG# w-2-12th fr r-1 relative)
 --
 
