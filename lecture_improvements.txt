@@ -1,6 +1,33 @@
 		Lecture improvements still to do...
 ===================================
 
+2024-25
+-------
+
+## Lecture 1
+
+- overran slightly, but only ~1 min
+- Malteaser demo with larger number of polos worked well, just remember to dim the lights
+- 3D octahedra too dark to show up, even with lights dimmed
+	- Ideally, this needs 3D octahedra and tetrahedra that can attach to each other, demonstrating the packing and hole positions
+	
+## Lecture 2
+
+- Overran, and needed to cover shear defects in lecture 3
+- First KV question is very easy
+	- Maybe include a second of intermediate difficulty before getting to the Mg2SiO4 question
+- Shear phases are difficult to visualise (and don't easily fit in lecture 2 timing)
+	- Can they be incorporated into lecture 3 or 6?
+
+## Lecture 3
+
+- Ran ~4 minutes short, even with plenty of time devoted to defect quiz
+- It would be helpful to derive K-V equations for (some of) the defects in the quiz
+	- Should shear phases be replaced by something else?
+- !!! Use the extra time to mention the assessment !!!	
+
+	
+
 2023-24
 -------
 
