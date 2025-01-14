@@ -401,7 +401,7 @@ color cobalt blue](files/LiCoO2.cif)
 ]
 
 .pull-right[
-- Close-packed hcp .red[oxygen] array
+- Close-packed FCC .red[oxygen] array
 - .blue[$\ce{Co}$] occupies alternate layers of octahedral holes
 - .gold[$\ce{Li+}$] can insert between Co layers, reducing $\ce{Co^{IV} <=> Co^{III}}$
 	- Layer spacing varies with $x$
