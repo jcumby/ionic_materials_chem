@@ -24,7 +24,15 @@
 - Ran ~4 minutes short, even with plenty of time devoted to defect quiz
 - It would be helpful to derive K-V equations for (some of) the defects in the quiz
 	- Should shear phases be replaced by something else?
-- !!! Use the extra time to mention the assessment !!!	
+- !!! Use the extra time to mention the assessment !!!
+
+
+## Lecture 4
+
+- Ran slightly short (~3 mins? difficult to judge based on UG announcement at start)
+- Remember to bring ANSWERS for battery capacity question!
+- Balloon demonstration for conversion vs intercalation electrodes went well, but does it clarify anything?!
+- Some parts may be too simple; need to focus more on structure-property analysis
 
 	
 
