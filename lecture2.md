@@ -7,6 +7,8 @@ time: 0
 
 ---
 
+class: roomy
+
 # Lecture summary
 $\require{mediawiki-texvc}$
 
@@ -14,6 +16,9 @@ $\require{mediawiki-texvc}$
 - Types of defect
 - Instrinsic and extrinsic defects
 - Defect equations
+
+.footer[- See Chapter 2 of [Solid State Materials Chemistry](https://doi.org/10.1017/9781139025348), Woodward 2021.
+]
 
 ---
 
@@ -115,7 +120,6 @@ Careful density measurements can be useful for determining Schottky defect conce
 
 ---
 
-time: 770
 # Frenkel defects
 
 - Smaller ion normally displaced
@@ -205,6 +209,8 @@ $$
 
 ![:vote](https://app.wooclap.com/MPXRTM/questionnaires/677d2fbedeb91d7cf8d4ed85)
 
+.footer.center[Wooclap Code: MPXRTM]
+
 ---
 
 $$
@@ -276,7 +282,24 @@ particularly for small numbers of defects!
 ---
 
 class: compact
-# Quiz 2 - Extrinsic defects
+# Quiz 2 - UO<sub>2</sub> Extrinsic defects
+
+Nuclear fuel (fluorite-type $\mathrm{UO\_{2}}$)  can oxidise in air to form $\mathrm{UO}_{2+\delta}$.
+
+
+![:vote](https://app.wooclap.com/MPXRTM/questionnaires/695e2c915fc87a0de4dd1202)
+
+---
+
+# Results - UO<sub>2</sub> defects
+
+![:results](./quiz_results/current/UO2_KV_test.png)
+
+
+---
+
+class: compact
+# Quiz 3 - More Extrinsic defects
 
 At high pressure, oxygen vacancies in $\ce{Mg2SiO4}$ can react with $\ce{H2O}$ to form new defects.
 
@@ -339,87 +362,6 @@ would cause the entropy term to dominate, assuming the product could be 'quenche
 
 ---
 
-class: compact
-# Defect ordering
-
-- At large defect concentrations, defects can interact
-    - minimises enthalpy
-- Can occur as
-	- clusters ('0D')
-	- lines ('1D')
-	- planes ('2D')
-
-Often seen from electron microscopy, e.g. $\ce{ZrNb\_{24}O\_{62}}$ shows 2D order in two directions:
-
-![Microscopy of shear structure in ZrNb24O62](./images/ZrNb24O62_shear_structures.png# w-6-12th l-3-12th relative)
-
-
----
-
-# Example - $\ce{WO3}$
-
-Plane-like defects are often described as *shear phases*
-
-.pull-left[
-$\ce{WO3}$
-![:jmol 400, 270, 10, 10, 1.5, polyhedra BONDS \(tungsten\);
-color polyhedra translucent gray;
-unitcell off;
-rotate z 20;
-zoom 180;
-select none;
-select add (all)\<624\>;
-select add (all)\<628\>;
-select add (all)\<560\>;
-select add (all)\<556\>;
-select add (all)\<481\>;
-select add (all)\<485\>;
-select add (all)\<406\>;
-select add (all)\<410\>;
-select add (all)\<338\>;
-select add (all)\<342\>;
-select add (all)\<263\>;
-select add (all)\<267\>;
-select add (all)\<188\>;
-select add (all)\<192\>;
-color atoms white;
-draw plane1 ((all)\<481\>) ((all)\<485\>) ((all)\<267\>)
-draw off;
-#select WITHIN(-3.5\~ plane\~ @\(plane((all)\<481\> (all)\<485\> (all)\<267\>)\));
-select WITHIN(-3.5\~ plane\~ $plane1);
-color polyhedra translucent orange;
-select none;
-draw plane2 ((all)\<474\>) ((all)\<478\>) ((all)\<260\>);
-draw off;
-#select WITHIN(-3.5\~ plane\~ @\(plane((all)\<474\> (all)\<478\> (all)\<260\>)\));
-select WITHIN(-3.5\~ plane\~ $plane2);
-color polyhedra translucent green;
-](files/cubic_WO3.cif)
-]
-
-
-
-
-.pull-right[
-$\ce{WO\_{2.90}\ or\ W\_{10}O\_{29}}$
-![:jmol 400, 270, 3, 3, 1, polyhedra BONDS \(tungsten\);
-color polyhedra translucent gray;
-unitcell off;
-rotate x 90;
-zoom 150;
-select none;
-draw plane3 ((all)\<470\>) ((all)\<730\>) ((all)\<650\>);
-draw off;
-select WITHIN(-3.5\~ plane\~ $plane3);
-color polyhedra translucent green;
-draw plane4 ((all)\<430\>) ((all)\<350\>) ((all)\<170\>);
-draw off;
-select WITHIN(2.5\~ plane\~ $plane4);
-color polyhedra translucent orange;
-](files/beta_WO3.cif)
-]
-
----
 
 # Lecture recap
 

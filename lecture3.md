@@ -23,6 +23,8 @@ $\require{mediawiki-texvc}$
 
 ![:vote](https://app.wooclap.com/SUJNYY/questionnaires/677e6679ab729ecc44fc41e2)
 
+.footer.center[Wooclap Code: SUJNYY]
+
 ---
 
 # Defect recap results
@@ -31,7 +33,7 @@ $\require{mediawiki-texvc}$
 
 ---
 
-class: compact
+exclude: true
 
 **NaCl Schottky**
 - Intrinsic defect (composition doesn't change) so formula mass change is 0
@@ -44,27 +46,34 @@ class: compact
 **TiO2 substitution with Zr**
 - Zr is heavier than Ti (91.224 vs 47.867) so formula mass will increase
 - Zr<sup>4+</sup> is slightly larger than Ti<sup>4+</sup> so we might expect volume to increase slightly, but overall the density will increase
-	- NOTE: I *wrongly* said Zr<sup>4+</sup> was smaller than Ti<sup>4+</sup> in the lecture - sorry!
-
-**Shear phase in WO<sub>3</sub>**
-- $\ce{WO\_{3} -> WO\_{3-x}}$, so the formula mass will decrease
-- Shear phase formation is a substantial rearrangement which is driven by reducing the overall volume. The result is that decrease in volume far outweighs the decrease in formula mass, so density will increase.
 
 ---
-class: compact
+
+exclude: true
+
+
+**Replacing O by F in CeO<sub>2</sub>**
+- Here, the answer depends on how the fluorination occurs:
+	1. Directly replace O by F, reducing more Ce<sup>4+</sup> to Ce<sup>3+</sup> to charge balance
+		- Overall: $\ce{CeO\_{2-x} -> Ce(O\_{1-y}F\_{y})\_{2-x}}$
+		- K-V: $\ce{2O\_{O} + 2Ce\_{Ce} + F2 <=> 2F\_{O}^{\bullet} + 2Ce\_{Ce}^{'} + O2}$
+		- This would increase formula mass slightly (F is heavier than O)
+		- Volume would increase (Ce<sup>3+</sup> is larger than Ce<sup>4+</sup>, F<sup>1-</sup> ~ O<sup>2-</sup>), so density would decrease
+
+	2. Replace O<sup>2-</sup> by two F<sup>1-</sup> by filling existing oxygen vacancies, maintaining the average Ce oxidation state
+		- Overall: $\ce{CeO\_{2-x} -> CeO\_{2-x-y}F\_{2y}}$
+		- K-V: $\ce{V\_{O}^{\bullet\bullet} + O\_{O} + F2 <=> 2F\_{O}^{\bullet} + \frac{1}{2}O2}$
+		- This would increase formula mass more significantly (two F per O)
+		- Filling vacancies will not change volume very much, so density would increase
+
+???
+
+Both K-V equations make the (very unlikely) assumption that fluorine will replace oxygen in the crystal structure while generating O<sub>2</sub> gas, whereas we know fluorine is extremely oxidising. 
+
+If heated in F<sub>2</sub> gas, another likely outcome is excess fluorination to form Ce<sup>4+</sup>, potentially even forming interstitial anion sites. Maintaining (or even reducing) Ce oxidation state would require a strong reducing agent alongside the fluorine source, such as H<sub>2</sub>, and even then may not be favourable without other driving forces (e.g. high pressure).
 
 
 
-** Replacing O by F in CeO<sub>2</sub>**
-- $\ce{CeO\_2 -> CeO\_{2-x}F\_{x}}$
-- F is slightly heavier than O (18.998 vs 15.999) so formula mass will increase slightly
-- Charge balance requires us to reduce some Ce<sup>4+</sup> to Ce<sup>3+</sup>. There are a few ways to imagine this with KV notation:
-	1. Replacing $O^{2-}$ by $F^{1-}$ occurs directly during synthesis:
-		- $\ce{O\_{O} + Ce\_{Ce} + H\_{2} + \frac{1}{2}F\_{2} -> F\_{O}^{\bullet} + Ce\_{Ce}^{'} + H2O}$
-		- (H<sub>2</sub> and F<sub>2</sub> are used to balance the equation here, but a real experiment would use a different fluorinating reagent such as CeF<sub>3</sub>)
-	2. As-synthesised CeO<sub>2</sub> is fluorinated by filling existing oxygen vacancies:
-		- $\ce{V\_{O}^{\bullet\bullet} + Ce\_{Ce}^{'} + \frac{1}{2}F\_{2} -> F\_{O}^{\bullet} + Ce\_{Ce}^{x}}$
-		- Note that the fluorite structure is often prone to anion vacancies due to the mismatch between ionic radii and the geometry (this is particularly prevalent when the cation can be reduced). We'll see why this again in lecture 6.
 ---
 
 class: compact
@@ -339,6 +348,94 @@ to account for the T-dependence of A.
 
 ---
 
+class: compact
+# Defect ordering
+
+More defects increase conductivity, but interaction can form new phases, *e.g.* $\ce{Mo\_{1-x}Cr\_{x}O2}$:
+
+![Phase diagram of Mo1-xCrxO2](./images/MoCrO2_magnetoresistance_phases.png# w-8-12th l-2-12th relative)
+
+.center[
+ ||||
+:---:|:---:|:-----:|:----:
+ .blue[$\ce{MoO2}$] | .green[$\ce{CrMoO4}$] | .red[$\ce{Cr2MoO6}$] | .orange[$\ce{CrO2}$ (rutile)]
+ ![:jmol 220, 220, 2, 2, 1, rotate z 90; select \(molybdenum\); color atoms green; connect (selected) (selected) DELETE;](files/mono_MoO2.cif) | ![:jmol 220, 220, 1, 2, 1, select \(molybdenum\); color atoms blue; select \(chromium\); color atoms yellow; select NOT \(oxygen\); connect (selected) (selected) DELETE;](files/CrMoO4_mono.cif)| ![:jmol 220, 220, 2, 1, 1, rotate x 90; select \(molybdenum\); color atoms blue; select \(chromium\); color atoms yellow; select NOT \(oxygen\); connect (selected) (selected) DELETE;](files/Cr2MoO6_trirutile.cif) | ![:jmol 220, 220, 2, 1, 3, rotate x 90; select \(chromium\); color atoms green; connect (selected) (selected) DELETE;](files/CrO2.cif)
+]
+
+---
+
+# Vacancy ordering
+
+Vacancies can order in lines/planes, leading to structural 'collapse'.
+
+Plane-like defects are often described as *shear phases*
+
+.pull-left[
+$\ce{WO3}$
+![:jmol 400, 270, 10, 10, 1.5, polyhedra BONDS \(tungsten\);
+color polyhedra translucent gray;
+unitcell off;
+rotate z 20;
+zoom 180;
+select none;
+select add (all)\<624\>;
+select add (all)\<628\>;
+select add (all)\<560\>;
+select add (all)\<556\>;
+select add (all)\<481\>;
+select add (all)\<485\>;
+select add (all)\<406\>;
+select add (all)\<410\>;
+select add (all)\<338\>;
+select add (all)\<342\>;
+select add (all)\<263\>;
+select add (all)\<267\>;
+select add (all)\<188\>;
+select add (all)\<192\>;
+color atoms white;
+draw plane1 ((all)\<481\>) ((all)\<485\>) ((all)\<267\>)
+draw off;
+#select WITHIN(-3.5\~ plane\~ @\(plane((all)\<481\> (all)\<485\> (all)\<267\>)\));
+select WITHIN(-3.5\~ plane\~ $plane1);
+color polyhedra translucent orange;
+select none;
+draw plane2 ((all)\<474\>) ((all)\<478\>) ((all)\<260\>);
+draw off;
+#select WITHIN(-3.5\~ plane\~ @\(plane((all)\<474\> (all)\<478\> (all)\<260\>)\));
+select WITHIN(-3.5\~ plane\~ $plane2);
+color polyhedra translucent green;
+](files/cubic_WO3.cif)
+]
+
+
+
+
+.pull-right[
+$\ce{WO\_{2.90}\ or\ W\_{10}O\_{29}}$
+![:jmol 400, 270, 3, 3, 1, polyhedra BONDS \(tungsten\);
+color polyhedra translucent gray;
+unitcell off;
+rotate x 90;
+zoom 150;
+select none;
+draw plane3 ((all)\<470\>) ((all)\<730\>) ((all)\<650\>);
+draw off;
+select WITHIN(-3.5\~ plane\~ $plane3);
+color polyhedra translucent green;
+draw plane4 ((all)\<430\>) ((all)\<350\>) ((all)\<170\>);
+draw off;
+select WITHIN(2.5\~ plane\~ $plane4);
+color polyhedra translucent orange;
+](files/beta_WO3.cif)
+]
+
+
+???
+
+Although vacancy-ordering often reduces ionic conductivity (by reducing the number of mobile defects), in some cases it can create new pathways for conduction. For example, tungsten oxide shear phases are currently being explored as Li-ion battery materials due to good Li-ion mobility and interstitial sites.
+
+---
+
 class: roomy
 # Lecture recap
 
@@ -351,7 +448,7 @@ class: roomy
 	- shows Arrhenius-like behaviour
 - Different defects have different conduction energetics
 	- Pathways can sometimes be determined experimentally
-
+- Ordering of defects can sometimes give rise to new crystal phases with different conduction properties
 
 
 ---
