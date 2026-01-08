@@ -18,6 +18,7 @@ During the lectures there are a number of interactive demonstrations:
 
 ** Lecture 3 **
 
+- Demonstration of vacancy ordering using blocks (introduced 2025-26)
 
 ** Lecture 4 **
 
