@@ -5,7 +5,6 @@ class: title, no-number
 
 .footer[- [Return to course contents](overview.html#overview)
 ]
-
 ---
 
 class: roomy
@@ -41,6 +40,8 @@ class: roomy
 
 ![:vote](https://app.wooclap.com/TMJZNM/questionnaires/677d1774f7d5c8b84df7559a)
 
+.footer.center[Wooclap Event Code: TMJZNM]
+
 ---
 
 # Results
@@ -65,9 +66,9 @@ Picture a cube. Imagine touching one corner, and then also touch every corner th
 
 ???
 
-# Example
+# Example in 3D
 
-If nothing is loaded here, try refreshing the browser (F5).
+If there is no picture shown below, try refreshing the browser (F5).
 
 ![:jmol 400,350, 0.9, 0.9, 0.9, unitcell off;
 axes off;
@@ -240,7 +241,6 @@ generates a finite number (230) of space groups.
 
 ---
 
-class: compact
 # Example: Sodium chloride
 
 .pull-center[
@@ -248,7 +248,7 @@ class: compact
 ]
 
 .center[
- | |
+ | | |
 ----------------|---|--
 Cubic structure | $a = b = c = 5.62\ \AA{}$, $\alpha = \beta = \gamma = 90^\circ$  |
 Spacegroup      | $\mathrm{Fm\bar3 m}$ (#225, point group = $\mathrm{O_h}$) |
@@ -259,6 +259,7 @@ Cl atoms at:    | (&half; 0 0)  &ensp; (0 &half; 0)      &ensp;  (0 0 &half;)   
 Because of symmetry, we only need to define one Na and one Cl position.
 ---
 
+class: roomy
 name: ionic_bonding
 # Ionic Bonding
 
@@ -393,7 +394,7 @@ Hexagonal close-packed (HCP) <br>
 
 CP arrangements of large (an)ions [X] leave 'holes' within the structure, which can be occupied by smaller (cat)ions [M]
 
-![Close packing holes](./images/close_packed_holes.jpg# w-100pct)
+![Close packing holes](./images/close_packed_holes.jpg# w-90pct)
 
 ---
 
@@ -418,12 +419,12 @@ One .gold[hole] per .red[cp ion] - both are 6-coordinate
 
 .pull-left[
 
-![:jmol 350, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/FCC_oct_holes.cif)
+![:jmol 350, 300, 1, 1, 1, connect 3.5 (O) (Hole); \(oxygen\).radius=1.0; color BONDS aliceblue](files/FCC_oct_holes.cif)
 Rock salt (NaCl) structure
 ]
 
 .pull-right[
-![:jmol 350, 300, 2, 2, 1, connect 4 (O) (Hole); color BONDS aliceblue](files/HCP_octahedral_holes.cif)
+![:jmol 350, 300, 2, 2, 1, \(oxygen\).radius=1.0;  connect 4 (O) (Hole); color BONDS aliceblue](files/HCP_octahedral_holes.cif)
 Nickel Arsenide structure (e.g. FeS)
 ![Hard boild egg](./images/iron_sulfide_egg.jpg# w-4-12th fr)
 ]
@@ -438,7 +439,9 @@ with $\ce{Ti^{4+}}$ filling half the octahedral holes
 CN = .gold[6] / .red[3]
 
 .pull-center[
-![:jmol 400,300, 2, 2, 2, connect 3.5 (Ti) (O);
+![:jmol 400,300, 2, 2, 2, \(oxygen\).radius=0.8;
+\(titanium\).radius=0.4;
+connect 3.5 (Ti) (O);
 #isosurface cutoff 0.8 origin \( 0 0 0\) steps \(0.2 0.2 0.2\) points \(100 10 30\) functionxyz = "cos((x-5.5)*80)+1";
 isosurface cutoff 1.9 origin \( 0 3 0\) steps \(0.2 0.2 0.2\) points \(48 4 30\) functionxyz = "cos((x+1.5)*78)+5*(y-3)";
 color isosurface translucent red;
@@ -447,20 +450,23 @@ color BONDS aliceblue;](files/rutile.cif)
 
 ---
 
-class: compact
 # Tetrahedral holes
 
 Two .gold[holes] per .red[cp ion]
 
 .pull-left[
-![:jmol 350, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/FCC_tet_holes.cif)
+![:jmol 350, 300, 1, 1, 1, \(oxygen\).radius=1.0; connect 3.5 (O) (Hole); color BONDS aliceblue](files/FCC_tet_holes.cif)
 ]
 
 .pull-right[
-![:jmol 350, 300, 1, 1, 1, connect 3.5 (O) (Hole); color BONDS aliceblue](files/HCP_tetrahedral_holes.cif)
+![:jmol 350, 300, 2, 2, 1, \(oxygen\).radius=1.0;
+select within(6.0\~ \(1.2 2.1 4.1\));
+delete NOT selected;
+connect 3.5 (O) (Hole); color BONDS aliceblue](files/HCP_tetrahedral_holes.cif)
 ]
 
 <br>
+
 
 Holes filled | FCC Type | CN(.gold[A]/.red[X]) |  | HCP Type | CN(.gold[A]/.red[X])
 -------------|------|-------------|------------|---|----
@@ -480,6 +486,7 @@ $\frac{r^{+}}{r^{-}}$  |  Cation C.N.  | MX Structure | MX<sub>2</sub> Structure
 0.7 - 1.0              | 8             | $\ce{CsCl}$         | $\ce{CaF2}$
 0.4 - 0.7              | 6             | $\ce{NaCl}$         | $\ce{TiO2}$
 0.2 - 0.4              | 4             | $\ce{ZnS}$ (Wurtzite/Zinc-blende) | Anti-fluorite (e.g. $\ce{Li2S}$)
+
 
 
 These are only approximate 'rules', and other binary structures exist (e.g. $\ce{CdI2}$, $\ce{CdCl2}$, $\ce{PbO}$, etc...)
