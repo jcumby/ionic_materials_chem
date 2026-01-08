@@ -418,22 +418,22 @@ Compare this with the ideal fluorite structure consisting of edge-sharing OM<sub
 class: compact
 # Long-range defect ordering
 
-In some cases defects can form long-range order
-- Many show order-disorder phase transition with T
+As discussed in Lecture 2, defects can undergo long-range order
+- Temperature can induce order-disorder phase transition
 
 ### Example: Ba<sub>2</sub>In<sub>2</sub>O<sub>5</sub>
 - Brownmillerite structure ($\ce{ABO\_{2.5}}$ perovskite with ordered $\ce{V\_{O}^{\bullet\bullet}}$)
 - Large increase in $\sigma$ at phase transition
 
-.pull-left[ ![Brownmillerite structure](./images/brownmillerite_struct.jpg# w-40pct relative l-3-12th)]
-.pull-right[ ![Brownmillerite conductivity](./images/brownmillerite_conductivity.jpg# w-50pct) ]
+.pull-left[ ![:jmol 450,350,2,1,2, rotate y -45; set autobond off; connect (all) (all) DELETE; connect 0.5 2.7 (In) (O) CREATE; polyhedra RADIUS 2.7 \(indium\); color polyhedra translucent orange](files/Ba2In2O5_ICSD73937.cif)
+]
+
+![Brownmillerite conductivity](./images/brownmillerite_conductivity.jpg# w-20pct relative)
 
 
 ---
 
 
-
-time: 48:56
 class: compact
 # Lecture recap
 
