@@ -213,8 +213,18 @@ $$
 
 ---
 
+exclude: True
 $$
 \ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} +\ ?? + BaTiO3}
+$$
+
+![:results](./quiz_results/current/kroger_vink_test.png)
+
+---
+
+exclude: False
+$$
+\ce{Ba\_{Ba} + Ti\_{Ti} + 3O\_{O} <=> V\_{Ba}{''} + V\_{Ti}{''''} + 3V\_{O}^{\bullet\bullet} + BaTiO3}
 $$
 
 ![:results](./quiz_results/current/kroger_vink_test.png)
@@ -291,12 +301,35 @@ Nuclear fuel (fluorite-type $\mathrm{UO\_{2}}$)  can oxidise in air to form $\ma
 
 ---
 
+exclude: True
 # Results - UO<sub>2</sub> defects
 
 ![:results](./quiz_results/current/UO2_KV_test.png)
 
 
 ---
+
+exclude: False
+# Results - UO<sub>2</sub> defects
+
+![:results](./quiz_results/current/UO2_KV_test.png)
+
+???
+
+Two ways to solve this problem (use both!):
+
+1. Exclude the equations which don't balance
+	- Recall that the number of sites must balance in a K-V equation. This rules out equations (1) and (4) which do not balance the oxygen sites.
+	- Equation (2) and (3) both balance, so we need to consider chemistry...
+2. Use chemistry references to help narrow down the options
+	- If you look up oxidation states of U you will find that $\ce{U^{6+}}$ is much more common than $\ce{U^{5+}}$.
+	- The question also states that $\ce{UO2}$ has the fluorite structure, which is prone to both anion interstitials and vacancies (because anions and cations are similar sizes). $\ce{O_{i}}$ is therefore a possibility.
+	- Looking closely at equation (2), we see that although uranium is oxidised (to $\ce{U^{5+}}$), we are formally reducing $\ce{O^{2-}}$ to $\ce{O^-}$. This does not oxidise the material overall, and is also unusual in most oxides!
+
+Overall, equation (3) is the most chemically reasonable.
+
+---
+
 
 class: compact
 # Quiz 3 - More Extrinsic defects
@@ -307,9 +340,28 @@ At high pressure, oxygen vacancies in $\ce{Mg2SiO4}$ can react with $\ce{H2O}$ t
 
 ---
 
+exclude: True
 # Results - Extrinsic defects
 
 ![:results](./quiz_results/current/extrinsic_KV_test.png)
+
+---
+
+exclude: False
+# Results - Extrinsic defects
+
+![:results](./quiz_results/current/extrinsic_KV_test.png)
+
+???
+
+This is a tricky problem! To start with, we know from the question that $\ce{V_{O}^{\bullet\bullet}}$ must be present on the left-hand side, as must $\ce{H2O}$.
+
+It seems reasonable to assume that we will fill a vacancy under high pressure conditions, and likewise we would be unlikely to generate any gases ($\ce{H2}$).
+Filling the vacancy would require either $\ce{O\_{O}}$ or $\ce{OH_{O}^{\bullet}}$ on the right-hand side. Both possibilities could be made to balance with K-V notation.
+
+One option would be to generate interstitial protons ($\ce{H_{i}^{\bullet}}$) for balance, but interstitial protons are very uncommon in oxides (they would normally associate with an oxide ion to form hydroxide). Additionally, high pressure would disfavour interstitials due to the volume increase (although this is small for a proton). Because of the likelihood of forming hydroxide ions over free protons, we can conclude that the most likely defect equation is:
+
+$$\ce{ H2O + V\_{O}^{\bullet\bullet} <=> 2OH\_{O}^{\bullet} } $$
 
 ---
 
