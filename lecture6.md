@@ -34,7 +34,10 @@ Electricity can be generated as long as fuel is supplied (they don't need to be 
 
 class: compact
 
-![Fuel cell history](./images/fuel_cell_history.jpg# w-50pct relative b-2 l-2-12th)
+![Fuel cell history](./images/fuel_cell_history.jpg# w-50pct absolute b-1 l-3-12th)
+
+.footer[- [Handbook of Thermal Management Systems](https://doi.org/10.1016/B978-0-443-19017-9.00019-2), 2023
+]
 
 
 ---
@@ -93,7 +96,7 @@ Efficiency = &eta; = -474.3 / 571.6 = **83%**
 ---
 
 class: compact
-# Efficiency with temperature
+# Thermodynamic Efficiency
 
 $$
 \Delta G = \Delta H - T\Delta S, \quad
@@ -139,7 +142,7 @@ Molten Carbonate (MCFC) | CO<sub>3</sub><sup>2-</sup> | 650 | &vellip;
 ---
 
 class: no-number
-# Main low temperature device:<br> Proton exchange membrane fuel cell (PEMFC)
+# Low temperature:<br> Proton exchange membrane fuel cell (PEMFC)
 
 - Carbon electrodes with precious metal catalysts (Pt, Pd, Ru)
 - Requires acidic proton-conducting polymer
@@ -227,7 +230,7 @@ exclude: true
 ---
 
 class: compact
-# Main high temperature chemistry:<br>Solid Oxide (SOFC)
+# High temperature:<br>Solid Oxide (SOFC)
 
 - All-solid-state system (*i.e.* solid electrolyte)
 - Most work at 800 - 1000 &deg;C
@@ -276,18 +279,177 @@ Delicate balance between:
 
 ---
 
-# Requirements for SOFC materials
+# Ideal requirements for fuel cell materials
 
 Property | Anode              |       Electrolyte         |   Cathode
 -------|-------------------|---------------------------|--------------
 Electronic conductivity | High | Low | High
 Ionic Conductivity | High | High | High
 Chemical stability | reducing conditions | oxidising **and** reducing conditions | oxidising conditions
-Catalytic activity | Fuel oxidation | $\ce{O2}$ reduction | $\ce{O2}$ reduction
+Catalytic activity | Fuel oxidation | (Fuel ox<sup>n</sup> and $\ce{O2}$ red<sup>n</sup>) | $\ce{O2}$ reduction
 
 Also: chemical compatibility between materials, similar thermal expansion, low cost, ...
 
 ---
+
+# Top Trumps - Fuel cell version
+
+
+.pull-left.w30[
+| $\ce{Bi\_{1.6}Gd\_{0.4}O3}$ ||
+|-||
+| ![:jmol 200,200,1,1,1, select NOT (oxygen); color atoms green; select (oxygen); color atoms translucent 0.5; select (all); color bonds white ](files/delta_Bi2O3.cif) |
+| Electronic Conductivity | Low 
+| Ionic Conductivity | High
+| Oxidation Stability | Mid
+| Reduction Stability | Low
+]
+
+.pull-left.w40.h-90p[
+![:vote](https://app.wooclap.com/SUARKZ/questionnaires/6960f1c4328501edb3f27f55)
+]
+
+.pull-left.w30[
+| MgO |
+|-|
+|  ![:jmol 200,200,1,1,1, select (all); color bonds white ](files/MgO.cif) |
+| Electronic Conductivity | Low 
+| Ionic Conductivity | Low
+| Oxidation Stability | High
+| Reduction Stability | High
+]
+
+---
+
+# Top trumps #2 
+
+
+.pull-left.w30[
+| $\ce{PrO_{1.833}}$ ||
+|-||
+| ![:jmol 200,200,1,1,1, select NOT (oxygen); color atoms green; select (oxygen); color atoms translucent 0.5; select (all); color bonds white ](files/Pr6O11.cif) |
+| Electronic Conductivity | High
+| Ionic Conductivity | Mid
+| Oxidation Stability | ??
+| Reduction Stability | ??
+]
+
+.pull-left.w40.h-90p[
+![:vote](https://app.wooclap.com/SUARKZ/questionnaires/6964dc825eb1dfcad9388bf6)
+]
+
+.pull-left.w30[
+| $\ce{Sr\_{0.89}Y\_{0.07}TiO\_{2.995}}$ |
+|-|
+|  ![:jmol 200,200,1,1,1, select (all); color bonds white; connect (strontium)(oxygen) DELETE; ](files/SrY_TiO3.cif) |
+| Electronic Conductivity | High 
+| Ionic Conductivity | Mid
+| Oxidation Stability | Low
+| Reduction Stability | High
+]
+
+
+---
+
+exclude: True
+# Top trumps #2 - answers
+
+
+.pull-left.w30[
+| $\ce{PrO_{1.833}}$ ||
+|-||
+| ![:jmol 200,200,1,1,1, select NOT (oxygen); color atoms green; select (oxygen); color atoms translucent 0.5; select (all); color bonds white ](files/Pr6O11.cif) |
+| Electronic Conductivity | High
+| Ionic Conductivity | Mid
+| Oxidation Stability | Low
+| Reduction Stability | Low
+]
+
+.pull-left.w40.h-90p[
+![:results](./quiz_results/current/fuel_cell_TT2.png)
+]
+
+.pull-left.w30[
+| $\ce{Sr\_{0.89}Y\_{0.07}TiO\_{2.995}}$ |
+|-|
+|  ![:jmol 200,200,1,1,1, select (all); color bonds white; connect (strontium)(oxygen) DELETE; ](files/SrY_TiO3.cif) |
+| Electronic Conductivity | High 
+| Ionic Conductivity | Mid
+| Oxidation Stability | Low
+| Reduction Stability | High
+]
+
+
+---
+
+# Top trumps #3
+
+
+.pull-left.w30[
+| $\ce{CsH(SO4)}$ ||
+|-||
+| ![:jmol 200,200,2,2,2, select (all); color bonds white;
+moveto 0 \( -833 -381 -401 101.33\) 115.47 0.0 0.0; connect (caesium)(oxygen) DELETE; polyhedra BONDS \(sulfur\)](files/CsHSO4.cif) |
+| Electronic Conductivity | Low
+| Ionic Conductivity | ???
+| Oxidation Stability | Mid
+| Reduction Stability | Low
+]
+
+.pull-left.w40.h-90p[
+![:vote](https://app.wooclap.com/SUARKZ/questionnaires/6964e3c25eb1dfcad93e4228)
+]
+
+.pull-left.w30[
+| $\ce{(NH4)3H(SO4)2}$ |
+|-|
+|  ![:jmol 200,200,1,2,2, select (all); color bonds white; polyhedra BONDS \(sulfur\); moveto 0 \( -717 -489 -497 109.19 \) 132.25 0.0 0.0  ;](files/NH4_3_HSO4.cif) |
+| Electronic Conductivity | Low
+| Ionic Conductivity | ???
+| Oxidation Stability | Mid
+| Reduction Stability | Low
+]
+
+---
+
+exclude: True
+# Top trumps #3 - Answers
+
+.pull-left.w30[
+| $\ce{CsH(SO4)}$ ||
+|-||
+| ![:jmol 200,200,2,2,2, select (all); color bonds white;
+moveto 0 \( -833 -381 -401 101.33\) 115.47 0.0 0.0; connect (caesium)(oxygen) DELETE; polyhedra BONDS \(sulfur\)](files/CsHSO4.cif) |
+| Electronic Conductivity | Low
+| Ionic Conductivity | Mid
+| Oxidation Stability | Mid
+| Reduction Stability | Low
+]
+
+.pull-left.w40.h-90p[
+![:results](./quiz_results/current/fuel_cell_TT3.png)
+]
+
+.pull-left.w30[
+| $\ce{(NH4)3H(SO4)2}$ |
+|-|
+|  ![:jmol 200,200,1,2,2, select (all); color bonds white; polyhedra BONDS \(sulfur\); moveto 0 \( -717 -489 -497 109.19 \) 132.25 0.0 0.0  ;](files/NH4_3_HSO4.cif) |
+| Electronic Conductivity | Low
+| Ionic Conductivity | High
+| Oxidation Stability | Mid
+| Reduction Stability | Low
+]
+
+
+???
+
+The reason $\ce{(NH4)3H(SO4)2}$ is a better ionic conductor than $\ce{CsH(SO4)}$ is due to the structural arrangement of hydrogen bonds. In $\ce{CsH(SO4)}$ the conduction is largely limited within 2D planes separated by large Cs cations. In contrast, $\ce{(NH4)3H(SO4)2}$ has a 3D network of hydrogen bonds formed by the ammonium cations, allowing for more efficient proton hopping throughout the structure.
+
+[This review](https://doi.org/10.1016/j.ijhydene.2011.09.152) gives a good overview of solid acid materials for proton-exchange membranes if you are interested in finding out more.
+
+---
+
+
 
 class: compact
 # 'Perfect' electrodes

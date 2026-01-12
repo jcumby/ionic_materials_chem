@@ -7,10 +7,11 @@
 		
 		<meta name="description" content="Lecture 6 - Fuel Cells.">
 
-		<!-- <link rel="stylesheet" type="text/css" href="./common/style.css"></style>  - Old JCC style settings -->
 		<link rel="stylesheet" type="text/css" href="./common/slide_layout.css"></style>
 		<link rel="stylesheet" type="text/css" href="./common/image_layout.css"></style>
 		<link rel="stylesheet" type="text/css" href="./common/adirondack.css"></style>
+		<link rel="stylesheet" type="text/css" href="./common/utilities.css"></style>
+		<!-- Intentionally disable full style.css so only width/float utilities apply -->
 		<style type="text/css">
 		@page {
 				  size:  1366px 768px; 
@@ -170,7 +171,7 @@
 		// To use in remark, do
 		//    [:vote](link/to/voting/page)
 		var url = this;
-		return '<div style="position: relative; height: 70%; padding-left: 10%; overflow: visible;"><iframe src="' + url + '" height="100%" frameborder=0 style="min-width: 300px" width="80%" ></iframe></div>';
+		return '<div class="vote-box" style="position: relative; height: 80%; padding-left: 10%; overflow: visible;"><iframe src="' + url + '" height="100%" frameborder=0 style="min-width: 300px" width="80%"></iframe></div>';
 		};
 		
 	remark.macros.results = function () {
