@@ -1,6 +1,41 @@
 		Lecture improvements still to do...
 ===================================
 
+2025-26
+-------
+
+## Lecture 1
+
+- Good timing
+- Don't spend time on the overview slides; the instructions are repeated in the L1 slides
+- 3D octahedra too dark to show up. Tetrahedra helped, but remember to show them clearly before placing between octahedra
+- Link between close-packing and octahedral felt a bit stilted. Is there a better way to show the relationship between the two?
+- Most confusion was felt over oct/tet holes. Is there a better demonstration?
+- Discussion of different structure types was a bit 'stamp collecting'.
+	- Make sure to introduce the number of holes per CP ion first, and then progress to the different packings
+	- Anion sizes are slightly too large to show holes and wavy plane in rutile
+
+## Lecture 2
+
+- Ran 2 minutes over; could have allowed less time for quiz 2 or earlier slides
+- Incorrect colour in NaCl Schottky diagram
+- When introducing BaTiO3 K-V quiz, make sure not to state it is vacancy formation!!
+- Jump between BaTiO3 quiz and substitution section seemed odd. Need to smooth the transition
+- Solid solution and non-stoichiometry sections were both rushed.
+	- Could Vegard's law be introduced earlier to help with substitution explanation?
+- Need to update references to 'defect ordering' (now in L3)
+
+## Lecture 3
+
+## Lecture 4
+
+## Lecture 5
+
+## Lecture 6
+
+## Overall Improvements
+
+
 2024-25
 -------
 
