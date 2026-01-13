@@ -283,16 +283,7 @@ $\ce{LiTiS2 -> Li^+ + TiS2 + e^{-}}$ | 2.0
 
 ---
 
-exclude: true
-# Quiz Answers
 
-Cathode | FW (g mol<sup>-1</sup> | Q (mAh g<sup>-1</sup>) | V (V) | E (Wh g<sup>-1</sup>)
------------|----|-------------------|-------|---------------------
-$\ce{LiCoPO4}$ | 160.85 | 166.6 | 4.7 | 0.783
-$\ce{LiF + Ag^0}$ | 133.81 (25.94 + 107.87) | 200.3 | 4.1 | 0.821
-$\ce{LiTiS2}$ | 118.94 | 225.3 | 2.0 | 0.451
-
----
 
 # Vote
 
@@ -305,6 +296,17 @@ $\ce{LiTiS2}$ | 118.94 | 225.3 | 2.0 | 0.451
 # Results
 
 ![:results](./quiz_results/current/energy_capacity.png)
+
+---
+
+exclude: false
+# Quiz Answers
+
+Cathode | FW (g mol<sup>-1</sup> | Q (mAh g<sup>-1</sup>) | V (V) | E (Wh g<sup>-1</sup>)
+-----------|----|-------------------|-------|---------------------
+$\ce{LiCoPO4}$ | 160.85 | 166.6 | 4.7 | 0.783
+$\ce{LiF + Ag^0}$ | 133.81 (25.94 + 107.87) | 200.3 | 4.1 | 0.821
+$\ce{LiTiS2}$ | 118.94 | 225.3 | 2.0 | 0.451
 
 ---
 

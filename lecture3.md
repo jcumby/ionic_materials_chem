@@ -33,7 +33,7 @@ $\require{mediawiki-texvc}$
 
 ---
 
-exclude: true
+exclude: false
 
 **NaCl Schottky**
 - Intrinsic defect (composition doesn't change) so formula mass change is 0
@@ -45,11 +45,11 @@ exclude: true
 
 **TiO2 substitution with Zr**
 - Zr is heavier than Ti (91.224 vs 47.867) so formula mass will increase
-- Zr<sup>4+</sup> is slightly larger than Ti<sup>4+</sup> so we might expect volume to increase slightly, but overall the density will increase
+- Zr<sup>4+</sup> is slightly larger than Ti<sup>4+</sup> so we might expect volume to increase slightly, but overall the density will increase due to the larger mass increase
 
 ---
 
-exclude: true
+exclude: false
 
 
 **Replacing O by F in CeO<sub>2</sub>**
@@ -63,8 +63,8 @@ exclude: true
 	2. Replace O<sup>2-</sup> by two F<sup>1-</sup> by filling existing oxygen vacancies, maintaining the average Ce oxidation state
 		- Overall: $\ce{CeO\_{2-x} -> CeO\_{2-x-y}F\_{2y}}$
 		- K-V: $\ce{V\_{O}^{\bullet\bullet} + O\_{O} + F2 <=> 2F\_{O}^{\bullet} + \frac{1}{2}O2}$
-		- This would increase formula mass more significantly (two F per O)
-		- Filling vacancies will not change volume very much, so density would increase
+		- This would increase formula mass more than #1 (two F per O)
+		- Filling vacancies will not change volume very much, so density would increase slightly
 
 ???
 
