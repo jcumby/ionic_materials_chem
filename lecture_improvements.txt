@@ -27,7 +27,31 @@
 
 ## Lecture 3
 
+- Ran slightly over time (~ 30 seconds) but had to rush final slides
+- Need to know the answers to the CeO2-x quix (first question) to write up defect equations without hesitation! Good balance of difficulty in the different materials, however.
+- Videos of measuring conductivity felt slightly unnecessary and out of place. Are they required, or could they be better integrated to help the flow?
+- Defect ordering fitted for time, but was not well-integrated. Can it be linked with conductivity pathways somehow?
+- Colour-coding of atoms should be specified
+- Is there a demonstration that could explain strain-driven defect ordering?  
+- The demonstration with bottle caps wasn't overly successful; moving the block caused it to drift out of the field of view, and moving it back caused the caps to reorder. 
+	- A strain-driven demo would be better, and link to the conductivity (i.e. moving ions).
+- WO3 vacancy ordering still felt out of place, but introducing substitution ordering first definitely helped.
+- Should there be mention of intrinsic vs extrinsic conduction? There is probably time with trimming elsewhere
+
 ## Lecture 4
+
+- Ran slightly short (~2 mins)
+- First part of lecture is still dry! 
+- Could potentially expand the discussion of design principles for increasing operating voltage, with greater number of examples
+- Need to emphasise the importance of mass in optimising for specific charge
+- Link between "design rules" and electrode families was a bit weak
+- Ballon demonstration worked, but challenging to get enough volunteers
+- Need to be clear on anode vs cathode for conversion electrodes
+	- Specify energy of each material in DOS-style diagram?
+- Could add slide highlighting advantages/disadvantages of intercalation electrodes.
+	- Need to be careful not to labour the point too much though, also for conversion electrodes
+- Local vs average structure felt bolted-on.
+
 
 ## Lecture 5
 
