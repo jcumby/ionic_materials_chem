@@ -321,6 +321,22 @@ Also: chemical compatibility between materials, similar thermal expansion, low c
 
 ---
 
+exclude: False
+# Top trumps #1 - answers
+
+.pull-left[
+Electrolytes should have high ionic conductivity, low electronic conductivity, and stability in both oxidising and reducing conditions.
+
+Because MgO has low ionic conductivity it is not suitable as an electrolyte material, despite its good stability.
+]
+
+.pull-right[
+![:results](./quiz_results/current/fuel_cell_TT1.png)
+]
+
+
+
+---
 # Top trumps #2 
 
 
@@ -351,34 +367,21 @@ Also: chemical compatibility between materials, similar thermal expansion, low c
 
 ---
 
-exclude: True
+exclude: False
 # Top trumps #2 - answers
 
 
-.pull-left.w30[
-| $\ce{PrO_{1.833}}$ ||
-|-||
-| ![:jmol 200,200,1,1,1, select NOT (oxygen); color atoms green; select (oxygen); color atoms translucent 0.5; select (all); color bonds white ](files/Pr6O11.cif) |
-| Electronic Conductivity | High
-| Ionic Conductivity | Mid
-| Oxidation Stability | Low
-| Reduction Stability | Low
+.pull-left[
+Estimating stability to oxidation/reduction relies on considering the available oxidation states (particularly of the cations). 
+
+$\ce{PrO\_{1.833}}$ has the formal oxidation state of Pr as +3.67 - you could equally write the formula as $\ce{Pr^{3+}Pr^{4+}\_2O\_{5.5}}$ (or $\ce{Pr^{3+}Pr^{4+}\_2O\_{6-x}}$ to imply it is fluorite-derived). 
+
+This makes it clear that the material can be both oxidised (to $\ce{Pr^{4+}}$) and reduced (to $\ce{Pr^{3+}}$), giving it poor stability under both conditions.
 ]
 
-.pull-left.w40.h-90p[
+.pull-right[
 ![:results](./quiz_results/current/fuel_cell_TT2.png)
 ]
-
-.pull-left.w30[
-| $\ce{Sr\_{0.89}Y\_{0.07}TiO\_{2.995}}$ |
-|-|
-|  ![:jmol 200,200,1,1,1, select (all); color bonds white; connect (strontium)(oxygen) DELETE; ](files/SrY_TiO3.cif) |
-| Electronic Conductivity | High 
-| Ionic Conductivity | Mid
-| Oxidation Stability | Low
-| Reduction Stability | High
-]
-
 
 ---
 
@@ -412,40 +415,19 @@ moveto 0 \( -833 -381 -401 101.33\) 115.47 0.0 0.0; connect (caesium)(oxygen) DE
 
 ---
 
-exclude: True
+exclude: False
 # Top trumps #3 - Answers
 
-.pull-left.w30[
-| $\ce{CsH(SO4)}$ ||
-|-||
-| ![:jmol 200,200,2,2,2, select (all); color bonds white;
-moveto 0 \( -833 -381 -401 101.33\) 115.47 0.0 0.0; connect (caesium)(oxygen) DELETE; polyhedra BONDS \(sulfur\)](files/CsHSO4.cif) |
-| Electronic Conductivity | Low
-| Ionic Conductivity | Mid
-| Oxidation Stability | Mid
-| Reduction Stability | Low
+.pull-left[
+$\ce{(NH4)3H(SO4)2}$ is a better ionic conductor than $\ce{CsH(SO4)}$, due to the structural arrangement of hydrogen bonds. In $\ce{CsH(SO4)}$ the conduction is within 2D planes separated by large Cs cations. In contrast, $\ce{(NH4)3H(SO4)2}$ has a 3D network of hydrogen bonds formed by the ammonium cations, allowing for more efficient proton hopping throughout the structure.
+
+[This review](https://doi.org/10.1016/j.ijhydene.2011.09.152) gives more detail about proton-conducting solid acids.
+
 ]
 
-.pull-left.w40.h-90p[
+.pull-right[
 ![:results](./quiz_results/current/fuel_cell_TT3.png)
 ]
-
-.pull-left.w30[
-| $\ce{(NH4)3H(SO4)2}$ |
-|-|
-|  ![:jmol 200,200,1,2,2, select (all); color bonds white; polyhedra BONDS \(sulfur\); moveto 0 \( -717 -489 -497 109.19 \) 132.25 0.0 0.0  ;](files/NH4_3_HSO4.cif) |
-| Electronic Conductivity | Low
-| Ionic Conductivity | High
-| Oxidation Stability | Mid
-| Reduction Stability | Low
-]
-
-
-???
-
-The reason $\ce{(NH4)3H(SO4)2}$ is a better ionic conductor than $\ce{CsH(SO4)}$ is due to the structural arrangement of hydrogen bonds. In $\ce{CsH(SO4)}$ the conduction is largely limited within 2D planes separated by large Cs cations. In contrast, $\ce{(NH4)3H(SO4)2}$ has a 3D network of hydrogen bonds formed by the ammonium cations, allowing for more efficient proton hopping throughout the structure.
-
-[This review](https://doi.org/10.1016/j.ijhydene.2011.09.152) gives a good overview of solid acid materials for proton-exchange membranes if you are interested in finding out more.
 
 ---
 

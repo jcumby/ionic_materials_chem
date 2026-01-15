@@ -55,7 +55,19 @@
 
 ## Lecture 5
 
+- Ran to time
+- Could have cut down initial slides (i.e. capacitor introduction)
+- Slightly short on later sections, but not too much
+- Limited audience participation, but demonstration still worked
+
 ## Lecture 6
+
+- Overran by ~2 mins (even without defect ordering demo)
+    - Could cut time in introduction and thermodynamics sections
+- Top trumps worked well, and students struggled to answer later questions
+    - Important to spend enough time going through the answers
+- Defect ordering section felt like an afterthought
+	- Would it be better to integrate that into L3 only, and use the cow/sheep demo in that lecture?
 
 ## Overall Improvements
 
